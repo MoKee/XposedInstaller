@@ -25,46 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DownloadDetailsActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:theme="@style/Theme.XposedInstaller.Transparent">
-            <intent-filter>
-                <action android:name="de.robv.android.xposed.installer.DOWNLOAD_DETAILS"/>
 
-                <data android:scheme="package"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-
-                <data
-                    android:host="repo.xposed.info"
-                    android:pathPrefix="/module/"
-                    android:scheme="http"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SettingsActivity"
-            android:theme="@style/Theme.XposedInstaller.Transparent"/>
-        <activity
-            android:name=".SupportActivity"
-            android:theme="@style/Theme.XposedInstaller.Transparent"/>
-        <activity
-            android:name=".AboutActivity"
-            android:theme="@style/Theme.XposedInstaller.Transparent"/>
-        <activity
-            android:name=".ModulesBookmark"
-            android:theme="@style/Theme.XposedInstaller.Transparent"/>
-        <activity
-            android:name=".installation.InstallationActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.XposedInstaller.Transparent"/>
         <receiver
             android:name=".receivers.PackageChangeReceiver"
             android:exported="false">
@@ -74,14 +35,6 @@
                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
 
                 <data android:scheme="package"/>
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name=".receivers.DownloadReceiver"
-            android:exported="true"
-            android:permission="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS">
-            <intent-filter>
-                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
             </intent-filter>
         </receiver>
         <receiver

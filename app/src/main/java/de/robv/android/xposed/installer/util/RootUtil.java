@@ -16,11 +16,8 @@ import java.util.List;
 
 import de.robv.android.xposed.installer.R;
 import de.robv.android.xposed.installer.XposedApp;
-import de.robv.android.xposed.installer.installation.FlashCallback;
 import eu.chainfire.libsuperuser.Shell;
 import eu.chainfire.libsuperuser.Shell.OnCommandResultListener;
-
-import static de.robv.android.xposed.installer.util.InstallZipUtil.triggerError;
 
 public class RootUtil {
     private Shell.Interactive mShell = null;
@@ -170,14 +167,6 @@ public class RootUtil {
             return false;
         }
 
-        return true;
-    }
-
-    public boolean startShell(FlashCallback flashCallback) {
-        if (!startShell()) {
-            triggerError(flashCallback, FlashCallback.ERROR_NO_ROOT_ACCESS);
-            return false;
-        }
         return true;
     }
 
