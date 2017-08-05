@@ -1,6 +1,5 @@
 package de.robv.android.xposed.installer.util;
 
-import android.content.Context;
 import android.os.Build;
 
 import java.io.BufferedReader;
@@ -8,10 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.zip.ZipFile;
-
-import de.robv.android.xposed.installer.R;
-import de.robv.android.xposed.installer.XposedApp;
-import de.robv.android.xposed.installer.installation.FlashCallback;
 
 public final class InstallZipUtil {
     public static class ZipCheckResult {
@@ -111,37 +106,6 @@ public final class InstallZipUtil {
         }
         reader.close();
         return prop.isComplete() ? prop : null;
-    }
-
-    public static String messageForError(int code, Object... args) {
-        Context context = XposedApp.getInstance();
-        switch (code) {
-            case FlashCallback.ERROR_TIMEOUT:
-                return context.getString(R.string.flash_error_timeout);
-
-            case FlashCallback.ERROR_SHELL_DIED:
-                return context.getString(R.string.flash_error_shell_died);
-
-            case FlashCallback.ERROR_NO_ROOT_ACCESS:
-                return context.getString(R.string.root_failed);
-
-            case FlashCallback.ERROR_INVALID_ZIP:
-                String message = context.getString(R.string.flash_error_invalid_zip);
-                if (args.length > 0) {
-                    message += "\n" + args[0];
-                }
-                return message;
-
-            case FlashCallback.ERROR_NOT_FLASHABLE_IN_APP:
-                return context.getString(R.string.flash_error_not_flashable_in_app);
-
-            default:
-                return context.getString(R.string.flash_error_default, code);
-        }
-    }
-
-    public static void triggerError(FlashCallback callback, int code, Object... args) {
-        callback.onError(code, messageForError(code, args));
     }
 
     public static void closeSilently(ZipFile z) {

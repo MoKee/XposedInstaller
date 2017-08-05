@@ -133,28 +133,6 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
                 setTitle(R.string.nav_item_modules);
                 navFragment = new ModulesFragment();
                 break;
-            case R.id.nav_item_downloads:
-                mPrevSelectedId = itemId;
-                setTitle(R.string.nav_item_download);
-                navFragment = new DownloadFragment();
-                break;
-            case R.id.nav_item_logs:
-                mPrevSelectedId = itemId;
-                setTitle(R.string.nav_item_logs);
-                navFragment = new LogsFragment();
-                break;
-            case R.id.nav_item_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
-            case R.id.nav_item_support:
-                startActivity(new Intent(this, SupportActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
-            case R.id.nav_item_about:
-                startActivity(new Intent(this, AboutActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
         }
 
         final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(4));
@@ -221,18 +199,8 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
 
     private void notifyDataSetChanged() {
         View parentLayout = findViewById(R.id.content_frame);
-        String frameworkUpdateVersion = mRepoLoader.getFrameworkUpdateVersion();
         boolean moduleUpdateAvailable = mRepoLoader.hasModuleUpdates();
-
-        Fragment currentFragment = getFragmentManager().findFragmentById(R.id.content_frame);
-        if (currentFragment instanceof DownloadDetailsFragment) {
-            if (frameworkUpdateVersion != null) {
-                Snackbar.make(parentLayout, R.string.welcome_framework_update_available + " " + String.valueOf(frameworkUpdateVersion), Snackbar.LENGTH_LONG).show();
-            }
-        }
-
         boolean snackBar = XposedApp.getPreferences().getBoolean("snack_bar", true);
-
         if (moduleUpdateAvailable && snackBar) {
             Snackbar.make(parentLayout, R.string.modules_updates_available, Snackbar.LENGTH_LONG).setAction(getString(R.string.view), new View.OnClickListener() {
                 @Override
