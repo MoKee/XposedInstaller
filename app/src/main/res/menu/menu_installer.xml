@@ -20,11 +20,4 @@
 
     </group>
 
-    <group android:id="@+id/menu_framework_download">
-        <item
-            android:id="@+id/show_outdated"
-            android:checkable="true"
-            android:title="@string/show_outdated"/>
-    </group>
-
 </menu>
