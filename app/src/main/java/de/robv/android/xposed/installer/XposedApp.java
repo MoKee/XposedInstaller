@@ -1,14 +1,8 @@
 package de.robv.android.xposed.installer;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.Application;
-import android.app.Application.ActivityLifecycleCallbacks;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.Bundle;
 import android.os.Environment;
 import android.os.FileUtils;
 import android.os.Handler;
@@ -20,13 +14,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import de.robv.android.xposed.installer.util.AssetUtil;
-import de.robv.android.xposed.installer.util.DownloadsUtil;
 import de.robv.android.xposed.installer.util.InstallZipUtil;
 import de.robv.android.xposed.installer.util.InstallZipUtil.XposedProp;
 import de.robv.android.xposed.installer.util.NotificationUtil;
-import de.robv.android.xposed.installer.util.RepoLoader;
 
-public class XposedApp extends Application implements ActivityLifecycleCallbacks {
+public class XposedApp extends Application {
     public static final String TAG = "XposedInstaller";
 
     @SuppressLint("SdCardPath")
@@ -42,7 +34,6 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
     private static XposedApp mInstance = null;
     private static Thread mUiThread;
     private static Handler mMainHandler;
-    private boolean mIsUiLoaded = false;
     private SharedPreferences mPref;
     private XposedProp mXposedProp;
 
@@ -56,10 +47,6 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         } else {
             action.run();
         }
-    }
-
-    public static void postOnUiThread(Runnable action) {
-        mMainHandler.post(action);
     }
 
     // This method is hooked by XposedBridge to return the current version
@@ -82,14 +69,6 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         return mInstance.mPref;
     }
 
-    public static void installApk(Context context, DownloadsUtil.DownloadInfo info) {
-        Intent installIntent = new Intent(Intent.ACTION_INSTALL_PACKAGE);
-        installIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        installIntent.setDataAndType(Uri.fromFile(new File(info.localFilename)), DownloadsUtil.MIME_TYPE_APK);
-        installIntent.putExtra(Intent.EXTRA_INSTALLER_PACKAGE_NAME, context.getApplicationInfo().packageName);
-        context.startActivity(installIntent);
-    }
-
     public static String getDownloadPath() {
         return getPreferences().getString("download_location", Environment.getExternalStorageDirectory() + "/XposedInstaller");
     }
@@ -105,8 +84,6 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         createDirectories();
         NotificationUtil.init();
         AssetUtil.removeBusybox();
-
-        registerActivityLifecycleCallbacks(this);
     }
 
     private void createDirectories() {
@@ -148,39 +125,5 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         synchronized (this) {
             mXposedProp = prop;
         }
-    }
-
-    // TODO find a better way to trigger actions only when any UI is shown for the first time
-    @Override
-    public synchronized void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-        if (mIsUiLoaded)
-            return;
-
-        RepoLoader.getInstance().triggerFirstLoadIfNecessary();
-        mIsUiLoaded = true;
-    }
-
-    @Override
-    public synchronized void onActivityResumed(Activity activity) {
-    }
-
-    @Override
-    public synchronized void onActivityPaused(Activity activity) {
-    }
-
-    @Override
-    public void onActivityStarted(Activity activity) {
-    }
-
-    @Override
-    public void onActivityStopped(Activity activity) {
-    }
-
-    @Override
-    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-    }
-
-    @Override
-    public void onActivityDestroyed(Activity activity) {
     }
 }

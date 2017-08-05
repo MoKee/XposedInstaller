@@ -5,9 +5,6 @@
         android:id="@+id/menu_launch"
         android:title="@string/module_launch"/>
     <item
-        android:id="@+id/menu_download_updates"
-        android:title="@string/module_download_updates"/>
-    <item
         android:id="@+id/menu_support"
         android:title="@string/module_support"/>
     <item

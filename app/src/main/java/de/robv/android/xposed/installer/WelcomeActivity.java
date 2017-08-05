@@ -2,13 +2,11 @@ package de.robv.android.xposed.installer;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -21,19 +19,11 @@ import android.view.animation.Transformation;
 import android.widget.LinearLayout;
 
 import de.robv.android.xposed.installer.installation.StatusInstallerFragment;
-import de.robv.android.xposed.installer.util.Loader;
-import de.robv.android.xposed.installer.util.ModuleUtil;
-import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
-import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
-import de.robv.android.xposed.installer.util.RepoLoader;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
-public class WelcomeActivity extends XposedBaseActivity implements NavigationView.OnNavigationItemSelectedListener,
-        ModuleListener, Loader.Listener<RepoLoader> {
+public class WelcomeActivity extends XposedBaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String SELECTED_ITEM_ID = "SELECTED_ITEM_ID";
     private final Handler mDrawerHandler = new Handler();
-    private RepoLoader mRepoLoader;
     private DrawerLayout mDrawerLayout;
     private int mPrevSelectedId;
     private NavigationView mNavigationView;
@@ -42,7 +32,6 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.setTheme(this);
         setContentView(R.layout.activity_welcome);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -98,12 +87,6 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
             int value = extras.getInt("fragment", prefs.getInt("default_view", 0));
             switchFragment(value);
         }
-
-        mRepoLoader = RepoLoader.getInstance();
-        ModuleUtil.getInstance().addListener(this);
-        mRepoLoader.addListener(this);
-
-        notifyDataSetChanged();
     }
 
     public void switchFragment(int itemId) {
@@ -133,28 +116,6 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
                 setTitle(R.string.nav_item_modules);
                 navFragment = new ModulesFragment();
                 break;
-            case R.id.nav_item_downloads:
-                mPrevSelectedId = itemId;
-                setTitle(R.string.nav_item_download);
-                navFragment = new DownloadFragment();
-                break;
-            case R.id.nav_item_logs:
-                mPrevSelectedId = itemId;
-                setTitle(R.string.nav_item_logs);
-                navFragment = new LogsFragment();
-                break;
-            case R.id.nav_item_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
-            case R.id.nav_item_support:
-                startActivity(new Intent(this, SupportActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
-            case R.id.nav_item_about:
-                startActivity(new Intent(this, AboutActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
         }
 
         final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(4));
@@ -217,51 +178,5 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
         } else {
             super.onBackPressed();
         }
-    }
-
-    private void notifyDataSetChanged() {
-        View parentLayout = findViewById(R.id.content_frame);
-        String frameworkUpdateVersion = mRepoLoader.getFrameworkUpdateVersion();
-        boolean moduleUpdateAvailable = mRepoLoader.hasModuleUpdates();
-
-        Fragment currentFragment = getFragmentManager().findFragmentById(R.id.content_frame);
-        if (currentFragment instanceof DownloadDetailsFragment) {
-            if (frameworkUpdateVersion != null) {
-                Snackbar.make(parentLayout, R.string.welcome_framework_update_available + " " + String.valueOf(frameworkUpdateVersion), Snackbar.LENGTH_LONG).show();
-            }
-        }
-
-        boolean snackBar = XposedApp.getPreferences().getBoolean("snack_bar", true);
-
-        if (moduleUpdateAvailable && snackBar) {
-            Snackbar.make(parentLayout, R.string.modules_updates_available, Snackbar.LENGTH_LONG).setAction(getString(R.string.view), new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    switchFragment(2);
-                }
-            }).show();
-        }
-    }
-
-    @Override
-    public void onInstalledModulesReloaded(ModuleUtil moduleUtil) {
-        notifyDataSetChanged();
-    }
-
-    @Override
-    public void onSingleInstalledModuleReloaded(ModuleUtil moduleUtil, String packageName, InstalledModule module) {
-        notifyDataSetChanged();
-    }
-
-    @Override
-    public void onReloadDone(RepoLoader loader) {
-        notifyDataSetChanged();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ModuleUtil.getInstance().removeListener(this);
-        mRepoLoader.removeListener(this);
     }
 }
