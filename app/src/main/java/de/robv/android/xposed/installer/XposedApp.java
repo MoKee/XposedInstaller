@@ -30,7 +30,7 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
     public static final String TAG = "XposedInstaller";
 
     @SuppressLint("SdCardPath")
-    public static final String BASE_DIR = "/data/data/de.robv.android.xposed.installer/";
+    public static final String BASE_DIR = "/data/user_de/0/de.robv.android.xposed.installer/";
     public static final String ENABLED_MODULES_LIST_FILE = XposedApp.BASE_DIR + "conf/enabled_modules.list";
 
     private static final String[] XPOSED_PROP_FILES = new String[]{
