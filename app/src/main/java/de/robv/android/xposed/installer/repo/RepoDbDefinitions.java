@@ -177,42 +177,4 @@ public class RepoDbDefinitions {
         public static final String IS_INSTALLED = "is_installed";
         public static final String HAS_UPDATE = "has_update";
     }
-
-    public static class OverviewColumnsIndexes {
-        private OverviewColumnsIndexes() {}
-
-        public static int PKGNAME = -1;
-        public static int TITLE = -1;
-        public static int SUMMARY = -1;
-        public static int CREATED = -1;
-        public static int UPDATED = -1;
-
-        public static int INSTALLED_VERSION = -1;
-        public static int LATEST_VERSION = -1;
-
-        public static int IS_FRAMEWORK = -1;
-        public static int IS_INSTALLED = -1;
-        public static int HAS_UPDATE = -1;
-
-        private static boolean isFilled = false;
-
-        public static void fillFromCursor(Cursor cursor) {
-            if (isFilled || cursor == null)
-                return;
-
-            PKGNAME = cursor.getColumnIndexOrThrow(OverviewColumns.PKGNAME);
-            TITLE = cursor.getColumnIndexOrThrow(OverviewColumns.TITLE);
-            SUMMARY = cursor.getColumnIndexOrThrow(OverviewColumns.SUMMARY);
-            CREATED = cursor.getColumnIndexOrThrow(OverviewColumns.CREATED);
-            UPDATED = cursor.getColumnIndexOrThrow(OverviewColumns.UPDATED);
-            INSTALLED_VERSION = cursor.getColumnIndexOrThrow(OverviewColumns.INSTALLED_VERSION);
-            LATEST_VERSION = cursor.getColumnIndexOrThrow(OverviewColumns.LATEST_VERSION);
-            INSTALLED_VERSION = cursor.getColumnIndexOrThrow(OverviewColumns.INSTALLED_VERSION);
-            IS_FRAMEWORK = cursor.getColumnIndexOrThrow(OverviewColumns.IS_FRAMEWORK);
-            IS_INSTALLED = cursor.getColumnIndexOrThrow(OverviewColumns.IS_INSTALLED);
-            HAS_UPDATE = cursor.getColumnIndexOrThrow(OverviewColumns.HAS_UPDATE);
-
-            isFilled = true;
-        }
-    }
 }
