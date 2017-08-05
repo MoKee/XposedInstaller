@@ -30,7 +30,6 @@ import de.robv.android.xposed.installer.util.ModuleUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
 import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
 import de.robv.android.xposed.installer.util.RepoLoader;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
 public class DownloadDetailsActivity extends XposedBaseActivity implements Loader.Listener<RepoLoader>, ModuleListener {
 
@@ -47,8 +46,6 @@ public class DownloadDetailsActivity extends XposedBaseActivity implements Loade
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        ThemeUtil.setTheme(this);
-
         mPackageName = getModulePackageName();
         mModule = sRepoLoader.getModule(mPackageName);
 

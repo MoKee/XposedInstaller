@@ -26,7 +26,6 @@ import de.robv.android.xposed.installer.util.ModuleUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
 import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
 import de.robv.android.xposed.installer.util.RepoLoader;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
 public class WelcomeActivity extends XposedBaseActivity implements NavigationView.OnNavigationItemSelectedListener,
         ModuleListener, Loader.Listener<RepoLoader> {
@@ -42,7 +41,6 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.setTheme(this);
         setContentView(R.layout.activity_welcome);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -71,7 +69,7 @@ public class WelcomeActivity extends XposedBaseActivity implements NavigationVie
         mDrawerToggle.syncState();
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mSelectedId = mNavigationView.getMenu().getItem(prefs.getInt("default_view", 0)).getItemId();
+        mSelectedId = mNavigationView.getMenu().getItem(0).getItemId();
         mSelectedId = savedInstanceState == null ? mSelectedId : savedInstanceState.getInt(SELECTED_ITEM_ID);
         mPrevSelectedId = mSelectedId;
         mNavigationView.getMenu().findItem(mSelectedId).setChecked(true);

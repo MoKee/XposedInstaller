@@ -20,14 +20,12 @@ import de.psdev.licensesdialog.licenses.SILOpenFontLicense11;
 import de.psdev.licensesdialog.model.Notice;
 import de.psdev.licensesdialog.model.Notices;
 import de.robv.android.xposed.installer.util.NavUtil;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
 public class AboutActivity extends XposedBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.setTheme(this);
         setContentView(R.layout.activity_container);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

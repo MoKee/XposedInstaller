@@ -56,7 +56,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import de.robv.android.xposed.installer.installation.StatusInstallerFragment;
 import de.robv.android.xposed.installer.repo.Module;
 import de.robv.android.xposed.installer.repo.ModuleVersion;
 import de.robv.android.xposed.installer.repo.ReleaseType;
@@ -80,7 +79,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
     public static final String XPOSED_REPO_LINK = "http://repo.xposed.info/module/%s";
     private static final String NOT_ACTIVE_NOTE_TAG = "NOT_ACTIVE_NOTE";
     private static String PLAY_STORE_LABEL = null;
-    private int installedXposedVersion;
     private ModuleUtil mModuleUtil;
     private ModuleAdapter mAdapter = null;
     private PackageManager mPm = null;
@@ -119,16 +117,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        installedXposedVersion = XposedApp.getInstalledXposedVersion();
-        if (installedXposedVersion < 0 || XposedApp.getActiveXposedVersion() < 0 || StatusInstallerFragment.DISABLE_FILE.exists()) {
-            View notActiveNote = getActivity().getLayoutInflater().inflate(R.layout.xposed_not_active_note, getListView(), false);
-            if (installedXposedVersion < 0) {
-                ((TextView) notActiveNote.findViewById(android.R.id.title)).setText(R.string.framework_not_installed);
-            }
-            notActiveNote.setTag(NOT_ACTIVE_NOTE_TAG);
-            getListView().addHeaderView(notActiveNote);
-        }
 
         mAdapter = new ModuleAdapter(getActivity());
         reloadModules.run();
@@ -543,10 +531,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
                 checkbox.setEnabled(false);
                 warningText.setText(getString(R.string.no_min_version_specified));
                 warningText.setVisibility(View.VISIBLE);
-            } else if (installedXposedVersion != 0 && item.minVersion > installedXposedVersion) {
-                checkbox.setEnabled(false);
-                warningText.setText(String.format(getString(R.string.warning_xposed_min_version), item.minVersion));
-                warningText.setVisibility(View.VISIBLE);
             } else if (item.minVersion < ModuleUtil.MIN_MODULE_VERSION) {
                 checkbox.setEnabled(false);
                 warningText.setText(String.format(getString(R.string.warning_min_version_too_low), item.minVersion, ModuleUtil.MIN_MODULE_VERSION));
@@ -554,10 +538,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
             } else if (item.isInstalledOnExternalStorage()) {
                 checkbox.setEnabled(false);
                 warningText.setText(getString(R.string.warning_installed_on_external_storage));
-                warningText.setVisibility(View.VISIBLE);
-            } else if (installedXposedVersion == 0) {
-                checkbox.setEnabled(false);
-                warningText.setText(getString(R.string.framework_not_installed));
                 warningText.setVisibility(View.VISIBLE);
             } else {
                 checkbox.setEnabled(true);

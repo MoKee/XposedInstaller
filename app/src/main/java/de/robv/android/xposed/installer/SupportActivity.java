@@ -10,13 +10,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import de.robv.android.xposed.installer.util.NavUtil;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
 public class SupportActivity extends XposedBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.setTheme(this);
         setContentView(R.layout.activity_container);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
