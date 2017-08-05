@@ -16,11 +16,8 @@ import java.util.List;
 
 import de.robv.android.xposed.installer.R;
 import de.robv.android.xposed.installer.XposedApp;
-import de.robv.android.xposed.installer.installation.FlashCallback;
 import eu.chainfire.libsuperuser.Shell;
 import eu.chainfire.libsuperuser.Shell.OnCommandResultListener;
-
-import static de.robv.android.xposed.installer.util.InstallZipUtil.triggerError;
 
 public class RootUtil {
     private Shell.Interactive mShell = null;
@@ -173,14 +170,6 @@ public class RootUtil {
         return true;
     }
 
-    public boolean startShell(FlashCallback flashCallback) {
-        if (!startShell()) {
-            triggerError(flashCallback, FlashCallback.ERROR_NO_ROOT_ACCESS);
-            return false;
-        }
-        return true;
-    }
-
     /**
      * Closes all resources related to the shell.
      */
@@ -245,8 +234,7 @@ public class RootUtil {
 
     public enum RebootMode {
         NORMAL(R.string.reboot),
-        SOFT(R.string.soft_reboot),
-        RECOVERY(R.string.reboot_recovery);
+        SOFT(R.string.soft_reboot);
 
         public final int titleRes;
 
@@ -260,8 +248,6 @@ public class RootUtil {
                     return NORMAL;
                 case R.id.soft_reboot:
                     return SOFT;
-                case R.id.reboot_recovery:
-                    return RECOVERY;
                 default:
                     throw new IllegalArgumentException();
             }
@@ -295,8 +281,6 @@ public class RootUtil {
                 return reboot(callback);
             case SOFT:
                 return softReboot(callback);
-            case RECOVERY:
-                return rebootToRecovery(callback);
             default:
                 throw new IllegalArgumentException();
         }
@@ -308,15 +292,5 @@ public class RootUtil {
 
     private boolean softReboot(LineCallback callback) {
         return execute("setprop ctl.restart surfaceflinger; setprop ctl.restart zygote", callback) == 0;
-    }
-
-    private boolean rebootToRecovery(LineCallback callback) {
-        // Create a flag used by some kernels to boot into recovery.
-        if (execute("ls /cache/recovery", null) != 0) {
-            executeWithBusybox("mkdir /cache/recovery", callback);
-        }
-        executeWithBusybox("touch /cache/recovery/boot", callback);
-
-        return executeWithBusybox("reboot recovery", callback) == 0;
     }
 }

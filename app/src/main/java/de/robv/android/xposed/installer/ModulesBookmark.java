@@ -36,7 +36,6 @@ import de.robv.android.xposed.installer.repo.Module;
 import de.robv.android.xposed.installer.repo.ModuleVersion;
 import de.robv.android.xposed.installer.util.DownloadsUtil;
 import de.robv.android.xposed.installer.util.RepoLoader;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
 import static de.robv.android.xposed.installer.XposedApp.WRITE_EXTERNAL_PERMISSION;
 
@@ -48,7 +47,6 @@ public class ModulesBookmark extends XposedBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.setTheme(this);
         setContentView(R.layout.activity_container);
 
         mRepoLoader = RepoLoader.getInstance();

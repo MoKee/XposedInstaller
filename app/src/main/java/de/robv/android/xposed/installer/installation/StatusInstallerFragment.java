@@ -1,17 +1,10 @@
 package de.robv.android.xposed.installer.installation;
 
-import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.UiThread;
 import android.support.design.widget.Snackbar;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,63 +15,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Set;
 
 import de.robv.android.xposed.installer.R;
 import de.robv.android.xposed.installer.XposedApp;
-import de.robv.android.xposed.installer.util.DownloadsUtil;
-import de.robv.android.xposed.installer.util.DownloadsUtil.DownloadFinishedCallback;
-import de.robv.android.xposed.installer.util.DownloadsUtil.DownloadInfo;
-import de.robv.android.xposed.installer.util.FrameworkZips;
-import de.robv.android.xposed.installer.util.FrameworkZips.FrameworkZip;
-import de.robv.android.xposed.installer.util.FrameworkZips.LocalFrameworkZip;
-import de.robv.android.xposed.installer.util.FrameworkZips.LocalZipLoader;
-import de.robv.android.xposed.installer.util.FrameworkZips.OnlineFrameworkZip;
-import de.robv.android.xposed.installer.util.FrameworkZips.OnlineZipLoader;
-import de.robv.android.xposed.installer.util.Loader;
-import de.robv.android.xposed.installer.util.NavUtil;
 import de.robv.android.xposed.installer.util.RootUtil;
-import de.robv.android.xposed.installer.util.RunnableWithParam;
 
 public class StatusInstallerFragment extends Fragment {
     public static final File DISABLE_FILE = new File(XposedApp.BASE_DIR + "conf/disabled");
     public static final File ENABLE_FILE = new File(XposedApp.BASE_DIR + "conf/enabled");
-    private boolean mShowOutdated = false;
-
-    private static boolean checkClassExists(String className) {
-        try {
-            Class.forName(className);
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.status_installer, container, false);
-
-        // Available ZIPs
-        final SwipeRefreshLayout refreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swiperefreshlayout);
-        refreshLayout.setColorSchemeColors(getResources().getColor(R.color.colorPrimary));
-
-        ONLINE_ZIP_LOADER.setSwipeRefreshLayout(refreshLayout);
-        ONLINE_ZIP_LOADER.addListener(mOnlineZipListener);
-        ONLINE_ZIP_LOADER.triggerFirstLoadIfNecessary();
-
-        LOCAL_ZIP_LOADER.addListener(mLocalZipListener);
-        LOCAL_ZIP_LOADER.triggerFirstLoadIfNecessary();
-
-        refreshZipViews(v);
 
         // Disable switch
         final SwitchCompat disableSwitch = (SwitchCompat) v.findViewById(R.id.disableSwitch);
@@ -105,18 +60,6 @@ public class StatusInstallerFragment extends Fragment {
                 }
             }
         });
-
-        // Device info
-        TextView androidSdk = (TextView) v.findViewById(R.id.android_version);
-        TextView manufacturer = (TextView) v.findViewById(R.id.ic_manufacturer);
-        TextView cpu = (TextView) v.findViewById(R.id.cpu);
-
-        androidSdk.setText(getString(R.string.android_sdk, Build.VERSION.RELEASE, getAndroidVersion(), Build.VERSION.SDK_INT));
-        manufacturer.setText(getUIFramework());
-        cpu.setText(FrameworkZips.ARCH);
-
-        // Known issues
-        refreshKnownIssue(v);
 
         // Display warning dialog to new users
         if (!XposedApp.getPreferences().getBoolean("hide_install_warning", false)) {
@@ -176,25 +119,14 @@ public class StatusInstallerFragment extends Fragment {
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ONLINE_ZIP_LOADER.removeListener(mOnlineZipListener);
-        ONLINE_ZIP_LOADER.setSwipeRefreshLayout(null);
-        LOCAL_ZIP_LOADER.removeListener(mLocalZipListener);
-    }
-
-    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mShowOutdated = XposedApp.getPreferences().getBoolean("framework_download_show_outdated", false);
         setHasOptionsMenu(true);
     }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_installer, menu);
-        menu.findItem(R.id.show_outdated).setChecked(mShowOutdated);
     }
 
     @Override
@@ -202,7 +134,6 @@ public class StatusInstallerFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.reboot:
             case R.id.soft_reboot:
-            case R.id.reboot_recovery:
                 final RootUtil.RebootMode mode = RootUtil.RebootMode.fromId(item.getItemId());
                 confirmReboot(mode.titleRes, new MaterialDialog.SingleButtonCallback() {
                     @Override
@@ -210,13 +141,6 @@ public class StatusInstallerFragment extends Fragment {
                         RootUtil.reboot(mode, getActivity());
                     }
                 });
-                return true;
-
-            case R.id.show_outdated:
-                mShowOutdated = !item.isChecked();
-                XposedApp.getPreferences().edit().putBoolean("framework_download_show_outdated", mShowOutdated).apply();
-                item.setChecked(mShowOutdated);
-                refreshZipViews(getView());
                 return true;
         }
 
@@ -231,295 +155,4 @@ public class StatusInstallerFragment extends Fragment {
                 .onPositive(yesHandler)
                 .show();
     }
-
-    @SuppressLint("StringFormatInvalid")
-    private void refreshKnownIssue(View v) {
-        final String issueName;
-        final String issueLink;
-
-        if (new File("/system/framework/core.jar.jex").exists()) {
-            issueName = "Aliyun OS";
-            issueLink = "http://forum.xda-developers.com/showpost.php?p=52289793&postcount=5";
-
-        } else if (new File("/data/miui/DexspyInstaller.jar").exists() || checkClassExists("miui.dexspy.DexspyInstaller")) {
-            issueName = "MIUI/Dexspy";
-            issueLink = "http://forum.xda-developers.com/showpost.php?p=52291098&postcount=6";
-
-        } else if (new File("/system/framework/twframework.jar").exists()) {
-            issueName = "Samsung TouchWiz ROM";
-            issueLink = "forum.xda-developers.com/showthread.php?t=3034811";
-        } else {
-            issueName = null;
-            issueLink = null;
-        }
-
-        TextView txtKnownIssue = (TextView) v.findViewById(R.id.framework_known_issue);
-        if (issueName != null) {
-            txtKnownIssue.setText(getString(R.string.install_known_issue, issueName));
-            txtKnownIssue.setVisibility(View.VISIBLE);
-            txtKnownIssue.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    NavUtil.startURL(getActivity(), issueLink);
-                }
-            });
-        } else {
-            txtKnownIssue.setVisibility(View.GONE);
-        }
-    }
-
-    private String getAndroidVersion() {
-        switch (Build.VERSION.SDK_INT) {
-            case 15:
-                return "Ice Cream Sandwich";
-            case 16:
-            case 17:
-            case 18:
-                return "Jelly Bean";
-            case 19:
-                return "KitKat";
-            case 21:
-            case 22:
-                return "Lollipop";
-            case 23:
-                return "Marshmallow";
-            case 24:
-            case 25:
-                return "Nougat";
-            default:
-                return "unknown";
-        }
-    }
-
-    private String getUIFramework() {
-        String manufacturer = Character.toUpperCase(Build.MANUFACTURER.charAt(0)) + Build.MANUFACTURER.substring(1);
-        if (!Build.BRAND.equals(Build.MANUFACTURER)) {
-            manufacturer += " " + Character.toUpperCase(Build.BRAND.charAt(0)) + Build.BRAND.substring(1);
-        }
-        manufacturer += " " + Build.MODEL + " ";
-        if (manufacturer.contains("Samsung")) {
-            manufacturer += new File("/system/framework/twframework.jar").exists() ? "(TouchWiz)" : "(AOSP-based ROM)";
-        } else if (manufacturer.contains("Xioami")) {
-            manufacturer += new File("/system/framework/framework-miui-res.apk").exists() ? "(MIUI)" : "(AOSP-based ROM)";
-        }
-        return manufacturer;
-    }
-
-    @UiThread
-    private void refreshZipViews(View view) {
-        LinearLayout zips = (LinearLayout) view.findViewById(R.id.zips);
-        zips.removeAllViews();
-        TextView tvError = (TextView) view.findViewById(R.id.zips_load_error);
-        synchronized (FrameworkZips.class) {
-            boolean hasZips = false;
-            for (FrameworkZips.Type type : FrameworkZips.Type.values()) {
-                hasZips |= addZipViews(getActivity().getLayoutInflater(), zips, type);
-            }
-
-            if (!FrameworkZips.hasLoadedOnlineZips()) {
-                tvError.setText(R.string.framework_zip_load_failed);
-                tvError.setVisibility(View.VISIBLE);
-            } else if (!hasZips) {
-                tvError.setText(R.string.framework_no_zips);
-                tvError.setVisibility(View.VISIBLE);
-            } else {
-                tvError.setVisibility(View.GONE);
-            }
-        }
-    }
-
-    private boolean addZipViews(LayoutInflater inflater, ViewGroup root, FrameworkZips.Type type) {
-        ViewGroup container = null;
-        Set<String> allTitles = FrameworkZips.getAllTitles(type);
-        for (String title : allTitles) {
-            OnlineFrameworkZip online = FrameworkZips.getOnline(title, type);
-            LocalFrameworkZip local = FrameworkZips.getLocal(title, type);
-
-            boolean hasOnline = (online != null);
-            boolean hasLocal = (local != null);
-            FrameworkZip zip = hasOnline ? online : local;
-            boolean isOutdated = zip.isOutdated();
-
-            if (isOutdated && !mShowOutdated) {
-                continue;
-            }
-
-            if (container == null) {
-                View card = inflater.inflate(R.layout.framework_zip_group, root, false);
-                TextView tv = (TextView) card.findViewById(android.R.id.title);
-                tv.setText(type.title);
-                container = (ViewGroup) card.findViewById(android.R.id.content);
-                root.addView(card);
-            }
-
-            addZipView(inflater, container, zip, hasOnline, hasLocal, isOutdated);
-        }
-
-        return !allTitles.isEmpty();
-    }
-
-    public void addZipView(LayoutInflater inflater, ViewGroup container, final FrameworkZip zip,
-                           boolean hasOnline, boolean hasLocal, boolean isOutdated) {
-        View view = inflater.inflate(R.layout.framework_zip_item, container, false);
-
-        TextView tvTitle = (TextView) view.findViewById(android.R.id.title);
-        tvTitle.setText(zip.title);
-
-        ImageView ivStatus = (ImageView) view.findViewById(R.id.framework_zip_status);
-        if (!hasLocal) {
-            ivStatus.setImageResource(R.drawable.ic_cloud);
-        } else if (hasOnline) {
-            ivStatus.setImageResource(R.drawable.ic_cloud_download);
-        } else {
-            ivStatus.setImageResource(R.drawable.ic_cloud_off);
-        }
-
-        if (isOutdated) {
-            int gray = Color.parseColor("#A0A0A0");
-            tvTitle.setTextColor(gray);
-            ivStatus.setColorFilter(gray);
-        }
-
-        view.setClickable(true);
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showActionDialog(getActivity(), zip.title, zip.type);
-            }
-        });
-        container.addView(view);
-    }
-
-    private void showActionDialog(final Context context, final String title, final FrameworkZips.Type type) {
-        final int ACTION_FLASH = 0;
-        final int ACTION_FLASH_RECOVERY = 1;
-        final int ACTION_SAVE = 2;
-        final int ACTION_DELETE = 3;
-
-        boolean isDownloaded = FrameworkZips.hasLocal(title, type);
-        int itemCount = isDownloaded ? 3 : 2;
-        String[] texts = new String[itemCount];
-        int[] ids = new int[itemCount];
-        int i = 0;
-
-        texts[i] = context.getString(type.text_flash);
-        ids[i++] = ACTION_FLASH;
-
-        texts[i] = context.getString(type.text_flash_recovery);
-        ids[i++] = ACTION_FLASH_RECOVERY;
-
-        /*
-        texts[i] = "Save to...";
-        ids[i++] = ACTION_SAVE;
-        */
-
-        if (FrameworkZips.hasLocal(title, type)) {
-            texts[i] = context.getString(R.string.framework_delete);
-            ids[i++] = ACTION_DELETE;
-        }
-
-        new MaterialDialog.Builder(context)
-                .title(title)
-                .items(texts)
-                .itemsIds(ids)
-                .itemsCallback(new MaterialDialog.ListCallback() {
-                    @Override
-                    public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
-                        final int action = itemView.getId();
-
-                        // Handle delete simple actions.
-                        if (action == ACTION_DELETE) {
-                            FrameworkZips.delete(context, title, type);
-                            LOCAL_ZIP_LOADER.triggerReload(true);
-                            return;
-                        }
-
-                        // Handle actions that need a download first.
-                        RunnableWithParam<File> runAfterDownload = null;
-                        if (action == ACTION_FLASH) {
-                            runAfterDownload = new RunnableWithParam<File>() {
-                                @Override
-                                public void run(File file) {
-                                    flash(context, new FlashDirectly(file, type, title, false));
-                                }
-                            };
-                        } else if (action == ACTION_FLASH_RECOVERY) {
-                            runAfterDownload = new RunnableWithParam<File>() {
-                                @Override
-                                public void run(File file) {
-                                    flash(context, new FlashRecoveryAuto(file, type, title));
-                                }
-                            };
-                        } else if (action == ACTION_SAVE) {
-                            runAfterDownload = new RunnableWithParam<File>() {
-                                @Override
-                                public void run(File file) {
-                                    saveTo(context, file);
-                                }
-                            };
-                        }
-
-                        LocalFrameworkZip local = FrameworkZips.getLocal(title, type);
-                        if (local != null) {
-                            runAfterDownload.run(local.path);
-                        } else {
-                            download(context, title, type, runAfterDownload);
-                        }
-                    }
-                })
-                .show();
-    }
-
-    private void download(Context context, String title, FrameworkZips.Type type, final RunnableWithParam<File> callback) {
-        OnlineFrameworkZip zip = FrameworkZips.getOnline(title, type);
-        new DownloadsUtil.Builder(context)
-                .setTitle(zip.title)
-                .setUrl(zip.url)
-                .setDestinationFromUrl(DownloadsUtil.DOWNLOAD_FRAMEWORK)
-                .setCallback(new DownloadFinishedCallback() {
-                    @Override
-                    public void onDownloadFinished(Context context, DownloadInfo info) {
-                        LOCAL_ZIP_LOADER.triggerReload(true);
-                        callback.run(new File(info.localFilename));
-                    }
-                })
-                .setMimeType(DownloadsUtil.MIME_TYPES.ZIP)
-                .setDialog(true)
-                .download();
-    }
-
-    private static void flash(Context context, Flashable flashable) {
-        Intent install = new Intent(context, InstallationActivity.class);
-        install.putExtra(Flashable.KEY, flashable);
-        context.startActivity(install);
-    }
-
-    private static void saveTo(Context context, File file) {
-        Toast.makeText(context, "Not implemented yet", Toast.LENGTH_SHORT).show();
-    }
-
-    private void refreshZipViewsOnUiThread() {
-        XposedApp.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                refreshZipViews(getView());
-            }
-        });
-    }
-
-    private static final OnlineZipLoader ONLINE_ZIP_LOADER = OnlineZipLoader.getInstance();
-    private final Loader.Listener<OnlineZipLoader> mOnlineZipListener = new Loader.Listener<OnlineZipLoader>() {
-        @Override
-        public void onReloadDone(OnlineZipLoader loader) {
-            refreshZipViewsOnUiThread();
-        }
-    };
-
-    private static final LocalZipLoader LOCAL_ZIP_LOADER = LocalZipLoader.getInstance();
-    private final Loader.Listener<LocalZipLoader> mLocalZipListener = new Loader.Listener<LocalZipLoader>() {
-        @Override
-        public void onReloadDone(LocalZipLoader loader) {
-            refreshZipViewsOnUiThread();
-        }
-    };
 }

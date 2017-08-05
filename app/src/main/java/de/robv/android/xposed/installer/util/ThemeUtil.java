@@ -9,29 +9,8 @@ import de.robv.android.xposed.installer.XposedApp;
 import de.robv.android.xposed.installer.XposedBaseActivity;
 
 public final class ThemeUtil {
-	private static int[] THEMES = new int[] {
-			R.style.Theme_XposedInstaller_Light,
-			R.style.Theme_XposedInstaller_Dark,
-			R.style.Theme_XposedInstaller_Dark_Black, };
-
 	private ThemeUtil() {
 	}
-
-	public static int getSelectTheme() {
-		int theme = XposedApp.getPreferences().getInt("theme", 0);
-		return (theme >= 0 && theme < THEMES.length) ? theme : 0;
-	}
-
-	public static void setTheme(XposedBaseActivity activity) {
-		activity.mTheme = getSelectTheme();
-		activity.setTheme(THEMES[activity.mTheme]);
-	}
-
-	public static void reloadTheme(XposedBaseActivity activity) {
-		int theme = getSelectTheme();
-		if (theme != activity.mTheme)
-			activity.recreate();
-    }
 
     public static int getThemeColor(Context context, int id) {
         Theme theme = context.getTheme();
