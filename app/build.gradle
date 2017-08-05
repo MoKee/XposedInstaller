@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "de.robv.android.xposed.installer"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 23
+        targetSdkVersion 23
         long timestamp = System.currentTimeMillis() / 1000
         versionCode Integer.valueOf(timestamp.toString())
         versionName "3.1.1"
