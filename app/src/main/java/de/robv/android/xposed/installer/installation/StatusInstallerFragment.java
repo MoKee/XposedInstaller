@@ -51,6 +51,7 @@ import de.robv.android.xposed.installer.util.RunnableWithParam;
 
 public class StatusInstallerFragment extends Fragment {
     public static final File DISABLE_FILE = new File(XposedApp.BASE_DIR + "conf/disabled");
+    public static final File ENABLE_FILE = new File(XposedApp.BASE_DIR + "conf/enabled");
     private boolean mShowOutdated = false;
 
     private static boolean checkClassExists(String className) {
@@ -81,16 +82,22 @@ public class StatusInstallerFragment extends Fragment {
 
         // Disable switch
         final SwitchCompat disableSwitch = (SwitchCompat) v.findViewById(R.id.disableSwitch);
-        disableSwitch.setChecked(!DISABLE_FILE.exists());
+        disableSwitch.setChecked(!DISABLE_FILE.exists() && ENABLE_FILE.exists());
         disableSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (DISABLE_FILE.exists()) {
+                if (isChecked) {
                     DISABLE_FILE.delete();
+                    try {
+                        ENABLE_FILE.createNewFile();
+                    } catch (IOException e) {
+                        Log.e(XposedApp.TAG, "Could not create " + ENABLE_FILE, e);
+                    }
                     Snackbar.make(disableSwitch, R.string.xposed_on_next_reboot, Snackbar.LENGTH_LONG).show();
                 } else {
                     try {
                         DISABLE_FILE.createNewFile();
+                        ENABLE_FILE.delete();
                         Snackbar.make(disableSwitch, R.string.xposed_off_next_reboot, Snackbar.LENGTH_LONG).show();
                     } catch (IOException e) {
                         Log.e(XposedApp.TAG, "Could not create " + DISABLE_FILE, e);
