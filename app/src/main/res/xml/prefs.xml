@@ -18,63 +18,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="group_app"
-        android:title="@string/settings_group_app">
-
-        <de.robv.android.xposed.installer.widget.IntegerListPreference
-            android:defaultValue="0"
-            android:entries="@array/theme_texts"
-            android:entryValues="@array/theme_values"
-            android:key="theme"
-            android:summary="%s"
-            android:title="@string/settings_theme"
-            app:useStockLayout="true"/>
-
-        <!--
-          TODO maybe enable again after checking the implementation
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="skip_xposedminversion_check"
-            android:summary="@string/skip_xposedminversion_check_summ"
-            android:title="@string/skip_xposedminversion_check"/>
-
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="snack_bar"
-            android:title="@string/notify_module_update"/>
-
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="chrome_tabs"
-            android:summary="@string/chrome_custom_tabs_summ"
-            android:title="@string/chrome_custom_tabs"/>
-
-        <Preference
-            android:key="download_location"
-            android:summary="@string/download_location_summ"
-            android:title="@string/download_location"/>
-        -->
-
-        <de.robv.android.xposed.installer.widget.IntegerListPreference
-            android:defaultValue="0"
-            android:entries="@array/default_view_texts"
-            android:entryValues="@array/default_view_values"
-            android:key="default_view"
-            android:summary="%s"
-            android:title="@string/settings_default_view"
-            app:useStockLayout="true"/>
-
-        <!--
-          TODO maybe enable again after checking the implementation
-        <CheckBoxPreference
-            android:key="open_drawer"
-            android:summary="@string/open_drawer_summ"
-            android:title="@string/open_drawer"/>
-        -->
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="group_experimental"
         android:title="@string/settings_group_experimental">
 

@@ -1,29 +1,11 @@
 package de.robv.android.xposed.installer;
 
 import android.os.Build;
-import android.os.Bundle;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-import de.robv.android.xposed.installer.util.ThemeUtil;
-
 public abstract class XposedBaseActivity extends AppCompatActivity {
-    public int mTheme = -1;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceBundle) {
-        super.onCreate(savedInstanceBundle);
-        ThemeUtil.setTheme(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        ThemeUtil.reloadTheme(this);
-    }
-
     @SuppressWarnings("deprecation")
     public void setFloating(android.support.v7.widget.Toolbar toolbar, @StringRes int details) {
         boolean isTablet = getResources().getBoolean(R.bool.isTablet);
