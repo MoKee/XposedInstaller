@@ -21,14 +21,12 @@ import java.io.File;
 import java.io.IOException;
 
 import de.robv.android.xposed.installer.util.RepoLoader;
-import de.robv.android.xposed.installer.util.ThemeUtil;
 
 public class SettingsActivity extends XposedBaseActivity implements FolderChooserDialog.FolderCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.setTheme(this);
         setContentView(R.layout.activity_container);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
