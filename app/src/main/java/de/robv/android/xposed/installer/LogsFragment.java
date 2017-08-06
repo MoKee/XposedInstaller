@@ -24,8 +24,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.afollestad.materialdialogs.MaterialDialog;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -222,7 +220,7 @@ public class LogsFragment extends Fragment {
                 now.get(Calendar.DAY_OF_MONTH), now.get(Calendar.HOUR_OF_DAY),
                 now.get(Calendar.MINUTE), now.get(Calendar.SECOND));
 
-        File dir =  getActivity().getExternalFilesDir(null);
+        File dir = getActivity().getExternalFilesDir(null);
 
         if (!dir.exists()) dir.mkdir();
 
@@ -251,7 +249,6 @@ public class LogsFragment extends Fragment {
     private class LogsReader extends AsyncTask<File, Integer, String> {
 
         private static final int MAX_LOG_SIZE = 1000 * 1024; // 1000 KB
-        private MaterialDialog mProgressDialog;
 
         private long skipLargeFile(BufferedReader is, long length) throws IOException {
             if (length < MAX_LOG_SIZE)
@@ -273,11 +270,6 @@ public class LogsFragment extends Fragment {
 
             return skipped;
 
-        }
-
-        @Override
-        protected void onPreExecute() {
-            mProgressDialog = new MaterialDialog.Builder(getActivity()).content(R.string.loading).progress(true, 0).show();
         }
 
         @Override
@@ -312,7 +304,6 @@ public class LogsFragment extends Fragment {
 
         @Override
         protected void onPostExecute(String llog) {
-            mProgressDialog.dismiss();
             mTxtLog.append(llog);
 
             if (llog.length() == 0)
