@@ -129,7 +129,6 @@
   <string name="download_could_not_read_file">Není možné načíst stažený soubor: %s</string>
   <string name="download_no_valid_apk">Stažený soubor není validní APK (nebo není kompatibilní)</string>
   <string name="download_incorrect_package_name">Název balíčku není správný (staženo: %1$s, očekáváno: %2$s)</string>
-  <string name="download_running">Probíhá stahování</string>
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">Stahování %1$s selhalo: %2$d (%3$s)</string>
   <string name="repo_download_failed">Stahování %1$s selhalo: %2$s</string>
@@ -137,29 +136,8 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Tento modul nemohl být načten protože je nainstalován na kartě SD, přesuňte jej prosím do interní paměti.</string>
   <string name="view">ZOBRAZIT</string>
-  <string name="export_">Exportování…</string>
-  <string name="import_">Importování…</string>
-  <string name="export_enabled_modules">Exportovat seznam povolených modulů</string>
-  <string name="import_enabled_modules">Importovat seznam povolených modulů</string>
-  <string name="export_installed_modules">Exportovat seznam nainstalovaných modulů</string>
-  <string name="import_installed_modules">Importovat seznam nainstalovaných modulů</string>
-  <string name="no_installed_modules">Žádné Xposed moduly nebyly nalezeny!</string>
-  <string name="no_backup_found">Nenalezena žádná záloha</string>
-  <string name="no_enabled_modules">Nejsou povoleny žádné moduly</string>
-  <string name="share">Sdílet…</string>
   <string name="permissionNotGranted">Tato funkce nebude fungovat bez udělení oprávnění k zápisu na externí úložiště.</string>
-  <string name="add_bookmark">Přidat záložku</string>
-  <string name="remove_bookmark">Odstranit záložku</string>
-  <string name="bookmarks">Záložky</string>
-  <string name="no_bookmark_added">Nebyla přidána žádná záložka</string>
-  <string name="bookmark_added">Založka přidána</string>
-  <string name="bookmark_removed">Záložka odstraněna</string>
-  <string name="undo">Vrátit zpět</string>
-  <string name="file_is_empty">Soubor je prázdny</string>
-  <string name="install_remove">Instalovat a odstranit</string>
-  <string name="download_remove">Stáhnout a odebrat</string>
   <string name="module_saved">Modul byl uložen %1$s</string>
-  <string name="loading">Načítání…</string>
   <string name="save">Uložit</string>
   <string name="update_download_list">Přejděte dolů pro obnovení seznamu modulů na převzetí</string>
 </resources>

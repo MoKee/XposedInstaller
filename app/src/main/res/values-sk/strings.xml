@@ -129,7 +129,6 @@
   <string name="download_could_not_read_file">Nemožno čítať stiahnutý súbor: %s</string>
   <string name="download_no_valid_apk">Stiahnutý súbor nie je platný APK súbor (alebo nie je kompatibilný)</string>
   <string name="download_incorrect_package_name">Názov balíka nie je správny (stiahnuté: %1$s, očakávané: %2$s)</string>
-  <string name="download_running">Prebieha sťahovanie</string>
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">Sťahovanie %1$s zlyhalo: %2$d (%3$s)</string>
   <string name="repo_download_failed">Sťahovanie %1$s zlyhalo: %2$s</string>
@@ -137,29 +136,8 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Tento modul nemôže byť načítaný, pretože je nainštalovaný na karte SD, prosím, presuňte ho do interného úložiska.</string>
   <string name="view">ZOBRAZIŤ</string>
-  <string name="export_">Exportuje sa…</string>
-  <string name="import_">Importuje sa…</string>
-  <string name="export_enabled_modules">Exportovať zoznam povolených modulov</string>
-  <string name="import_enabled_modules">Importovať zoznam povolených modulov</string>
-  <string name="export_installed_modules">Exportovať zoznam inštalovaných modulov</string>
-  <string name="import_installed_modules">Importovať zoznam inštalovaných modulov</string>
-  <string name="no_installed_modules">Nie je nainštalovaný žiadny modul!</string>
-  <string name="no_backup_found">Záloha nenájdená</string>
-  <string name="no_enabled_modules">Nie sú povolené žiadne moduly</string>
-  <string name="share">Zdieľať…</string>
   <string name="permissionNotGranted">Táto funkcia nebude fungovať bez povolenia zapisovať na externé úložisko.</string>
-  <string name="add_bookmark">Pridať záložku</string>
-  <string name="remove_bookmark">Odstrániť záložku</string>
-  <string name="bookmarks">Záložky</string>
-  <string name="no_bookmark_added">Nebola pridaná žiadna záložka</string>
-  <string name="bookmark_added">Záložka pridaná</string>
-  <string name="bookmark_removed">Záložka odstránená</string>
-  <string name="undo">Späť</string>
-  <string name="file_is_empty">Súbor je prázdny</string>
-  <string name="install_remove">Nainštalovať a odstrániť</string>
-  <string name="download_remove">Stiahnuť a odstrániť</string>
   <string name="module_saved">Modul bol uložený %1$s</string>
-  <string name="loading">Načítavanie…</string>
   <string name="save">Uložiť</string>
   <string name="update_download_list">Prejdite dolu pre obnovenie zoznamu modulov na prevzatie</string>
 </resources>

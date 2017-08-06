@@ -116,11 +116,5 @@
   <string name="repo_download_failed">Звантаження %1$s скаовано: %2$s</string>
   <string name="repo_load_failed">Помилка завантаження репозиторію з %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="add_bookmark">Додати закладку</string>
-  <string name="bookmarks">Закладки</string>
-  <string name="bookmark_added">Закладку додано</string>
-  <string name="undo">Відмінити</string>
-  <string name="file_is_empty">Файл пустий</string>
-  <string name="loading">Завантаження...</string>
   <string name="save">Зберегти</string>
 </resources>

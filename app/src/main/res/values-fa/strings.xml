@@ -30,11 +30,5 @@
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
-  <string name="add_bookmark">افزودن نشانک</string>
-  <string name="bookmarks">نشانک‌ها</string>
-  <string name="bookmark_added">نشانک اضافه شد</string>
-  <string name="undo">واگرد</string>
-  <string name="file_is_empty">فایل خالی است</string>
-  <string name="loading">در حال بارگذاری...</string>
   <string name="save">ذخیره</string>
 </resources>

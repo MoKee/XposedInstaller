@@ -131,28 +131,7 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">このモジュールはSDカードにインストールされているため、読み込めませんでした。内部ストレージに移動してください。</string>
   <string name="view">表示</string>
-  <string name="export_">エクスポート</string>
-  <string name="import_">インポート</string>
-  <string name="export_enabled_modules">有効になっているモジュールのリストをエクスポート</string>
-  <string name="import_enabled_modules">有効になっていたモジュールのリストをインポート</string>
-  <string name="export_installed_modules">インストールされているモジュールのリストをエクスポート</string>
-  <string name="import_installed_modules">インストールされていたモジュールのリストをインポート</string>
-  <string name="no_installed_modules">インストールされているモジュールがありません</string>
-  <string name="no_backup_found">バックアップが見つかりません</string>
-  <string name="no_enabled_modules">有効になっているモジュールがありません</string>
-  <string name="share">共有方法</string>
   <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません。</string>
-  <string name="add_bookmark">ブックマークを追加</string>
-  <string name="remove_bookmark">ブックマークを削除</string>
-  <string name="bookmarks">ブックマーク</string>
-  <string name="no_bookmark_added">ブックマークが追加されていません</string>
-  <string name="bookmark_added">ブックマークを追加しました</string>
-  <string name="bookmark_removed">ブックマークを削除しました</string>
-  <string name="undo">元に戻す</string>
-  <string name="file_is_empty">ファイルは空です</string>
-  <string name="install_remove">インストールして削除</string>
-  <string name="download_remove">ダウンロードして削除</string>
   <string name="module_saved">モジュールを%1$sに保存しました</string>
-  <string name="loading">読み込み中…</string>
   <string name="save">保存</string>
 </resources>

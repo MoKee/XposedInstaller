@@ -19,6 +19,5 @@
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
-  <string name="undo">មិន​ធ្វើវិញ</string>
   <string name="save">រក្សាទុក</string>
 </resources>

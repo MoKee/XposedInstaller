@@ -17,7 +17,5 @@
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
-  <string name="file_is_empty">El ficheru ta baleru</string>
-  <string name="loading">Cargando…</string>
   <string name="save">Guardar</string>
 </resources>

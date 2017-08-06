@@ -114,11 +114,5 @@
   <string name="repo_download_failed">Tải xuống %1$s không thành công: %2$s</string>
   <string name="repo_load_failed">Không thể tải kho module từ %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="add_bookmark">Thêm dấu trang</string>
-  <string name="bookmarks">Dấu trang</string>
-  <string name="bookmark_added">Đã thêm dấu trang</string>
-  <string name="undo">Hoàn tác</string>
-  <string name="file_is_empty">Tệp rỗng</string>
-  <string name="loading">Đang tải…</string>
   <string name="save">Lưu</string>
 </resources>

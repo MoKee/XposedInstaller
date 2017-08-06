@@ -19,9 +19,5 @@
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
-  <string name="add_bookmark">Lisa järjehoidja</string>
-  <string name="bookmarks">Järjehoidjad</string>
-  <string name="bookmark_added">Järjehoidja lisatud</string>
-  <string name="undo">Võta tagasi</string>
   <string name="save">Salvesta</string>
 </resources>

@@ -131,27 +131,7 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Ten moduł nie może zostać załadowany, ponieważ jest zainstalowany na karcie SD, przenieś go do pamięci wewnętrznej.</string>
   <string name="view">PODGLĄD</string>
-  <string name="export_">Eksport…</string>
-  <string name="export_enabled_modules">Eksport listy włączonych modułów</string>
-  <string name="import_enabled_modules">Import listy włączonych modułów</string>
-  <string name="export_installed_modules">Eksport listy zainstalowanych modułów</string>
-  <string name="import_installed_modules">Import listy zainstalowanych modułów</string>
-  <string name="no_installed_modules">Brak zainstalowanych modułów!</string>
-  <string name="no_backup_found">Nie znaleziono kopii zapasowej</string>
-  <string name="no_enabled_modules">Brak aktywnych modułów</string>
-  <string name="share">Udostępnij przez…</string>
   <string name="permissionNotGranted">Ta funkcja nie zadziała bez uprawnienia zapisu zewnętrznej pamięci masowej.</string>
-  <string name="add_bookmark">Dodaj zakładkę</string>
-  <string name="remove_bookmark">Usuń zakładkę</string>
-  <string name="bookmarks">Zakładki</string>
-  <string name="no_bookmark_added">Brak dodanej zakładki</string>
-  <string name="bookmark_added">Dodano zakładkę</string>
-  <string name="bookmark_removed">Usunięto zakładkę</string>
-  <string name="undo">Cofnij</string>
-  <string name="file_is_empty">Plik jest pusty</string>
-  <string name="install_remove">Zainstaluj i usuń</string>
-  <string name="download_remove">Pobierz i usuń</string>
   <string name="module_saved">Moduł zapisany %1$s</string>
-  <string name="loading">Ładowanie…</string>
   <string name="save">Zapisz</string>
 </resources>

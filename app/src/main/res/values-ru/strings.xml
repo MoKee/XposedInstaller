@@ -135,28 +135,7 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Этот модуль не может быть загружен, потому что он установлен на SD-карту, переместите его во внутреннюю память.</string>
   <string name="view">Смотреть</string>
-  <string name="export_">Экспорт модулей</string>
-  <string name="import_">Импорт модулей</string>
-  <string name="export_enabled_modules">Экспорт списка включенных модулей</string>
-  <string name="import_enabled_modules">Импорт списка включенных модулей</string>
-  <string name="export_installed_modules">Экспорт списка установленных модулей</string>
-  <string name="import_installed_modules">Импорт списка установленных модулей</string>
-  <string name="no_installed_modules">Установленных модулей нет!</string>
-  <string name="no_backup_found">Резервные копии не найдены</string>
-  <string name="no_enabled_modules">Нет включенных модулей</string>
-  <string name="share">Поделиться</string>
   <string name="permissionNotGranted">Эта функция не будет работать без разрешения на запись для накопителя.</string>
-  <string name="add_bookmark">Добавить закладку</string>
-  <string name="remove_bookmark">Удалить закладку</string>
-  <string name="bookmarks">Закладки</string>
-  <string name="no_bookmark_added">Нет добавленных закладок</string>
-  <string name="bookmark_added">Закладка добавлена</string>
-  <string name="bookmark_removed">Закладка удалена</string>
-  <string name="undo">Отменить</string>
-  <string name="file_is_empty">Файлов нет</string>
-  <string name="install_remove">Установить и удалить</string>
-  <string name="download_remove">Скачать и удалить</string>
   <string name="module_saved">Модуль сохранен в %1$s</string>
-  <string name="loading">Загрузка…</string>
   <string name="save">Сохранить</string>
 </resources>

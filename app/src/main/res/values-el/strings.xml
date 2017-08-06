@@ -112,11 +112,5 @@
   <string name="repo_download_failed">Το κατέβασμα %1$s απέτυχε: %2$s</string>
   <string name="repo_load_failed">Αδυναμία φόρτωσης αποθετηρίου (repository) από %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="add_bookmark">Προσθήκη σελιδοδείκτη</string>
-  <string name="bookmarks">Σελιδοδείκτες</string>
-  <string name="bookmark_added">Ο σελιδοδείκτης προστέθηκε</string>
-  <string name="undo">Αναίρεση</string>
-  <string name="file_is_empty">Το αρχείο είναι κενό</string>
-  <string name="loading">Φόρτωση…</string>
   <string name="save">Αποθήκευση</string>
 </resources>

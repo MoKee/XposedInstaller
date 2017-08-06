@@ -132,28 +132,7 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">ไม่สามารถโหลดโมดูลนี้เพราะติดตั้งบนการ์ดความจำ กรุณาย้ายไปยังหน่วยความจำภายใน</string>
   <string name="view">แสดง</string>
-  <string name="export_">ส่งออก…</string>
-  <string name="import_">นำเข้า…</string>
-  <string name="export_enabled_modules">ส่งออกรายการโมดูลที่เปิดใช้งาน</string>
-  <string name="import_enabled_modules">นำเข้ารายการโมดูลที่เปิดใช้งาน</string>
-  <string name="export_installed_modules">ส่งออกรายการโมดูลที่ติดตั้ง</string>
-  <string name="import_installed_modules">นำเข้ารายการโมดูลที่ติดตั้ง</string>
-  <string name="no_installed_modules">ยังไม่ได้ติดตั้งโมดูล</string>
-  <string name="no_backup_found">ไม่พบสำรองข้อมูล</string>
-  <string name="no_enabled_modules">ยังไม่มีโมดูลเปิดใช้งาน</string>
-  <string name="share">แบ่งปันด้วย…</string>
   <string name="permissionNotGranted">คุณสมบัตินี้จะไม่ทำงาน หากไม่ได้รับการอนุญาตเพื่อเขียนข้อมูลไปยังที่เก็บข้อมูลภายนอก</string>
-  <string name="add_bookmark">เพิ่มบุ๊คมาร์ค</string>
-  <string name="remove_bookmark">ลบบุ๊คมาร์ค</string>
-  <string name="bookmarks">บุ๊คมาร์ค</string>
-  <string name="no_bookmark_added">ไม่มีบุ๊คมาร์ค</string>
-  <string name="bookmark_added">เพิ่มบุ๊คมาร์คแล้ว</string>
-  <string name="bookmark_removed">ลบบุ๊คมาร์คแล้ว</string>
-  <string name="undo">ย้อนกลับ</string>
-  <string name="file_is_empty">ไฟล์ว่างเปล่า</string>
-  <string name="install_remove">ติดตั้งและลบ</string>
-  <string name="download_remove">ดาวน์โหลดและลบ</string>
   <string name="module_saved">โมดูลบันทึกที่ %1$s</string>
-  <string name="loading">กำลังโหลด…</string>
   <string name="save">บันทึก</string>
 </resources>
