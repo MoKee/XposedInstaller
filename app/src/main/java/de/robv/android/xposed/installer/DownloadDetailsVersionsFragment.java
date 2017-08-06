@@ -87,6 +87,7 @@ public class DownloadDetailsVersionsFragment extends ListFragment {
         getListView().setDividerHeight(sixDp);
         getListView().setPadding(eightDp, eightDp, eightDp, eightDp);
         getListView().setClipToPadding(false);
+        getListView().setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);
     }
 
     @Override
@@ -192,8 +193,8 @@ public class DownloadDetailsVersionsFragment extends ListFragment {
             mColorRelTypeOthers = getResources().getColor(R.color.warning);
             mColorInstalled = ThemeUtil.getThemeColor(context, R.attr.download_status_installed);
             mColorUpdateAvailable = getResources().getColor(R.color.download_status_update_available);
-            mTextInstalled = getString(R.string.download_section_installed) + ":";
-            mTextUpdateAvailable = getString(R.string.download_section_update_available) + ":";
+            mTextInstalled = getString(R.string.download_section_installed);
+            mTextUpdateAvailable = getString(R.string.download_section_update_available);
             mInstalledVersionCode = (installed != null) ? installed.versionCode : -1;
         }
 

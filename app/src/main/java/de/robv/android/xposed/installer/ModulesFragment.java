@@ -9,6 +9,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBar;
 import android.util.DisplayMetrics;
@@ -20,11 +21,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,10 +47,9 @@ import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
 public class ModulesFragment extends ListFragment implements ModuleListener {
 
     public static final String SETTINGS_CATEGORY = "de.robv.android.xposed.category.MODULE_SETTINGS";
+
     public static final String PLAY_STORE_PACKAGE = "com.android.vending";
     public static final String PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=%s";
-    public static final String XPOSED_REPO_LINK = "http://repo.xposed.info/module/%s";
-    private static final String NOT_ACTIVE_NOTE_TAG = "NOT_ACTIVE_NOTE";
 
     private static String PLAY_STORE_LABEL = null;
 
@@ -136,11 +136,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
         String packageName = (String) v.getTag();
         if (packageName == null)
             return;
-
-        if (packageName.equals(NOT_ACTIVE_NOTE_TAG)) {
-            ((WelcomeActivity) getActivity()).switchFragment(0);
-            return;
-        }
 
         Intent launchIntent = getSettingsIntent(packageName);
         if (launchIntent != null)
@@ -255,18 +250,20 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
     }
 
     private class ModuleAdapter extends ArrayAdapter<InstalledModule> {
-        public ModuleAdapter(Context context) {
+
+        ModuleAdapter(Context context) {
             super(context, R.layout.list_item_module, R.id.title);
         }
 
+        @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             View view = super.getView(position, convertView, parent);
 
             if (convertView == null) {
                 // The reusable view was created for the first time, set up the
                 // listener on the checkbox
-                ((CheckBox) view.findViewById(R.id.checkbox)).setOnCheckedChangeListener(new OnCheckedChangeListener() {
+                ((Switch) view.findViewById(R.id.checkbox)).setOnCheckedChangeListener(new OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         String packageName = (String) buttonView.getTag();
@@ -299,7 +296,7 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
                 descriptionText.setTextColor(getResources().getColor(R.color.warning));
             }
 
-            CheckBox checkbox = (CheckBox) view.findViewById(R.id.checkbox);
+            Switch checkbox = (Switch) view.findViewById(R.id.checkbox);
             checkbox.setChecked(mModuleUtil.isModuleEnabled(item.packageName));
             TextView warningText = (TextView) view.findViewById(R.id.warning);
 
