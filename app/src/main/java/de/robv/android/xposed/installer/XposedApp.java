@@ -58,10 +58,6 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         }
     }
 
-    public static void postOnUiThread(Runnable action) {
-        mMainHandler.post(action);
-    }
-
     // This method is hooked by XposedBridge to return the current version
     public static int getActiveXposedVersion() {
         return -1;

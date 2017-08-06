@@ -1,11 +1,11 @@
 package de.robv.android.xposed.installer;
 
 import android.app.Activity;
-import android.app.ListFragment;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -35,6 +35,7 @@ import de.robv.android.xposed.installer.widget.DownloadView;
 import static de.robv.android.xposed.installer.XposedApp.WRITE_EXTERNAL_PERMISSION;
 
 public class DownloadDetailsVersionsFragment extends ListFragment {
+
     private static VersionsAdapter sAdapter;
     private DownloadDetailsActivity mActivity;
     private Module module;

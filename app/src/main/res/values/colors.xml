@@ -11,17 +11,12 @@
     <color name="amber_500">#FFC107</color>
 
     <!-- light theme-->
-    <color name="background_material_light">#ffeeeeee</color>
+    <color name="background_light">#fff4f4f4</color>
     <color name="list_download_item_color_light">#fff</color>
     <color name="card_background_light">#fff</color>
     <color name="card_background_pressed_light">#dfdfdf</color>
     <color name="card_shadow_light">#dbdbdb</color>
     <color name="pager_tab_strip_bg_light">#222</color>
     <color name="sticky_header_background_light">#e5e5e5</color>
-
-    <!-- dark theme -->
-
-    <!-- black theme -->
-
 
 </resources>

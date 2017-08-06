@@ -5,6 +5,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -14,13 +15,12 @@ import android.widget.TextView;
 
 import de.psdev.licensesdialog.LicensesDialog;
 import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
-import de.psdev.licensesdialog.licenses.MITLicense;
 import de.psdev.licensesdialog.licenses.SILOpenFontLicense11;
 import de.psdev.licensesdialog.model.Notice;
 import de.psdev.licensesdialog.model.Notices;
 import de.robv.android.xposed.installer.util.NavUtil;
 
-public class AboutActivity extends XposedBaseActivity {
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,6 @@ public class AboutActivity extends XposedBaseActivity {
             ab.setTitle(R.string.nav_item_about);
             ab.setDisplayHomeAsUpEnabled(true);
         }
-
-        setFloating(toolbar, R.string.nav_item_about);
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction().add(R.id.container, new AboutFragment()).commit();

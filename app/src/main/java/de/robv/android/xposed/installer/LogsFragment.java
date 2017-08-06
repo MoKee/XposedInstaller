@@ -2,7 +2,6 @@ package de.robv.android.xposed.installer;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -11,8 +10,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v13.app.FragmentCompat;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -59,23 +58,6 @@ public class LogsFragment extends Fragment {
         mSVLog = (ScrollView) v.findViewById(R.id.svLog);
         mHSVLog = (HorizontalScrollView) v.findViewById(R.id.hsvLog);
         reloadErrorLog();
-/*
-        View scrollTop = v.findViewById(R.id.scroll_top);
-        View scrollDown = v.findViewById(R.id.scroll_down);
-
-        scrollTop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scrollTop();
-            }
-        });
-        scrollDown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scrollDown();
-            }
-        });
-*/
         return v;
     }
 
@@ -204,7 +186,7 @@ public class LogsFragment extends Fragment {
     @SuppressLint("DefaultLocale")
     private File save() {
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            FragmentCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);
+            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);
             return null;
         }
 

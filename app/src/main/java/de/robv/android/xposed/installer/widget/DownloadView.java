@@ -2,11 +2,10 @@ package de.robv.android.xposed.installer.widget;
 
 import android.Manifest;
 import android.app.DownloadManager;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.support.v13.app.FragmentCompat;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -178,7 +177,7 @@ public class DownloadView extends LinearLayout {
     private boolean checkPermissions() {
         if (ActivityCompat.checkSelfPermission(this.getContext(),
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            FragmentCompat.requestPermissions(fragment, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);
+            fragment.requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);
             return true;
         }
         return false;
