@@ -151,14 +151,7 @@
     <!-- Most of these belong to currently hidden features -->
     <string name="warning_installed_on_external_storage">This module cannot be loaded because it\'s installed on the SD card, please move it to internal storage.</string>
     <string name="view">VIEW</string>
-    <string name="no_backup_found">No backup found</string>
-    <string name="share">Share with…</string>
     <string name="permissionNotGranted">This feature will not work without permission to write external storage.</string>
-    <string name="add_bookmark">Add bookmark</string>
-    <string name="remove_bookmark">Remove bookmark</string>
-    <string name="bookmark_added">Bookmark added</string>
-    <string name="bookmark_removed">Bookmark removed</string>
-    <string name="file_is_empty">File is empty</string>
     <string name="module_saved">Module saved at %1$s</string>
     <string name="save">Save</string>
     <string name="update_download_list">Pulldown to refresh download\'s module list</string>

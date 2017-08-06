@@ -2,10 +2,11 @@ package de.robv.android.xposed.installer;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
+import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.CheckBoxPreference;
+import android.support.v7.preference.Preference;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
@@ -15,7 +16,7 @@ import java.io.IOException;
 
 import de.robv.android.xposed.installer.util.RepoLoader;
 
-public class SettingsActivity extends XposedBaseActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,6 @@ public class SettingsActivity extends XposedBaseActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-        setFloating(toolbar, 0);
-
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new SettingsFragment()).commit();
@@ -47,17 +46,13 @@ public class SettingsActivity extends XposedBaseActivity {
 
     }
 
-    public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
-        private static final File mDisableResourcesFlag = new File(XposedApp.BASE_DIR + "conf/disable_resources");
-        private Preference mClickedPreference;
-        private Preference downloadLocation;
+    public static class SettingsFragment extends PreferenceFragment implements
+            SharedPreferences.OnSharedPreferenceChangeListener {
 
-        public SettingsFragment() {
-        }
+        private static final File mDisableResourcesFlag = new File(XposedApp.BASE_DIR + "conf/disable_resources");
 
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(R.xml.prefs);
 
             findPreference("release_type_global").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

@@ -4,17 +4,6 @@
       xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/menu_bookmark"
-        app:showAsAction="ifRoom"
-        tools:ignore="MenuTitle"/>
-
-    <item
-        android:id="@+id/menu_share"
-        android:icon="@drawable/ic_action_share"
-        android:title="@string/share"
-        app:showAsAction="ifRoom"/>
-
-    <item
         android:id="@+id/menu_refresh"
         android:icon="@drawable/ic_menu_refresh"
         android:title="@string/menuReload"

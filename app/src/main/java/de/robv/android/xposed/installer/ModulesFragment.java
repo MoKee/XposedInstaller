@@ -1,7 +1,5 @@
 package de.robv.android.xposed.installer;
 
-import android.Manifest;
-import android.app.ListFragment;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -11,14 +9,9 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v13.app.FragmentCompat;
-import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBar;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -35,45 +28,35 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.text.Collator;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-import de.robv.android.xposed.installer.repo.Module;
-import de.robv.android.xposed.installer.repo.ModuleVersion;
-import de.robv.android.xposed.installer.repo.ReleaseType;
 import de.robv.android.xposed.installer.repo.RepoDb;
 import de.robv.android.xposed.installer.repo.RepoDb.RowNotFoundException;
-import de.robv.android.xposed.installer.util.DownloadsUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
 import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
 import de.robv.android.xposed.installer.util.NavUtil;
-import de.robv.android.xposed.installer.util.RepoLoader;
 import de.robv.android.xposed.installer.util.ThemeUtil;
 
 import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
-import static de.robv.android.xposed.installer.XposedApp.WRITE_EXTERNAL_PERMISSION;
 
 public class ModulesFragment extends ListFragment implements ModuleListener {
+
     public static final String SETTINGS_CATEGORY = "de.robv.android.xposed.category.MODULE_SETTINGS";
     public static final String PLAY_STORE_PACKAGE = "com.android.vending";
     public static final String PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=%s";
     public static final String XPOSED_REPO_LINK = "http://repo.xposed.info/module/%s";
     private static final String NOT_ACTIVE_NOTE_TAG = "NOT_ACTIVE_NOTE";
+
     private static String PLAY_STORE_LABEL = null;
+
     private ModuleUtil mModuleUtil;
     private ModuleAdapter mAdapter = null;
     private PackageManager mPm = null;
+
     private Runnable reloadModules = new Runnable() {
         public void run() {
             mAdapter.setNotifyOnChange(false);
@@ -89,7 +72,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
             mAdapter.notifyDataSetChanged();
         }
     };
-    private MenuItem mClickedMenuItem = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -129,102 +111,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
         getListView().setDividerHeight(sixDp);
         getListView().setPadding(eightDp, toolBarDp + eightDp, eightDp, eightDp);
         getListView().setClipToPadding(false);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions,
-                grantResults);
-        if (requestCode == WRITE_EXTERNAL_PERMISSION) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                if (mClickedMenuItem != null) {
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            onOptionsItemSelected(mClickedMenuItem);
-                        }
-                    }, 500);
-                }
-            } else {
-                Toast.makeText(getActivity(), R.string.permissionNotGranted, Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    private boolean checkPermissions() {
-        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            FragmentCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);
-            return true;
-        }
-        return false;
-    }
-
-    private boolean importModules(File path) {
-        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            Toast.makeText(getActivity(), R.string.sdcard_not_writable, Toast.LENGTH_LONG).show();
-            return false;
-        }
-        InputStream ips = null;
-        RepoLoader repoLoader = RepoLoader.getInstance();
-        List<Module> list = new ArrayList<>();
-        if (!path.exists()) {
-            Toast.makeText(getActivity(), getString(R.string.no_backup_found),
-                    Toast.LENGTH_LONG).show();
-            return false;
-        }
-        try {
-            ips = new FileInputStream(path);
-        } catch (FileNotFoundException e) {
-            Log.e(XposedApp.TAG, "Could not open " + path, e);
-        }
-
-        if (path.length() == 0) {
-            Toast.makeText(getActivity(), R.string.file_is_empty, Toast.LENGTH_LONG).show();
-            return false;
-        }
-
-        try {
-            assert ips != null;
-            InputStreamReader ipsr = new InputStreamReader(ips);
-            BufferedReader br = new BufferedReader(ipsr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                Module m = repoLoader.getModule(line);
-
-                if (m == null) {
-                    Toast.makeText(getActivity(), getString(R.string.download_details_not_found,
-                            line), Toast.LENGTH_SHORT).show();
-                } else {
-                    list.add(m);
-                }
-            }
-            br.close();
-        } catch (ActivityNotFoundException | IOException e) {
-            Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show();
-        }
-
-        for (Module m : list) {
-            ModuleVersion mv = null;
-            for (int i = 0; i < m.versions.size(); i++) {
-                ModuleVersion mvTemp = m.versions.get(i);
-
-                if (mvTemp.relType == ReleaseType.STABLE) {
-                    mv = mvTemp;
-                    break;
-                }
-            }
-
-            if (mv != null) {
-                DownloadsUtil.add(getActivity(), m.name, mv.downloadLink, new DownloadsUtil.DownloadFinishedCallback() {
-                    @Override
-                    public void onDownloadFinished(Context context, DownloadsUtil.DownloadInfo info) {
-                        XposedApp.installApk(context, info);
-                    }
-                }, DownloadsUtil.MIME_TYPES.APK);
-            }
-        }
-
-        return true;
     }
 
     @Override

@@ -19,7 +19,8 @@
             android:name=".WelcomeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.XposedInstaller.Light.WithDrawer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

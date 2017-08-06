@@ -1,6 +1,5 @@
 package de.robv.android.xposed.installer;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +8,7 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -42,7 +42,9 @@ import de.robv.android.xposed.installer.util.ThemeUtil;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
-public class DownloadFragment extends Fragment implements Loader.Listener<RepoLoader>, ModuleListener {
+public class DownloadFragment extends Fragment implements
+        Loader.Listener<RepoLoader>, ModuleListener {
+
     private SharedPreferences mPref;
     private DownloadsAdapter mAdapter;
     private String mFilterText;

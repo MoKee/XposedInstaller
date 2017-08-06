@@ -4,10 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceFragmentCompat;
+import android.support.v7.preference.PreferenceManager;
 
 import java.util.Map;
 
@@ -15,7 +14,8 @@ import de.robv.android.xposed.installer.repo.Module;
 import de.robv.android.xposed.installer.util.PrefixedSharedPreferences;
 import de.robv.android.xposed.installer.util.RepoLoader;
 
-public class DownloadDetailsSettingsFragment extends PreferenceFragment {
+public class DownloadDetailsSettingsFragment extends PreferenceFragmentCompat {
+
     private DownloadDetailsActivity mActivity;
 
     @Override
@@ -25,9 +25,7 @@ public class DownloadDetailsSettingsFragment extends PreferenceFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final Module module = mActivity.getModule();
         if (module == null)
             return;
@@ -53,7 +51,7 @@ public class DownloadDetailsSettingsFragment extends PreferenceFragment {
         }
 
         findPreference("release_type").setOnPreferenceChangeListener(
-                new OnPreferenceChangeListener() {
+                new Preference.OnPreferenceChangeListener() {
                     @Override
                     public boolean onPreferenceChange(Preference preference,
                                                       Object newValue) {

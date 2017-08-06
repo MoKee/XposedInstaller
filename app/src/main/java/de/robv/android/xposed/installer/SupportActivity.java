@@ -3,6 +3,7 @@ package de.robv.android.xposed.installer;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 import de.robv.android.xposed.installer.util.NavUtil;
 
-public class SupportActivity extends XposedBaseActivity {
+public class SupportActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,6 @@ public class SupportActivity extends XposedBaseActivity {
             ab.setTitle(R.string.nav_item_support);
             ab.setDisplayHomeAsUpEnabled(true);
         }
-
-        setFloating(toolbar, 0);
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction().add(R.id.container, new SupportFragment()).commit();
