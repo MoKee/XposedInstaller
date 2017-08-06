@@ -146,28 +146,7 @@
     <!-- Most of these belong to currently hidden features -->
     <string name="warning_installed_on_external_storage">Este módulo não pode ser carregado pois está instalado no cartão SD. Mova-o para a memória interna, por favor.</string>
     <string name="view">VER</string>
-    <string name="export_">Exportar…</string>
-    <string name="import_">Importar…</string>
-    <string name="export_enabled_modules">Exportar lista de módulos ativos</string>
-    <string name="import_enabled_modules">Importar lista de módulos ativos</string>
-    <string name="export_installed_modules">Exportar lista de módulos instalados</string>
-    <string name="import_installed_modules">Importar lista de módulos instalados</string>
-    <string name="no_installed_modules">Não existem módulos instalados!</string>
-    <string name="no_backup_found">Não foi encontrado nenhum \"backup\"</string>
-    <string name="no_enabled_modules">Não existem módulos ativos</string>
-    <string name="share">Partilhar com…</string>
     <string name="permissionNotGranted">Esta funcionalidade não funcionará sem a permissão de escrita para o cartão SD.</string>
-    <string name="add_bookmark">Adicionar marcador</string>
-    <string name="remove_bookmark">Remover marcador</string>
-    <string name="bookmarks">Marcadores</string>
-    <string name="no_bookmark_added">Não foi adicionado nenhum marcador</string>
-    <string name="bookmark_added">Marcador adicionado</string>
-    <string name="bookmark_removed">Marcador removido</string>
-    <string name="undo">Reverter</string>
-    <string name="file_is_empty">O ficheiro está vazio</string>
-    <string name="install_remove">Instalar e remover</string>
-    <string name="download_remove">Descarregar e remover</string>
     <string name="module_saved">Módulo guardado em %1$s</string>
-    <string name="loading">A carregar…</string>
 
 </resources>
