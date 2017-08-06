@@ -3,7 +3,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <!-- General/various strings -->
   <string name="menuSend">傳送</string>
-  <string name="menuSaveToSd">傳送到 SD 卡</string>
+  <string name="menuSaveToSd">儲存至 SD 卡</string>
   <string name="xposed_not_active">最新版本的 Xposed 目前尚未啟用。您是否已安裝框架並重新啟動？</string>
   <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Xposed 框架有更新可用。</string>
@@ -21,7 +21,7 @@
   <!-- Installer tab -->
   <string name="install_update">安裝/更新</string>
   <string name="uninstall">卸載</string>
-  <string name="soft_reboot">快速重啟</string>
+  <string name="soft_reboot">快速重新啟動</string>
   <string name="reboot">重新啟動</string>
   <string name="reboot_recovery">重新啟動至 Recovery 模式</string>
   <string name="not_now">稍後</string>
@@ -35,10 +35,10 @@
   <string name="framework_active">Xposed 框架 %s 版已啟用。</string>
   <string name="framework_not_active">Xposed 框架 %s 版已安裝，但尚未啟用。 請查看日誌以了解細節。</string>
   <string name="framework_not_installed">Xposed 框架未安裝。</string>
-  <string name="flash_error_timeout">操作逾時</string>
-  <string name="flash_error_shell_died">操作意外中止</string>
-  <string name="flash_error_invalid_zip">不是可以刷入的zip檔案</string>
-  <string name="flash_error_not_flashable_in_app">此檔案只能通過Recovery刷入</string>
+  <string name="flash_error_timeout">發生逾時</string>
+  <string name="flash_error_shell_died">執行意外中止</string>
+  <string name="flash_error_invalid_zip">不是可以刷入的 zip 檔案</string>
+  <string name="flash_error_not_flashable_in_app">此檔案只能通過 Recovery 刷入</string>
   <string name="flash_error_default">發生 %d 錯誤</string>
   <string name="status">Xposed 狀態</string>
   <string name="xposed_on_next_reboot">Xposed 框架將在下次重新啟動裝置後啟用</string>
@@ -50,19 +50,19 @@
   <string name="framework_install_recovery">通過 Recovery 安裝</string>
   <string name="framework_uninstall_recovery">通過 Recovery 反安裝</string>
   <string name="framework_delete">刪除已經下載的檔案</string>
-  <string name="framework_zip_load_failed">無法讀取可用的zip檔案，請下滑重新整理後嘗試。</string>
-  <string name="framework_no_zips">找不到符合的zip檔案，可能暫時不支援您的裝置</string>
+  <string name="framework_zip_load_failed">無法讀取可用的 zip 檔案，請下滑重新整理後嘗試。</string>
+  <string name="framework_no_zips">找不到符合的 zip 檔案，可能暫時不支援您的裝置</string>
   <!-- File operations -->
   <string name="root_failed">無法取得 root 權限。\n\n請確認您的裝置已正確的 root 以及您沒有阻擋 shell 指令。</string>
   <string name="file_copying">正在複製 %s&#8230;</string>
   <string name="file_copy_failed">無法將 %1$s 複製到 %2$s</string>
   <string name="file_creating_directory">正在建立目錄 %s&#8230;</string>
   <string name="file_create_directory_failed">無法建立目錄 %s</string>
-  <string name="file_writing_recovery_command">正在寫入 Recovery 命令&#8230;</string>
+  <string name="file_writing_recovery_command">正在寫入 Recovery 命令 &#8230;</string>
   <string name="file_writing_recovery_command_failed">寫入 Recovery 命令失敗。請換一種安裝方式。</string>
   <string name="file_done">完成！修改將於重新啟動之後生效。</string>
   <!-- Modules tab -->
-  <string name="module_is_not_activated_yet">Xposed模組未啟動</string>
+  <string name="module_is_not_activated_yet">Xposed 模組未啟動</string>
   <string name="module_is_not_activated_yet_detailed">已安裝 %s，但尚未啟用。</string>
   <string name="activate_and_reboot">啟用並重新啟動</string>
   <string name="activate_only">僅啟動</string>
@@ -76,7 +76,7 @@
   <string name="warning_xposed_min_version">該模組需要較新版本的 Xposed (%d)，因此無法啟用。</string>
   <string name="no_min_version_specified">該模組未指定 Xposed 版本需求。</string>
   <string name="warning_min_version_too_low">該模組在 Xposed %1$d 版本下建立，但因為不相容 %2$d 版本中的變化內容，它已被停用。</string>
-  <string name="module_launch">執行界面</string>
+  <string name="module_launch">啟動使用者介面</string>
   <string name="module_download_updates">下載/更新</string>
   <string name="module_support">支援</string>
   <string name="module_app_info">應用程式資料</string>
@@ -89,13 +89,13 @@
   <string name="download_details_page_versions">版本</string>
   <string name="download_details_page_settings">設定</string>
   <string name="reltype_stable">穩定版</string>
-  <string name="reltype_stable_summary">穩定版（低故障率）</string>
+  <string name="reltype_stable_summary">穩定版 (低故障率)</string>
   <string name="reltype_beta">測試版</string>
-  <string name="reltype_beta_summary">測試版（預計存在問題）</string>
+  <string name="reltype_beta_summary">測試版 (預計存在問題)</string>
   <string name="reltype_experimental">試驗版</string>
-  <string name="reltype_experimental_summary">實驗版（高故障率）</string>
+  <string name="reltype_experimental_summary">實驗版 (高故障率)</string>
   <string name="reltype_use_global_summary">使用全域設定</string>
-  <string name="download_author">作者： %s</string>
+  <string name="download_author">作者：%s</string>
   <string name="download_unknown_author">作者不詳</string>
   <string name="download_status_installed">已安裝 (%s 版本)</string>
   <string name="download_status_update_available">可更新 (%1$s \u2192 %2$s 版本)</string>
@@ -108,11 +108,11 @@
   <string name="download_section_update_available">可更新</string>
   <string name="download_section_installed">已install</string>
   <string name="download_section_not_installed">未安裝</string>
-  <string name="download_section_24h">最近24小時</string>
-  <string name="download_section_7d">最近7天</string>
-  <string name="download_section_30d">最近30天</string>
-  <string name="download_section_older">30天前</string>
-  <string name="download_details_not_found">在倉庫中找不到名爲 \"%s\" 的模組。</string>
+  <string name="download_section_24h">最近 24 小時</string>
+  <string name="download_section_7d">最近 7 天</string>
+  <string name="download_section_30d">最近 30 天</string>
+  <string name="download_section_older">30 天前</string>
+  <string name="download_details_not_found">在資源庫中找不到名為「 %s」的模組。</string>
   <string name="download_no_versions">作者還沒有上傳任何版本。</string>
   <string name="download_test_version_not_shown">有新的測試版可用。根據您的全域或模組設定，未被顯示。</string>
   <!-- Settings tab -->
@@ -129,14 +129,14 @@
   <string name="settings_theme_dark">深色</string>
   <string name="settings_theme_black">黑色 (對 AMOLED 螢幕有幫助)</string>
   <string name="settings_default_view">預設瀏覽</string>
-  <string name="open_drawer_summ">啟動時自動開啟抽屜式導航欄</string>
-  <string name="open_drawer">自動開啟抽屜式導航欄</string>
+  <string name="open_drawer_summ">啟動時自動開啟清單式導航列</string>
+  <string name="open_drawer">自動開啟清單式導航列</string>
   <string name="skip_xposedminversion_check">略過 \'Xposed 最低版本\' 檢查</string>
   <string name="skip_xposedminversion_check_summ">略過模組 \'Xposed 最低版本\' 檢查</string>
   <string name="chrome_custom_tabs">Chrome 式自訂分頁</string>
   <string name="chrome_custom_tabs_summ">於內置瀏覽器開啟連結</string>
   <string name="download_location">下載位置</string>
-  <string name="download_location_summ">下載模組Apk檔的位置</string>
+  <string name="download_location_summ">下載模組安裝檔的位置</string>
   <string name="notify_module_update">啟用模組更新通知</string>
   <!-- Support tab -->
   <string name="support_modules_label">模組支援</string>
@@ -149,7 +149,7 @@
   <string name="logs_load_failed">無法讀取日誌：</string>
   <string name="logs_save_failed">無法將日誌寫入 SD 卡：</string>
   <string name="sdcard_not_writable">找不到 SD 卡或無法寫入</string>
-  <string name="log_too_large">日誌檔大於%1$,d kB，跳過前%2$,d kB</string>
+  <string name="log_too_large">日誌檔大於 %1$,d kB，跳過前 %2$,d kB</string>
   <string name="menuClearLog">立即清理日誌</string>
   <string name="logs_cleared">清理日誌成功</string>
   <string name="logs_clear_failed">無法清理日誌：</string>
@@ -157,7 +157,7 @@
   <string name="scroll_top">捲動回到頂端</string>
   <string name="scroll_bottom">捲動至到底端</string>
   <!-- About tab -->
-  <string name="about_developers_label">主要開發者</string>
+  <string name="about_developers_label">主要開發人員</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> 和 <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> 和\n <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> 修復錯誤及 Material Design 化</string>
   <string name="about_translator_label">翻譯：</string>
   <string name="about_version_label">版本</string>
@@ -176,19 +176,19 @@
   <!-- DownloadUtils -->
   <string name="download_md5sum_incorrect">MD5 校驗碼錯誤 (下載值： %1$s, 預期值： %2$s)</string>
   <string name="download_could_not_read_file">無法讀取下載檔案：%s</string>
-  <string name="download_no_valid_apk">下載的檔案不是有效 APK (或不相容)</string>
+  <string name="download_no_valid_apk">下載的檔案不是有效安裝檔 (或不相容)</string>
   <string name="download_incorrect_package_name">檔案包名稱不正確 (下載： %1$s, 預期： %2$s)</string>
   <string name="download_running">正在下載</string>
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">下載 %1$s 時出錯：%2$d (%3$s)</string>
   <string name="repo_download_failed">下載 %1$s 時出錯：%2$s</string>
-  <string name="repo_load_failed">無法載入倉庫 %1$s:\n%2$s</string>
+  <string name="repo_load_failed">無法載入資源庫 %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="warning_installed_on_external_storage">此模組安裝在SD卡中導致無法載入，請將此模組移回內部儲存空間。</string>
+  <string name="warning_installed_on_external_storage">此模組安裝在 SD 卡中導致無法載入，請將此模組移回內部儲存空間。</string>
   <string name="warning_forward_locked">無法載入此模組，因為他已經是轉發鎖定，請通知此模組的開發人員。</string>
   <string name="export_modules">匯出已啟用的模組清單</string>
   <string name="import_modules">匯入已啟用的模組清單</string>
-  <string name="view">查看</string>
+  <string name="view">檢視</string>
   <string name="export_">匯出…</string>
   <string name="import_">匯入…</string>
   <string name="export_enabled_modules">匯出已啟用的模組清單</string>
