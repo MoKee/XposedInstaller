@@ -7,12 +7,11 @@ import android.net.Uri;
 import android.provider.Browser;
 import android.support.annotation.NonNull;
 import android.support.customtabs.CustomTabsIntent;
+import android.support.v7.app.AlertDialog;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.URLSpan;
 import android.text.util.Linkify;
-
-import com.afollestad.materialdialogs.MaterialDialog;
 
 import de.robv.android.xposed.installer.R;
 import de.robv.android.xposed.installer.XposedApp;
@@ -48,9 +47,9 @@ public final class NavUtil {
     }
 
     public static void showMessage(@NonNull Context context, CharSequence message) {
-        new MaterialDialog.Builder(context)
-                .content(message)
-                .positiveText(android.R.string.ok)
+        new AlertDialog.Builder(context)
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok, null)
                 .show();
     }
 }

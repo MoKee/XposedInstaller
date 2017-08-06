@@ -2,6 +2,7 @@ package de.robv.android.xposed.installer;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -10,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -25,8 +27,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CursorAdapter;
 import android.widget.FilterQueryProvider;
 import android.widget.TextView;
-
-import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -195,18 +195,16 @@ public class DownloadFragment extends Fragment implements Loader.Listener<RepoLo
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_sort:
-                new MaterialDialog.Builder(getActivity())
-                        .title(R.string.download_sorting_title)
-                        .items(R.array.download_sort_order)
-                        .itemsCallbackSingleChoice(mSortingOrder,
-                                new MaterialDialog.ListCallbackSingleChoice() {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.download_sorting_title)
+                        .setSingleChoiceItems(R.array.download_sort_order, mSortingOrder,
+                                new DialogInterface.OnClickListener() {
                                     @Override
-                                    public boolean onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
+                                    public void onClick(DialogInterface dialog, int i) {
                                         mSortingOrder = i;
                                         mPref.edit().putInt("download_sorting_order", mSortingOrder).apply();
                                         reloadItems();
-                                        materialDialog.dismiss();
-                                        return true;
+                                        dialog.dismiss();
                                     }
                                 })
                         .show();

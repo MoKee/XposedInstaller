@@ -4,14 +4,13 @@ import android.app.Fragment;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.afollestad.materialdialogs.MaterialDialog;
 
 import de.psdev.licensesdialog.LicensesDialog;
 import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
@@ -86,13 +85,14 @@ public class AboutActivity extends XposedBaseActivity {
             developersView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MaterialDialog dialog = new MaterialDialog.Builder(getActivity())
-                            .title(R.string.about_developers_label)
-                            .content(R.string.about_developers)
-                            .positiveText(android.R.string.ok)
+                    AlertDialog dialog = new AlertDialog.Builder(getActivity())
+                            .setTitle(R.string.about_developers_label)
+                            .setMessage(R.string.about_developers)
+                            .setPositiveButton(android.R.string.ok, null)
                             .show();
 
-                    ((TextView) dialog.findViewById(R.id.md_content)).setMovementMethod(LinkMovementMethod.getInstance());
+                    ((TextView) dialog.findViewById(android.R.id.message))
+                            .setMovementMethod(LinkMovementMethod.getInstance());
                 }
             });
 
