@@ -13,7 +13,8 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.XposedInstaller.Light">
+        android:theme="@style/Theme.XposedInstaller.Light"
+        android:directBootAware="true">
         <activity
             android:name=".WelcomeActivity"
             android:configChanges="orientation|screenSize"
