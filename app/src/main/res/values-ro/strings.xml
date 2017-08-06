@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Trimite</string>
   <string name="menuSaveToSd">Salveaza pe cardul SD</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Un update pentru Framework-ul Xposed este disponibil (%s).</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Descarcă</string>
@@ -12,16 +12,16 @@
   <string name="nav_item_support">Asistenta</string>
   <string name="nav_item_about">Despre</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Repornire soft:</string>
+  <string name="soft_reboot">Repornire soft:</string>
   <string name="reboot">Repornire</string>
   <string name="reboot_failed">Repornirea a esuat. Va rugam utilizati functia nativa a dispozitivului.</string>
-    <string name="reboot_confirmation">Confirmati repornirea ?</string>
+  <string name="reboot_confirmation">Confirmati repornirea ?</string>
   <string name="install_warning_title">Procedati cu grija !</string>
   <string name="install_warning">In anumite cazuri dispozitivul nu va porni dupa instalarea Xposed. \n\nIf daca nu ati auzit despre \"soft brick\" si \"bootloop\" pana acum si nu stiti cum sa remediati o astfel de problema,  <b>NU</b> instalati Xposed!\n\nin nici un caz. A avea un backup recent este de preferat.</string>
   <string name="dont_show_again">Nu mai afisati.</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Accesul la root a esuat.\n\nAsigurati-va ca dispozitivul este rootat corespunzator iar comenzile de tip shell nu sunt blocate.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed nu este inca activ</string>
   <string name="module_is_not_activated_yet_detailed">%s a fost instalat, dar nu este inca activ.</string>
   <string name="activate_and_reboot">Activare si repornire.</string>
@@ -32,7 +32,7 @@
   <string name="xposed_module_list_updated">Lista modulelor Xposed a fost actualizata\nModificarile vor deveni active dupa repornire</string>
   <string name="xposed_module_updated_notification_title">Modulul Xposed a fost actualizat.</string>
   <string name="xposed_module_updated_notification">Reporniti pentru a activa modificarile.</string>
-    <string name="no_min_version_specified">Acest modul nu specifica ce versiune de Xposed este necesara.</string>
+  <string name="no_min_version_specified">Acest modul nu specifica ce versiune de Xposed este necesara.</string>
   <string name="warning_min_version_too_low">Acest modul a fost creat pentru versiunea de Xposed %1$d, dar din cauza unor modificari incompatibile in versiunea %2$d, a fost dezactivat.</string>
   <string name="module_launch">Lanseaza interfata</string>
   <string name="module_download_updates">Descarcati/Actualizati</string>
@@ -77,7 +77,7 @@
   <string name="settings_group_experimental">Experimental</string>
   <string name="settings_disable_resources">Dezactivare resource hooks</string>
   <string name="settings_disable_resources_summary">Solutie pentru conflictele cu teme\n<b>ATENTIE:</b> Modulele care vor incerca sa modifice resursele nu vor functiona cand aceasta este activata.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Doneaza</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Log-ul nu a putut fi scris pe cardul SD :</string>

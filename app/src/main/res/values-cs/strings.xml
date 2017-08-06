@@ -4,35 +4,40 @@
   <!-- General/various strings -->
   <string name="menuSend">Odeslat</string>
   <string name="menuSaveToSd">Uložit na SD kartu</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Aktualizace Xposed frameworku je k dispozici (%s).</string>
   <string name="modules_updates_available">Aktualizace modulu k dispozici</string>
   <!-- Navigation drawer items -->
+  <string name="nav_item_install">Xposed Framework</string>
   <string name="nav_item_modules">Moduly</string>
   <string name="nav_item_download">Stáhnout</string>
   <string name="nav_item_settings">Nastavení</string>
   <string name="nav_item_support">Podpora</string>
-  <string name="nav_item_logs">Log</string>
+  <string name="nav_item_logs">Logy</string>
   <string name="nav_item_about">O aplikaci</string>
   <string name="navigation_drawer_open">Otevřít panel navigace</string>
   <string name="navigation_drawer_close">Zavřít panel navigace</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Lehký restart</string>
+  <string name="soft_reboot">Lehký restart</string>
   <string name="reboot">Restart</string>
   <string name="reboot_failed">Nepodařilo se restartovat zařízení. Prosím, restartujte jej běžným způsobem.</string>
-    <string name="reboot_confirmation">Chcete zařízení restartovat nyní?</string>
+  <string name="reboot_confirmation">Chcete zařízení restartovat nyní?</string>
   <string name="install_warning_title">Buďte opatrní!</string>
   <string name="install_warning">V některých případech nemusí po instalaci Xposed vaše zařízení již naběhnout.\n\nPokud nejste obeznámeni s pojmy \"soft brick\" nebo \"bootloop\" a pokud nevíte, jak se v podobné situaci zachovat, <b>NEINSTALUJTE</b> Xposed!\n\nV každém případě je vřele doporučeno mít aktuální zálohu.</string>
   <string name="dont_show_again">Již nezobrazovat</string>
-    <string name="framework_active">Xposed Framework verze %s je aktivní.</string>
+  <string name="framework_active">Xposed Framework verze %s je aktivní.</string>
   <string name="framework_not_active">Xposed Framework verze %s je nainstalován, ale není aktivní. Prosím zkontrolujte log pro podrobnosti.</string>
   <string name="framework_not_installed">Xposed Framework není nainstalován.</string>
-    <!-- File operations -->
+  <string name="status">Stav Xposed</string>
+  <string name="xposed_on_next_reboot">Xposed Framework bude povolen při příštím restartu</string>
+  <string name="xposed_off_next_reboot">Xposed Framework bude zakázán na příštím restartu</string>
+  <!-- File operations -->
   <string name="root_failed">Nepodařilo se získat oprávnění root.\n\nUjistěte se, že je vaše zařízení správně rootnuté a nejsou blokované přikazy shellu.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul ještě není aktivován</string>
   <string name="module_is_not_activated_yet_detailed">%s byl nainstalován, ale ještě není aktivován.</string>
   <string name="activate_and_reboot">Aktivovat a restartovat</string>
+  <string name="activate_only">Pouze aktivovat</string>
   <string name="module_activated">Xposed modul byl aktivován</string>
   <string name="module_empty_description">(popis není k dispozici)</string>
   <string name="module_no_ui">Tento modul nemá žádné uživatelské rozhraní</string>
@@ -40,7 +45,7 @@
   <string name="xposed_module_list_updated">Seznam Xposed modulů byl aktualizován.\nZměny se projeví po restartu zařízení.</string>
   <string name="xposed_module_updated_notification_title">Xposed modul byl aktualizován</string>
   <string name="xposed_module_updated_notification">Restartovat pro aktivaci změn</string>
-    <string name="no_min_version_specified">Tento modul nespecifikuje požadovanou verzi Xposed.</string>
+  <string name="no_min_version_specified">Tento modul nespecifikuje požadovanou verzi Xposed.</string>
   <string name="warning_min_version_too_low">Tento modul byl vytvořen pro Xposed verze %1$d, ale kvůli nekompatibilním změnám ve verzi %2$d byl zakázán.</string>
   <string name="module_launch">Spustit UI</string>
   <string name="module_download_updates">Stažení/Aktualizace</string>
@@ -56,6 +61,7 @@
   <string name="download_details_page_settings">Nastavení</string>
   <string name="reltype_stable">Stabilní</string>
   <string name="reltype_stable_summary">Stabilní (malé riziko chyb)</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (očekávají se nějaké chyby)</string>
   <string name="reltype_experimental">Experimentální</string>
   <string name="reltype_experimental_summary">Experimentální (vysoké riziko chyb)</string>
@@ -65,10 +71,11 @@
   <string name="download_status_installed">Nainstalováno (verze %s)</string>
   <string name="download_status_update_available">Aktualizace k dispozici (verze %1$s \u2192 %2$s)</string>
   <string name="download_timestamps">Přidáno %1$s \u00b7 Aktualizováno %2$s</string>
-  <string name="download_sorting_title">Řazení</string>
+  <string name="download_sorting_title">Způsob řazení</string>
   <string name="download_sorting_status">Dle stavu</string>
   <string name="download_sorting_updated">Dle poslední aktualizace</string>
   <string name="download_sorting_created">Dle data vytvoření</string>
+  <string name="download_section_framework">Xposed Framework</string>
   <string name="download_section_update_available">Aktualizace k dispozici</string>
   <string name="download_section_installed">Nainstalováno</string>
   <string name="download_section_not_installed">Nenainstalováno</string>
@@ -84,8 +91,8 @@
   <string name="settings_release_type">Zobrazované verze</string>
   <string name="settings_group_experimental">Experimentální</string>
   <string name="settings_disable_resources">Zakázat ovlivňování prostředků</string>
-  <string name="settings_disable_resources_summary">(Resource hooks)\nŘeší konflikty s tématy (theme engines).\n<b>VAROVÁNÍ:</b> Je-li aktivní, moduly měnící prostředky nebudou správně pracovat.</string>
-    <!-- Support tab -->
+  <string name="settings_disable_resources_summary">Řešení konfliktů s tématy\n<b>VAROVÁNÍ:</b> Pokud je tato možnost povolena, moduly, které se snaží změnit zdroje, nebudou fungovat.</string>
+  <!-- Support tab -->
   <string name="support_modules_label">Podpora pro jednotlivé moduly</string>
   <string name="support_modules_description">Podržte prst na kterémkoliv z modulů v seznamu nainstalovaných modulů a zvolte \"%1$s\".</string>
   <string name="support_framework_label">Podpora pro Framework/instalátor</string>
@@ -99,6 +106,8 @@
   <string name="logs_cleared">Log úspěšně smazán</string>
   <string name="logs_clear_failed">Nepodařilo se vymazat log:</string>
   <string name="log_is_empty">Log je prázný</string>
+  <string name="scroll_top">Přejít na začátek stránky</string>
+  <string name="scroll_bottom">Přejít na konec stránky</string>
   <!-- About tab -->
   <string name="about_developers_label">Hlavní vývojáři:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> a <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a> - autoři frameworku a instalátoru\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> a <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> - opravy chyb a Material Design</string>
@@ -108,7 +117,7 @@
   <string name="about_libraries_label">Použité knihovny:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Stáhnout</string>
-  <string name="download_view_install">Instalovat</string>
+  <string name="download_view_install">Nainstalovat</string>
   <string name="download_view_cancel">Zrušit</string>
   <string name="download_view_no_url">URL pro stažení není k dispozici</string>
   <string name="download_view_running">Probíhá stahování (%1$,d z %2$,d kB)</string>
@@ -120,12 +129,16 @@
   <string name="download_could_not_read_file">Není možné načíst stažený soubor: %s</string>
   <string name="download_no_valid_apk">Stažený soubor není validní APK (nebo není kompatibilní)</string>
   <string name="download_incorrect_package_name">Název balíčku není správný (staženo: %1$s, očekáváno: %2$s)</string>
+  <string name="download_running">Probíhá stahování</string>
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">Stahování %1$s selhalo: %2$d (%3$s)</string>
   <string name="repo_download_failed">Stahování %1$s selhalo: %2$s</string>
   <string name="repo_load_failed">Nemohu načíst repozitář z %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Tento modul nemohl být načten protože je nainstalován na kartě SD, přesuňte jej prosím do interní paměti.</string>
+  <string name="view">ZOBRAZIT</string>
+  <string name="export_">Exportování…</string>
+  <string name="import_">Importování…</string>
   <string name="export_enabled_modules">Exportovat seznam povolených modulů</string>
   <string name="import_enabled_modules">Importovat seznam povolených modulů</string>
   <string name="export_installed_modules">Exportovat seznam nainstalovaných modulů</string>
@@ -136,10 +149,17 @@
   <string name="share">Sdílet…</string>
   <string name="permissionNotGranted">Tato funkce nebude fungovat bez udělení oprávnění k zápisu na externí úložiště.</string>
   <string name="add_bookmark">Přidat záložku</string>
+  <string name="remove_bookmark">Odstranit záložku</string>
   <string name="bookmarks">Záložky</string>
+  <string name="no_bookmark_added">Nebyla přidána žádná záložka</string>
   <string name="bookmark_added">Založka přidána</string>
+  <string name="bookmark_removed">Záložka odstraněna</string>
   <string name="undo">Vrátit zpět</string>
   <string name="file_is_empty">Soubor je prázdny</string>
+  <string name="install_remove">Instalovat a odstranit</string>
+  <string name="download_remove">Stáhnout a odebrat</string>
+  <string name="module_saved">Modul byl uložen %1$s</string>
   <string name="loading">Načítání…</string>
   <string name="save">Uložit</string>
+  <string name="update_download_list">Přejděte dolů pro obnovení seznamu modulů na převzetí</string>
 </resources>

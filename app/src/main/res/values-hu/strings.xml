@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Küldés</string>
   <string name="menuSaveToSd">SD kártyára mentés</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Frissítés elérhető az Xposed keretrendszerhez (%s).</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Letöltés</string>
@@ -14,16 +14,16 @@
   <string name="navigation_drawer_open">Navigációs fiók megnyitása</string>
   <string name="navigation_drawer_close">Navigációs fiók bezárása</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Gyors újraindítás</string>
+  <string name="soft_reboot">Gyors újraindítás</string>
   <string name="reboot">Újraindítás</string>
   <string name="reboot_failed">Újraindítás sikertelen. Kérlek használd az eszköz rendes újraindítási funkcióját.</string>
-    <string name="reboot_confirmation">Újra akarsz indítani most?</string>
+  <string name="reboot_confirmation">Újra akarsz indítani most?</string>
   <string name="install_warning_title">Légy óvatos!</string>
   <string name="install_warning">Néhány esetben az eszközöd talán nem fog bootolni az Xposed telepítése után. Ha sosem hallottál a \"soft brick\"-ről vagy a \"bootloop\"-ról vagy ha nem tudod, hogyan térj vissza egy ilyen helyzetből, <b>NE</b> telepítsd az Xposed-ot. Egy friss mentés megléte erősen ajánlott minden esetben.</string>
   <string name="dont_show_again">Ne mutasd még egyszer</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Rendszergazda jogok kérése sikertelen.\n\nEllenőrizd, hogy az eszközöd megfelelően van-e rootolva és nincsenek-e blokkolva a shell parancsok.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Az Xposed modul még nincs aktiválva</string>
   <string name="module_is_not_activated_yet_detailed">%s telepítve lett, de még nincs aktiválva.</string>
   <string name="activate_and_reboot">Aktiválás és újraindítás</string>
@@ -34,7 +34,7 @@
   <string name="xposed_module_list_updated">Az Xposed modul lista frissült\nA változtatások újraindítás után lépnek életbe</string>
   <string name="xposed_module_updated_notification_title">Xposed modul frissítve</string>
   <string name="xposed_module_updated_notification">Újraindítás a változtatások aktiválásához</string>
-    <string name="no_min_version_specified">A modul nem tünteti fel a szükséges Xposed verziót.</string>
+  <string name="no_min_version_specified">A modul nem tünteti fel a szükséges Xposed verziót.</string>
   <string name="warning_min_version_too_low">Ez a modul a(z) %1$d verziójú Xposed-hoz lett készítve, de a(z) %2$d verzió összeférhetetlen változtatásai miatt le lett tiltva.</string>
   <string name="module_launch">UI megnyitása</string>
   <string name="module_download_updates">Letöltés/Frissítések</string>
@@ -81,7 +81,7 @@
   <string name="settings_group_experimental">Kísérlet</string>
   <string name="settings_disable_resources">\"Resource hook\"-ok letiltva</string>
   <string name="settings_disable_resources_summary">Megoldás a témamotorokkal való konfliktusokra.\n<b>FIGYELEM:</b> A resource-okat módosítani próbáló modulok nem fognak működni, ha ez engedélyezve van.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Adomány</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Nem lehetett a naplót az SD kártyára írni:</string>

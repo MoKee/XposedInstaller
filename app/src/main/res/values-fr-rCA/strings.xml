@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Envoyer</string>
   <string name="menuSaveToSd">Sauver sur la carte SD</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Une mise à jour du Framework Xposed est disponible.</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Télécharger</string>
@@ -14,16 +14,16 @@
   <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
   <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Redémarrage doux</string>
+  <string name="soft_reboot">Redémarrage doux</string>
   <string name="reboot">Redémarrer</string>
   <string name="reboot_failed">Le redémarrage a échoué. Veuillez utiliser la fonction redémarrage de l\'appareil.</string>
-    <string name="reboot_confirmation">Voulez-vous redémarrer maintenant ?</string>
+  <string name="reboot_confirmation">Voulez-vous redémarrer maintenant ?</string>
   <string name="install_warning_title">Soyez prudent !</string>
   <string name="install_warning">Dans certains cas, votre appareil pourrait ne plus démarrer après avoir installé le Framework Xposed.\n\nSi vous n\'avez jamais entendu parler de \"soft brick\" et de \"bootloop\" avant ou si vous ne savez pas comment récupérer d\'une telle situation, n\'installez <b>PAS</b> le Framework Xposed !\n\nDans tous les cas, il est fortement recommandé d\'avoir une sauvegarde récente.</string>
   <string name="dont_show_again">Ne plus afficher</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Échec accès root.\n\nAssurez-vous que votre appareil soit correctement rooté et que vous n\'ayez pas bloqué les commandes shell.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Le module Xposed n\'est pas encore activé</string>
   <string name="module_is_not_activated_yet_detailed">%s a été installé mais n\'est pas encore activé.</string>
   <string name="activate_and_reboot">Activer et redémarrer</string>
@@ -34,7 +34,7 @@
   <string name="xposed_module_list_updated">La liste des modules Xposed a été rafraîchie\nLes changements seront actifs après redémarrage</string>
   <string name="xposed_module_updated_notification_title">Module Xposed mis à jour</string>
   <string name="xposed_module_updated_notification">Redémarrez pour appliquer les modifications</string>
-    <string name="no_min_version_specified">Ce module ne spécifie pas la version de Xposed dont il a besoin.</string>
+  <string name="no_min_version_specified">Ce module ne spécifie pas la version de Xposed dont il a besoin.</string>
   <string name="warning_min_version_too_low">Ce module a été créé pour Xposed version %1$d, mais du fait de changements incompatibles dans la version %2$d, il a été désactivé.</string>
   <string name="module_launch">Lancer l\'UI</string>
   <string name="module_download_updates">Installer/Mettre à jour</string>
@@ -78,7 +78,7 @@
   <string name="settings_group_experimental">Expérimental</string>
   <string name="settings_disable_resources">Désactiver \"resource hooks\"</string>
   <string name="settings_disable_resources_summary">Solution pour éviter les conflits avec les moteurs de thème\n<b>ATTENTION:</b> Les modules qui essaient de modifier les ressources ne fonctionneront pas si vous activez ceci.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Faire une donation</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Impossible d\'écrire le journal:</string>

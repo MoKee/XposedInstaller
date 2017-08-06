@@ -4,20 +4,20 @@
   <!-- General/various strings -->
   <string name="menuSend">भेजो</string>
   <string name="menuSaveToSd"> SD काऱड पर सेव करे </string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">क्स्पोसेद फ्रेमवर्क का अपडेट अवेलेबल है (%s)।</string>
   <!-- Navigation drawer items -->
   <!-- Installer tab -->
-    <string name="soft_reboot">नरम रिबूट</string>
+  <string name="soft_reboot">नरम रिबूट</string>
   <string name="reboot">रिबूट</string>
   <string name="reboot_failed">रिबूट फ़ैल होगया है। किरपिया आपके डिवाइस के सामान्य रिबूट प्रक्रिया चलकर देखे।</string>
-    <string name="reboot_confirmation">क्या आप रिबूट करने की अनुमति देंगे?</string>
+  <string name="reboot_confirmation">क्या आप रिबूट करने की अनुमति देंगे?</string>
   <string name="install_warning_title">ध्यान से!</string>
   <string name="install_warning">कभी कब्बर आबका डिवाइस बूट नहीं होगा, अगर आपने कभी\n\nIf  \"सॉफ्ट  ब्रिक\" और \"बूटलूप\" एन शब्दओ के बारे में कभी नहीं सुना जाओ या आप को पता नहीं की ऐसी स्थिति से रिकवर कैसे हिते है, एक्स्पोसड <b>कभी इनस्टॉल ना करे</b>!\n\nकिसी भी स्थिथि में बैकप होना यदेमंद है।</string>
   <string name="dont_show_again">वापिस मत दिखाओ</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">रूट असेस नहीं मिल पाया गई।\n\nएक बार जाच करके जरुर देखे के अपने रूट किया है और जरुरी परमिशन दिए है।</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">एक्स्पोसड मोदुले अभी चालू नहीं है।</string>
   <string name="module_is_not_activated_yet_detailed">%s इनस्टॉल किया गया है पर वह अभी चालू नहीं है।</string>
   <string name="activate_and_reboot">चालू करके रिबूट करो</string>
@@ -28,7 +28,7 @@
   <string name="xposed_module_list_updated">एक्स्पोसड मोदुले की लिस्ट अपडेट हुई है\nकोई बदलाव रिबूट पर शुरू हो जाएगे</string>
   <string name="xposed_module_updated_notification_title">एक्स्पोसड मोदुले अपडेट हो गाया है</string>
   <string name="xposed_module_updated_notification">बदलाव शुरू अर्ने के लिए रिबूट करे</string>
-    <string name="no_min_version_specified">यहाँ मोदुले नहीं बताता की इसे कौनसा एक्स्पोसडब्रिज वर्जन चाहिए।</string>
+  <string name="no_min_version_specified">यहाँ मोदुले नहीं बताता की इसे कौनसा एक्स्पोसडब्रिज वर्जन चाहिए।</string>
   <string name="warning_min_version_too_low">ये मोदुले एक्स्पोसडब्रिज वेर्सिओम %1$d के लिए बनाया गया था, पर कुछ तकनिकी कारणों के वजह से ये वर्जन %2$d के साथ नहीं चलता, इसलिए यह बंद कर सिया है।</string>
   <string name="module_launch">ऊई चालू करे</string>
   <string name="module_download_updates">डाउनलोड/उप्दाट्स</string>
@@ -75,7 +75,7 @@
   <string name="settings_group_experimental">प्रायोगिक</string>
   <string name="settings_disable_resources">रिसोर्स हुक्स दिअब्ले करे</string>
   <string name="settings_disable_resources_summary">वोर्कारौंड्स फॉर कोम्फ्लिक्ट्स इन टी\n<b>चेतान्वनी:</b> मोदुलेस जो रिसोर्सेज बदलने की कोशिश करते है वो काम नहीं करेंगे जब यह चालू है।</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <!-- Logs tab  -->
   <string name="logs_save_failed">लोग सद कार्ड पे लिख न पाए</string>
   <string name="sdcard_not_writable">सड़ कार्ड मिला नहीं अथवा उसपर लिख न पाए</string>

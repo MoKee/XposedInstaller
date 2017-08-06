@@ -4,33 +4,36 @@
   <!-- General/various strings -->
   <string name="menuSend">Senden</string>
   <string name="menuSaveToSd">Auf SD-Karte speichern</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Es ist eine Aktualisierung für das Xposed-Framework verfügbar (%s).</string>
   <string name="modules_updates_available">Aktualisierungen für Module sind verfügbar</string>
   <!-- Navigation drawer items -->
+  <string name="nav_item_install">Framework</string>
   <string name="nav_item_modules">Module</string>
   <string name="nav_item_download">Herunterladen</string>
   <string name="nav_item_settings">Einstellungen</string>
   <string name="nav_item_support">Hilfe</string>
+  <string name="nav_item_logs">Protokolle</string>
   <string name="nav_item_about">Über</string>
   <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
   <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Software-Neustart</string>
+  <string name="soft_reboot">Software-Neustart</string>
   <string name="reboot">Geräte-Neustart</string>
-    <string name="reboot_failed">Neustart fehlgeschlagen. Bitte verwende die normale Neustartfunktion des Geräts.</string>
-    <string name="reboot_confirmation">Möchtest du jetzt neustarten?</string>
+  <string name="reboot_failed">Neustart fehlgeschlagen. Bitte verwende die normale Neustartfunktion des Geräts.</string>
+  <string name="reboot_confirmation">Möchtest du jetzt neustarten?</string>
   <string name="install_warning_title">Vorsicht!</string>
   <string name="install_warning">In manchen Fällen wird das Gerät nicht mehr korrekt starten, nachdem du Xposed installiert hast.\n\nFalls dir \"Soft Brick\" und \"Bootloop\" nichts sagen oder du nicht weißt, wie du dich aus einer solchen Situation befreien kannst, solltest du Xposed <b>NICHT</b> installieren!\n\nIn jedem Fall ist es sehr empfehlenswert, ein aktuelles Backup zu haben.</string>
   <string name="dont_show_again">Nicht wieder anzeigen</string>
-    <string name="framework_active">Xposed-Framework Version %s ist aktiv.</string>
+  <string name="framework_active">Xposed-Framework Version %s ist aktiv.</string>
   <string name="framework_not_active">Xposed-Framework Version %s ist installiert, aber nicht aktiv. Bitte schaue in den Logs nach Details.</string>
   <string name="framework_not_installed">Xposed-Framework ist nicht installiert.</string>
-    <string name="xposed_on_next_reboot">Xposed-Framework wird aktiviert beim nächsten Neustart</string>
+  <string name="status">Xposed Status</string>
+  <string name="xposed_on_next_reboot">Xposed-Framework wird aktiviert beim nächsten Neustart</string>
   <string name="xposed_off_next_reboot">Xposed-Framework wird deaktiviert beim nächsten Neustart</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Root-Zugriff fehlgeschlagen\n\nStelle sicher, dass das Gerät korrekt gerootet ist und Shell-Kommandos nicht blockiert werden.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed-Modul ist noch nicht aktiv</string>
   <string name="module_is_not_activated_yet_detailed">%s wurde installiert, aber noch nicht aktiviert.</string>
   <string name="activate_and_reboot">Aktivieren und neustarten</string>
@@ -42,7 +45,7 @@
   <string name="xposed_module_list_updated">Liste der Xposed-Module aktualisiert\nÄnderungen werden nach einem Neustart sichtbar</string>
   <string name="xposed_module_updated_notification_title">Xposed-Modul aktualisiert</string>
   <string name="xposed_module_updated_notification">Neustarten, um Änderungen zu aktivieren</string>
-    <string name="no_min_version_specified">Dieses Modul macht keine Angabe über die benötigte Xposed-Version.</string>
+  <string name="no_min_version_specified">Dieses Modul macht keine Angabe über die benötigte Xposed-Version.</string>
   <string name="warning_min_version_too_low">Dieses Modul wurde für die Xposed-Version %1$d erstellt. Aufgrund von inkompatiblen Änderungen in Version %2$d wurde das Modul daher deaktiviert.</string>
   <string name="module_launch">App öffnen</string>
   <string name="module_download_updates">Downloads/Aktualisierungen</string>
@@ -58,6 +61,7 @@
   <string name="download_details_page_settings">Einstellungen</string>
   <string name="reltype_stable">Stabil</string>
   <string name="reltype_stable_summary">Stabil (geringes Bugrisiko)</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (mit einigen Bugs ist zu rechnen)</string>
   <string name="reltype_experimental">Experimentell</string>
   <string name="reltype_experimental_summary">Experimentell (hohes Bugrisiko)</string>
@@ -71,6 +75,7 @@
   <string name="download_sorting_status">Status</string>
   <string name="download_sorting_updated">Zuletzt aktualisiert</string>
   <string name="download_sorting_created">Erstellungsdatum</string>
+  <string name="download_section_framework">Framework</string>
   <string name="download_section_update_available">Aktualisierung verfügbar</string>
   <string name="download_section_installed">Installiert</string>
   <string name="download_section_not_installed">Nicht installiert</string>
@@ -83,11 +88,11 @@
   <string name="download_test_version_not_shown">Es gibt eine Testversion, aber sie wird aufgrund deiner globalen oder modul-spezifischen Einstellungen nicht angezeigt.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">Herunterladen</string>
-    <string name="settings_release_type">Anzuzeigende Versionen</string>
+  <string name="settings_release_type">Anzuzeigende Versionen</string>
   <string name="settings_group_experimental">Experimentell</string>
   <string name="settings_disable_resources">Ressourcen-APIs deaktivieren</string>
   <string name="settings_disable_resources_summary">Workaround für Konflikte mit \"Theming Engines\"\n<b>VORSICHT:</b> Module, die Ressourcen verändern, werden mit dieser Einstellung nicht funktionieren.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_modules_label">Support für Module</string>
   <string name="support_modules_description">Drücke in der Modulliste lange auf ein Modul und wähle im Kontextmenü \"%1$s\" aus.</string>
   <string name="support_framework_label">Framework/Installer-Support</string>
@@ -132,6 +137,8 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Dieses Modul kann nicht geladen werden, da es auf der SD-Karte installiert ist. Bitte verschiebe es auf den Internen Speicher.</string>
   <string name="view">Ansicht</string>
+  <string name="export_">Exportieren…</string>
+  <string name="import_">Importieren...</string>
   <string name="export_enabled_modules">Exportiere Liste aktiver Module</string>
   <string name="import_enabled_modules">Importiere Liste aktiver Module</string>
   <string name="export_installed_modules">Exportiere Liste installierter Module</string>

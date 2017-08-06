@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Gönder</string>
   <string name="menuSaveToSd">SD Karta kaydet</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Xposed için kullanılabilir bir güncelleştirme var.</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">İndir</string>
@@ -14,16 +14,16 @@
   <string name="navigation_drawer_open">Navigasyon çekmecesini aç</string>
   <string name="navigation_drawer_close">Navigasyon çekmecesini kapat</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Hızlı yeniden başlat</string>
+  <string name="soft_reboot">Hızlı yeniden başlat</string>
   <string name="reboot">Yeniden Başlat</string>
   <string name="reboot_failed">Y.Başlatma hatası. Lütfen telefonu normal olarak yeniden başlatın.</string>
-    <string name="reboot_confirmation">Telefonu yeniden başlatmak istiyormusunuz?</string>
+  <string name="reboot_confirmation">Telefonu yeniden başlatmak istiyormusunuz?</string>
   <string name="install_warning_title">Dikkatli olun!</string>
   <string name="install_warning">Bazı durumlarda Xposed yüklendikten sonra telefonunuz soft brick olabilir\n\nEğer \"soft brick\" veya \"bootloop\" gibi terimleri duymadıysanız\veya bunlar hakkında bilginiz yoksa Xposedi <b>YÜKLEMEYİN</b> Ya da yüklemeden önce\n\nMutlaka telefonunuzu yedekleyin.</string>
   <string name="dont_show_again">Bunu bir daha gösterme</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Root erişimi alınamadı.\n\nLütfen cihazınının root erişiminin açık olduğuna ve komut alabildiğine emin olun.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modülü henüz aktif değil</string>
   <string name="module_is_not_activated_yet_detailed">%s yüklendi,ama şu an aktif değil.</string>
   <string name="activate_and_reboot">Aktifleştir ve yeniden başlat</string>
@@ -34,7 +34,7 @@
   <string name="xposed_module_list_updated">Xposed modül listesi güncellendi.Değişikliklerin aktif olması için telefonunuzu yeniden başlatın.</string>
   <string name="xposed_module_updated_notification_title">Xposed modülü güncellendi</string>
   <string name="xposed_module_updated_notification">Değişiklikleri etkinleştirmek için yeniden başlatın</string>
-    <string name="no_min_version_specified">Bu modül ihtiyacı olan Xposed sürümünü belirtmez.</string>
+  <string name="no_min_version_specified">Bu modül ihtiyacı olan Xposed sürümünü belirtmez.</string>
   <string name="warning_min_version_too_low">Bu modül Xposed sürüm %1$d, için oluşturuldu, ancak bu sürüm ile uyumsuz değişiklikler var, %2$d, Bu yüzden evre dışı bırakıldı..</string>
   <string name="module_launch">UI Başlat</string>
   <string name="module_download_updates">ındir/Güncelle</string>
@@ -79,7 +79,7 @@
   <string name="settings_group_experimental">Deneysel</string>
   <string name="settings_disable_resources">Kaynak bilgiler engelli</string>
   <string name="settings_disable_resources_summary">Tema motoru ile çakışmalar için çözüm\n<b>UYARI:</b> Bu etkinleştirildiğinde kaynaklarını değiştirmeye çalışmayın modüller çalışmaz.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Bağış yap</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Log kayıtlarını SD karta yazamadı:</string>

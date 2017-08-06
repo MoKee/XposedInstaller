@@ -5,12 +5,12 @@
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
   <!-- Installer tab -->
-    <!-- File operations -->
+  <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_uninstall">Desinstalar</string>
   <!-- Download tab -->
   <!-- Settings tab -->
-    <!-- Support tab -->
+  <!-- Support tab -->
   <!-- Logs tab  -->
   <!-- About tab -->
   <!-- DownloadView -->

@@ -11,7 +11,7 @@
   <string name="navigation_drawer_open">Avaa navigointivalikko</string>
   <string name="navigation_drawer_close">Sulje navigointivalikko</string>
   <!-- Installer tab -->
-    <!-- File operations -->
+  <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_support">Tuki</string>
   <string name="module_app_info">Sovelluksen tiedot</string>
@@ -26,7 +26,7 @@
   <!-- Settings tab -->
   <string name="settings_group_download">Lataa</string>
   <string name="settings_group_experimental">Kokeellinen</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Lahjoita</string>
   <!-- Logs tab  -->
   <!-- About tab -->

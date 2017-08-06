@@ -4,28 +4,28 @@
   <!-- General/various strings -->
   <string name="menuSend">Pošalji</string>
   <string name="menuSaveToSd">Snimi na SD kartu</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Nova verzija Xposed Framework-a je dostupna (%s).</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Преузми</string>
   <string name="nav_item_support">Подршка</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Softverski restart</string>
+  <string name="soft_reboot">Softverski restart</string>
   <string name="reboot">Restart</string>
   <string name="reboot_failed">Restartovanje je neuspešno. Milim, restartujte urđaj normalnom procedurom.</string>
-    <string name="reboot_confirmation">Da li želite da restartujete uređaj sada?</string>
+  <string name="reboot_confirmation">Da li želite da restartujete uređaj sada?</string>
   <string name="install_warning_title">Budite oprezni!</string>
   <string name="install_warning">U nekim slučajevima, može se desiti da vaš uređaj ne podigne sistem nakon instalacije Xposed-a.\n\Ako nikada niste čuli o terminima \"soft brick\" i \"bootloop\" do sada ili ako ne znate kako da nađete rešenje ako se nađete u toj situaciji, <b>NE</b> instalirajte Xposed!\n\nU svakom slučaju, imati rezervnu kopiju sistema je preporučljivo.</string>
   <string name="dont_show_again">Ne prikazuj ponovo</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Neuspešan pristup root direktorijumu.\n\nProverite još jednom da li je vaš uređaj root-ovan pravilno i da niste blokirali shell komande.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul još nije aktivan</string>
   <string name="module_empty_description">(trenutno bez opisa)</string>
   <string name="module_no_ui">Ovaj modul ne daje korisnički interfejs</string>
   <string name="no_xposed_modules_found">Ni jedan Xposed modul nije pronađen!</string>
   <string name="xposed_module_list_updated">Xposed modul lista je osvežena\nPromene će biti aktivne nakon ponovnog pokretanja sistema </string>
-    <string name="no_min_version_specified">Ovaj modul nije precizirao Xposed verziju koja je potrebna.</string>
+  <string name="no_min_version_specified">Ovaj modul nije precizirao Xposed verziju koja je potrebna.</string>
   <string name="warning_min_version_too_low">Ovaj modul je kreiran za Xposed verziju %1$d, ali zbog nekompaktibilnosti u verziji %2$d, je onemogućen.</string>
   <string name="module_launch">Startovanje UI</string>
   <string name="module_download_updates">Učitaj/Nadogradi</string>
@@ -59,7 +59,7 @@
   <string name="settings_group_experimental">Eksperimentalno </string>
   <string name="settings_disable_resources">Onemogući resource hooks</string>
   <string name="settings_disable_resources_summary">Radi na konfliktima sa theming endžinom\n<b>UPOZORENJE:</b> Moduli koji pokušavaju da izmene resurse neće raditi ako je ova opcija omogućena.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Донирајте</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Nemoguće zapisati log na SD cartu:</string>

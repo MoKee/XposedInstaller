@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Invia</string>
   <string name="menuSaveToSd">Salva sulla scheda SD</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">È disponibile un aggiornamento per il Framework Xposed.</string>
   <string name="modules_updates_available">Aggiornamenti dei moduli disponibili</string>
   <!-- Navigation drawer items -->
@@ -16,22 +16,22 @@
   <string name="navigation_drawer_open">Apri navigation drawer</string>
   <string name="navigation_drawer_close">Chiudi navigation drawer</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Riavvio soft</string>
+  <string name="soft_reboot">Riavvio soft</string>
   <string name="reboot">Riavvio</string>
-    <string name="reboot_failed">Riavvio fallito. Usa la funzione riavvia del dispositivo.</string>
-    <string name="reboot_confirmation">Vuoi riavviare ora?</string>
+  <string name="reboot_failed">Riavvio fallito. Usa la funzione riavvia del dispositivo.</string>
+  <string name="reboot_confirmation">Vuoi riavviare ora?</string>
   <string name="install_warning_title">Sii prudente!</string>
   <string name="install_warning">In alcuni casi, il dispositivo potrebbe non accendersi più dopo l\'installazione di Xposed.\n\nSe non hai mai sentito parlare di \"soft brick\" e \"bootloop\" prima d\'ora o se non si è capaci di ripristinare il dispositivo <b>NON</b> installare Xposed!\n\nIn molti casi. avere un backup recente è altamente raccomandato.</string>
   <string name="dont_show_again">Non mostrare più</string>
-    <string name="framework_active">La versione di Xposed Framework attiva è: %s.</string>
+  <string name="framework_active">La versione di Xposed Framework attiva è: %s.</string>
   <string name="framework_not_active">La versione di Xposed Framework installata è %s, ma non è attiva. Perfavore controlla i log per dettagli.</string>
   <string name="framework_not_installed">Xposed Framework non è installato.</string>
   <string name="status">Stato Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework sarà abilitato al prossimo riavvio</string>
   <string name="xposed_off_next_reboot">Xposed Framework sarà disabilitato al prossimo riavvio</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Impossibile ottenere l\'accesso root.\n\nAssicurati di avere correttamente i permessi e di non aver bloccato comandi shell.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Il modulo Xposed non è stato ancora attivato</string>
   <string name="module_is_not_activated_yet_detailed">%s è stato installato, ma non è ancora attivo.</string>
   <string name="activate_and_reboot">Attiva e riavvia</string>
@@ -43,7 +43,7 @@
   <string name="xposed_module_list_updated">La lista dei moduli Xposed è stata aggiornata\nI cambiamenti saranno attivi al riavvio</string>
   <string name="xposed_module_updated_notification_title">Modulo Xposed aggiornato</string>
   <string name="xposed_module_updated_notification">Riavvia per attivare i cambiamenti</string>
-    <string name="no_min_version_specified">Questo modulo non specifica la versione di Xposed di cui ha bisogno.</string>
+  <string name="no_min_version_specified">Questo modulo non specifica la versione di Xposed di cui ha bisogno.</string>
   <string name="warning_min_version_too_low">Questo modulo è stato creato per la versione %1$d di Xposed, ma a causa di incompatibilità con la versione %2$d è stato disattivato.</string>
   <string name="module_launch">Apri interfaccia</string>
   <string name="module_download_updates">Scarica/Aggiorna</string>
@@ -88,7 +88,7 @@
   <string name="settings_group_experimental">Sperimentale</string>
   <string name="settings_disable_resources">Disabilita agganci alle risorse</string>
   <string name="settings_disable_resources_summary">Soluzioni di conflitti con i theme engine\n<b>ATTENZIONE:</b> I moduli che cambiano le risorse non funzioneranno attivando questa funzione.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_modules_label">Supporto per i moduli</string>
   <string name="support_modules_description">Click lungo su qualsiasi modulo nella lista dei moduli e seleziona \"%1$s\".</string>
   <string name="support_framework_label">Framework/Installer supporto</string>

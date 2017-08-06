@@ -11,7 +11,7 @@
   <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
   <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
   <!-- Installer tab -->
-    <!-- File operations -->
+  <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_support">Podpora</string>
   <string name="module_app_info">Podatki o aplikaciji</string>
@@ -26,7 +26,7 @@
   <!-- Settings tab -->
   <string name="settings_group_download">Prenesi</string>
   <string name="settings_group_experimental">Preizkusno</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">Prispevaj</string>
   <!-- Logs tab  -->
   <!-- About tab -->

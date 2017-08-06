@@ -10,16 +10,16 @@
   <string name="nav_item_support">الدعم الفني</string>
   <string name="nav_item_about">حول</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">اعادة تشغيل سريعة</string>
+  <string name="soft_reboot">اعادة تشغيل سريعة</string>
   <string name="reboot">اعادة التشغيل</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">لم يتم تنشيط الوحدة النمطية إكسبوسيد بعد</string>
   <string name="module_empty_description">(لا يوجد وصف المقدمة)</string>
   <string name="module_no_ui">هذه الوحدة النمطية لا توفر واجهة المستخدم</string>
   <string name="no_xposed_modules_found">لم يتم العثور على أية وحدات إكسبوسيد!</string>
   <string name="xposed_module_list_updated">تم تحديث قائمة الوحدة النمطية إكسبوسيد التغييرات سوف تصبح نشطة على إعادة التشغيل</string>
-    <string name="no_min_version_specified">لا تحدد هذه الوحدة النمطية إصدار إكسبوسيدبريدجي يحتاج إليها.</string>
+  <string name="no_min_version_specified">لا تحدد هذه الوحدة النمطية إصدار إكسبوسيدبريدجي يحتاج إليها.</string>
   <string name="warning_min_version_too_low">تم إنشاء هذه الوحدة لإصدار Xposed %1$d, ولكن نظرا للتغيرات غير متوافقة في الإصدار %2$d, فقد تم تعطيله.</string>
   <string name="module_launch">بدء تشغيل واجهة المستخدم</string>
   <string name="module_download_updates">تحميل/تحديث</string>
@@ -53,7 +53,7 @@
   <!-- Settings tab -->
   <string name="settings_group_download">تحميل</string>
   <string name="settings_group_experimental">التجريبية</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_donate_label">تبرع</string>
   <!-- Logs tab  -->
   <!-- About tab -->

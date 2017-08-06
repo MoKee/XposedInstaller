@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Wyślij</string>
   <string name="menuSaveToSd">Zapisz na karcie SD</string>
-    <!-- Welcome screen / main sections -->
+  <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Aktualizacja procesu framework dostarczanego przez aplikację Xposed jest dostępna (%s).</string>
   <string name="modules_updates_available">Dostępna aktualizacja modułów</string>
   <!-- Navigation drawer items -->
@@ -17,22 +17,22 @@
   <string name="navigation_drawer_open">Otwórz szufladę naiwigacji</string>
   <string name="navigation_drawer_close">Zamknij szufladę naiwigacji</string>
   <!-- Installer tab -->
-    <string name="soft_reboot">Tryb szybki</string>
+  <string name="soft_reboot">Tryb szybki</string>
   <string name="reboot">Tryb normalny</string>
-    <string name="reboot_failed">Restartnie powiódł się. Proszę użyć normalnego trybu restartu.</string>
-    <string name="reboot_confirmation">Chcesz teraz zrestartować telefon?</string>
+  <string name="reboot_failed">Restartnie powiódł się. Proszę użyć normalnego trybu restartu.</string>
+  <string name="reboot_confirmation">Chcesz teraz zrestartować telefon?</string>
   <string name="install_warning_title">Bądź ostrożny!</string>
   <string name="install_warning">W niektórych przypadkach urządzenie może nie uruchomić się po instalacji Xposed. Jeśli nigdy nie słyszałeś o miękkiej cegle, bootloopie i nie wiesz jak odzyskać w takiej sytuacji system, nie instaluj Xposed! W każdym bądź razie, zrobienie kopii  zapasowej jest bardzo zalecane.</string>
   <string name="dont_show_again">Nie pokazuj ponownie</string>
-    <string name="framework_active">Wersja %s Xposed framework jest aktywna.</string>
+  <string name="framework_active">Wersja %s Xposed framework jest aktywna.</string>
   <string name="framework_not_active">Wersja %s Xposed framework jest zainstalowana, ale nie jest aktywna. Proszę sprawdzić logi, aby poznać szczegóły.</string>
   <string name="framework_not_installed">Xposed framework jest niezainstalowany.</string>
   <string name="status">Status Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework zostanie włączony po ponownym uruchoimieniu</string>
   <string name="xposed_off_next_reboot">Xposed Framework zostanie wyłączony po ponownym uruchoimieniu</string>
-    <!-- File operations -->
+  <!-- File operations -->
   <string name="root_failed">Nie udało się uzyskać dostępu do konta roota. Upewnij się, że urządzenie jest zrootowane prawidłowo i nie zostały zablokowane polecenia powłoki.</string>
-    <!-- Modules tab -->
+  <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Moduł Xposed nie jest jeszcze aktywny</string>
   <string name="module_is_not_activated_yet_detailed">%s został zainstalowany, ale nie został jeszcze aktywowany.</string>
   <string name="activate_and_reboot">Aktywuj i zrestartuj</string>
@@ -43,7 +43,7 @@
   <string name="xposed_module_list_updated">Lista modułów Xposed została zaktualizowana. Zmiany zostaną uaktywnione po ponownym uruchomieniu</string>
   <string name="xposed_module_updated_notification_title">Moduł został zaktualizowany</string>
   <string name="xposed_module_updated_notification">Uruchom ponownie, aby aktywować zmiany</string>
-    <string name="no_min_version_specified">Ten moduł nie określa wymaganej wersji Xposed.</string>
+  <string name="no_min_version_specified">Ten moduł nie określa wymaganej wersji Xposed.</string>
   <string name="warning_min_version_too_low">Ten moduł był stworzony dla Xposed w wersji %1$d, ale przez niekompatybilne zmiany w wersji %2$d, został wyłączony.</string>
   <string name="module_launch">Uruchom UI</string>
   <string name="module_download_updates">Pobierz/Aktualizuj</string>
@@ -88,7 +88,7 @@
   <string name="settings_group_experimental">Eksperymentalne</string>
   <string name="settings_disable_resources">Wyłącz zasoby konfliktów</string>
   <string name="settings_disable_resources_summary">Rozwiązanie konfliktów z silnikiem\n<b>OSTRZEŻENIE:</b> Moduły, które próbują zmienić zasoby nie będą pracowały, kiedy to jest włączone.</string>
-    <!-- Support tab -->
+  <!-- Support tab -->
   <string name="support_modules_label">Wsparcie dla modułów</string>
   <string name="support_modules_description">Długie naciśnięcie modułu na liście i wybierz \"%1$s\".</string>
   <string name="support_framework_label">Wsparcie Framework/Instalator</string>
