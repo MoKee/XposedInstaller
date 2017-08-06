@@ -7,32 +7,6 @@
         <item>@string/download_sorting_created</item>
     </string-array>
 
-    <string-array name="theme_texts" translatable="false">
-        <item>@string/settings_theme_light</item>
-        <item>@string/settings_theme_dark</item>
-        <item>@string/settings_theme_black</item>
-    </string-array>
-
-    <string-array name="default_view_texts" translatable="false">
-        <item>@string/nav_item_install</item>
-        <item>@string/nav_item_modules</item>
-        <item>@string/nav_item_download</item>
-        <item>@string/nav_item_logs</item>
-    </string-array>
-
-    <string-array name="theme_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
-    <string-array name="default_view_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
     <string-array name="release_type_texts" translatable="false">
         <item>@string/reltype_stable_summary</item>
         <item>@string/reltype_beta_summary</item>

@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Senden</string>
   <string name="menuSaveToSd">Auf SD-Karte speichern</string>
-  <string name="xposed_not_active">Die aktuellste Xposed-Version ist derzeit nicht aktiv. Hast du das Framework installiert und das Gerät neugestartet?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Es ist eine Aktualisierung für das Xposed-Framework verfügbar (%s).</string>
   <string name="modules_updates_available">Aktualisierungen für Module sind verfügbar</string>
   <!-- Navigation drawer items -->
@@ -17,48 +16,21 @@
   <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
   <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
   <!-- Installer tab -->
-  <string name="install_update">Installieren/Aktualisieren</string>
-  <string name="uninstall">Deinstallieren</string>
-  <string name="soft_reboot">Software-Neustart</string>
+    <string name="soft_reboot">Software-Neustart</string>
   <string name="reboot">Geräte-Neustart</string>
-  <string name="reboot_recovery">Neustart ins Recovery</string>
-  <string name="not_now">Nicht jetzt</string>
-  <string name="reboot_failed">Neustart fehlgeschlagen. Bitte verwende die normale Neustartfunktion des Geräts.</string>
-  <string name="auto_flash_note">%s sollte automatisch installiert werden, sobald du \"OK\" drückst.</string>
-  <string name="reboot_confirmation">Möchtest du jetzt neustarten?</string>
+    <string name="reboot_failed">Neustart fehlgeschlagen. Bitte verwende die normale Neustartfunktion des Geräts.</string>
+    <string name="reboot_confirmation">Möchtest du jetzt neustarten?</string>
   <string name="install_warning_title">Vorsicht!</string>
   <string name="install_warning">In manchen Fällen wird das Gerät nicht mehr korrekt starten, nachdem du Xposed installiert hast.\n\nFalls dir \"Soft Brick\" und \"Bootloop\" nichts sagen oder du nicht weißt, wie du dich aus einer solchen Situation befreien kannst, solltest du Xposed <b>NICHT</b> installieren!\n\nIn jedem Fall ist es sehr empfehlenswert, ein aktuelles Backup zu haben.</string>
   <string name="dont_show_again">Nicht wieder anzeigen</string>
-  <string name="install_known_issue">Es scheint eine bekannte Inkompatibilität (\"%s\") mit deinem ROM zu geben. Du solltest Xposed wahrscheinlich nicht installieren. Klicke hier für mehr Informationen.</string>
-  <string name="framework_active">Xposed-Framework Version %s ist aktiv.</string>
+    <string name="framework_active">Xposed-Framework Version %s ist aktiv.</string>
   <string name="framework_not_active">Xposed-Framework Version %s ist installiert, aber nicht aktiv. Bitte schaue in den Logs nach Details.</string>
   <string name="framework_not_installed">Xposed-Framework ist nicht installiert.</string>
-  <string name="flash_error_timeout">Timeout aufgetreten</string>
-  <string name="flash_error_shell_died">Ausführung wurde unerwartet abgebrochen</string>
-  <string name="flash_error_invalid_zip">Keine flashbare ZIP-Datei</string>
-  <string name="flash_error_not_flashable_in_app">Diese Datei kann nur via Recovery geflasht werden</string>
-  <string name="flash_error_default">Fehler %d ist aufgetreten</string>
-  <string name="xposed_on_next_reboot">Xposed-Framework wird aktiviert beim nächsten Neustart</string>
+    <string name="xposed_on_next_reboot">Xposed-Framework wird aktiviert beim nächsten Neustart</string>
   <string name="xposed_off_next_reboot">Xposed-Framework wird deaktiviert beim nächsten Neustart</string>
-  <string name="show_outdated">Zeige alte Versionen</string>
-  <string name="framework_device_info">Dein Gerät</string>
-  <string name="framework_install">Installieren</string>
-  <string name="framework_uninstall">Deinstallieren</string>
-  <string name="framework_install_recovery">Installieren via Recovery</string>
-  <string name="framework_uninstall_recovery">Deinstallieren via Recovery</string>
-  <string name="framework_delete">Heruntergeladene Datei löschen</string>
-  <string name="framework_zip_load_failed">Konnte die verfügbaren ZIPs nicht laden. Ziehe nach unten, um es erneut zu versuchen.</string>
-  <string name="framework_no_zips">Keine passenden ZIPs gefunden, dein Gerät scheint derzeit nicht unterstützt zu sein.</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">Root-Zugriff fehlgeschlagen\n\nStelle sicher, dass das Gerät korrekt gerootet ist und Shell-Kommandos nicht blockiert werden.</string>
-  <string name="file_copying">Kopiere %s&#8230;</string>
-  <string name="file_copy_failed">Konnte %1$s nicht nach %2$s kopieren</string>
-  <string name="file_creating_directory">Erstelle Verzeichnis %s&#8230;</string>
-  <string name="file_create_directory_failed">Konnte Verzeichnis %s nicht anlegen</string>
-  <string name="file_writing_recovery_command">Schreibe Recovery-Kommando&#8230;</string>
-  <string name="file_writing_recovery_command_failed">Schreiben des Recovery-Kommands ist fehlgeschlagen. Bitte verwende eine andere Installationsweise.</string>
-  <string name="file_done">Fertig! Änderungen werden nach einem Neustart sichtbar.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed-Modul ist noch nicht aktiv</string>
   <string name="module_is_not_activated_yet_detailed">%s wurde installiert, aber noch nicht aktiviert.</string>
   <string name="activate_and_reboot">Aktivieren und neustarten</string>
@@ -70,8 +42,7 @@
   <string name="xposed_module_list_updated">Liste der Xposed-Module aktualisiert\nÄnderungen werden nach einem Neustart sichtbar</string>
   <string name="xposed_module_updated_notification_title">Xposed-Modul aktualisiert</string>
   <string name="xposed_module_updated_notification">Neustarten, um Änderungen zu aktivieren</string>
-  <string name="warning_xposed_min_version">Dieses Modul erfordert eine neuere Xposed-Version (%d) und kann daher nicht aktiviert werden.</string>
-  <string name="no_min_version_specified">Dieses Modul macht keine Angabe über die benötigte Xposed-Version.</string>
+    <string name="no_min_version_specified">Dieses Modul macht keine Angabe über die benötigte Xposed-Version.</string>
   <string name="warning_min_version_too_low">Dieses Modul wurde für die Xposed-Version %1$d erstellt. Aufgrund von inkompatiblen Änderungen in Version %2$d wurde das Modul daher deaktiviert.</string>
   <string name="module_launch">App öffnen</string>
   <string name="module_download_updates">Downloads/Aktualisierungen</string>
@@ -112,23 +83,11 @@
   <string name="download_test_version_not_shown">Es gibt eine Testversion, aber sie wird aufgrund deiner globalen oder modul-spezifischen Einstellungen nicht angezeigt.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">Herunterladen</string>
-  <string name="settings_enable_downloads">Downloads aktivieren</string>
-  <string name="settings_enable_downloads_summary">Erlaube Xposed Installer, nach Updates und neuen Modulen zu suchen</string>
-  <string name="settings_release_type">Anzuzeigende Versionen</string>
+    <string name="settings_release_type">Anzuzeigende Versionen</string>
   <string name="settings_group_experimental">Experimentell</string>
   <string name="settings_disable_resources">Ressourcen-APIs deaktivieren</string>
   <string name="settings_disable_resources_summary">Workaround für Konflikte mit \"Theming Engines\"\n<b>VORSICHT:</b> Module, die Ressourcen verändern, werden mit dieser Einstellung nicht funktionieren.</string>
-  <string name="settings_group_app">Applikation</string>
-  <string name="settings_theme">Aussehen</string>
-  <string name="settings_theme_light">Hell</string>
-  <string name="settings_theme_dark">Dunkel</string>
-  <string name="settings_theme_black">Schwarz (nützlich für AMOLED-Bildschirme)</string>
-  <string name="settings_default_view">Ansicht beim Start</string>
-  <string name="open_drawer_summ">Beim Start automatisch das Navigations-Menü öffnen</string>
-  <string name="open_drawer">Öffne Navigations-Menü</string>
-  <string name="chrome_custom_tabs_summ">Öffne Links im internen Browser</string>
-  <string name="notify_module_update">Bei Modul-Aktualisierungen benachrichtigen</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_modules_label">Support für Module</string>
   <string name="support_modules_description">Drücke in der Modulliste lange auf ein Modul und wähle im Kontextmenü \"%1$s\" aus.</string>
   <string name="support_framework_label">Framework/Installer-Support</string>

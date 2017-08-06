@@ -12,7 +12,4 @@
         <item name="download_status_installed">@android:color/holo_orange_dark</item>
     </style>
 
-    <style name="Theme.XposedInstaller.Transparent" parent="Theme.AppCompat.NoActionBar">
-    </style>
-
 </resources>

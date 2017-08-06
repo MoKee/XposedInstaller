@@ -10,8 +10,7 @@
   <string name="module_app_info">अॅप माहिती</string>
   <!-- Download tab -->
   <!-- Settings tab -->
-  <string name="settings_theme_dark">गडद</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <!-- Logs tab  -->
   <!-- About tab -->
   <string name="about_version_label">आवृत्ती</string>

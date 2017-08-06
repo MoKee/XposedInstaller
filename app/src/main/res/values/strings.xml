@@ -4,7 +4,6 @@
     <!-- General/various strings -->
     <string name="menuSend">Send</string>
     <string name="menuSaveToSd">Save to SD card</string>
-    <string name="xposed_not_active">The latest version of Xposed is currently not active. Did you install the Framework and reboot?</string>
 
     <!-- Welcome screen / main sections -->
     <string name="welcome_framework_update_available">An update for the Xposed Framework is available (%s).</string>
@@ -22,50 +21,22 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Installer tab -->
-    <string name="install_update">Install/Update</string>
-    <string name="uninstall">Uninstall</string>
     <string name="soft_reboot">Soft reboot</string>
     <string name="reboot">Reboot</string>
-    <string name="reboot_recovery">Reboot to recovery</string>
-    <string name="not_now">Not now</string>
     <string name="reboot_failed">Reboot failed. Please use the device\'s normal reboot function.</string>
-    <string name="auto_flash_note">%s should be flashed automatically once you press "OK".</string>
     <string name="reboot_confirmation">Do you want to reboot now?</string>
     <string name="install_warning_title">Be careful!</string>
     <string name="install_warning">In some cases, your device might no longer boot after installing Xposed.\n\nIf you never heard about \"soft brick\" and \"bootloop\" before or if you don\'t know how to recover from such a situation, do <b>NOT</b> install Xposed!\n\nIn any case, having a recent backup is highly recommended.</string>
     <string name="dont_show_again">Don\'t show this again</string>
-    <string name="install_known_issue">There seems to be a known issue (\"%s\") with your ROM. Installing Xposed might not work or lead to severe problems. Click here for details about the issue.</string>
     <string name="framework_active">Xposed Framework version %s is active.</string>
     <string name="framework_not_active">Xposed Framework version %s is installed, but not active. Please check the logs for details.</string>
     <string name="framework_not_installed">Xposed Framework is not installed.</string>
-    <string name="countdown" translatable="false">%1$s (%2$d)</string>
-    <string name="flash_error_timeout">Timeout occurred</string>
-    <string name="flash_error_shell_died">Execution aborted unexpectedly</string>
-    <string name="flash_error_invalid_zip">Not a flashable ZIP file</string>
-    <string name="flash_error_not_flashable_in_app">This file can only be flashed via recovery.</string>
-    <string name="flash_error_default">Error %d occurred</string>
     <string name="status">Xposed Status</string>
     <string name="xposed_on_next_reboot">Xposed Framework will be enabled on next reboot</string>
     <string name="xposed_off_next_reboot">Xposed Framework will be disabled on next reboot</string>
-    <string name="show_outdated">Show outdated versions</string>
-    <string name="framework_device_info">Your device</string>
-    <string name="framework_install">Install</string>
-    <string name="framework_uninstall">Uninstall</string>
-    <string name="framework_install_recovery">Install via recovery</string>
-    <string name="framework_uninstall_recovery">Uninstall via recovery</string>
-    <string name="framework_delete">Delete downloaded file</string>
-    <string name="framework_zip_load_failed">Could not load available ZIP files. Pull down to try again.</string>
-    <string name="framework_no_zips">No matching ZIPs were found, it seems like your device is currently not supported.</string>
 
     <!-- File operations -->
     <string name="root_failed">Failed to get root access.\n\nMake sure your device is rooted properly and you have not blocked shell commands.</string>
-    <string name="file_copying">Copying %s&#8230;</string>
-    <string name="file_copy_failed">Could not copy %1$s to %2$s</string>
-    <string name="file_creating_directory">Creating directory %s&#8230;</string>
-    <string name="file_create_directory_failed">Could not create directory %s</string>
-    <string name="file_writing_recovery_command">Writing recovery command&#8230;</string>
-    <string name="file_writing_recovery_command_failed">Writing recovery command failed. Please use a different installation method.</string>
-    <string name="file_done">Done! Changes will become active on reboot.</string>
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">Xposed module is not activated yet</string>
@@ -79,7 +50,6 @@
     <string name="xposed_module_list_updated">Xposed module list was updated\nChanges will become active on reboot</string>
     <string name="xposed_module_updated_notification_title">Xposed module updated</string>
     <string name="xposed_module_updated_notification">Reboot to activate changes</string>
-    <string name="warning_xposed_min_version">This module requires a newer Xposed version (%d) and thus cannot be activated.</string>
     <string name="no_min_version_specified">This module does not specify the Xposed version it needs.</string>
     <string name="warning_min_version_too_low">This module was created for Xposed version %1$d, but due to incompatible changes in version %2$d, it has been disabled.</string>
     <string name="module_launch">Launch UI</string>
@@ -125,27 +95,10 @@
 
     <!-- Settings tab -->
     <string name="settings_group_download">Download</string>
-    <string name="settings_enable_downloads">Enable downloads</string>
-    <string name="settings_enable_downloads_summary">Allow Xposed Installer to check for updates and new modules</string>
     <string name="settings_release_type">Versions to be shown</string>
     <string name="settings_group_experimental">Experimental</string>
     <string name="settings_disable_resources">Disabled resource hooks</string>
     <string name="settings_disable_resources_summary">Workaround for conflicts with theming engines\n<b>WARNING:</b> Modules which try to change resources will not work when this is enabled.</string>
-    <string name="settings_group_app">Application</string>
-    <string name="settings_theme">Theme</string>
-    <string name="settings_theme_light">Light</string>
-    <string name="settings_theme_dark">Dark</string>
-    <string name="settings_theme_black">Black (useful for AMOLED screens)</string>
-    <string name="settings_default_view">Default view</string>
-    <string name="open_drawer_summ">Open automatically the navigation drawer at startup</string>
-    <string name="open_drawer">Open automatically navigation drawer</string>
-    <string name="skip_xposedminversion_check">Skip \'xposedminversion\' check</string>
-    <string name="skip_xposedminversion_check_summ">Skip \'xposedminversion\' check for modules</string>
-    <string name="chrome_custom_tabs">Chrome Custom Tabs</string>
-    <string name="chrome_custom_tabs_summ">Open links in internal browser</string>
-    <string name="download_location">Download location</string>
-    <string name="download_location_summ">Download location for APK files (modules only)</string>
-    <string name="notify_module_update">Enable module update notification</string>
 
     <!-- Support tab -->
     <string name="support_modules_label">Support for modules</string>
@@ -156,10 +109,8 @@
     <string name="support_donate_description">If you would like to say thanks for Xposed, you can donate to rovo89 here</string>
 
     <!-- Logs tab  -->
-    <string name="logs_load_failed">Could not read log:</string>
     <string name="logs_save_failed">Could not write log to SD card:</string>
     <string name="sdcard_not_writable">SD card not found or not writable</string>
-    <string name="log_too_large">Log file is larger than %1$,d kB, skipped first %2$,d kB</string>
     <string name="menuClearLog">Clear log now</string>
     <string name="logs_cleared">Log successfully cleared</string>
     <string name="logs_clear_failed">Could not clear the log:</string>
@@ -185,7 +136,6 @@
     <string name="download_view_waiting">Download is waiting</string>
     <string name="download_view_successful">Download successful</string>
     <string name="download_view_failed">Download failed (error %d)</string>
-    <string name="download_view_size">Size: %s KB</string>
 
     <!-- DownloadUtils -->
     <string name="download_md5sum_incorrect">MD5 sum is incorrect (downloaded: %1$s, expected: %2$s)</string>
@@ -202,9 +152,6 @@
 
     <!-- Most of these belong to currently hidden features -->
     <string name="warning_installed_on_external_storage">This module cannot be loaded because it\'s installed on the SD card, please move it to internal storage.</string>
-    <string name="warning_forward_locked">This module cannot be loaded because it\'s is forward-locked, please contact the module\'s developer.</string>
-    <string name="export_modules">Export enabled modules list</string>
-    <string name="import_modules">Import enabled modules list</string>
     <string name="view">VIEW</string>
     <string name="export_">Export…</string>
     <string name="import_">Import…</string>

@@ -4,7 +4,6 @@
     <!-- General/various strings -->
     <string name="menuSend">Menghantar</string>
     <string name="menuSaveToSd">Simpan Ke SD Kad</string>
-    <string name="xposed_not_active">Versi terkini Xposed masih tidak aktif. Adakah anda memasang Framework dan hidupkan semula?</string>
 
     <!-- Welcome screen / main sections -->
     <string name="welcome_framework_update_available">Terdapat kemaskini terbaru Xposed Framework tersedia (%s).</string>
@@ -12,27 +11,16 @@
     <!-- Navigation drawer items -->
 
     <!-- Installer tab -->
-    <string name="install_update">Memasang/Kemaskini</string>
-    <string name="uninstall">Nyah Pasang</string>
     <string name="soft_reboot">Hidup smula secara perlahan</string>
     <string name="reboot">Hidupkan semula</string>
     <string name="reboot_failed">Hidupkan semula gagal. Sila gunakan peranti\'s hidupkan smula secara biasa.</string>
-    <string name="auto_flash_note">%s Akan flash secara automatik jika anda menekan "OK".</string>
     <string name="reboot_confirmation">Adakah anda mahu menghidupkan semula sekarang?</string>
     <string name="install_warning_title">Berhati²!</string>
     <string name="install_warning">Ada sesetengah kes, peranti anda mungkin tidak dapat hidupkan semula selepas memasang Xposed.\n\nJika anda tidak peduli mengenainya \"soft brick\" and \"bootloop\" sebelum anda lakukan dan\'tidak tahu bagaimana untuk pemulihan dari sebarang situasi, Jangan <b>Tidak</b> Memasang Xposed!\n\nada sesetengah kes, digalakkan anda membuat sandaran.</string>
     <string name="dont_show_again">Jangan\' tunjukkan ini lagi</string>
-    <string name="install_known_issue">Dimana kelihatan sebarang isu(\"%s\") dengan ROM anda. Pemasangan Xposed mungkin tidak berfungsi atau mengalami masalah atau sedikit gangguan. Klik disini untuk penjelasan mengenai isu.</string>
 
     <!-- File operations -->
     <string name="root_failed">Gagal untuk mendapat kebenaran root.\n\nPastikan peranti anda telah di\'root secara sempurna dan anda tidak menghalang shell commands.</string>
-    <string name="file_copying">Menyalin %s&#8230;</string>
-    <string name="file_copy_failed">Tidak boleh menyalin %1$s ke %2$s</string>
-    <string name="file_creating_directory">Mencipta direktori %s&#8230;</string>
-    <string name="file_create_directory_failed">Tidak boleh mencipta direktori %s</string>
-    <string name="file_writing_recovery_command">Menulis command pemulihan&#8230;</string>
-    <string name="file_writing_recovery_command_failed">Menulis command pemulihan gagal. Sila gunakan cara lain untuk memasang alat.</string>
-    <string name="file_done">Selesai! Perubahan akan aktif selepas dihidupkan semula.</string>
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">Xposed modul tidak diaktifkan lagi</string>
@@ -45,7 +33,6 @@
     <string name="xposed_module_list_updated">Senarai Xposed modul telah dikemaskini\nPenukaran akan aktif selepas dihidupkan semula</string>
     <string name="xposed_module_updated_notification_title">Xposed modul dikemaskini</string>
     <string name="xposed_module_updated_notification">Hidupkan semula untuk diaktifkan perubahan</string>
-    <string name="warning_xposed_min_version">Modul ini memerlukan Xposed versi terbaru (%d) sebab itu tidak dapat diaktifkan.</string>
     <string name="no_min_version_specified">Modul seperti tidak sesuai dengan Xposed versi yg dikehendaki.</string>
     <string name="warning_min_version_too_low">Modul ini dibuat untuk Xposed versi %1$d, tetapi disebabkan tidak sesuai kepada perubahan mengikut versi %2$d, maka telah dimatikan.</string>
     <string name="module_launch">Lancarkan UI</string>
@@ -95,11 +82,6 @@
     <string name="settings_group_experimental">Pengujian</string>
     <string name="settings_disable_resources">Matikan resource hooks</string>
     <string name="settings_disable_resources_summary">Melihat sekeliling untuk konflik dengan enjin tema\n<b>AMARAN:</b> Yang mana Modul yg cuba ditukar resources tidak akan berfungsi jika ini dihidupkan.</string>
-    <string name="settings_group_app">Aplikasi</string>
-    <string name="settings_theme">Tema</string>
-    <string name="settings_theme_light">Cerah</string>
-    <string name="settings_theme_dark">Gelap</string>
-    <string name="settings_theme_black">Hitam (sesuai untuk AMOLED screens)</string>
 
     <!-- Support tab -->
 

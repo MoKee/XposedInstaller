@@ -7,8 +7,7 @@
   <string name="nav_item_download">Download</string>
   <string name="nav_item_support">Support</string>
   <!-- Installer tab -->
-  <string name="framework_install">Install</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_support">Support</string>
   <!-- Download tab -->

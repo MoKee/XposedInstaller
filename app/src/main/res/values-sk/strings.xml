@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Odoslať</string>
   <string name="menuSaveToSd">Uložiť na kartu SD</string>
-  <string name="xposed_not_active">Najnovšia verzia Xposed nie je aktuálne aktívna. Nainštalovali ste Framework a reštartovali zariadenie?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Je dostupná aktualizácia pre Xposed Framework (%s).</string>
   <string name="modules_updates_available">Aktualizácia modulu(ov) je dostupná</string>
   <!-- Navigation drawer items -->
@@ -18,36 +17,22 @@
   <string name="navigation_drawer_open">Otvoriť navigačný panel</string>
   <string name="navigation_drawer_close">Zavrieť navigačný panel</string>
   <!-- Installer tab -->
-  <string name="install_update">Inštalovať/Aktualizovať</string>
-  <string name="uninstall">Odinštalovať</string>
-  <string name="soft_reboot">Softvérový reštart</string>
+    <string name="soft_reboot">Softvérový reštart</string>
   <string name="reboot">Reštart</string>
-  <string name="reboot_recovery">Reštartovať do recovery</string>
-  <string name="reboot_failed">Reštart zlyhal. Prosím, použite normálnu funkciu zariadenia pre reštart.</string>
-  <string name="auto_flash_note">%s by mal byť automaticky flashnutý hneď, ako stlačíte tlačidlo \"OK\".</string>
-  <string name="reboot_confirmation">Chcete reštartovať zariadenie teraz?</string>
+    <string name="reboot_failed">Reštart zlyhal. Prosím, použite normálnu funkciu zariadenia pre reštart.</string>
+    <string name="reboot_confirmation">Chcete reštartovať zariadenie teraz?</string>
   <string name="install_warning_title">Buďte opatrný!</string>
   <string name="install_warning">V niektorých prípadoch sa vaše zariadenie nemusí spustiť po inštalácii Xposedu.\n\nAk ste nikdy predtým nepočuli o problémoch, ako sú \"soft brick\" a \"bootloop\", alebo ak neviete, ako sa dostať z takejto situácie, <b>NEINŠTALUJTE</b> Xposed!\n\nV každom prípade je odporúčané si vytvoriť zálohu.</string>
   <string name="dont_show_again">Nezobrazovať znova</string>
-  <string name="install_known_issue">Vyskytol sa známy problém (\"%s\") s vašou ROM. Inštalácia Xposed nemusí fungovať alebo môže viesť k závažným problémom. Kliknite sem pre podrobnosti o probléme.</string>
-  <string name="framework_active">Xposed Framework verzia %s je aktívny.</string>
+    <string name="framework_active">Xposed Framework verzia %s je aktívny.</string>
   <string name="framework_not_active">Xposed Framework verzia %s je nainštalovaný, ale nie je aktívny. Prosím, skontrolujte záznamy pre viac informácií.</string>
   <string name="framework_not_installed">Xposed Framework nie je nainštalovaný.</string>
   <string name="status">Stav Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework bude povolený pri nasledujúcom reštarte</string>
   <string name="xposed_off_next_reboot">Xposed Framework bude zakázaný pri nasledujúcom reštarte</string>
-  <string name="framework_install">Nainštalovať</string>
-  <string name="framework_uninstall">Odinštalovať</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">Nepodarilo sa získať root prístup.\n\nUistite sa, že je zariadenie správne rootnuté a príkazy konzoly nie sú blokované.</string>
-  <string name="file_copying">Kopírovanie %s&#8230;</string>
-  <string name="file_copy_failed">Nemožno kopírovať %1$s do %2$s</string>
-  <string name="file_creating_directory">Vytváranie adresára %s&#8230;</string>
-  <string name="file_create_directory_failed">Nemožno vytvoriť adresár %s</string>
-  <string name="file_writing_recovery_command">Zápis Recovery príkazu&#8230;</string>
-  <string name="file_writing_recovery_command_failed">Zápis Recovery príkazu zlyhal. Prosím, použite iný režim inštalácie.</string>
-  <string name="file_done">Hotovo! Zmeny sa stanú aktívnymi po reštarte.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul zatiaľ nie je aktivovaný</string>
   <string name="module_is_not_activated_yet_detailed">Modul %s bol nainštalovaný, ale zatiaľ nie je aktivovaný.</string>
   <string name="activate_and_reboot">Aktivovať a reštartovať</string>
@@ -58,8 +43,7 @@
   <string name="xposed_module_list_updated">Zoznam Xposed modulov bol aktualizovaný\nZmeny sa prejavia po reštarte</string>
   <string name="xposed_module_updated_notification_title">Aktualizovaný Xposed modul</string>
   <string name="xposed_module_updated_notification">Reštartujte pre aktiváciu zmien</string>
-  <string name="warning_xposed_min_version">Tento modul vyžaduje novšiu verziu Xposed (%d) a preto nemôže byť aktivovaný.</string>
-  <string name="no_min_version_specified">Tento modul nešpecifikuje verziu Xposed, ktorú potrebuje.</string>
+    <string name="no_min_version_specified">Tento modul nešpecifikuje verziu Xposed, ktorú potrebuje.</string>
   <string name="warning_min_version_too_low">Tento modul bol vytvorený pre verziu Xposed %1$d, ale kvôli nekompatibilným zmenám vo verzii %2$d bol deaktivovaný.</string>
   <string name="module_launch">Spustiť</string>
   <string name="module_download_updates">Stiahnuť/Aktualizácie</string>
@@ -104,19 +88,7 @@
   <string name="settings_group_experimental">Experimentálne</string>
   <string name="settings_disable_resources">Zakázať zmenu zdrojov</string>
   <string name="settings_disable_resources_summary">Riešenie konfliktov s témami\n<b>VAROVANIE:</b> Ak je táto možnosť povolená, moduly, ktoré sa snažia zmeniť zdroje, nebudú fungovať.</string>
-  <string name="settings_group_app">Aplikácia</string>
-  <string name="settings_theme">Téma</string>
-  <string name="settings_theme_light">Svetlá</string>
-  <string name="settings_theme_dark">Tmavá</string>
-  <string name="settings_theme_black">Čierna (vhodná pre AMOLED displeje)</string>
-  <string name="settings_default_view">Predvolené zobrazenie</string>
-  <string name="open_drawer_summ">Otvoriť navigačné menu po spustení aplikácie</string>
-  <string name="open_drawer">Automaticky otvoriť navigačné menu</string>
-  <string name="skip_xposedminversion_check">Preskočiť \'xposedminversion\' kontrolu</string>
-  <string name="skip_xposedminversion_check_summ">Preskočiť \'xposedminversion\' kontrolu pre moduly</string>
-  <string name="chrome_custom_tabs_summ">Otvoriť odkazy v internom prehliadači</string>
-  <string name="notify_module_update">Povoliť upozornenie na aktualizáciu modulu</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_modules_label">Podpora pre moduly</string>
   <string name="support_modules_description">Podržte dlho na module v zozname modulov a zvoľte \"%1$s\".</string>
   <string name="support_framework_label">Podpora pre Framework/Installer</string>

@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Отправить</string>
   <string name="menuSaveToSd">Сохранить на SD-карту</string>
-  <string name="xposed_not_active">Последняя версия Xposed в настоящее время не активна. Уверены, что Вы установили Framework и перезагрузили устройство?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Доступно обновление для Xposed Framework (%s).</string>
   <string name="modules_updates_available">Доступны обновления модуля</string>
   <!-- Navigation drawer items -->
@@ -19,36 +18,22 @@
   <string name="navigation_drawer_open">Открыть меню приложений</string>
   <string name="navigation_drawer_close">Закрыть меню приложений</string>
   <!-- Installer tab -->
-  <string name="install_update">Установить или Обновить</string>
-  <string name="uninstall">Удалить</string>
-  <string name="soft_reboot">Быстрая перезагрузка</string>
+    <string name="soft_reboot">Быстрая перезагрузка</string>
   <string name="reboot">Полная перезагрузка</string>
-  <string name="reboot_recovery">Перезагрузить в Recovery</string>
-  <string name="reboot_failed">Сбой перезагрузки. Пожалуйста, используйте встроенную функцию перезагрузки на устройстве.</string>
-  <string name="auto_flash_note">%s будет прошита автоматически при нажатии \"OK\".</string>
-  <string name="reboot_confirmation">Хотите перезагрузить устройство сейчас?</string>
+    <string name="reboot_failed">Сбой перезагрузки. Пожалуйста, используйте встроенную функцию перезагрузки на устройстве.</string>
+    <string name="reboot_confirmation">Хотите перезагрузить устройство сейчас?</string>
   <string name="install_warning_title">Будьте осторожны!</string>
   <string name="install_warning">В некоторых случаях, устройство может не загрузиться после установки Xposed.\n\nЕсли вы не знаете что такое \"soft brick\" и \"bootloop\". И не знаете как восстановить систему, <b>НЕ</b> устанавливайте Xposed!\n\nВ любом случае, делайте резервную копию системы.\"</string>
   <string name="dont_show_again">Больше не показывать сообщение</string>
-  <string name="install_known_issue">Похоже, присутствует известная несовместимость (\"%s\") с Вашей прошивкой. Пожалуй, Вам не стоит устанавливать Xposed. Нажмите здесь для дополнительной информации.</string>
-  <string name="framework_active">Xposed Framework версии %s активирован!</string>
+    <string name="framework_active">Xposed Framework версии %s активирован!</string>
   <string name="framework_not_active">Xposed Framework версия %s установлена, но не активирована. Пожалуйста проверьте логи.</string>
   <string name="framework_not_installed">Xposed Framework не установлен.</string>
   <string name="status">Состояние Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework будет включен после перезагрузки</string>
   <string name="xposed_off_next_reboot">Xposed Framework будет выключен после перезагрузки</string>
-  <string name="framework_install">Установить</string>
-  <string name="framework_uninstall">Удалить</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">Сбой получения прав рут-доступа.\n\nУбедитесь, что на устройстве есть рут и команды оболочки не блокируются.</string>
-  <string name="file_copying">Копирование %s&#8230;</string>
-  <string name="file_copy_failed">Невозможно копировать %1$s в %2$s</string>
-  <string name="file_creating_directory">Создание каталога %s&#8230;</string>
-  <string name="file_create_directory_failed">Невозможно создать каталог %s</string>
-  <string name="file_writing_recovery_command">Запись команды восстановления&#8230;</string>
-  <string name="file_writing_recovery_command_failed">Запись команды восстановления не удалась. Пожалуйста, используйте другой метод установки.</string>
-  <string name="file_done">Готово! Изменения станут активными после перезагрузки.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed модуль еще не активирован</string>
   <string name="module_is_not_activated_yet_detailed">%s был установлен но не активирован.</string>
   <string name="activate_and_reboot">Активировать и перезагрузить</string>
@@ -59,8 +44,7 @@
   <string name="xposed_module_list_updated">Список Xposed модулей обновлен\nИзменения вступят в силу после перезагрузки</string>
   <string name="xposed_module_updated_notification_title">Модуль Xposed обновлен</string>
   <string name="xposed_module_updated_notification">Перезагрузите устройство</string>
-  <string name="warning_xposed_min_version">Этот модуль требует более новой версии Xposed (%d) и не может быть активирован.</string>
-  <string name="no_min_version_specified">Этот модуль не указал версию Xposed, в которой он нуждается.</string>
+    <string name="no_min_version_specified">Этот модуль не указал версию Xposed, в которой он нуждается.</string>
   <string name="warning_min_version_too_low">Этот модуль был создан для Xposed версии %1$d, но из-за несовместимых изменений в версии %2$d, он был отключен.</string>
   <string name="module_launch">Запустить модуль</string>
   <string name="module_download_updates">Загрузить/Обновить</string>
@@ -107,19 +91,7 @@
   <string name="settings_group_experimental">Экспериментальное</string>
   <string name="settings_disable_resources">Не изменять ресурсы</string>
   <string name="settings_disable_resources_summary">Временное решение для конфликтов с темами системы\n<b>ВНИМАНИЕ:</b> Модули, которые пытаются изменить ресурсы не будут работать, если эта опция включена.</string>
-  <string name="settings_group_app">Приложение</string>
-  <string name="settings_theme">Тема</string>
-  <string name="settings_theme_light">Material светлая</string>
-  <string name="settings_theme_dark">Material темная</string>
-  <string name="settings_theme_black">Material черная (полезно для AMOLED экранов)</string>
-  <string name="settings_default_view">Вид по умолчанию при запуске</string>
-  <string name="open_drawer_summ">Автоматически открывать боковое меню при запуске</string>
-  <string name="open_drawer">Автоматически открыть боковое меню</string>
-  <string name="skip_xposedminversion_check">Пропускать проверку \'Xposed мин. версии\'</string>
-  <string name="skip_xposedminversion_check_summ">Пропустить \'Xposed мин. версии\' проверку модулей</string>
-  <string name="chrome_custom_tabs_summ">Открытие ссылок внутри приложения</string>
-  <string name="notify_module_update">Включить уведомления об обновлении модулей</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_modules_label">Поддержка модулей</string>
   <string name="support_modules_description">Долгое нажатие на модуле, в меню \"Установленные модули\" и выберите \"%1$s\".</string>
   <string name="support_framework_label">Поддержка Xposed Framework/Installer</string>

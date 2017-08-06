@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Enviar</string>
   <string name="menuSaveToSd">Salvar no cartão SD</string>
-  <string name="xposed_not_active">A última versão do Framework não está ativa. Você instalou o Framework e reiniciou o dispositivo?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Uma atualização para o Xposed Framework está disponível(%s).</string>
   <string name="modules_updates_available">Atualização(ões) de módulos disponíveis</string>
   <!-- Navigation drawer items -->
@@ -19,36 +18,22 @@
   <string name="navigation_drawer_open">Abrir gaveta de navegação</string>
   <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
   <!-- Installer tab -->
-  <string name="install_update">Instalar/Atualizar</string>
-  <string name="uninstall">Desinstalar</string>
-  <string name="soft_reboot">Reinício rápido</string>
+    <string name="soft_reboot">Reinício rápido</string>
   <string name="reboot">Reiniciar</string>
-  <string name="reboot_recovery">Reiniciar para recuperação</string>
-  <string name="reboot_failed">O reinício falhou. Por favor, use a função de reinício normal do sistema.</string>
-  <string name="auto_flash_note">%s vai ser instalado automaticamente quando você apertar \"OK\".</string>
-  <string name="reboot_confirmation">Deseja reinciar agora?</string>
+    <string name="reboot_failed">O reinício falhou. Por favor, use a função de reinício normal do sistema.</string>
+    <string name="reboot_confirmation">Deseja reinciar agora?</string>
   <string name="install_warning_title">Seja cuidadoso!</string>
   <string name="install_warning">Em alguns casos, seu dispositivo pode não ligar depois de instalar o Xposed.\n\nSe você nunca ouviu falar sobre \"soft brick\" e \"bootloop\" antes ou se você não sabe como se recuperar dessa situação, <b>NÃO</b> instale o Xposed!\n\nEm qualquer caso, ter um backup recente é altamente recomendado.</string>
   <string name="dont_show_again">Não mostre isso novamente</string>
-  <string name="install_known_issue">Este parece ser um erro conhecido (\"%s\") com sua ROM. Instalar o Xposed pode não funcionar ou causar sérios problemas. Clique aqui para detalhes sobre esse erro.</string>
-  <string name="framework_active">Xposed Framework versão %s está ativa.</string>
+    <string name="framework_active">Xposed Framework versão %s está ativa.</string>
   <string name="framework_not_active">O Xposed Framework versão %s está instalado, mas não está ativo. Por favor, veja registros para detalhes.</string>
   <string name="framework_not_installed">O Xposed Framework não está instalado.</string>
   <string name="status">Estado do Xposed</string>
   <string name="xposed_on_next_reboot">O Xposed Framework vai ser ativado no próximo reinício</string>
   <string name="xposed_off_next_reboot">O Xposed Framework vai ser desativado no próximo reinício</string>
-  <string name="framework_install">Instalar</string>
-  <string name="framework_uninstall">Desinstalar</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">Falha ao obter acesso root.\n\nTenha certeza que seu dispositivo está enraizado corretamente e que você não bloqueou comandos shell.</string>
-  <string name="file_copying">Copiando %s&#8230;</string>
-  <string name="file_copy_failed">Não foi possível copiar %1$s para %2$s</string>
-  <string name="file_creating_directory">Criando diretório %s&#8230;</string>
-  <string name="file_create_directory_failed">Não foi possível criar o diretório %s</string>
-  <string name="file_writing_recovery_command">Escrevendo comando de recuperação&#8230;</string>
-  <string name="file_writing_recovery_command_failed">Falha ao escrever o comando de recuperação. Por favor, use um método de instalação diferente.</string>
-  <string name="file_done">Pronto! As alterações terão efeito ao reiniciar.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Módulo não foi ativado ainda</string>
   <string name="module_is_not_activated_yet_detailed">%s foi instalado, mas ainda não está ativado.</string>
   <string name="activate_and_reboot">Ativar e reiniciar</string>
@@ -59,8 +44,7 @@
   <string name="xposed_module_list_updated">A lista de módulos foi atualizada\nAs alterações terão efeito ao reiniciar</string>
   <string name="xposed_module_updated_notification_title">Módulo atualizado</string>
   <string name="xposed_module_updated_notification">Reinicie para efetivar as mudanças</string>
-  <string name="warning_xposed_min_version">Este módulo requer uma nova versão do Xposed (%d) e não pode ser ativado.</string>
-  <string name="no_min_version_specified">Este módulo não especificou qual versão do Xposed precisa.</string>
+    <string name="no_min_version_specified">Este módulo não especificou qual versão do Xposed precisa.</string>
   <string name="warning_min_version_too_low">Este módulo foi criado para a versão %1$d do Xposed, mas devido à alterações incompatíveis na versão %2$d, foi desabilitado.</string>
   <string name="module_launch">Abrir interface de usuário</string>
   <string name="module_download_updates">Baixar/Atualizar</string>
@@ -106,18 +90,7 @@
   <string name="settings_group_experimental">Experimental</string>
   <string name="settings_disable_resources">Desabilitar prender recursos</string>
   <string name="settings_disable_resources_summary">Solução para conflitos com temas\n<b>AVISO:</b> Módulos que tentam alterar recursos não funcionarão com esta opção ativada.</string>
-  <string name="settings_group_app">Aplicativo</string>
-  <string name="settings_theme">Tema</string>
-  <string name="settings_theme_light">Claro</string>
-  <string name="settings_theme_dark">Escuro</string>
-  <string name="settings_theme_black">Preto ( bom em telas AMOLED)</string>
-  <string name="settings_default_view">Visualização padrão</string>
-  <string name="open_drawer_summ">Abre a barra de navegação automaticamente ao iniciar</string>
-  <string name="open_drawer">Abrir barra de navegação automaticamente</string>
-  <string name="chrome_custom_tabs">Separadores do Chrome Personalizados</string>
-  <string name="chrome_custom_tabs_summ">Abrir links no navegador interno</string>
-  <string name="notify_module_update">Habilitar notificação de atualização de módulo</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_modules_label">Ajuda para módulos</string>
   <string name="support_modules_description">Pressione qualquer módulo na lista de módulos e selecione \"%1$s\".</string>
   <string name="support_framework_label">Ajuda para o Framework/Installer</string>

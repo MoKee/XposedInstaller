@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Gửi</string>
   <string name="menuSaveToSd">Lưu vào thẻ SD</string>
-  <string name="xposed_not_active">Phiên bản mới nhất của Xposed chưa hoạt động. Bạn đã cài Framework và khởi động lại chưa?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Đã có bản mới cho Framework của Xposed (%s).</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Tải về</string>
@@ -15,29 +14,16 @@
   <string name="navigation_drawer_open">Mở menu ngăn kéo</string>
   <string name="navigation_drawer_close">Đóng menu ngăn kéo</string>
   <!-- Installer tab -->
-  <string name="install_update">Cài đặt/Cập nhật</string>
-  <string name="uninstall">Gỡ cài đặt</string>
-  <string name="soft_reboot">Khởi động lại mềm</string>
+    <string name="soft_reboot">Khởi động lại mềm</string>
   <string name="reboot">Khởi động lại</string>
   <string name="reboot_failed">Không thể khởi động lại. Vui lòng sử dụng chức năng khởi động lại của thiết bị.</string>
-  <string name="auto_flash_note">%s sẽ được cài đặt tự động khi bạn bấm \"OK\".</string>
-  <string name="reboot_confirmation">Bạn có muốn khởi động lại không?</string>
+    <string name="reboot_confirmation">Bạn có muốn khởi động lại không?</string>
   <string name="install_warning_title">Hãy cẩn thận!</string>
   <string name="install_warning">Trong một số trường hợp, thiết bị của bạn có thể không khởi động được sau khi cài Xposed.\n\nNếu bạn chưa từng nghe nói về \"soft brick\" và \"bootloop\" hoặc nếu bạn không biết cách xử lý trong tình huống đó, thì <b>ĐỪNG</b> cài Xposed!\n\nDù thế nào, bạn cũng nên có một bản sao lưu mới.</string>
   <string name="dont_show_again">Đừng hiện lại nữa</string>
-  <string name="install_known_issue">Bản ROM của bạn đã được thông báo là gặp truc trặc (\"%s\") với Xposed. Ứng dụng có thể không hoạt động hoặc gặp lỗi nghiêm trọng. Hãy bấm vào đây để xem chi tiết vấn đề.</string>
-  <string name="framework_install">Cài đặt</string>
-  <string name="framework_uninstall">Gỡ bỏ</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">Không thể lấy quyền root.\n\nHãy đảm bảo rằng thiết bị của bạn đã root và bạn không chặn các lệnh shell.</string>
-  <string name="file_copying">Đang chép %s&#8230;</string>
-  <string name="file_copy_failed">Không thể chép %1$s vào %2$s</string>
-  <string name="file_creating_directory">Đang tạo thư mục %s&#8230;</string>
-  <string name="file_create_directory_failed">Không thể tạo thư mục %s</string>
-  <string name="file_writing_recovery_command">Đang viết lệnh cho recovery&#8230;</string>
-  <string name="file_writing_recovery_command_failed">Không thể viết lệnh cho recovery. Hãy dùng cách khác để cài.</string>
-  <string name="file_done">Xong! Các thay đổi sẽ có hiệu lực khi khởi động lại thiết bị.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Module chưa bật</string>
   <string name="module_is_not_activated_yet_detailed">%s đã được cài, nhưng chưa được kích hoạt.</string>
   <string name="activate_and_reboot">Kích hoạt và khởi động lại</string>
@@ -48,8 +34,7 @@
   <string name="xposed_module_list_updated">Danh sách module đã được cập nhật\nCác thay đổi sẽ có hiệu lực sau khi khởi động lại</string>
   <string name="xposed_module_updated_notification_title">Module của Xposed đã được cập nhật</string>
   <string name="xposed_module_updated_notification">Khởi động lại để áp dụng ác thay đổi</string>
-  <string name="warning_xposed_min_version">Module này cần bản Xposed mới (%d) nên hiện tại không thể bật.</string>
-  <string name="no_min_version_specified">Module này không yêu cầu cụ thể phiên bản Xposed nào.</string>
+    <string name="no_min_version_specified">Module này không yêu cầu cụ thể phiên bản Xposed nào.</string>
   <string name="warning_min_version_too_low">Module này được viết cho Xposed bản %1$d, nhưng do không tương thích với các thay đổi trong bản %2$d, nên đã bị tắt.</string>
   <string name="module_launch">Mở giao diện</string>
   <string name="module_download_updates">Tải xuống/Cập nhật</string>
@@ -94,12 +79,7 @@
   <string name="settings_group_experimental">Thử nghiệm</string>
   <string name="settings_disable_resources">Ngắt các kết nối tài nguyên</string>
   <string name="settings_disable_resources_summary">Tránh xung đột với các máy giao diện\n<b>CẢNH BÁO:</b> Các module cần thay đổi tài nguyên sẽ không hoạt động khi bật tính năng này.</string>
-  <string name="settings_group_app">Ứng dụng</string>
-  <string name="settings_theme">Kiểu giao diện</string>
-  <string name="settings_theme_light">Sáng</string>
-  <string name="settings_theme_dark">Tối</string>
-  <string name="settings_theme_black">Đen (phù hợp với màn hình AMOLED)</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_donate_label">Ủng hộ</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Không thể ghi nhật ký vào thẻ SD:</string>

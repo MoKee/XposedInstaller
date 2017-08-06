@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">שלח</string>
   <string name="menuSaveToSd">שמור לכרטיס זיכרון</string>
-  <string name="xposed_not_active">הגרסה האחרונה של Xposed לא פעילה כרגע. התקנת את הסביבה והפעלת מחדש?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">עדכון לסביבת Xposed זמין.</string>
   <!-- Navigation drawer items -->
   <string name="nav_item_download">הורדה</string>
@@ -13,28 +12,16 @@
   <string name="nav_item_support">תמיכה</string>
   <string name="nav_item_about">אודות</string>
   <!-- Installer tab -->
-  <string name="install_update">התקנה/עדכון</string>
-  <string name="uninstall">הסרה</string>
-  <string name="soft_reboot">הפעלה מחדש מהירה</string>
+    <string name="soft_reboot">הפעלה מחדש מהירה</string>
   <string name="reboot">הפעלה מחדש</string>
   <string name="reboot_failed">הפעלה מחדש נכשלה. בבקשה הפעילו מחדש את המכשיר בעצמכם.</string>
-  <string name="auto_flash_note">%s יצרב באופן אוטומטי לאחר לחיצה על \"אישור\".</string>
-  <string name="reboot_confirmation">האם להפעיל מחדש כעת?</string>
+    <string name="reboot_confirmation">האם להפעיל מחדש כעת?</string>
   <string name="install_warning_title">היו זהירים!</string>
   <string name="install_warning">במקרים מסויימים, המכשיר שלך עלול לא לעבוד לאחר התקנה של Xposed.\n\nאם מעולם לא שמעת על \"soft brick\" ו \"bootloop\" או שאתה לא יודע איך לצאת ממצב כזה, <b>אל</b> תתקין את Xposed!\n\nבכל מקרה, מומלץ שיהיה גיבוי עדכני.</string>
   <string name="dont_show_again">אל תציג זאת שוב</string>
-  <string name="install_known_issue">נראה שיש בעיה ידועה (\"%s\") עם הרום שלך. התקנה של Xposed עלולה לא לעבוד או לגרום לבעיות. לחץ כאן לפרטים אודות הבעיה.</string>
-  <string name="framework_install">התקן</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">לא ניתן להשיג הרשאות רוט.\n\nבדקו שהמכשיר שלכם עבר תהליך רוט כראוי ושהוא לא חסום לפקודות shell.</string>
-  <string name="file_copying">מעתיק %s&#8230;</string>
-  <string name="file_copy_failed">Tלא ניתן להעתיק את %1$s ל %2$s</string>
-  <string name="file_creating_directory">יוצר תיקייה %s&#8230;</string>
-  <string name="file_create_directory_failed">לא ניתן ליצור תיקיה בשם %s</string>
-  <string name="file_writing_recovery_command">כותב לרקוברי פקודה &#8230;</string>
-  <string name="file_writing_recovery_command_failed">כתיבה לרקוברי נכשלה. השתמש בצורת התקנה שונה.</string>
-  <string name="file_done">הסתיים! השינויים יאופשרו בהפעלה מחדש.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">מודול עוד לא מופעל</string>
   <string name="module_is_not_activated_yet_detailed">%s הותקן, אך עוד לא הופעל.</string>
   <string name="activate_and_reboot">אפשר והפעל מחדש</string>
@@ -45,8 +32,7 @@
   <string name="xposed_module_list_updated">רשימת המודולים עודכנה\nהשינויים יחולו לאחר הפעלה מחדש</string>
   <string name="xposed_module_updated_notification_title">מודול Xposed עודכן</string>
   <string name="xposed_module_updated_notification">הפעל מחדש בכדי לאפשר את השינויים</string>
-  <string name="warning_xposed_min_version">מודול זה דורש גרסה עדכנית יותר של סביבת Xposed (%d) ולכן לא ניתן להפעילו.</string>
-  <string name="no_min_version_specified">מודול זה אינו מספק את הגרסה של סביבת Xposed שהוא צריך.</string>
+    <string name="no_min_version_specified">מודול זה אינו מספק את הגרסה של סביבת Xposed שהוא צריך.</string>
   <string name="warning_min_version_too_low">מודול זה פותח עבור Xposed בגרסה %1$d, אבל בעקרבות שינויים בגרסה %2$d, הוא בוטל.</string>
   <string name="module_launch">פתח ממשק</string>
   <string name="module_download_updates">הורד/התקן</string>
@@ -93,12 +79,7 @@
   <string name="settings_group_experimental">ניסיוני</string>
   <string name="settings_disable_resources">מבטל את חיבור המשאבים (resources)</string>
   <string name="settings_disable_resources_summary">פתרון לבעיות עם ערכות נושא <b>אזהרה:</b> מודולים שמנסים לשנות את המשאבים (resources) לא יעבדו!.</string>
-  <string name="settings_group_app">אפליקציה</string>
-  <string name="settings_theme">ערכת נושא</string>
-  <string name="settings_theme_light">בהיר</string>
-  <string name="settings_theme_dark">כהה</string>
-  <string name="settings_theme_black">שחור (שימושי למסכי אמולד)</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_donate_label">תרום</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">לא ניתן לשמור את הלוג לכרטיס הזיכרון:</string>

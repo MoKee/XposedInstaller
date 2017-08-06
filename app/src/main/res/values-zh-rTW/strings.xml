@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">傳送</string>
   <string name="menuSaveToSd">傳送到 SD 卡</string>
-  <string name="xposed_not_active">最新版本的 Xposed 目前尚未啟用。您是否已安裝框架並重新啟動？</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Xposed 框架有更新可用。</string>
   <string name="modules_updates_available">模組可供更新</string>
   <!-- Navigation drawer items -->
@@ -19,49 +18,22 @@
   <string name="navigation_drawer_open">開啟抽屜式導航欄</string>
   <string name="navigation_drawer_close">關閉抽屜式導航欄</string>
   <!-- Installer tab -->
-  <string name="install_update">安裝/更新</string>
-  <string name="uninstall">移除</string>
-  <string name="soft_reboot">快速重啟</string>
+    <string name="soft_reboot">快速重啟</string>
   <string name="reboot">重新啟動</string>
-  <string name="reboot_recovery">重新啟動至 Recovery 模式</string>
-  <string name="not_now">稍後</string>
-  <string name="reboot_failed">重新啟動失敗。請使用裝置的標準的重新啟動功能。</string>
-  <string name="auto_flash_note">當您按下 OK 後，%s 將會自動被刷入裝置。</string>
-  <string name="reboot_confirmation">您要現在重新啟動嗎？</string>
+    <string name="reboot_failed">重新啟動失敗。請使用裝置的標準的重新啟動功能。</string>
+    <string name="reboot_confirmation">您要現在重新啟動嗎？</string>
   <string name="install_warning_title">小心！</string>
   <string name="install_warning">某些情況下，您的裝置可能會在安裝 Xposed 後無法啓動。\n\n如果您從未聽說「軟變磚」或「無限重新啟動」，或者您不知道如何從這種情況恢復，請\"<b>不要</b>\"安裝 Xposed ！\n\n無論如何，強烈建議準備好最近的備份。</string>
   <string name="dont_show_again">不要再顯示這個</string>
-  <string name="install_known_issue">Xposed 與您的 ROM 似乎存在已知的問題 (\"%s\")。安裝 Xposed 可能無法正常工作或是導致更嚴重的問題。點擊這裡了解詳情。</string>
-  <string name="framework_active">Xposed 框架 %s 版已啟用。</string>
+    <string name="framework_active">Xposed 框架 %s 版已啟用。</string>
   <string name="framework_not_active">Xposed 框架 %s 版已安裝，但尚未啟用。 請查看日誌以了解細節。</string>
   <string name="framework_not_installed">Xposed 框架未安裝。</string>
-  <string name="flash_error_timeout">操作逾時</string>
-  <string name="flash_error_shell_died">操作意外中止</string>
-  <string name="flash_error_invalid_zip">不是可以刷入的zip檔案</string>
-  <string name="flash_error_not_flashable_in_app">此檔案只能通過Recovery刷入</string>
-  <string name="flash_error_default">發生 %d 錯誤</string>
-  <string name="status">Xposed 狀態</string>
+    <string name="status">Xposed 狀態</string>
   <string name="xposed_on_next_reboot">Xposed 框架將在下次重新啟動裝置後啟用</string>
   <string name="xposed_off_next_reboot">Xposed 框架將在下次重新啟動裝置後停用</string>
-  <string name="show_outdated">顯示舊版本</string>
-  <string name="framework_device_info">您的裝置</string>
-  <string name="framework_install">安裝</string>
-  <string name="framework_uninstall">解除安裝</string>
-  <string name="framework_install_recovery">通過 Recovery 安裝</string>
-  <string name="framework_uninstall_recovery">通過 Recovery 反安裝</string>
-  <string name="framework_delete">刪除已經下載的檔案</string>
-  <string name="framework_zip_load_failed">無法讀取可用的zip檔案，請下滑重新整理後嘗試。</string>
-  <string name="framework_no_zips">找不到符合的zip檔案，可能暫時不支援您的裝置</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">無法取得 root 權限。\n\n請確認您的裝置已正確的 root 以及您沒有阻擋 shell 指令。</string>
-  <string name="file_copying">正在複製 %s&#8230;</string>
-  <string name="file_copy_failed">無法將 %1$s 複製到 %2$s</string>
-  <string name="file_creating_directory">正在建立目錄 %s&#8230;</string>
-  <string name="file_create_directory_failed">無法建立目錄 %s</string>
-  <string name="file_writing_recovery_command">正在寫入 Recovery 命令&#8230;</string>
-  <string name="file_writing_recovery_command_failed">寫入 Recovery 命令失敗。請換一種安裝方式。</string>
-  <string name="file_done">完成！修改將於重新啟動之後生效。</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed模組未啟動</string>
   <string name="module_is_not_activated_yet_detailed">已安裝 %s，但尚未啟用。</string>
   <string name="activate_and_reboot">啟用並重新啟動</string>
@@ -73,8 +45,7 @@
   <string name="xposed_module_list_updated">Xposed 模組清單已更新\n更改將於重新啟動後生效</string>
   <string name="xposed_module_updated_notification_title">Xposed 模組已更新</string>
   <string name="xposed_module_updated_notification">重新啟動以套用變更。</string>
-  <string name="warning_xposed_min_version">該模組需要較新版本的 Xposed (%d)，因此無法啟用。</string>
-  <string name="no_min_version_specified">該模組未指定 Xposed 版本需求。</string>
+    <string name="no_min_version_specified">該模組未指定 Xposed 版本需求。</string>
   <string name="warning_min_version_too_low">該模組在 Xposed %1$d 版本下建立，但因為不相容 %2$d 版本中的變化內容，它已被停用。</string>
   <string name="module_launch">執行界面</string>
   <string name="module_download_updates">下載/更新</string>
@@ -117,28 +88,11 @@
   <string name="download_test_version_not_shown">有新的測試版可用。根據您的全域或模組設定，未被顯示。</string>
   <!-- Settings tab -->
   <string name="settings_group_download">下載</string>
-  <string name="settings_enable_downloads">啟用下載</string>
-  <string name="settings_enable_downloads_summary">允許 Xposed Installer 檢查更新和更新模組</string>
-  <string name="settings_release_type">顯示版本</string>
+    <string name="settings_release_type">顯示版本</string>
   <string name="settings_group_experimental">實驗性</string>
   <string name="settings_disable_resources">停用資源鉤子</string>
   <string name="settings_disable_resources_summary">解決與主題引擎的衝突。\n<b>警告：</b> 啓用此選項將導致修改資源的模組停止運作。</string>
-  <string name="settings_group_app">應用程式</string>
-  <string name="settings_theme">主題</string>
-  <string name="settings_theme_light">淺色</string>
-  <string name="settings_theme_dark">暗色</string>
-  <string name="settings_theme_black">黑色 (對 AMOLED 螢幕有幫助)</string>
-  <string name="settings_default_view">預設瀏覽</string>
-  <string name="open_drawer_summ">啟動時自動開啟抽屜式導航欄</string>
-  <string name="open_drawer">自動開啟抽屜式導航欄</string>
-  <string name="skip_xposedminversion_check">略過 \'Xposed 最低版本\' 檢查</string>
-  <string name="skip_xposedminversion_check_summ">略過模組 \'Xposed 最低版本\' 檢查</string>
-  <string name="chrome_custom_tabs">Chrome 式自訂分頁</string>
-  <string name="chrome_custom_tabs_summ">於內置瀏覽器開啟連結</string>
-  <string name="download_location">下載位置</string>
-  <string name="download_location_summ">下載模組Apk檔的位置</string>
-  <string name="notify_module_update">啟用模組更新通知</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_modules_label">模組支援</string>
   <string name="support_modules_description">於模組清單長按並選取 \"%1$s\"。</string>
   <string name="support_framework_label">框架/Installer 支援</string>
@@ -146,11 +100,9 @@
   <string name="support_donate_label">贊助</string>
   <string name="support_donate_description">若您想對 Xposed 表達感謝，在此贊助 rovo89。</string>
   <!-- Logs tab  -->
-  <string name="logs_load_failed">無法讀取日誌：</string>
-  <string name="logs_save_failed">無法將日誌寫入 SD 卡：</string>
+    <string name="logs_save_failed">無法將日誌寫入 SD 卡：</string>
   <string name="sdcard_not_writable">找不到 SD 卡或無法寫入</string>
-  <string name="log_too_large">日誌檔大於%1$,d kB，跳過前%2$,d kB</string>
-  <string name="menuClearLog">立即清理日誌</string>
+    <string name="menuClearLog">立即清理日誌</string>
   <string name="logs_cleared">清理日誌成功</string>
   <string name="logs_clear_failed">無法清理日誌：</string>
   <string name="log_is_empty">日誌爲空</string>
@@ -172,8 +124,7 @@
   <string name="download_view_waiting">等待下載中</string>
   <string name="download_view_successful">下載成功</string>
   <string name="download_view_failed">下載失敗 (錯誤 %d)</string>
-  <string name="download_view_size">大小：%s kB</string>
-  <!-- DownloadUtils -->
+    <!-- DownloadUtils -->
   <string name="download_md5sum_incorrect">MD5 校驗碼錯誤 (下載值： %1$s, 預期值： %2$s)</string>
   <string name="download_could_not_read_file">無法讀取下載檔案：%s</string>
   <string name="download_no_valid_apk">下載的檔案不是有效 APK (或不相容)</string>
@@ -185,10 +136,7 @@
   <string name="repo_load_failed">無法載入倉庫 %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">此模組安裝在SD卡中導致無法載入，請將此模組移回內部儲存空間。</string>
-  <string name="warning_forward_locked">無法載入此模組，因為他已經是轉發鎖定，請通知此模組的開發人員。</string>
-  <string name="export_modules">匯出已啟用的模組清單</string>
-  <string name="import_modules">匯入已啟用的模組清單</string>
-  <string name="view">查看</string>
+    <string name="view">查看</string>
   <string name="export_">匯出…</string>
   <string name="import_">匯入…</string>
   <string name="export_enabled_modules">匯出啟用模組清單</string>

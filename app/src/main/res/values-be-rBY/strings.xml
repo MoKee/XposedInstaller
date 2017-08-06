@@ -11,10 +11,7 @@
   <string name="navigation_drawer_open">Адкрыць панэль</string>
   <string name="navigation_drawer_close">Зачыніць панель</string>
   <!-- Installer tab -->
-  <string name="uninstall">Выдаліць</string>
-  <string name="framework_install">Усталяваць</string>
-  <string name="framework_uninstall">Выдаліць</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_support">Падтрымка</string>
   <string name="module_app_info">Звесткі пра праграму</string>
@@ -29,9 +26,7 @@
   <!-- Settings tab -->
   <string name="settings_group_download">Спампаваць</string>
   <string name="settings_group_experimental">Эксперыментальная</string>
-  <string name="settings_theme">Тэма</string>
-  <string name="settings_theme_dark">Цемра</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_donate_label">Ахвяраваць</string>
   <!-- Logs tab  -->
   <!-- About tab -->

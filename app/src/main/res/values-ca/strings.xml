@@ -4,8 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSend">Envia</string>
   <string name="menuSaveToSd">Desa a la targeta</string>
-  <string name="xposed_not_active">La darrera versió de l\'Xposed no està activa. Heu instal·lat el marc i reiniciat?</string>
-  <!-- Welcome screen / main sections -->
+    <!-- Welcome screen / main sections -->
   <string name="welcome_framework_update_available">Hi ha una actualització per al marc Xposed (%s).</string>
   <string name="modules_updates_available">Hi ha actualitzacions disponibles d\'algun mòdul(s)</string>
   <!-- Navigation drawer items -->
@@ -19,32 +18,19 @@
   <string name="navigation_drawer_open">Obre el calaix de navegació</string>
   <string name="navigation_drawer_close">Tanca el calaix de navegació</string>
   <!-- Installer tab -->
-  <string name="install_update">Instal·la/Actualitza</string>
-  <string name="uninstall">Desinstal·la</string>
-  <string name="soft_reboot">Reinici ràpid</string>
+    <string name="soft_reboot">Reinici ràpid</string>
   <string name="reboot">Reinici</string>
-  <string name="reboot_recovery">Reinici a recuperació</string>
-  <string name="reboot_failed">Ha fallat el reinici. Utilitzeu la funció normal de reinici del dispositiu.</string>
-  <string name="auto_flash_note">S\'hauria d\'instal·lar automàticament %s quan premeu \"D\'acord\".</string>
-  <string name="reboot_confirmation">Voleu reiniciar ara?</string>
+    <string name="reboot_failed">Ha fallat el reinici. Utilitzeu la funció normal de reinici del dispositiu.</string>
+    <string name="reboot_confirmation">Voleu reiniciar ara?</string>
   <string name="install_warning_title">Compte!</string>
   <string name="install_warning">Alguna vegada pot ser que el dispositiu no s\'iniciï després d\'instal·lar l\'Xposed.\n\nSi no heu sentit mai els termes \"soft brick\" i \"bootloop\" o no sabeu com recuperar-vos d\'aquestes situacions, <b>NO</b> instal·leu l\'Xposed!\n\nEn tot cas, és altament recomanable tenir una còpia de seguretat recent.</string>
   <string name="dont_show_again">No ho tornis a mostrar</string>
-  <string name="install_known_issue">Sembla que hi ha un problema conegut (\"%s\") amb la vostra ROM. Potser que la intal·lació de l\'Xposed no funcioni o causar problemes greus. Feu clic aquí per a més detalls del problema.</string>
-  <string name="framework_active">El marc Xposed versió %s està actiu.</string>
+    <string name="framework_active">El marc Xposed versió %s està actiu.</string>
   <string name="framework_not_active">El marc Xposed versió %s està instal·lat però inactiu. Reviseu els registres per als detalls.</string>
   <string name="framework_not_installed">El marc Xposed no està instal·lat.</string>
-  <string name="framework_install">Instal·la</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <string name="root_failed">No s\'ha aconseguit accés d\'usuari primari.\n\nAssegureu-vos que el dispositiu té activat l\'usuari primari (root) i que no s\'han bloquejat les ordres de línia de comandaments.</string>
-  <string name="file_copying">S\'està copiant %s&#8230;</string>
-  <string name="file_copy_failed">No s\'ha pogut copiar %1$s a %2$s</string>
-  <string name="file_creating_directory">S\'està creant la carpeta %s&#8230;</string>
-  <string name="file_create_directory_failed">No s\'ha pogut crear la carpeta %s</string>
-  <string name="file_writing_recovery_command">S\'està escrivint un comandament de mode recuperació&#8230;</string>
-  <string name="file_writing_recovery_command_failed">Ha fallat l\'escriptura del comandament de mode recuperació. Utilitzeu un mètode d\'instal·lació diferent.</string>
-  <string name="file_done">Fet! Els canvis s\'activaran en reiniciar.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">El mòdul Xposed encara no està actiu</string>
   <string name="module_is_not_activated_yet_detailed">S\'ha intal·lat %s, però encara no està actiu.</string>
   <string name="activate_and_reboot">Activa i reinicia</string>
@@ -55,8 +41,7 @@
   <string name="xposed_module_list_updated">S\'ha actualitzat la llista de mòduls Xposed\nS\'activaran els canvis en reiniciar</string>
   <string name="xposed_module_updated_notification_title">S\'ha actualitzat el mòdul Xposed</string>
   <string name="xposed_module_updated_notification">Reinicieu per activar els canvis</string>
-  <string name="warning_xposed_min_version">Aquest mòdul requereix una versió de l\'Xposed més nova (%d) i no es pot activar.</string>
-  <string name="no_min_version_specified">Aquest mòdul no especifica la versió de l\'Xposed que necessita.</string>
+    <string name="no_min_version_specified">Aquest mòdul no especifica la versió de l\'Xposed que necessita.</string>
   <string name="warning_min_version_too_low">Aquest mòdul es va crear per a l\'Xposed versió %1$d, però degut als canvis incompatibles a la versió %2$d, s\'ha inhabilitat.</string>
   <string name="module_launch">Executa la IU</string>
   <string name="module_download_updates">Baixa/Actualitzacions</string>
@@ -101,16 +86,7 @@
   <string name="settings_group_experimental">Experimental</string>
   <string name="settings_disable_resources">Ganxos d\'orígens inhabilitats</string>
   <string name="settings_disable_resources_summary">Solució per a conflictes amb motors de tematització\n<b>AVÍS:</b> Els mòduls que intenten canviar recursos no funcionaran si s\'habilita.</string>
-  <string name="settings_group_app">Aplicació</string>
-  <string name="settings_theme">Tema</string>
-  <string name="settings_theme_light">Clar</string>
-  <string name="settings_theme_dark">Fosc</string>
-  <string name="settings_theme_black">Negre (útil per a pantalles AMOLED)</string>
-  <string name="settings_default_view">Vista per defecte</string>
-  <string name="chrome_custom_tabs">Pestanyes personalitzades del Chrome</string>
-  <string name="chrome_custom_tabs_summ">Obre els enllaços al navegador intern</string>
-  <string name="notify_module_update">Habilita la notificació d\'actualització de mòduls</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <string name="support_modules_label">Ajuda per als mòduls</string>
   <string name="support_modules_description">Feu clic llarg sobre un mòdul de la llista de mòduls i seleccioneu \"%1$s\".</string>
   <string name="support_framework_label">Ajuda per al marc/instal·lador</string>

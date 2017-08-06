@@ -5,15 +5,12 @@
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
   <!-- Installer tab -->
-  <string name="uninstall">Desinstalar</string>
-  <string name="framework_uninstall">Desinstalar</string>
-  <!-- File operations -->
+    <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_uninstall">Desinstalar</string>
   <!-- Download tab -->
   <!-- Settings tab -->
-  <string name="settings_theme">Tema</string>
-  <!-- Support tab -->
+    <!-- Support tab -->
   <!-- Logs tab  -->
   <!-- About tab -->
   <!-- DownloadView -->

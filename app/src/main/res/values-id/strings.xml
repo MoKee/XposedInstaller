@@ -9,8 +9,6 @@
     <!-- Navigation drawer items -->
 
     <!-- Installer tab -->
-    <string name="install_update">Install/Update</string>
-    <string name="uninstall">Hapus</string>
     <string name="soft_reboot">Reboot cepat</string>
     <string name="reboot">Reboot</string>
 
@@ -22,7 +20,6 @@
     <string name="module_no_ui">Modul ini tidak ada tampilan utama</string>
     <string name="no_xposed_modules_found">Tidak ada modul Xposed detemukan!</string>
     <string name="xposed_module_list_updated">Daftar modul telah diupdate\nAkan aktif setelah reboot.</string>
-    <string name="warning_xposed_min_version">Modul ini membutuhkan Xposed yang lebih baru (%d) dan tidak dapat diaktifkan.</string>
     <string name="no_min_version_specified">Modul ini tidak memberitahukan versi Xposed yang dibutuhkan.</string>
     <string name="warning_min_version_too_low">Modul ini dibuat untuk Xposed versi %1$d, tetapi karena ketidakcocoknya di versi %2$d, maka modul dimatikan.</string>
     <string name="module_launch">Buka UI</string>
