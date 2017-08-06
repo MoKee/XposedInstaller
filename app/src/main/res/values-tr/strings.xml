@@ -115,10 +115,7 @@
   <string name="repo_load_failed">Depodan yüklenemiyor %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="add_bookmark">Yer imi ekle</string>
-  <string name="bookmarks">Yer imleri</string>
   <string name="bookmark_added">Yer işareti eklendi</string>
-  <string name="undo">Geri al</string>
   <string name="file_is_empty">Dosya boş</string>
-  <string name="loading">Yükleniyor…</string>
   <string name="save">Kaydet</string>
 </resources>

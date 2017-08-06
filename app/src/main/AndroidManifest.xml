@@ -52,7 +52,6 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".SupportActivity" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".ModulesBookmark" />
         <receiver
             android:name=".receivers.PackageChangeReceiver"
             android:exported="false">

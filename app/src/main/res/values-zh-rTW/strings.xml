@@ -129,7 +129,6 @@
   <string name="download_could_not_read_file">無法讀取下載檔案：%s</string>
   <string name="download_no_valid_apk">下載的檔案不是有效 APK (或不相容)</string>
   <string name="download_incorrect_package_name">檔案包名稱不正確 (下載： %1$s, 預期： %2$s)</string>
-  <string name="download_running">正在下載</string>
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">下載 %1$s 時出錯：%2$d (%3$s)</string>
   <string name="repo_download_failed">下載 %1$s 時出錯：%2$s</string>
@@ -137,29 +136,15 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">此模組安裝在SD卡中導致無法載入，請將此模組移回內部儲存空間。</string>
     <string name="view">查看</string>
-  <string name="export_">匯出…</string>
-  <string name="import_">匯入…</string>
-  <string name="export_enabled_modules">匯出啟用模組清單</string>
-  <string name="import_enabled_modules">匯入啟用模組清單</string>
-  <string name="export_installed_modules">匯出安裝模組清單</string>
-  <string name="import_installed_modules">匯入安裝模組清單</string>
-  <string name="no_installed_modules">無任何已安裝的模組！</string>
   <string name="no_backup_found">找不到備份</string>
-  <string name="no_enabled_modules">沒有任何啟用的模組</string>
   <string name="share">分享至…</string>
   <string name="permissionNotGranted">未取得寫入外部存儲空間權限，此功能將無法正常運作。</string>
   <string name="add_bookmark">新增書籤</string>
   <string name="remove_bookmark">移除書籤</string>
-  <string name="bookmarks">書籤</string>
-  <string name="no_bookmark_added">無加入書籤</string>
   <string name="bookmark_added">已加入書籤</string>
   <string name="bookmark_removed">已移除書籤</string>
-  <string name="undo">還原</string>
   <string name="file_is_empty">檔案為空</string>
-  <string name="install_remove">安裝和移除</string>
-  <string name="download_remove">下載和移除</string>
   <string name="module_saved">儲存模組於 %1$s</string>
-  <string name="loading">載入中…</string>
   <string name="save">儲存</string>
   <string name="update_download_list">下滑以重新下載的模組清單</string>
 </resources>

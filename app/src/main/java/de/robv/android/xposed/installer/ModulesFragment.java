@@ -22,8 +22,6 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,23 +36,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
 
 import de.robv.android.xposed.installer.repo.Module;
 import de.robv.android.xposed.installer.repo.ModuleVersion;
@@ -137,14 +129,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
         getListView().setDividerHeight(sixDp);
         getListView().setPadding(eightDp, toolBarDp + eightDp, eightDp, eightDp);
         getListView().setClipToPadding(false);
-
-        setHasOptionsMenu(true);
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // TODO maybe enable again after checking the implementation
-        //inflater.inflate(R.menu.menu_modules, menu);
     }
 
     @Override
@@ -165,100 +149,6 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
                 Toast.makeText(getActivity(), R.string.permissionNotGranted, Toast.LENGTH_LONG).show();
             }
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.bookmarks) {
-            startActivity(new Intent(getActivity(), ModulesBookmark.class));
-            return true;
-        }
-
-        String backupPath = Environment.getExternalStorageDirectory()
-                + "/XposedInstaller";
-
-        File enabledModulesPath = new File(backupPath, "enabled_modules.list");
-        File installedModulesPath = new File(backupPath, "installed_modules.list");
-        File targetDir = new File(backupPath);
-        File listModules = new File(XposedApp.ENABLED_MODULES_LIST_FILE);
-
-        mClickedMenuItem = item;
-
-        if (checkPermissions())
-            return false;
-
-        switch (item.getItemId()) {
-            case R.id.export_enabled_modules:
-                if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                    return false;
-                }
-
-                if (ModuleUtil.getInstance().getEnabledModules().isEmpty()) {
-                    Toast.makeText(getActivity(), getString(R.string.no_enabled_modules), Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-
-                try {
-                    if (!targetDir.exists())
-                        targetDir.mkdir();
-
-                    FileInputStream in = new FileInputStream(listModules);
-                    FileOutputStream out = new FileOutputStream(enabledModulesPath);
-
-                    byte[] buffer = new byte[1024];
-                    int len;
-                    while ((len = in.read(buffer)) > 0) {
-                        out.write(buffer, 0, len);
-                    }
-                    in.close();
-                    out.close();
-                } catch (IOException e) {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.logs_save_failed) + "\n" + e.getMessage(), Toast.LENGTH_LONG).show();
-                    return false;
-                }
-
-                Toast.makeText(getActivity(), enabledModulesPath.toString(), Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.export_installed_modules:
-                if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                    Toast.makeText(getActivity(), R.string.sdcard_not_writable, Toast.LENGTH_LONG).show();
-                    return false;
-                }
-                Map<String, InstalledModule> installedModules = ModuleUtil.getInstance().getModules();
-
-                if (installedModules.isEmpty()) {
-                    Toast.makeText(getActivity(), getString(R.string.no_installed_modules), Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-
-                try {
-                    if (!targetDir.exists())
-                        targetDir.mkdir();
-
-                    FileWriter fw = new FileWriter(installedModulesPath);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    PrintWriter fileOut = new PrintWriter(bw);
-
-                    Set keys = installedModules.keySet();
-                    for (Object key1 : keys) {
-                        String packageName = (String) key1;
-                        fileOut.println(packageName);
-                    }
-
-                    fileOut.close();
-                } catch (IOException e) {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.logs_save_failed) + "n" + e.getMessage(), Toast.LENGTH_LONG).show();
-                    return false;
-                }
-
-                Toast.makeText(getActivity(), installedModulesPath.toString(), Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.import_installed_modules:
-                return importModules(installedModulesPath);
-            case R.id.import_enabled_modules:
-                return importModules(enabledModulesPath);
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     private boolean checkPermissions() {

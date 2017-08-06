@@ -19,7 +19,5 @@
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
   <string name="add_bookmark">Gehitu laster-marka</string>
-  <string name="bookmarks">Laster-markak</string>
   <string name="bookmark_added">Laster-marka gehitu da</string>
-  <string name="undo">Desegin</string>
 </resources>

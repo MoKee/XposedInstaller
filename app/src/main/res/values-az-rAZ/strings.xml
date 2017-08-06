@@ -20,8 +20,6 @@
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
   <string name="add_bookmark">Əlfəcin əlavə et</string>
-  <string name="bookmarks">Əlfəcinlər</string>
   <string name="bookmark_added">Əlfəcin əlavə edildi</string>
-  <string name="undo">Ləğv edin</string>
   <string name="save">Yadda saxla</string>
 </resources>
