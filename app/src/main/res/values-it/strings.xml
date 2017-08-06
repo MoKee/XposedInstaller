@@ -132,28 +132,14 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Questo modulo non può essere caricato perché è installato nella memoria SD, per favore spostalo nella memoria interna</string>
   <string name="view">VEDI</string>
-  <string name="export_">Esporta…</string>
-  <string name="import_">Importa…</string>
-  <string name="export_enabled_modules">Esporta lista moduli attivati</string>
-  <string name="import_enabled_modules">Importa lista moduli attivati</string>
-  <string name="export_installed_modules">Esporta lista moduli installati</string>
-  <string name="import_installed_modules">Importa lista moduli installati</string>
-  <string name="no_installed_modules">Non c\'è nessun modulo installato!</string>
   <string name="no_backup_found">Nessun backup trovato!</string>
-  <string name="no_enabled_modules">Non c\'è nessun modulo abilitato!</string>
   <string name="share">Condividi con…</string>
   <string name="permissionNotGranted">Questa funzionalità non funzionerà senza il permesso di scrittura della memoria esterna.</string>
   <string name="add_bookmark">Aggiungi segnalibro</string>
   <string name="remove_bookmark">Rimuovi segnalibro</string>
-  <string name="bookmarks">Segnalibri</string>
-  <string name="no_bookmark_added">Nessun segnalibro aggiunto</string>
   <string name="bookmark_added">Segnalibro aggiunto</string>
   <string name="bookmark_removed">Segnalibro rimosso</string>
-  <string name="undo">Annulla</string>
   <string name="file_is_empty">Il file è vuoto</string>
-  <string name="install_remove">Installa e rimuovi</string>
-  <string name="download_remove">Scarica e rimuovi </string>
   <string name="module_saved">Modulo salvato in %1$s</string>
-  <string name="loading">Caricamento…</string>
   <string name="save">Salva</string>
 </resources>

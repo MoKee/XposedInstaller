@@ -1,10 +1,11 @@
 package de.robv.android.xposed.installer.installation;
 
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,9 +17,6 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.io.File;
 import java.io.IOException;
@@ -63,20 +61,17 @@ public class StatusInstallerFragment extends Fragment {
 
         // Display warning dialog to new users
         if (!XposedApp.getPreferences().getBoolean("hide_install_warning", false)) {
-            new MaterialDialog.Builder(getActivity())
-                    .title(R.string.install_warning_title)
-                    .content(R.string.install_warning)
-                    .positiveText(android.R.string.ok)
-                    .onPositive(new MaterialDialog.SingleButtonCallback() {
+            new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.install_warning_title)
+                    .setMessage(R.string.install_warning)
+                    .setNeutralButton(R.string.dont_show_again, new DialogInterface.OnClickListener() {
                         @Override
-                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                            if (dialog.isPromptCheckBoxChecked()) {
-                                XposedApp.getPreferences().edit().putBoolean("hide_install_warning", true).apply();
-                            }
+                        public void onClick(DialogInterface dialog, int which) {
+                            XposedApp.getPreferences().edit().putBoolean("hide_install_warning", true).apply();
                         }
                     })
-                    .checkBoxPromptRes(R.string.dont_show_again, false, null)
-                    .cancelable(false)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setCancelable(false)
                     .show();
         }
 
@@ -135,9 +130,9 @@ public class StatusInstallerFragment extends Fragment {
             case R.id.reboot:
             case R.id.soft_reboot:
                 final RootUtil.RebootMode mode = RootUtil.RebootMode.fromId(item.getItemId());
-                confirmReboot(mode.titleRes, new MaterialDialog.SingleButtonCallback() {
+                confirmReboot(mode.titleRes, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                    public void onClick(DialogInterface dialog, int which) {
                         RootUtil.reboot(mode, getActivity());
                     }
                 });
@@ -147,12 +142,11 @@ public class StatusInstallerFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    private void confirmReboot(int contentTextId, MaterialDialog.SingleButtonCallback yesHandler) {
-        new MaterialDialog.Builder(getActivity())
-                .content(R.string.reboot_confirmation)
-                .positiveText(contentTextId)
-                .negativeText(android.R.string.no)
-                .onPositive(yesHandler)
+    private void confirmReboot(int contentTextId, DialogInterface.OnClickListener yesHandler) {
+        new AlertDialog.Builder(getActivity())
+                .setMessage(R.string.reboot_confirmation)
+                .setPositiveButton(contentTextId, yesHandler)
+                .setNegativeButton(android.R.string.no, null)
                 .show();
     }
 }

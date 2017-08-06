@@ -1,28 +1,21 @@
 package de.robv.android.xposed.installer;
 
-import android.Manifest;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
-
-import com.afollestad.materialdialogs.folderselector.FolderChooserDialog;
 
 import java.io.File;
 import java.io.IOException;
 
 import de.robv.android.xposed.installer.util.RepoLoader;
 
-public class SettingsActivity extends XposedBaseActivity implements FolderChooserDialog.FolderCallback {
+public class SettingsActivity extends XposedBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +47,7 @@ public class SettingsActivity extends XposedBaseActivity implements FolderChoose
 
     }
 
-    @Override
-    public void onFolderSelection(@NonNull FolderChooserDialog dialog, @NonNull File folder) {
-        if (folder.canWrite()) {
-            XposedApp.getPreferences().edit().putString("download_location", folder.getPath()).apply();
-        } else {
-            Toast.makeText(this, R.string.sdcard_not_writable, Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener {
+    public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         private static final File mDisableResourcesFlag = new File(XposedApp.BASE_DIR + "conf/disable_resources");
         private Preference mClickedPreference;
         private Preference downloadLocation;
@@ -104,10 +88,6 @@ public class SettingsActivity extends XposedBaseActivity implements FolderChoose
                     return (enabled == mDisableResourcesFlag.exists());
                 }
             });
-
-            // TODO maybe enable again after checking the implementation
-            //downloadLocation = findPreference("download_location");
-            //downloadLocation.setOnPreferenceClickListener(this);
         }
 
         @Override
@@ -127,52 +107,6 @@ public class SettingsActivity extends XposedBaseActivity implements FolderChoose
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
             if (key.equals("theme")) getActivity().recreate();
-        }
-
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            if (preference.getKey().equals(downloadLocation.getKey())) {
-                if (checkPermissions()) {
-                    mClickedPreference = downloadLocation;
-                    return false;
-                }
-
-                new FolderChooserDialog.Builder((SettingsActivity) getActivity())
-                        .cancelButton(android.R.string.cancel)
-                        .initialPath(XposedApp.getDownloadPath())
-                        .show();
-            }
-
-            return true;
-        }
-
-        private boolean checkPermissions() {
-            if (Build.VERSION.SDK_INT < 23) return false;
-
-            if (ActivityCompat.checkSelfPermission(getContext(),
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
-                return true;
-            }
-            return false;
-        }
-
-        @Override
-        public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                if (mClickedPreference != null) {
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            onPreferenceClick(mClickedPreference);
-                        }
-                    }, 500);
-                }
-            } else {
-                Toast.makeText(getActivity(), R.string.permissionNotGranted, Toast.LENGTH_LONG).show();
-            }
         }
     }
 }

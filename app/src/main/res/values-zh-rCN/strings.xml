@@ -130,7 +130,6 @@
   <string name="download_could_not_read_file">无法读取下载文件：%s</string>
   <string name="download_no_valid_apk">下载的文件不是有效的 APK（或不兼容）</string>
   <string name="download_incorrect_package_name">包名错误（下载项：%1$s，预期：%2$s）</string>
-  <string name="download_running">正在下载</string>
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">下载 %1$s 失败：%2$d（%3$s）</string>
   <string name="repo_download_failed">下载 %1$s 失败：%2$s</string>
@@ -138,29 +137,15 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">该模块不能载入，因为它安装在 SD 卡上，请将它移至内部存储。</string>
     <string name="view">视图</string>
-  <string name="export_">导出…</string>
-  <string name="import_">导入…</string>
-  <string name="export_enabled_modules">导出已启用模块列表</string>
-  <string name="import_enabled_modules">导入已启用模块列表</string>
-  <string name="export_installed_modules">导出已安装模块列表</string>
-  <string name="import_installed_modules">导入已安装模块列表</string>
-  <string name="no_installed_modules">未安装任何模块</string>
   <string name="no_backup_found">未找到备份</string>
-  <string name="no_enabled_modules">未启用任何模块</string>
   <string name="share">分享</string>
   <string name="permissionNotGranted">没有获取写入外部存储权限，该功能无法正常工作。</string>
   <string name="add_bookmark">添加书签</string>
   <string name="remove_bookmark">移除书签</string>
-  <string name="bookmarks">书签</string>
-  <string name="no_bookmark_added">未添加书签</string>
   <string name="bookmark_added">书签已添加</string>
   <string name="bookmark_removed">书签已移除</string>
-  <string name="undo">撤销</string>
   <string name="file_is_empty">文件为空</string>
-  <string name="install_remove">安装和移除</string>
-  <string name="download_remove">下载和移除</string>
   <string name="module_saved">模块保存于 %1$s</string>
-  <string name="loading">正在载入</string>
   <string name="save">保存</string>
   <string name="update_download_list">下拉刷新已下载模块列表</string>
 </resources>

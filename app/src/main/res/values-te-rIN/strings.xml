@@ -19,7 +19,5 @@
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
   <string name="add_bookmark">&quot;బుక్‌మార్క్ చేర్చు&quot;</string>
-  <string name="bookmarks">&quot;బుక్‌మార్కులు&quot;</string>
   <string name="bookmark_added">&quot;పుటసూచి జోడించబడింది”</string>
-  <string name="undo">చర్య రద్దు చేయి</string>
 </resources>

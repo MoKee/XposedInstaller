@@ -117,10 +117,7 @@
   <string name="repo_load_failed">Nem lehet betölteni a gyűjteményt %1$s-ról:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="add_bookmark">Könyvjelző hozzáadása</string>
-  <string name="bookmarks">Könyvjelzők</string>
   <string name="bookmark_added">Könyvjelző hozzáadva</string>
-  <string name="undo">Visszavonás</string>
   <string name="file_is_empty">A fájl üres</string>
-  <string name="loading">Betöltés…</string>
   <string name="save">Mentés</string>
 </resources>
