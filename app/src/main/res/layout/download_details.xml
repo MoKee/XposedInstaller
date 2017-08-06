@@ -1,46 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"
-            tools:context=".DownloadDetailsFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".DownloadDetailsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:paddingRight="?android:attr/scrollbarSize">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/download_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold"/>
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            tools:text="ModuleNme" />
 
         <TextView
             android:id="@+id/download_author"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textStyle="italic"/>
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            tools:text="author: Author Name" />
 
         <TextView
             android:id="@+id/download_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            tools:text="This is the very very long\nmaybe new line description" />
 
         <LinearLayout
             android:id="@+id/download_moreinfo_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-        </LinearLayout>
+            android:layout_marginTop="32dp"
+            android:background="@color/background_light"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingTop="12dp"
+            tools:layout_height="400dp" />
 
     </LinearLayout>
 

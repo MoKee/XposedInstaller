@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    android:id="@+id/card_view"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_marginBottom="3dip"
-    android:layout_marginLeft="8dip"
-    android:layout_marginRight="8dip"
-    android:layout_marginTop="3dip"
-    android:elevation="2dip"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp"
+    android:elevation="1dp"
     android:foreground="?selectableItemBackground"
-    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:minHeight="?android:listPreferredItemHeight"
     card_view:cardBackgroundColor="?attr/list_download_item_color"
-    card_view:cardCornerRadius="2dip">
+    card_view:cardCornerRadius="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dip">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false">
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -39,22 +38,24 @@
                     android:id="@+id/txtStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    android:textAppearance="?android:textAppearanceSmall"
+                    tools:text="Installed" />
 
                 <TextView
                     android:id="@+id/txtVersion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textIsSelectable="false"/>
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textIsSelectable="false"
+                    tools:text="1.0.0" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
                 android:layout_weight="1"
-                android:gravity="right"
+                android:gravity="end"
                 android:orientation="vertical">
 
                 <TextView
@@ -62,40 +63,55 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:textAppearanceSmall"
                     android:textIsSelectable="false"
-                    android:textStyle="italic"/>
+                    tools:text="Stable" />
 
                 <TextView
                     android:id="@+id/txtUploadDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?android:attr/textColorTertiary"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="?android:textColorTertiary"
                     android:textIsSelectable="false"
-                    android:textStyle="italic"/>
+                    tools:text="2017/9/1" />
+
             </LinearLayout>
+
         </LinearLayout>
 
         <de.robv.android.xposed.installer.widget.DownloadView
             android:id="@+id/downloadView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp" />
 
         <TextView
             android:id="@+id/txtChangesTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/changes"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textStyle="bold"/>
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtChanges"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            tools:text="This is the change log\nmay be new line" />
 
     </LinearLayout>
+
 </android.support.v7.widget.CardView>
