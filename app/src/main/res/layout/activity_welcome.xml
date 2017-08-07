@@ -32,6 +32,7 @@
         android:clickable="true"
         android:clipToPadding="false"
         android:elevation="4dp"
+        app:itemIconTint="?colorAccent"
         android:fitsSystemWindows="true"
         app:insetForeground="#4000"
         app:menu="@menu/drawer"/>
