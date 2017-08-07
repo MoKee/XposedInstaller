@@ -127,7 +127,7 @@ public class DownloadsUtil {
 
     @Deprecated
     public static DownloadInfo add(Context context, String title, String url, DownloadFinishedCallback callback, MIME_TYPES mimeType) {
-        return add(context, title, url, callback, mimeType, false, false);
+        return add(context, title, url, callback, mimeType, true, true);
     }
 
     @Deprecated
