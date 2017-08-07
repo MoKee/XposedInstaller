@@ -1,6 +1,8 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
 
     <!-- Default Navigation Drawer. -->
     <dimen name="nav_drawer_width">264dp</dimen>
+
+    <dimen name="card_margin">8dp</dimen>
+
 </resources>

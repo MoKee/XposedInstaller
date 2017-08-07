@@ -11,9 +11,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ListFragment;
-import android.support.v7.app.ActionBar;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
@@ -99,18 +96,12 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
         registerForContextMenu(getListView());
         mModuleUtil.addListener(this);
 
-        ActionBar actionBar = ((WelcomeActivity) getActivity()).getSupportActionBar();
-
-        DisplayMetrics metrics = getResources().getDisplayMetrics();
-        int sixDp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, metrics);
-        int eightDp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8, metrics);
-        assert actionBar != null;
-        int toolBarDp = actionBar.getHeight() == 0 ? 196 : actionBar.getHeight();
-
+        final int cardMargin = getResources().getDimensionPixelSize(R.dimen.card_margin);
         getListView().setDivider(null);
-        getListView().setDividerHeight(sixDp);
-        getListView().setPadding(eightDp, toolBarDp + eightDp, eightDp, eightDp);
+        getListView().setDividerHeight(cardMargin);
+        getListView().setPadding(cardMargin, cardMargin, cardMargin, cardMargin);
         getListView().setClipToPadding(false);
+        getListView().setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);
     }
 
     @Override

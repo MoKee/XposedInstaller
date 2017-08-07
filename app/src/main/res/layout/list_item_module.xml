@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
     android:foreground="?selectableItemBackground"
     card_view:cardBackgroundColor="?attr/list_download_item_color"
     card_view:cardCornerRadius="2dp"
