@@ -54,7 +54,6 @@ public class LogsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_logs, container, false);
         mTxtLog = (TextView) v.findViewById(R.id.txtLog);
-        mTxtLog.setTextIsSelectable(true);
         mSVLog = (ScrollView) v.findViewById(R.id.svLog);
         mHSVLog = (HorizontalScrollView) v.findViewById(R.id.hsvLog);
         reloadErrorLog();

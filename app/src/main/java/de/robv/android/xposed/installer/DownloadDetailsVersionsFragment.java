@@ -7,8 +7,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.text.method.LinkMovementMethod;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,12 +78,10 @@ public class DownloadDetailsVersionsFragment extends ListFragment {
             setListAdapter(sAdapter);
         }
 
-        DisplayMetrics metrics = getResources().getDisplayMetrics();
-        int sixDp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, metrics);
-        int eightDp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8, metrics);
+        final int cardMargin = getResources().getDimensionPixelSize(R.dimen.card_margin);
         getListView().setDivider(null);
-        getListView().setDividerHeight(sixDp);
-        getListView().setPadding(eightDp, eightDp, eightDp, eightDp);
+        getListView().setDividerHeight(cardMargin);
+        getListView().setPadding(cardMargin, cardMargin, cardMargin, cardMargin);
         getListView().setClipToPadding(false);
         getListView().setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);
     }
