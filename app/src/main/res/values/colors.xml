@@ -1,9 +1,9 @@
 <resources>
 
     <!-- base colors-->
-    <color name="colorPrimary">#2196f3</color>
-    <color name="colorPrimaryDark">#1976d2</color>
-    <color name="colorAccent">#FF9800</color>
+    <color name="colorPrimary">#263238</color>
+    <color name="colorPrimaryDark">#21272b</color>
+    <color name="colorAccent">#009688</color>
     <color name="red_500">#F44336</color>
     <color name="warning">@color/red_500</color>
     <color name="download_status_update_available">@color/darker_green</color>
@@ -11,7 +11,7 @@
     <color name="amber_500">#FFC107</color>
 
     <!-- light theme-->
-    <color name="background_light">#fff4f4f4</color>
+    <color name="background_light">#fafafa</color>
     <color name="list_download_item_color_light">#fff</color>
     <color name="card_background_light">#fff</color>
     <color name="card_background_pressed_light">#dfdfdf</color>
