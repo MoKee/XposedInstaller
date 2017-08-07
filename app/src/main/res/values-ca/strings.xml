@@ -69,7 +69,7 @@
   <string name="download_sorting_status">Ordena per estat</string>
   <string name="download_sorting_updated">Ordena per darrera actualització</string>
   <string name="download_sorting_created">Ordena per data de creació</string>
-    <string name="download_section_update_available">Actualització disponible</string>
+  <string name="download_section_update_available">Actualització disponible</string>
   <string name="download_section_installed">Instal·lat</string>
   <string name="download_section_not_installed">No instal·lat</string>
   <string name="download_section_24h">Darreres 24 hores</string>
@@ -104,7 +104,7 @@
   <string name="about_developers_label">Desenvolupadors principals</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> i <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> i <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> per solucionar errors i disseny Material</string>
   <string name="about_translator_label">Traductor</string>
-    <string name="about_source_label">Codi font</string>
+  <string name="about_source_label">Codi font</string>
   <string name="about_libraries_label">Biblioteques utilitzades</string>
   <!-- DownloadView -->
   <string name="download_view_download">Baixa</string>

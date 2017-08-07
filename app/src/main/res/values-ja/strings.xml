@@ -71,7 +71,7 @@
   <string name="download_sorting_status">状態</string>
   <string name="download_sorting_updated">最終更新日</string>
   <string name="download_sorting_created">作成日</string>
-    <string name="download_section_update_available">更新があります</string>
+  <string name="download_section_update_available">更新があります</string>
   <string name="download_section_installed">インストール済み</string>
   <string name="download_section_not_installed">未インストール</string>
   <string name="download_section_24h">24時間以内</string>
@@ -106,7 +106,7 @@
   <string name="about_developers_label">メイン開発者</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a>、<a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>、<a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a>（バグ修正、マテリアルデザイン）</string>
   <string name="about_translator_label">翻訳</string>
-    <string name="about_source_label">ソースコード</string>
+  <string name="about_source_label">ソースコード</string>
   <string name="about_libraries_label">使用ライブラリ</string>
   <!-- DownloadView -->
   <string name="download_view_download">ダウンロード</string>

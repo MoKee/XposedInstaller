@@ -92,7 +92,7 @@
   <string name="about_developers_label">Hoofdontwikkelaars:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> en <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Het Framework is naar het Nederlands vertaald door:</string>
-    <string name="about_source_label">Broncode:</string>
+  <string name="about_source_label">Broncode:</string>
   <string name="about_libraries_label">Gebruikte bibliotheken:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Download</string>

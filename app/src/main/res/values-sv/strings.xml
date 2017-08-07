@@ -45,7 +45,7 @@
   <string name="download_sorting_status">Sortera efter status</string>
   <string name="download_sorting_updated">Sortera efter senaste uppdatering</string>
   <string name="download_sorting_created">Sortera efter datum för skapandet</string>
-    <string name="download_section_update_available">Uppdatering tillgänglig</string>
+  <string name="download_section_update_available">Uppdatering tillgänglig</string>
   <string name="download_section_installed">Installerad</string>
   <string name="download_section_not_installed">Inte installerad</string>
   <string name="download_section_24h">Senaste 24 timmarna</string>
@@ -64,7 +64,7 @@
   <string name="about_developers_label">Huvudsakliga utvecklare:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> och <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Översättare:</string>
-    <string name="about_source_label">Källkod:</string>
+  <string name="about_source_label">Källkod:</string>
   <string name="about_libraries_label">Bibliotek som använts:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Ladda ner</string>

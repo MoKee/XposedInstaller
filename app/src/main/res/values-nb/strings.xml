@@ -58,7 +58,7 @@
   <string name="download_sorting_status">Sorter etter status</string>
   <string name="download_sorting_updated">Sorter etter siste oppdatering</string>
   <string name="download_sorting_created">Sorter etter opprettelsesdato</string>
-    <string name="download_section_update_available">Oppdatering tilgjengelig</string>
+  <string name="download_section_update_available">Oppdatering tilgjengelig</string>
   <string name="download_section_installed">Installert</string>
   <string name="download_section_not_installed">Ikke installert</string>
   <string name="download_section_24h">Siste 24 timene</string>
@@ -87,7 +87,7 @@
   <string name="about_developers_label">Hovedutvikler:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> and <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Oversetter:</string>
-    <string name="about_source_label">Kildekode:</string>
+  <string name="about_source_label">Kildekode:</string>
   <string name="about_libraries_label">Brukte bibliotek:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Last ned</string>

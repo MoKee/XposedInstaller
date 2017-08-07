@@ -64,7 +64,7 @@
   <string name="download_sorting_status">Rendezés állapot szerint</string>
   <string name="download_sorting_updated">Rendezés legutolsó frissítés szerint</string>
   <string name="download_sorting_created">Rendezés készítés ideje szerint</string>
-    <string name="download_section_update_available">Frissítés elérhető</string>
+  <string name="download_section_update_available">Frissítés elérhető</string>
   <string name="download_section_installed">Telepítve</string>
   <string name="download_section_not_installed">Nincs telepítve</string>
   <string name="download_section_24h">Elmúlt 24 órában</string>
@@ -93,7 +93,7 @@
   <string name="about_developers_label">Fő fejlesztők:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> és <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Fordító:</string>
-    <string name="about_source_label">Forráskód:</string>
+  <string name="about_source_label">Forráskód:</string>
   <string name="about_libraries_label">Használt könyvtárak:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Letöltés</string>
