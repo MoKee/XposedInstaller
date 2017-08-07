@@ -5,11 +5,8 @@
   <string name="menuSend">发送</string>
   <string name="menuSaveToSd">保存到 SD 卡</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Xposed 框架有更新可用（%s）。</string>
-  <string name="modules_updates_available">有模块可更新</string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">框架</string>
-  <string name="nav_item_modules">模块</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">模块</string>
   <string name="nav_item_download">下载</string>
   <string name="nav_item_settings">设置</string>
   <string name="nav_item_support">支持</string>
@@ -25,10 +22,8 @@
   <string name="install_warning_title">警告！</string>
   <string name="install_warning">在某些情况下，您的设备在安装 Xposed 后可能无法正常启动。\n\n如果您以前从未听说过“软砖”和“bootloop”，或者不知道怎样从这种情况中恢复，请不要安装 Xposed。\n\n无论发生什么情况，我们都推荐您及时备份资料。</string>
   <string name="dont_show_again">不再显示</string>
-  <string name="framework_active">Xposed 框架 %s 版已激活。</string>
-  <string name="framework_not_active">Xposed 框架 %s 版已安装，但未激活。请检查日志的详细信息。</string>
-  <string name="framework_not_installed">Xposed 框架未安装。</string>
-  <string name="status">Xposed 状态</string>
+    <string name="framework_not_active">Xposed 框架 %s 版已安装，但未激活。请检查日志的详细信息。</string>
+    <string name="status">Xposed 状态</string>
   <string name="xposed_on_next_reboot">Xposed 框架将在重启后启用</string>
   <string name="xposed_off_next_reboot">Xposed 框架将在重启后禁用</string>
   <!-- File operations -->
@@ -39,11 +34,8 @@
   <string name="activate_and_reboot">激活并重启设备</string>
   <string name="activate_only">仅激活</string>
   <string name="module_activated">Xposed 模块已激活</string>
-  <string name="module_empty_description">（未提供描述）</string>
-  <string name="module_no_ui">该模块未提供用户界面</string>
-  <string name="no_xposed_modules_found">未找到 Xposed 模块</string>
-  <string name="xposed_module_list_updated">Xposed 模块列表已更新。\n改动将在重启后生效。</string>
-  <string name="xposed_module_updated_notification_title">Xposed 模块已更新</string>
+    <string name="module_no_ui">该模块未提供用户界面</string>
+    <string name="xposed_module_updated_notification_title">Xposed 模块已更新</string>
   <string name="xposed_module_updated_notification">重启设备以激活更新。</string>
   <string name="no_min_version_specified">该模块未指定需要的 Xposed 版本。</string>
   <string name="warning_min_version_too_low">该模块在 Xposed %1$d 版下创建，但因为不兼容 %2$d 版中的更改，它已被禁用。</string>
@@ -135,8 +127,7 @@
   <string name="repo_load_failed">无法从 %1$s:\n%2$s 加载存储库</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">该模块不能载入，因为它安装在 SD 卡上，请将它移至内部存储。</string>
-  <string name="view">视图</string>
-  <string name="permissionNotGranted">没有获取写入外部存储权限，该功能无法正常工作。</string>
+    <string name="permissionNotGranted">没有获取写入外部存储权限，该功能无法正常工作。</string>
   <string name="module_saved">模块保存于 %1$s</string>
   <string name="save">保存</string>
   <string name="update_download_list">下拉刷新已下载模块列表</string>

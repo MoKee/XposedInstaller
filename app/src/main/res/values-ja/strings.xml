@@ -5,11 +5,8 @@
   <string name="menuSend">送信</string>
   <string name="menuSaveToSd">SDカードに保存</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Xposedフレームワークの更新があります。 （%s）</string>
-  <string name="modules_updates_available">モジュールの更新があります</string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">フレームワーク</string>
-  <string name="nav_item_modules">モジュール</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">モジュール</string>
   <string name="nav_item_download">ダウンロード</string>
   <string name="nav_item_settings">設定</string>
   <string name="nav_item_support">サポート</string>
@@ -25,21 +22,16 @@
   <string name="install_warning_title">注意！</string>
   <string name="install_warning">Xposedをインストールした後、場合によっては起動しなくなることがあります。\n\n 「仮文鎮」や「ブートループ」を知らない場合やその状態からの復旧方法を理解していないのであれば、Xposedをインストール<b>しないでください</b>。\n\nいずれにせよ、現在のバックアップを取ることを強く推奨します。</string>
   <string name="dont_show_again">次回から表示しない</string>
-  <string name="framework_active">Xposedフレームワークバージョン%sが有効になっています。</string>
-  <string name="framework_not_active">バージョン%sのXposedフレームワークがインストールされていますが、有効になっていません。ログで詳細を確認してください。</string>
-  <string name="framework_not_installed">Xposedフレームワークはインストールされていません。</string>
-  <!-- File operations -->
+    <string name="framework_not_active">バージョン%sのXposedフレームワークがインストールされていますが、有効になっていません。ログで詳細を確認してください。</string>
+    <!-- File operations -->
   <string name="root_failed">ルートアクセスを取得できませんでした。\n\n端末が正しくルート化されているか、シェルコマンドをブロックしていないかを確認してください。</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposedモジュールがまだ有効化されていません</string>
   <string name="module_is_not_activated_yet_detailed">%sがインストールされましたが、まだ有効化されていません。</string>
   <string name="activate_and_reboot">有効化して再起動</string>
   <string name="module_activated">Xposedモジュールが有効化されました。</string>
-  <string name="module_empty_description">（説明はありません）</string>
-  <string name="module_no_ui">このモジュールにはUIがありません</string>
-  <string name="no_xposed_modules_found">Xposedモジュールがありません。</string>
-  <string name="xposed_module_list_updated">Xposedモジュールが更新されました。\n変更は再起動後に反映されます。</string>
-  <string name="xposed_module_updated_notification_title">Xposedモジュールが更新されました</string>
+    <string name="module_no_ui">このモジュールにはUIがありません</string>
+    <string name="xposed_module_updated_notification_title">Xposedモジュールが更新されました</string>
   <string name="xposed_module_updated_notification">変更を有効化するには再起動してください。</string>
   <string name="no_min_version_specified">このモジュールは必要なXposedバージョンを指定していません。</string>
   <string name="warning_min_version_too_low">このモジュールはXposedバージョン%1$d向けに作成されましたが、 バージョン%2$dとは互換性がないので無効化されました。</string>
@@ -128,8 +120,7 @@
   <string name="repo_load_failed">%1$sからレポジトリをロードできませんでした\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">このモジュールはSDカードにインストールされているため、読み込めませんでした。内部ストレージに移動してください。</string>
-  <string name="view">表示</string>
-  <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません。</string>
+    <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません。</string>
   <string name="module_saved">モジュールを%1$sに保存しました</string>
   <string name="save">保存</string>
 </resources>

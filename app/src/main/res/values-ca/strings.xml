@@ -5,11 +5,8 @@
   <string name="menuSend">Envia</string>
   <string name="menuSaveToSd">Desa a la targeta</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Hi ha una actualització per al marc Xposed (%s).</string>
-  <string name="modules_updates_available">Hi ha actualitzacions disponibles d\'algun mòdul(s)</string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">Marc</string>
-  <string name="nav_item_modules">Mòduls</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">Mòduls</string>
   <string name="nav_item_download">Baixades</string>
   <string name="nav_item_settings">Configuració</string>
   <string name="nav_item_support">Ajuda</string>
@@ -25,21 +22,16 @@
   <string name="install_warning_title">Compte!</string>
   <string name="install_warning">Alguna vegada pot ser que el dispositiu no s\'iniciï després d\'instal·lar l\'Xposed.\n\nSi no heu sentit mai els termes \"soft brick\" i \"bootloop\" o no sabeu com recuperar-vos d\'aquestes situacions, <b>NO</b> instal·leu l\'Xposed!\n\nEn tot cas, és altament recomanable tenir una còpia de seguretat recent.</string>
   <string name="dont_show_again">No ho tornis a mostrar</string>
-  <string name="framework_active">El marc Xposed versió %s està actiu.</string>
-  <string name="framework_not_active">El marc Xposed versió %s està instal·lat però inactiu. Reviseu els registres per als detalls.</string>
-  <string name="framework_not_installed">El marc Xposed no està instal·lat.</string>
-  <!-- File operations -->
+    <string name="framework_not_active">El marc Xposed versió %s està instal·lat però inactiu. Reviseu els registres per als detalls.</string>
+    <!-- File operations -->
   <string name="root_failed">No s\'ha aconseguit accés d\'usuari primari.\n\nAssegureu-vos que el dispositiu té activat l\'usuari primari (root) i que no s\'han bloquejat les ordres de línia de comandaments.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">El mòdul Xposed encara no està actiu</string>
   <string name="module_is_not_activated_yet_detailed">S\'ha intal·lat %s, però encara no està actiu.</string>
   <string name="activate_and_reboot">Activa i reinicia</string>
   <string name="module_activated">El mòdul Xposed està actiu</string>
-  <string name="module_empty_description">(sense descripció)</string>
-  <string name="module_no_ui">Aquest mòdul no proporciona una interfície d\'usuari</string>
-  <string name="no_xposed_modules_found">No s\'ha trobat cap mòdul Xposed!</string>
-  <string name="xposed_module_list_updated">S\'ha actualitzat la llista de mòduls Xposed\nS\'activaran els canvis en reiniciar</string>
-  <string name="xposed_module_updated_notification_title">S\'ha actualitzat el mòdul Xposed</string>
+    <string name="module_no_ui">Aquest mòdul no proporciona una interfície d\'usuari</string>
+    <string name="xposed_module_updated_notification_title">S\'ha actualitzat el mòdul Xposed</string>
   <string name="xposed_module_updated_notification">Reinicieu per activar els canvis</string>
   <string name="no_min_version_specified">Aquest mòdul no especifica la versió de l\'Xposed que necessita.</string>
   <string name="warning_min_version_too_low">Aquest mòdul es va crear per a l\'Xposed versió %1$d, però degut als canvis incompatibles a la versió %2$d, s\'ha inhabilitat.</string>
@@ -126,8 +118,7 @@
   <string name="repo_load_failed">No s\'ha pogut carregar el dipòsit des de %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">No es pot carregar aquest mòdul perquè s\'ha instal·lat a la targeta SD, moveu-lo a l\'emmagatzematge intern.</string>
-  <string name="view">VISUALITZA</string>
-  <string name="permissionNotGranted">Aquesta característica no funcionarà sense permís per escriure a l\'emmagatzematge extern.</string>
+    <string name="permissionNotGranted">Aquesta característica no funcionarà sense permís per escriure a l\'emmagatzematge extern.</string>
   <string name="module_saved">S\'ha desat el mòdul a %1$s</string>
   <string name="save">Desa</string>
 </resources>

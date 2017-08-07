@@ -5,11 +5,8 @@
   <string name="menuSend">Enviar</string>
   <string name="menuSaveToSd">Guardar para o cartão SD</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Está disponível uma atualização da \"Xposed Framework\".</string>
-  <string name="modules_updates_available">Estão disponíveis atualizações para alguns Módulos</string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">\"Framework\"</string>
-  <string name="nav_item_modules">Módulos</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">Módulos</string>
   <string name="nav_item_download">Descarregar</string>
   <string name="nav_item_settings">Definições</string>
   <string name="nav_item_support">Suporte</string>
@@ -25,21 +22,16 @@
   <string name="install_warning_title">Atenção!</string>
   <string name="install_warning">Em certos casos, após a instalação da \"Xposed\", o dispositivo deixa de arrancar.\n\nAssim, se nunca ouviu falar em \"soft brick\" ou \"bootloop\", ou caso não saiba como recuperar de uma situação dessas, <b>NÃO</b> instale a \"Xposed\"!\n\nIndependentemente disso, ter um \"backup\" recente é sempre, altamente, recomendado.</string>
   <string name="dont_show_again">Não mostrar novamente</string>
-  <string name="framework_active">A versão %s da \"Xposed Framework\" está ativa.</string>
-  <string name="framework_not_active">A versão %s da \"Xposed Framework\" está instalada mas não está ativa. Por favor verifique os registos para mais detalhes.</string>
-  <string name="framework_not_installed">A \"Xposed Framework\" não está instalada.</string>
-  <!-- File operations -->
+    <string name="framework_not_active">A versão %s da \"Xposed Framework\" está instalada mas não está ativa. Por favor verifique os registos para mais detalhes.</string>
+    <!-- File operations -->
   <string name="root_failed">Falha ao obter o acesso \"root\".\n\nCertifique-se que o seu aparelho dispõe de acesso \"root\" e/ou que foi dada permissão à app para correr como tal.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">O módulo \"Xposed\! ainda não foi ativado</string>
   <string name="module_is_not_activated_yet_detailed">%s foi instalado, mas ainda não foi ativado.</string>
   <string name="activate_and_reboot">Ativar e reiniciar</string>
   <string name="module_activated">O Módulo \"Xposed\" foi ativado</string>
-  <string name="module_empty_description">(não existe qualquer descrição)</string>
-  <string name="module_no_ui">Este módulo não dispõe de uma interface de utilizador</string>
-  <string name="no_xposed_modules_found">Não foram encontrados módulos!</string>
-  <string name="xposed_module_list_updated">A lista de módulos \"Xposed\" foi atualizada\nAs mudanças tornar-se-ão efetivas após reiniciar</string>
-  <string name="xposed_module_updated_notification_title">Módulo \"Xposed\" atualizado</string>
+    <string name="module_no_ui">Este módulo não dispõe de uma interface de utilizador</string>
+    <string name="xposed_module_updated_notification_title">Módulo \"Xposed\" atualizado</string>
   <string name="xposed_module_updated_notification">Reinicie para que as mudanças se tornem efetivas</string>
   <string name="no_min_version_specified">Este módulo não especifica qual a versão \!Xposed\" que necessita.</string>
   <string name="warning_min_version_too_low">Este módulo foi criado para a \"Xposed\" versão %1$d mas, devido a incompatibilidade na versão %2$d, foi desabilitado.</string>
@@ -127,8 +119,7 @@
   <string name="repo_load_failed">Não foi possível carregar o repositório a partir de %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Este módulo não pode ser carregado pois está instalado no cartão SD. Mova-o para a memória interna, por favor.</string>
-  <string name="view">VER</string>
-  <string name="permissionNotGranted">Esta funcionalidade não funcionará sem a permissão de escrita para o cartão SD.</string>
+    <string name="permissionNotGranted">Esta funcionalidade não funcionará sem a permissão de escrita para o cartão SD.</string>
   <string name="module_saved">Módulo guardado em %1$s</string>
   <string name="save">Guardar</string>
 </resources>

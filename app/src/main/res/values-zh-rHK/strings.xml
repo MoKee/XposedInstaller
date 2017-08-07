@@ -5,11 +5,8 @@
   <string name="menuSend">傳送</string>
   <string name="menuSaveToSd">傳送到 SD 卡</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Xposed 框架有更新可用。</string>
-  <string name="modules_updates_available">模組可供更新</string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">框架</string>
-  <string name="nav_item_modules">模組</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">模組</string>
   <string name="nav_item_download">下載</string>
   <string name="nav_item_settings">設定</string>
   <string name="nav_item_support">支援</string>
@@ -25,10 +22,8 @@
   <string name="install_warning_title">小心！</string>
   <string name="install_warning">某些情況下，您的裝置可能會在安裝 Xposed 後無法啓動。\n\n如果您從未聽說「軟變磚」或「無限重新啟動」，或者您不知道如何從這種情況恢復，請\"<b>不要</b>\"安裝 Xposed ！\n\n無論如何，強烈建議準備好最近的備份。</string>
   <string name="dont_show_again">不要再顯示這個</string>
-  <string name="framework_active">Xposed 框架 %s 版已啟用。</string>
-  <string name="framework_not_active">Xposed 框架 %s 版已安裝，但尚未啟用。 請查看日誌以了解細節。</string>
-  <string name="framework_not_installed">Xposed 框架未安裝。</string>
-  <string name="status">Xposed 狀態</string>
+    <string name="framework_not_active">Xposed 框架 %s 版已安裝，但尚未啟用。 請查看日誌以了解細節。</string>
+    <string name="status">Xposed 狀態</string>
   <string name="xposed_on_next_reboot">Xposed 框架將在下次重新啟動裝置後啟用</string>
   <string name="xposed_off_next_reboot">Xposed 框架將在下次重新啟動裝置後停用</string>
   <!-- File operations -->
@@ -39,11 +34,8 @@
   <string name="activate_and_reboot">啟用並重新啟動</string>
   <string name="activate_only">僅啟動</string>
   <string name="module_activated">Xposed 模組已被啟用</string>
-  <string name="module_empty_description">(未提供描述)</string>
-  <string name="module_no_ui">該模組未提供使用者介面</string>
-  <string name="no_xposed_modules_found">未找到 Xposed 模組！</string>
-  <string name="xposed_module_list_updated">Xposed 模組清單已更新\n更改將於重新啟動後生效</string>
-  <string name="xposed_module_updated_notification_title">Xposed 模組已更新</string>
+    <string name="module_no_ui">該模組未提供使用者介面</string>
+    <string name="xposed_module_updated_notification_title">Xposed 模組已更新</string>
   <string name="xposed_module_updated_notification">重新啟動以套用變更。</string>
   <string name="no_min_version_specified">該模組未指定 Xposed 版本需求。</string>
   <string name="warning_min_version_too_low">該模組在 Xposed %1$d 版本下建立，但因為不相容 %2$d 版本中的變化內容，它已被停用。</string>
@@ -133,8 +125,7 @@
   <string name="repo_load_failed">無法載入倉庫 %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">此模組安裝在SD卡中導致無法載入，請將此模組移回內部儲存空間。</string>
-  <string name="view">查看</string>
-  <string name="permissionNotGranted">未取得寫入外部存儲空間權限，此功能將無法正常運作。</string>
+    <string name="permissionNotGranted">未取得寫入外部存儲空間權限，此功能將無法正常運作。</string>
   <string name="module_saved">儲存模組於 %1$s</string>
   <string name="save">儲存</string>
   <string name="update_download_list">下滑以重新下載的模組清單</string>

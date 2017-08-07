@@ -5,8 +5,7 @@
   <string name="menuSend">Изпрати</string>
   <string name="menuSaveToSd">Запиши в SD картата</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Налично е обновление за Xposed Framework (%s).</string>
-  <!-- Navigation drawer items -->
+    <!-- Navigation drawer items -->
   <string name="nav_item_download">Сваляне</string>
   <string name="nav_item_settings">Настройки</string>
   <string name="nav_item_support">Поддръжка</string>
@@ -28,11 +27,8 @@
   <string name="module_is_not_activated_yet_detailed">%s беше инсталиран, но все още не е активиран.</string>
   <string name="activate_and_reboot">Активирай и рестартирай</string>
   <string name="module_activated">Xposed модула е активиран</string>
-  <string name="module_empty_description">(няма описание)</string>
-  <string name="module_no_ui">Този модул няма потребителски интерфейс</string>
-  <string name="no_xposed_modules_found">Не са намерени модули за Xposed!</string>
-  <string name="xposed_module_list_updated">Списъка с Xposed модули е обновен\nПромените ще бъдат активни след рестарт</string>
-  <string name="xposed_module_updated_notification_title">Обновен е Xposed модул</string>
+    <string name="module_no_ui">Този модул няма потребителски интерфейс</string>
+    <string name="xposed_module_updated_notification_title">Обновен е Xposed модул</string>
   <string name="xposed_module_updated_notification">Рестартирай за прилагана на промените</string>
   <string name="no_min_version_specified">Този модул не указва нужната версия на Xposed.</string>
   <string name="warning_min_version_too_low">Този модул е създаден за Xposed версия %1$d, но поради несъвместимост с версия %2$d, е изключен.</string>

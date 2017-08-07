@@ -6,7 +6,6 @@
     <string name="menuSaveToSd">Yaddaş kartında saxla</string>
 
     <!-- Welcome screen / main sections -->
-    <string name="welcome_framework_update_available">Xposed Framework üçün yeniləmə mövcuddur.</string>
 
     <!-- Navigation drawer items -->
 
@@ -18,10 +17,7 @@
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">Xposed modulu hələ ki aktiv deyil</string>
-    <string name="module_empty_description">(heç bir məlumatla təmin olunmayıb)</string>
     <string name="module_no_ui">Bu modul istifadəçi interfeysini təmin eləmir</string>
-    <string name="no_xposed_modules_found">Xposed modulları tapılmadı!</string>
-    <string name="xposed_module_list_updated">Xposed modul siyahısı yeniləndi\nDəyişikliklər yenidən başlamadan sonra aktiv olacaq</string>
     <string name="no_min_version_specified">Bu modul lazım olan Xposed versiyasını təyin edə bilmir.</string>
     <string name="warning_min_version_too_low">Bu modul Xposed versiya %1$d üçün yaradılıb, ancaq versiya %2$d\'ə uyğun gəlməyən dəyişiklikərə görə aradan qaldırıldı.</string>
     <string name="module_launch">Uİ\'ni başlat</string>

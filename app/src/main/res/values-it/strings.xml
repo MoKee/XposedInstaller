@@ -5,9 +5,7 @@
   <string name="menuSend">Invia</string>
   <string name="menuSaveToSd">Salva sulla scheda SD</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">È disponibile un aggiornamento per il Framework Xposed.</string>
-  <string name="modules_updates_available">Aggiornamenti dei moduli disponibili</string>
-  <!-- Navigation drawer items -->
+    <!-- Navigation drawer items -->
   <string name="nav_item_modules">Moduli</string>
   <string name="nav_item_download">scarica</string>
   <string name="nav_item_settings">Impostazioni</string>
@@ -23,10 +21,8 @@
   <string name="install_warning_title">Sii prudente!</string>
   <string name="install_warning">In alcuni casi, il dispositivo potrebbe non accendersi più dopo l\'installazione di Xposed.\n\nSe non hai mai sentito parlare di \"soft brick\" e \"bootloop\" prima d\'ora o se non si è capaci di ripristinare il dispositivo <b>NON</b> installare Xposed!\n\nIn molti casi. avere un backup recente è altamente raccomandato.</string>
   <string name="dont_show_again">Non mostrare più</string>
-  <string name="framework_active">La versione di Xposed Framework attiva è: %s.</string>
-  <string name="framework_not_active">La versione di Xposed Framework installata è %s, ma non è attiva. Perfavore controlla i log per dettagli.</string>
-  <string name="framework_not_installed">Xposed Framework non è installato.</string>
-  <string name="status">Stato Xposed</string>
+    <string name="framework_not_active">La versione di Xposed Framework installata è %s, ma non è attiva. Perfavore controlla i log per dettagli.</string>
+    <string name="status">Stato Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework sarà abilitato al prossimo riavvio</string>
   <string name="xposed_off_next_reboot">Xposed Framework sarà disabilitato al prossimo riavvio</string>
   <!-- File operations -->
@@ -37,11 +33,8 @@
   <string name="activate_and_reboot">Attiva e riavvia</string>
   <string name="activate_only">Attiva solamente</string>
   <string name="module_activated">Il modulo è stato attivato</string>
-  <string name="module_empty_description">(descrizione non disponibile)</string>
-  <string name="module_no_ui">Questo modulo non dispone di un\'interfaccia utente</string>
-  <string name="no_xposed_modules_found">Nessun modulo Xposed trovato!</string>
-  <string name="xposed_module_list_updated">La lista dei moduli Xposed è stata aggiornata\nI cambiamenti saranno attivi al riavvio</string>
-  <string name="xposed_module_updated_notification_title">Modulo Xposed aggiornato</string>
+    <string name="module_no_ui">Questo modulo non dispone di un\'interfaccia utente</string>
+    <string name="xposed_module_updated_notification_title">Modulo Xposed aggiornato</string>
   <string name="xposed_module_updated_notification">Riavvia per attivare i cambiamenti</string>
   <string name="no_min_version_specified">Questo modulo non specifica la versione di Xposed di cui ha bisogno.</string>
   <string name="warning_min_version_too_low">Questo modulo è stato creato per la versione %1$d di Xposed, ma a causa di incompatibilità con la versione %2$d è stato disattivato.</string>
@@ -130,8 +123,7 @@
   <string name="repo_load_failed">Impossibile caricare repository da %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Questo modulo non può essere caricato perché è installato nella memoria SD, per favore spostalo nella memoria interna</string>
-  <string name="view">VEDI</string>
-  <string name="permissionNotGranted">Questa funzionalità non funzionerà senza il permesso di scrittura della memoria esterna.</string>
+    <string name="permissionNotGranted">Questa funzionalità non funzionerà senza il permesso di scrittura della memoria esterna.</string>
   <string name="module_saved">Modulo salvato in %1$s</string>
   <string name="save">Salva</string>
 </resources>

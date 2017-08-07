@@ -5,8 +5,7 @@
   <string name="menuSend">Gửi</string>
   <string name="menuSaveToSd">Lưu vào thẻ SD</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Đã có bản mới cho Framework của Xposed (%s).</string>
-  <!-- Navigation drawer items -->
+    <!-- Navigation drawer items -->
   <string name="nav_item_download">Tải về</string>
   <string name="nav_item_settings">Cài đặt</string>
   <string name="nav_item_support">Hỗ trợ</string>
@@ -28,11 +27,8 @@
   <string name="module_is_not_activated_yet_detailed">%s đã được cài, nhưng chưa được kích hoạt.</string>
   <string name="activate_and_reboot">Kích hoạt và khởi động lại</string>
   <string name="module_activated">Module của Xposed đã được kích hoạt</string>
-  <string name="module_empty_description">(không có phần miêu tả)</string>
-  <string name="module_no_ui">Module này không có giao diện</string>
-  <string name="no_xposed_modules_found">Không tìm thấy module nào!</string>
-  <string name="xposed_module_list_updated">Danh sách module đã được cập nhật\nCác thay đổi sẽ có hiệu lực sau khi khởi động lại</string>
-  <string name="xposed_module_updated_notification_title">Module của Xposed đã được cập nhật</string>
+    <string name="module_no_ui">Module này không có giao diện</string>
+    <string name="xposed_module_updated_notification_title">Module của Xposed đã được cập nhật</string>
   <string name="xposed_module_updated_notification">Khởi động lại để áp dụng ác thay đổi</string>
   <string name="no_min_version_specified">Module này không yêu cầu cụ thể phiên bản Xposed nào.</string>
   <string name="warning_min_version_too_low">Module này được viết cho Xposed bản %1$d, nhưng do không tương thích với các thay đổi trong bản %2$d, nên đã bị tắt.</string>

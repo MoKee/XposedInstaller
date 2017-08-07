@@ -6,7 +6,6 @@
     <string name="menuSaveToSd">Simpan Ke SD Kad</string>
 
     <!-- Welcome screen / main sections -->
-    <string name="welcome_framework_update_available">Terdapat kemaskini terbaru Xposed Framework tersedia (%s).</string>
 
     <!-- Navigation drawer items -->
 
@@ -27,10 +26,7 @@
     <string name="module_is_not_activated_yet_detailed">%s telah dipasang, tetapi tidak aktif lagi.</string>
     <string name="activate_and_reboot">Aktif dan hidupkan semula</string>
     <string name="module_activated">Xposed modul telah diaktifkan</string>
-    <string name="module_empty_description">(Tidak ada senarai disediakan)</string>
     <string name="module_no_ui">Modul ini tidak menyediakan paparan pemuka pengguna</string>
-    <string name="no_xposed_modules_found">Xposed modul tidak ditemui!</string>
-    <string name="xposed_module_list_updated">Senarai Xposed modul telah dikemaskini\nPenukaran akan aktif selepas dihidupkan semula</string>
     <string name="xposed_module_updated_notification_title">Xposed modul dikemaskini</string>
     <string name="xposed_module_updated_notification">Hidupkan semula untuk diaktifkan perubahan</string>
     <string name="no_min_version_specified">Modul seperti tidak sesuai dengan Xposed versi yg dikehendaki.</string>

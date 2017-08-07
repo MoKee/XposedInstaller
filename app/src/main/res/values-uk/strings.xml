@@ -5,8 +5,7 @@
   <string name="menuSend">Надіслати</string>
   <string name="menuSaveToSd">Зберегти на SD-картку</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Є оновлення для Xposed Framework (%s).</string>
-  <!-- Navigation drawer items -->
+    <!-- Navigation drawer items -->
   <string name="nav_item_download">Завантажити</string>
   <string name="nav_item_settings">Налаштування</string>
   <string name="nav_item_support">Служба підтримки</string>
@@ -28,11 +27,8 @@
   <string name="module_is_not_activated_yet_detailed">%s було встановлено, але ще не активовано.</string>
   <string name="activate_and_reboot">Активувати та перезавантажити</string>
   <string name="module_activated">Модуль Xposed було активовано</string>
-  <string name="module_empty_description">(опис не надано)</string>
-  <string name="module_no_ui">Цей мдуль не має користувацького інтерфейсу</string>
-  <string name="no_xposed_modules_found">Жодного модулю Xposed не знайдено!</string>
-  <string name="xposed_module_list_updated">Перелік модулів Xposed було оновлено\nЗміни активуються після перезавантаження</string>
-  <string name="xposed_module_updated_notification_title">Модуль Xposed оновлено</string>
+    <string name="module_no_ui">Цей мдуль не має користувацького інтерфейсу</string>
+    <string name="xposed_module_updated_notification_title">Модуль Xposed оновлено</string>
   <string name="xposed_module_updated_notification">Для активації змін перезавантажтеся</string>
   <string name="no_min_version_specified">В цьому модулі не вказано необхідну для нього версію Xposed.</string>
   <string name="warning_min_version_too_low">Цей модуль створений для Xposed версії %1$d, але через несумісні зміни у версії %2$d, його було деактивовано.</string>

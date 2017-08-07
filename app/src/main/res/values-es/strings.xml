@@ -5,11 +5,8 @@
   <string name="menuSend">Enviar</string>
   <string name="menuSaveToSd">Guardar en la tarjeta SD</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Hay una actualización para el Xposed Framework disponible (%s).</string>
-  <string name="modules_updates_available">Hay una actualización disponible para el Módulo </string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">Framework</string>
-  <string name="nav_item_modules">Módulos</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">Módulos</string>
   <string name="nav_item_download">Descargar</string>
   <string name="nav_item_settings">Ajustes</string>
   <string name="nav_item_support">Soporte</string>
@@ -25,10 +22,8 @@
   <string name="install_warning_title">Tenga cuidado!</string>
   <string name="install_warning">En algunos casos, su dispositivo puede no iniciar después de haber instalado el Xposed.\n\nSi nunca antes ha escuchado acerca de \"soft brick\" y \"bootloop\" o si no sabe cómo recuperarlo de esa situación, mejor <b>NO</b> instale el Xposed!\n\nEn cualquier caso, tener una copia de seguridad es altamente recommendable.</string>
   <string name="dont_show_again">No mostrar esto nuevamente</string>
-  <string name="framework_active">La versión  %s del Xposed Framework está activa.</string>
-  <string name="framework_not_active">La versión  %s del Xposed Framework está instalada, pero no está activa. Por favor revise los registros para más detalles.</string>
-  <string name="framework_not_installed">El Xposed Framework no está instalado.</string>
-  <string name="status">Estado del Xposed</string>
+    <string name="framework_not_active">La versión  %s del Xposed Framework está instalada, pero no está activa. Por favor revise los registros para más detalles.</string>
+    <string name="status">Estado del Xposed</string>
   <string name="xposed_on_next_reboot">El Xposed Framework se activará en el próximo reinicio</string>
   <string name="xposed_off_next_reboot">El Xposed Framework se desactivará en el próximo reinicio</string>
   <!-- File operations -->
@@ -39,11 +34,8 @@
   <string name="activate_and_reboot">Activar y reiniciar</string>
   <string name="activate_only">Activar sólo</string>
   <string name="module_activated">El módulo Xposed ha sido activado</string>
-  <string name="module_empty_description">(no posee descripción)</string>
-  <string name="module_no_ui">Éste módulo no posee una interfaz de usuario</string>
-  <string name="no_xposed_modules_found">No se encontraron módulos Xposed!</string>
-  <string name="xposed_module_list_updated">La lista de módulos Xposed fue actualizada\nLos cambios tendrán efecto después de reiniciar</string>
-  <string name="xposed_module_updated_notification_title">Módulo Xposed actualizado</string>
+    <string name="module_no_ui">Éste módulo no posee una interfaz de usuario</string>
+    <string name="xposed_module_updated_notification_title">Módulo Xposed actualizado</string>
   <string name="xposed_module_updated_notification">Reinicie para que los cambios surtan efecto</string>
   <string name="no_min_version_specified">Éste módulo no especifica la versión del Xposed que necesita.</string>
   <string name="warning_min_version_too_low">Éste módulo fue creado para la versión del Xposed %1$d, pero debido a incompatibilidades de los cambios hechos en la versión %2$d, han sido deshabilitados.</string>
@@ -133,8 +125,7 @@
   <string name="repo_load_failed">No se puede cargar el repositorio desde %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Éste módulo no puede ser cargado porque está instalado en la tarjeta SD, por favor muévala hacia el almacenamiento interno.</string>
-  <string name="view">VISTA</string>
-  <string name="permissionNotGranted">Éstas características no funcionarán sin permisos para escribir en el almacenamiento externo.</string>
+    <string name="permissionNotGranted">Éstas características no funcionarán sin permisos para escribir en el almacenamiento externo.</string>
   <string name="module_saved">Módulo guardado en %1$s</string>
   <string name="save">Guardar</string>
   <string name="update_download_list">Deslizar hacia abajo para actualizar lista de módulos de descarga</string>

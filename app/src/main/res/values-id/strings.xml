@@ -4,7 +4,6 @@
     <!-- General/various strings -->
 
     <!-- Welcome screen / main sections -->
-    <string name="welcome_framework_update_available">Update tersedia.</string>
 
     <!-- Navigation drawer items -->
 
@@ -16,10 +15,7 @@
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">Modul Xposed belum diaktifkan</string>
-    <string name="module_empty_description">(tidak ada deskripsi)</string>
     <string name="module_no_ui">Modul ini tidak ada tampilan utama</string>
-    <string name="no_xposed_modules_found">Tidak ada modul Xposed detemukan!</string>
-    <string name="xposed_module_list_updated">Daftar modul telah diupdate\nAkan aktif setelah reboot.</string>
     <string name="no_min_version_specified">Modul ini tidak memberitahukan versi Xposed yang dibutuhkan.</string>
     <string name="warning_min_version_too_low">Modul ini dibuat untuk Xposed versi %1$d, tetapi karena ketidakcocoknya di versi %2$d, maka modul dimatikan.</string>
     <string name="module_launch">Buka UI</string>

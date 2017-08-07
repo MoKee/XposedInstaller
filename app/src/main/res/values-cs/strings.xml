@@ -5,11 +5,8 @@
   <string name="menuSend">Odeslat</string>
   <string name="menuSaveToSd">Uložit na SD kartu</string>
   <!-- Welcome screen / main sections -->
-  <string name="welcome_framework_update_available">Aktualizace Xposed frameworku je k dispozici (%s).</string>
-  <string name="modules_updates_available">Aktualizace modulu k dispozici</string>
-  <!-- Navigation drawer items -->
-  <string name="nav_item_install">Xposed Framework</string>
-  <string name="nav_item_modules">Moduly</string>
+    <!-- Navigation drawer items -->
+    <string name="nav_item_modules">Moduly</string>
   <string name="nav_item_download">Stáhnout</string>
   <string name="nav_item_settings">Nastavení</string>
   <string name="nav_item_support">Podpora</string>
@@ -25,10 +22,8 @@
   <string name="install_warning_title">Buďte opatrní!</string>
   <string name="install_warning">V některých případech nemusí po instalaci Xposed vaše zařízení již naběhnout.\n\nPokud nejste obeznámeni s pojmy \"soft brick\" nebo \"bootloop\" a pokud nevíte, jak se v podobné situaci zachovat, <b>NEINSTALUJTE</b> Xposed!\n\nV každém případě je vřele doporučeno mít aktuální zálohu.</string>
   <string name="dont_show_again">Již nezobrazovat</string>
-  <string name="framework_active">Xposed Framework verze %s je aktivní.</string>
-  <string name="framework_not_active">Xposed Framework verze %s je nainstalován, ale není aktivní. Prosím zkontrolujte log pro podrobnosti.</string>
-  <string name="framework_not_installed">Xposed Framework není nainstalován.</string>
-  <string name="status">Stav Xposed</string>
+    <string name="framework_not_active">Xposed Framework verze %s je nainstalován, ale není aktivní. Prosím zkontrolujte log pro podrobnosti.</string>
+    <string name="status">Stav Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework bude povolen při příštím restartu</string>
   <string name="xposed_off_next_reboot">Xposed Framework bude zakázán na příštím restartu</string>
   <!-- File operations -->
@@ -39,11 +34,8 @@
   <string name="activate_and_reboot">Aktivovat a restartovat</string>
   <string name="activate_only">Pouze aktivovat</string>
   <string name="module_activated">Xposed modul byl aktivován</string>
-  <string name="module_empty_description">(popis není k dispozici)</string>
-  <string name="module_no_ui">Tento modul nemá žádné uživatelské rozhraní</string>
-  <string name="no_xposed_modules_found">Nebyly nalezeny žádné Xposed moduly!</string>
-  <string name="xposed_module_list_updated">Seznam Xposed modulů byl aktualizován.\nZměny se projeví po restartu zařízení.</string>
-  <string name="xposed_module_updated_notification_title">Xposed modul byl aktualizován</string>
+    <string name="module_no_ui">Tento modul nemá žádné uživatelské rozhraní</string>
+    <string name="xposed_module_updated_notification_title">Xposed modul byl aktualizován</string>
   <string name="xposed_module_updated_notification">Restartovat pro aktivaci změn</string>
   <string name="no_min_version_specified">Tento modul nespecifikuje požadovanou verzi Xposed.</string>
   <string name="warning_min_version_too_low">Tento modul byl vytvořen pro Xposed verze %1$d, ale kvůli nekompatibilním změnám ve verzi %2$d byl zakázán.</string>
@@ -134,8 +126,7 @@
   <string name="repo_load_failed">Nemohu načíst repozitář z %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Tento modul nemohl být načten protože je nainstalován na kartě SD, přesuňte jej prosím do interní paměti.</string>
-  <string name="view">ZOBRAZIT</string>
-  <string name="permissionNotGranted">Tato funkce nebude fungovat bez udělení oprávnění k zápisu na externí úložiště.</string>
+    <string name="permissionNotGranted">Tato funkce nebude fungovat bez udělení oprávnění k zápisu na externí úložiště.</string>
   <string name="module_saved">Modul byl uložen %1$s</string>
   <string name="save">Uložit</string>
   <string name="update_download_list">Přejděte dolů pro obnovení seznamu modulů na převzetí</string>
