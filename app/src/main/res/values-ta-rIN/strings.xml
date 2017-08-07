@@ -20,7 +20,7 @@
   <string name="support_donate_label">நன்கொடை</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-    <!-- DownloadView -->
+  <!-- DownloadView -->
   <string name="download_view_download">பதிவிறக்கம்</string>
   <string name="download_view_install">நிறுவு</string>
   <string name="download_view_cancel">ரத்துசெய்</string>

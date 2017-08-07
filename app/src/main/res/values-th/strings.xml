@@ -71,7 +71,7 @@
   <string name="download_sorting_status">เรียงโดยสถานะ</string>
   <string name="download_sorting_updated">เรียงโดยการอัพเดท</string>
   <string name="download_sorting_created">เรียงโดยวันที่สร้าง</string>
-    <string name="download_section_update_available">สามารถอัพเดทได้</string>
+  <string name="download_section_update_available">สามารถอัพเดทได้</string>
   <string name="download_section_installed">ติดตั้งแล้ว</string>
   <string name="download_section_not_installed">ไม่ได้ติดตั้ง</string>
   <string name="download_section_24h">24 ชั่วโมงล่าสุด</string>
@@ -107,7 +107,7 @@
   <string name="about_developers_label">ผู้พัฒนาหลัก</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> และ <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> และ <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> สำหรับแก้ไขบัคและ Material Design</string>
   <string name="about_translator_label">ผู้แปล</string>
-    <string name="about_source_label">ที่มารหัส</string>
+  <string name="about_source_label">ที่มารหัส</string>
   <string name="about_libraries_label">ใช้ไลบารี่แล้ว</string>
   <!-- DownloadView -->
   <string name="download_view_download">ดาวน์โหลด</string>

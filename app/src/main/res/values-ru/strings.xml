@@ -74,7 +74,7 @@
   <string name="download_sorting_status">Сортировать по статусу</string>
   <string name="download_sorting_updated">Сортировать по последнему обновлению</string>
   <string name="download_sorting_created">Сортировать по дате создания</string>
-    <string name="download_section_update_available">Доступно обновление</string>
+  <string name="download_section_update_available">Доступно обновление</string>
   <string name="download_section_installed">Установлен</string>
   <string name="download_section_not_installed">Не установлен</string>
   <string name="download_section_24h">За последние 24 часа</string>
@@ -110,7 +110,7 @@
   <string name="about_developers_label">Главные разработчики</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> и <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> и <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> Для исправления багов и Material Дизайна</string>
   <string name="about_translator_label">Переводчик:</string>
-    <string name="about_source_label">Исходный код</string>
+  <string name="about_source_label">Исходный код</string>
   <string name="about_libraries_label">Используемые библиотеки</string>
   <!-- DownloadView -->
   <string name="download_view_download">Скачать</string>

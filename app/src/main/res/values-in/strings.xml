@@ -30,7 +30,7 @@
   <string name="support_donate_label">Donasi</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-    <!-- DownloadView -->
+  <!-- DownloadView -->
   <string name="download_view_download">Unduh</string>
   <string name="download_view_install">Pasang</string>
   <string name="download_view_cancel">Batal</string>

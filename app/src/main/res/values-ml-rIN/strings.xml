@@ -19,7 +19,7 @@
   <string name="support_donate_label">സംഭാവന</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-    <!-- DownloadView -->
+  <!-- DownloadView -->
   <string name="download_view_install">ഇൻസ്റ്റാൾ</string>
   <string name="download_view_cancel">റദ്ദാക്കുക</string>
   <!-- DownloadUtils -->

@@ -75,7 +75,7 @@
   <string name="download_sorting_status">Podľa stavu</string>
   <string name="download_sorting_updated">Podľa poslednej aktualizácie</string>
   <string name="download_sorting_created">Podľa dátumu vytvorenia</string>
-    <string name="download_section_update_available">Dostupná aktualizácia</string>
+  <string name="download_section_update_available">Dostupná aktualizácia</string>
   <string name="download_section_installed">Nainštalované</string>
   <string name="download_section_not_installed">Nenainštalované</string>
   <string name="download_section_24h">Za posledných 24 hodín</string>
@@ -111,7 +111,7 @@
   <string name="about_developers_label">Hlavní vývojári</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> a <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Prekladatelia</string>
-    <string name="about_source_label">Zdrojový kód</string>
+  <string name="about_source_label">Zdrojový kód</string>
   <string name="about_libraries_label">Použité knižnice</string>
   <!-- DownloadView -->
   <string name="download_view_download">Stiahnuť</string>

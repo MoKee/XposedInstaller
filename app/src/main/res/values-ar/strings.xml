@@ -42,7 +42,7 @@
   <string name="download_sorting_status">فرز حسب الحالة</string>
   <string name="download_sorting_updated">فرز حسب آخر تحديث</string>
   <string name="download_sorting_created">فرز حسب تاريخ الإنشاء</string>
-    <string name="download_section_update_available">تحديث متوفر</string>
+  <string name="download_section_update_available">تحديث متوفر</string>
   <string name="download_section_installed">تثبيت</string>
   <string name="download_section_not_installed">لم يتم تثبيت</string>
   <string name="download_section_24h">ال 24 ساعة الماضية</string>
@@ -59,7 +59,7 @@
   <string name="about_developers_label">مطوري الرئيسية:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> و <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">ترجمات:</string>
-    <string name="about_source_label">التعليمات البرمجية المصدر:</string>
+  <string name="about_source_label">التعليمات البرمجية المصدر:</string>
   <string name="about_libraries_label">المكتبات المستخدمة:</string>
   <!-- DownloadView -->
   <string name="download_view_download">تحميل</string>
