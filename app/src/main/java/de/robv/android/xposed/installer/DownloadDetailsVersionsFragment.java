@@ -101,8 +101,8 @@ public class DownloadDetailsVersionsFragment extends ListFragment {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == WRITE_EXTERNAL_PERMISSION) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED && !TextUtils.isEmpty(DownloadView.mClickedUrl)) {
-
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (TextUtils.isEmpty(DownloadView.mClickedUrl)) return;
                 DownloadsUtil.add(getActivity(), module.name,
                         DownloadView.mClickedUrl,
                         new DownloadsUtil.DownloadFinishedCallback() {
