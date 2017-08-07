@@ -28,10 +28,6 @@
             android:icon="@drawable/ic_nav_settings"
             android:title="@string/nav_item_settings"/>
         <item
-            android:id="@+id/nav_item_support"
-            android:icon="@drawable/ic_nav_support"
-            android:title="@string/nav_item_support"/>
-        <item
             android:id="@+id/nav_item_about"
             android:icon="@drawable/ic_nav_about"
             android:title="@string/nav_item_about"/>

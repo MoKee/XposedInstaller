@@ -51,7 +51,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".SupportActivity" />
         <activity android:name=".AboutActivity" />
         <receiver
             android:name=".receivers.PackageChangeReceiver"

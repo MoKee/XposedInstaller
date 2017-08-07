@@ -1,16 +1,17 @@
 package de.robv.android.xposed.installer;
 
-import android.app.Fragment;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceClickListener;
+import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import de.psdev.licensesdialog.LicensesDialog;
@@ -44,77 +45,109 @@ public class AboutActivity extends AppCompatActivity {
         }
 
         if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction().add(R.id.container, new AboutFragment()).commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.container, new AboutFragment())
+                    .commit();
         }
     }
 
-    public static class AboutFragment extends Fragment {
+    public static class AboutFragment extends PreferenceFragmentCompat {
 
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View v = inflater.inflate(R.layout.tab_about, container, false);
-
-            View developersView = v.findViewById(R.id.developersView);
-            View licensesView = v.findViewById(R.id.licensesView);
-            View translatorsView = v.findViewById(R.id.translatorsView);
-            View sourceCodeView = v.findViewById(R.id.sourceCodeView);
-
-            String packageName = getActivity().getPackageName();
-            String translator = getResources().getString(R.string.translator);
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            addPreferencesFromResource(R.xml.about);
 
             try {
-                String version = getActivity().getPackageManager().getPackageInfo(packageName, 0).versionName;
-                ((TextView) v.findViewById(R.id.app_version)).setText(version);
+                final String packageName = getActivity().getPackageName();
+                final String version = getActivity().getPackageManager()
+                        .getPackageInfo(packageName, 0).versionName;
+                findPreference("version").setSummary(version);
             } catch (NameNotFoundException ignored) {
             }
 
-            licensesView.setOnClickListener(new View.OnClickListener() {
+            findPreference("developers").setOnPreferenceClickListener(new OnPreferenceClickListener() {
                 @Override
-                public void onClick(View v) {
+                public boolean onPreferenceClick(Preference preference) {
+                    createDeveloperDialog();
+                    return true;
+                }
+            });
+
+            findPreference("licenses").setOnPreferenceClickListener(new OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
                     createLicenseDialog();
+                    return true;
                 }
             });
 
-            developersView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                            .setTitle(R.string.about_developers_label)
-                            .setMessage(R.string.about_developers)
-                            .setPositiveButton(android.R.string.ok, null)
-                            .show();
+            linkPreference("source", R.string.about_source);
 
-                    ((TextView) dialog.findViewById(android.R.id.message))
-                            .setMovementMethod(LinkMovementMethod.getInstance());
-                }
-            });
+            findPreference("modules").setSummary(getString(R.string.support_modules_description,
+                    getString(R.string.module_support)));
 
-            sourceCodeView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    NavUtil.startURL(getActivity(), getString(R.string.about_source));
-                }
-            });
-
-            if (translator.isEmpty()) {
-                translatorsView.setVisibility(View.GONE);
-            }
-
-            return v;
+            linkPreference("installer", R.string.about_support);
+            linkPreference("faq", R.string.support_faq_url);
+            linkPreference("donate", R.string.support_donate_url);
         }
 
+        private void linkPreference(String key, final @StringRes int url) {
+            findPreference(key).setOnPreferenceClickListener(new OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    NavUtil.startURL(getActivity(), getString(url));
+                    return true;
+                }
+            });
+        }
+
+        private void createDeveloperDialog() {
+            final AlertDialog dialog = new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.about_developers_label)
+                    .setMessage(R.string.about_developers)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show();
+
+            final TextView message = (TextView) dialog.findViewById(android.R.id.message);
+            if (message != null) {
+                message.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+        }
+
+        @SuppressWarnings("SpellCheckingInspection")
         private void createLicenseDialog() {
             Notices notices = new Notices();
-            notices.addNotice(new Notice("StickyListHeaders", "https://github.com/emilsjolander/StickyListHeaders", "Emil Sjölander", new ApacheSoftwareLicense20()));
-            notices.addNotice(new Notice("PreferenceFragment-Compat", "https://github.com/Machinarius/PreferenceFragment-Compat", "machinarius", new ApacheSoftwareLicense20()));
-            notices.addNotice(new Notice("libsuperuser", "https://github.com/Chainfire/libsuperuser", "Copyright (C) 2012-2015 Jorrit \"Chainfire\" Jongma", new ApacheSoftwareLicense20()));
-            notices.addNotice(new Notice("picasso", "https://github.com/square/picasso", "Copyright 2013 Square, Inc.", new ApacheSoftwareLicense20()));
-            notices.addNotice(new Notice("materialdesignicons", "http://materialdesignicons.com", "Copyright (c) 2014, Austin Andrews", new SILOpenFontLicense11()));
+
+            notices.addNotice(new Notice(
+                    "StickyListHeaders",
+                    "https://github.com/emilsjolander/StickyListHeaders",
+                    "Emil Sjölander",
+                    new ApacheSoftwareLicense20()));
+
+            notices.addNotice(new Notice(
+                    "PreferenceFragment-Compat",
+                    "https://github.com/Machinarius/PreferenceFragment-Compat",
+                    "machinarius",
+                    new ApacheSoftwareLicense20()));
+
+            notices.addNotice(new Notice(
+                    "libsuperuser",
+                    "https://github.com/Chainfire/libsuperuser",
+                    "Copyright (C) 2012-2015 Jorrit \"Chainfire\" Jongma",
+                    new ApacheSoftwareLicense20()));
+
+            notices.addNotice(new Notice(
+                    "picasso",
+                    "https://github.com/square/picasso",
+                    "Copyright 2013 Square, Inc.",
+                    new ApacheSoftwareLicense20()));
+
+            notices.addNotice(new Notice(
+                    "materialdesignicons",
+                    "http://materialdesignicons.com",
+                    "Copyright (c) 2014, Austin Andrews",
+                    new SILOpenFontLicense11()));
 
             new LicensesDialog.Builder(getActivity())
                     .setNotices(notices)
@@ -122,5 +155,6 @@ public class AboutActivity extends AppCompatActivity {
                     .build()
                     .show();
         }
+
     }
 }
