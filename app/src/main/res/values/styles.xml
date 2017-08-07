@@ -2,13 +2,12 @@
 <resources>
 
     <!-- Base application light theme. -->
-    <style name="Theme.XposedInstaller.Light.Base" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.XposedInstaller.Light.Base" parent="@android:style/Theme.Material.Settings" />
+
+    <style name="Theme.XposedInstaller.Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="Theme.XposedInstaller.Light" parent="Theme.XposedInstaller.Light.Base">
         <item name="android:windowBackground">@color/background_light</item>
         <item name="sticky_header_background">@color/sticky_header_background_light</item>
         <item name="list_download_item_color">@color/list_download_item_color_light</item>
