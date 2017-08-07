@@ -149,10 +149,6 @@ public class WelcomeActivity extends AppCompatActivity implements
                 startActivity(new Intent(this, SettingsActivity.class));
                 mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
                 return;
-            case R.id.nav_item_support:
-                startActivity(new Intent(this, SupportActivity.class));
-                mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);
-                return;
             case R.id.nav_item_about:
                 startActivity(new Intent(this, AboutActivity.class));
                 mNavigationView.getMenu().findItem(mPrevSelectedId).setChecked(true);

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference app:layout="@layout/brand" />
+
+    <Preference
+        app:icon="@drawable/ic_info"
+        app:key="version"
+        app:summary="1.0.0"
+        app:title="@string/about_version_label" />
+
+    <Preference
+        app:icon="@drawable/ic_person"
+        app:key="developers"
+        app:title="@string/about_developers_label" />
+
+    <Preference
+        app:icon="@drawable/ic_description"
+        app:key="licenses"
+        app:title="@string/about_libraries_label" />
+
+    <Preference
+        app:icon="@drawable/ic_language"
+        app:key="translator"
+        app:summary="@string/translator"
+        app:title="@string/about_translator_label" />
+
+    <Preference
+        app:icon="@drawable/ic_github"
+        app:key="source"
+        app:title="@string/about_source_label" />
+
+    <PreferenceCategory app:title="@string/nav_item_support">
+
+        <Preference
+            app:icon="@drawable/ic_info"
+            app:key="modules"
+            app:summary="@string/support_modules_description"
+            app:title="@string/support_modules_label" />
+
+        <Preference
+            app:icon="@drawable/ic_help"
+            app:key="installer"
+            app:title="@string/support_framework_label" />
+
+        <Preference
+            app:icon="@drawable/ic_nav_logs"
+            app:key="faq"
+            app:title="@string/support_faq_label" />
+
+        <Preference
+            app:icon="@drawable/ic_donate"
+            app:key="donate"
+            app:summary="@string/support_donate_description"
+            app:title="@string/support_donate_label" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
