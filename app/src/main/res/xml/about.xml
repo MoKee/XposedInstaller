@@ -10,6 +10,12 @@
         app:title="@string/about_modified_version_label" />
 
     <Preference
+        app:icon="@drawable/ic_xposed"
+        app:key="framework"
+        app:summary="87"
+        app:title="@string/about_framework_version_label" />
+
+    <Preference
         app:icon="@drawable/ic_person"
         app:key="developers"
         app:title="@string/about_developers_label" />
@@ -33,23 +39,19 @@
     <PreferenceCategory app:title="@string/nav_item_support">
 
         <Preference
-            app:icon="@drawable/ic_info"
             app:key="modules"
             app:summary="@string/support_modules_description"
             app:title="@string/support_modules_label" />
 
         <Preference
-            app:icon="@drawable/ic_help"
             app:key="installer"
             app:title="@string/support_framework_label" />
 
         <Preference
-            app:icon="@drawable/ic_nav_logs"
             app:key="faq"
             app:title="@string/support_faq_label" />
 
         <Preference
-            app:icon="@drawable/ic_donate"
             app:key="donate"
             app:summary="@string/support_donate_description"
             app:title="@string/support_donate_label" />

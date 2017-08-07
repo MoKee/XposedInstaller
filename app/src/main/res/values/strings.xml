@@ -123,6 +123,7 @@
     <string name="about_translator_label">Translator</string>
     <string name="translator"></string>
     <string name="about_modified_version_label">MoKee modified version</string>
+    <string name="about_framework_version_label">Framework version</string>
     <string name="about_source_label">Source code</string>
     <string name="about_libraries_label">Used libraries</string>
 

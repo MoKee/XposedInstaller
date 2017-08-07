@@ -67,6 +67,8 @@ public class AboutActivity extends AppCompatActivity {
             } catch (NameNotFoundException ignored) {
             }
 
+            findPreference("framework").setSummary(XposedApp.getXposedProp().getVersion());
+
             findPreference("developers").setOnPreferenceClickListener(new OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
