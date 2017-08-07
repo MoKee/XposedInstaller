@@ -5,7 +5,7 @@
   <string name="menuSend">भेजो</string>
   <string name="menuSaveToSd"> SD काऱड पर सेव करे </string>
   <!-- Welcome screen / main sections -->
-    <!-- Navigation drawer items -->
+  <!-- Navigation drawer items -->
   <!-- Installer tab -->
   <string name="soft_reboot">नरम रिबूट</string>
   <string name="reboot">रिबूट</string>
@@ -21,8 +21,8 @@
   <string name="module_is_not_activated_yet_detailed">%s इनस्टॉल किया गया है पर वह अभी चालू नहीं है।</string>
   <string name="activate_and_reboot">चालू करके रिबूट करो</string>
   <string name="module_activated">एक्स्पोसड मोदुले अभी चालू है</string>
-    <string name="module_no_ui">इस मोदुले का यूजर इंटरफ़ेस नहीं है</string>
-    <string name="xposed_module_updated_notification_title">एक्स्पोसड मोदुले अपडेट हो गाया है</string>
+  <string name="module_no_ui">इस मोदुले का यूजर इंटरफ़ेस नहीं है</string>
+  <string name="xposed_module_updated_notification_title">एक्स्पोसड मोदुले अपडेट हो गाया है</string>
   <string name="xposed_module_updated_notification">बदलाव शुरू अर्ने के लिए रिबूट करे</string>
   <string name="no_min_version_specified">यहाँ मोदुले नहीं बताता की इसे कौनसा एक्स्पोसडब्रिज वर्जन चाहिए।</string>
   <string name="warning_min_version_too_low">ये मोदुले एक्स्पोसडब्रिज वेर्सिओम %1$d के लिए बनाया गया था, पर कुछ तकनिकी कारणों के वजह से ये वर्जन %2$d के साथ नहीं चलता, इसलिए यह बंद कर सिया है।</string>

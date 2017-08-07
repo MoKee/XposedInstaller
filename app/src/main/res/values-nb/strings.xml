@@ -4,7 +4,7 @@
   <!-- General/various strings -->
   <string name="menuSaveToSd">Lagre på SD-kort</string>
   <!-- Welcome screen / main sections -->
-    <!-- Navigation drawer items -->
+  <!-- Navigation drawer items -->
   <string name="nav_item_download">Last ned</string>
   <string name="nav_item_support">Brukerstøtte</string>
   <!-- Installer tab -->
@@ -22,8 +22,8 @@
   <string name="module_is_not_activated_yet_detailed">%s har blitt installert, men er ikke aktivert enda.</string>
   <string name="activate_and_reboot">Aktiver og restart</string>
   <string name="module_activated">Xposed-modul har blitt aktivert</string>
-    <string name="module_no_ui">Denne modulen gir ikke et brukergrensesnitt</string>
-    <string name="xposed_module_updated_notification_title">Xposed-modul er blitt oppdatert</string>
+  <string name="module_no_ui">Denne modulen gir ikke et brukergrensesnitt</string>
+  <string name="xposed_module_updated_notification_title">Xposed-modul er blitt oppdatert</string>
   <string name="xposed_module_updated_notification">Restart for å aktivere endringene</string>
   <string name="no_min_version_specified">Denne modulen spesifiserer ikke hvilken versjon av Xposed den krever.</string>
   <string name="warning_min_version_too_low">Denne modulen var laget for Xposed versjon %1$d, men grunnet uforenlige endringer i versjon %2$d, er den blitt deaktivert.</string>

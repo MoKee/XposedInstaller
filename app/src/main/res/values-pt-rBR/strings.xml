@@ -5,8 +5,8 @@
   <string name="menuSend">Enviar</string>
   <string name="menuSaveToSd">Salvar no cartão SD</string>
   <!-- Welcome screen / main sections -->
-    <!-- Navigation drawer items -->
-    <string name="nav_item_modules">Módulos</string>
+  <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Módulos</string>
   <string name="nav_item_download">Baixar</string>
   <string name="nav_item_settings">Configurações</string>
   <string name="nav_item_support">Ajuda</string>
@@ -22,8 +22,8 @@
   <string name="install_warning_title">Seja cuidadoso!</string>
   <string name="install_warning">Em alguns casos, seu dispositivo pode não ligar depois de instalar o Xposed.\n\nSe você nunca ouviu falar sobre \"soft brick\" e \"bootloop\" antes ou se você não sabe como se recuperar dessa situação, <b>NÃO</b> instale o Xposed!\n\nEm qualquer caso, ter um backup recente é altamente recomendado.</string>
   <string name="dont_show_again">Não mostre isso novamente</string>
-    <string name="framework_not_active">O Xposed Framework versão %s está instalado, mas não está ativo. Por favor, veja registros para detalhes.</string>
-    <string name="status">Estado do Xposed</string>
+  <string name="framework_not_active">O Xposed Framework versão %s está instalado, mas não está ativo. Por favor, veja registros para detalhes.</string>
+  <string name="status">Estado do Xposed</string>
   <string name="xposed_on_next_reboot">O Xposed Framework vai ser ativado no próximo reinício</string>
   <string name="xposed_off_next_reboot">O Xposed Framework vai ser desativado no próximo reinício</string>
   <!-- File operations -->
@@ -33,8 +33,8 @@
   <string name="module_is_not_activated_yet_detailed">%s foi instalado, mas ainda não está ativado.</string>
   <string name="activate_and_reboot">Ativar e reiniciar</string>
   <string name="module_activated">O módulo foi ativado</string>
-    <string name="module_no_ui">Este módulo não possui uma interface de usuário</string>
-    <string name="xposed_module_updated_notification_title">Módulo atualizado</string>
+  <string name="module_no_ui">Este módulo não possui uma interface de usuário</string>
+  <string name="xposed_module_updated_notification_title">Módulo atualizado</string>
   <string name="xposed_module_updated_notification">Reinicie para efetivar as mudanças</string>
   <string name="no_min_version_specified">Este módulo não especificou qual versão do Xposed precisa.</string>
   <string name="warning_min_version_too_low">Este módulo foi criado para a versão %1$d do Xposed, mas devido à alterações incompatíveis na versão %2$d, foi desabilitado.</string>
@@ -123,7 +123,7 @@
   <string name="repo_load_failed">Não foi possível carregar o repositório de %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Este módulo não pôde ser carregado porque esá instalado no cartão SD, por favor, mova-o para a memória interna.</string>
-    <string name="permissionNotGranted">Esta função não vai funcionar sem permissão para escrever no cartão SD.</string>
+  <string name="permissionNotGranted">Esta função não vai funcionar sem permissão para escrever no cartão SD.</string>
   <string name="module_saved">Módulo salvo em %1$s</string>
   <string name="save">Salvar</string>
 </resources>

@@ -5,7 +5,7 @@
   <string name="menuSend">שלח</string>
   <string name="menuSaveToSd">שמור לכרטיס זיכרון</string>
   <!-- Welcome screen / main sections -->
-    <!-- Navigation drawer items -->
+  <!-- Navigation drawer items -->
   <string name="nav_item_download">הורדה</string>
   <string name="nav_item_settings">הגדרות</string>
   <string name="nav_item_support">תמיכה</string>
@@ -25,8 +25,8 @@
   <string name="module_is_not_activated_yet_detailed">%s הותקן, אך עוד לא הופעל.</string>
   <string name="activate_and_reboot">אפשר והפעל מחדש</string>
   <string name="module_activated">מודול Xposed אופשר</string>
-    <string name="module_no_ui">מודול זה לא מספק ממשק משתמש</string>
-    <string name="xposed_module_updated_notification_title">מודול Xposed עודכן</string>
+  <string name="module_no_ui">מודול זה לא מספק ממשק משתמש</string>
+  <string name="xposed_module_updated_notification_title">מודול Xposed עודכן</string>
   <string name="xposed_module_updated_notification">הפעל מחדש בכדי לאפשר את השינויים</string>
   <string name="no_min_version_specified">מודול זה אינו מספק את הגרסה של סביבת Xposed שהוא צריך.</string>
   <string name="warning_min_version_too_low">מודול זה פותח עבור Xposed בגרסה %1$d, אבל בעקרבות שינויים בגרסה %2$d, הוא בוטל.</string>
