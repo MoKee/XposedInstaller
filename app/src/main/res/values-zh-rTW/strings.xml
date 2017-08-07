@@ -111,8 +111,7 @@
   <string name="about_developers_label">主要開發人員</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> 和 <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> 和\n <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> 修復錯誤及 Material Design 化</string>
   <string name="about_translator_label">翻譯：</string>
-  <string name="about_version_label">應用程式版本</string>
-  <string name="about_source_label">原始碼</string>
+    <string name="about_source_label">原始碼</string>
   <string name="about_libraries_label">使用的函式庫</string>
   <!-- DownloadView -->
   <string name="download_view_download">下載</string>

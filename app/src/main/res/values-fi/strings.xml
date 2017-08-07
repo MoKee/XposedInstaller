@@ -30,8 +30,7 @@
   <string name="support_donate_label">Lahjoita</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">Versio</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <string name="download_view_download">Lataa</string>
   <string name="download_view_install">Asenna</string>
   <string name="download_view_cancel">Peruuta</string>

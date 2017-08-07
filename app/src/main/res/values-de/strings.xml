@@ -111,8 +111,7 @@
   <string name="about_developers_label">Hauptentwickler</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> und <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Übersetzer:</string>
-  <string name="about_version_label">Version dieser App:</string>
-  <string name="about_source_label">Quellcode</string>
+    <string name="about_source_label">Quellcode</string>
   <string name="about_libraries_label">Verwendete Bibliotheken</string>
   <!-- DownloadView -->
   <string name="download_view_download">Herunterladen</string>

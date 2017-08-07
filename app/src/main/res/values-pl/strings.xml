@@ -107,8 +107,7 @@
   <!-- About tab -->
   <string name="about_developers_label">Moi deweloperzy</string>
   <string name="about_translator_label">Tłumacz</string>
-  <string name="about_version_label">Wersja</string>
-  <string name="about_source_label">Źródło kodu</string>
+    <string name="about_source_label">Źródło kodu</string>
   <string name="about_libraries_label">Używane biblioteki</string>
   <!-- DownloadView -->
   <string name="download_view_download">Pobierz</string>

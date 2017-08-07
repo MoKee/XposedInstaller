@@ -91,8 +91,7 @@
   <string name="about_developers_label">Développeurs principaux:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> et <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Traducteur:</string>
-  <string name="about_version_label">Version</string>
-  <string name="about_source_label">Code source:</string>
+    <string name="about_source_label">Code source:</string>
   <string name="about_libraries_label">Librairies utilisées:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Télécharger</string>

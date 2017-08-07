@@ -24,8 +24,7 @@
   <!-- Support tab -->
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">نسخه</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <string name="download_view_download">دانلود</string>
   <!-- DownloadUtils -->
   <!-- RepoLoader -->

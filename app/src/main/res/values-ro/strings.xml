@@ -90,8 +90,7 @@
   <string name="about_developers_label">Dezvoltatori:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> si <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Traducator:</string>
-  <string name="about_version_label">Versiunea acestei aplicatii:</string>
-  <string name="about_source_label">Cod sursa:</string>
+    <string name="about_source_label">Cod sursa:</string>
   <string name="about_libraries_label">Librarii utilizate:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Descarca</string>

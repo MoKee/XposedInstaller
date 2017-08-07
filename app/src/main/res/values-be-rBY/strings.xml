@@ -30,8 +30,7 @@
   <string name="support_donate_label">Ахвяраваць</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">Версія</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <string name="download_view_download">Спампаваць</string>
   <string name="download_view_install">Усталяваць</string>
   <string name="download_view_cancel">Скасаваць</string>

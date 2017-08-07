@@ -14,8 +14,7 @@
   <!-- Support tab -->
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">Verzija</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->

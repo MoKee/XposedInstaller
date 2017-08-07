@@ -23,8 +23,7 @@
   <string name="support_donate_label">Paaukoti</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">Versija</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <string name="download_view_download">Atsisiųsti</string>
   <string name="download_view_install">Įrašyti</string>
   <string name="download_view_cancel">Atšaukti</string>

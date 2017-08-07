@@ -117,7 +117,6 @@
     <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> e <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> e <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> pela resolução de erros e pelo \"Material Design\"</string>
     <string name="about_translator_label">Tradutor:</string>
     <string name="translator">Vasco Machado (Typhus_ aka ElTifo)</string>
-    <string name="about_version_label">Versão da app:</string>
     <string name="about_source_label">Código fonte:</string>
     <string name="about_libraries_label">\"Libraries\" utilizadas:</string>
 

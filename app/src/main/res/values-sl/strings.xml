@@ -30,8 +30,7 @@
   <string name="support_donate_label">Prispevaj</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">Različica</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <string name="download_view_download">Prenesi</string>
   <string name="download_view_install">Namesti</string>
   <string name="download_view_cancel">Prekliči</string>

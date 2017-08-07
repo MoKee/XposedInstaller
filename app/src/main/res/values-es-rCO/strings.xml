@@ -111,8 +111,7 @@
   <string name="about_developers_label">Desarrolladores principales</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> y <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> y <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> para soluciones de bugs y Material Design</string>
   <string name="about_translator_label">Traductor</string>
-  <string name="about_version_label">Versión</string>
-  <string name="about_source_label">Código fuente</string>
+    <string name="about_source_label">Código fuente</string>
   <string name="about_libraries_label">Librerías usadas</string>
   <!-- DownloadView -->
   <string name="download_view_download">Descargar</string>

@@ -19,8 +19,7 @@
   <string name="support_donate_label">Ehson</string>
   <!-- Logs tab  -->
   <!-- About tab -->
-  <string name="about_version_label">Qo‘shish</string>
-  <!-- DownloadView -->
+    <!-- DownloadView -->
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->

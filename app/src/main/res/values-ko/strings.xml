@@ -65,8 +65,7 @@
   <string name="about_developers_label">대표 개발자 :</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> 와 <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">번역자 : </string>
-  <string name="about_version_label">이 설치 도구의 버전 :</string>
-  <string name="about_source_label">소스 코드 :</string>
+    <string name="about_source_label">소스 코드 :</string>
   <string name="about_libraries_label">사용된 라이브러리들 :</string>
   <!-- DownloadView -->
   <string name="download_view_download">내려받기</string>

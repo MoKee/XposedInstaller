@@ -111,8 +111,7 @@
   <string name="about_developers_label">Hlavní vývojáři:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> a <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a> - autoři frameworku a instalátoru\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> a <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> - opravy chyb a Material Design</string>
   <string name="about_translator_label">Překlad:</string>
-  <string name="about_version_label">Verze této aplikace:</string>
-  <string name="about_source_label">Zdrojový kód:</string>
+    <string name="about_source_label">Zdrojový kód:</string>
   <string name="about_libraries_label">Použité knihovny:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Stáhnout</string>

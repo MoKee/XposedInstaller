@@ -112,7 +112,7 @@
   <string name="about_developers_label">主要开发者</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> and <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> and <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> for bug fixes and Material Design</string>
   <string name="about_translator_label">翻译者</string>
-  <string name="about_version_label">版本</string>
+  <string name="about_modified_version_label">魔趣定制版本</string>
   <string name="about_source_label">源码</string>
   <string name="about_libraries_label">使用的库文件</string>
   <!-- DownloadView -->

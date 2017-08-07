@@ -93,8 +93,7 @@
   <string name="about_developers_label">Головні розробники:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> та <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Перекладач:</string>
-  <string name="about_version_label">Версія цього додатку:</string>
-  <string name="about_source_label">Вихідний код:</string>
+    <string name="about_source_label">Вихідний код:</string>
   <string name="about_libraries_label">Використані бібліотеки:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Звантаження</string>

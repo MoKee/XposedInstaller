@@ -93,8 +93,7 @@
   <string name="about_developers_label">Разработчици:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> и <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Преводач:</string>
-  <string name="about_version_label">Версия:</string>
-  <string name="about_source_label">Изходен код:</string>
+    <string name="about_source_label">Изходен код:</string>
   <string name="about_libraries_label">Използвани библиотеки:</string>
   <!-- DownloadView -->
   <string name="download_view_download">Изтегли</string>

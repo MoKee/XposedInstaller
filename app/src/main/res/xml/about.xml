@@ -7,7 +7,7 @@
         app:icon="@drawable/ic_info"
         app:key="version"
         app:summary="1.0.0"
-        app:title="@string/about_version_label" />
+        app:title="@string/about_modified_version_label" />
 
     <Preference
         app:icon="@drawable/ic_person"

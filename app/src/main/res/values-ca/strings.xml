@@ -104,8 +104,7 @@
   <string name="about_developers_label">Desenvolupadors principals</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> i <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> i <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> per solucionar errors i disseny Material</string>
   <string name="about_translator_label">Traductor</string>
-  <string name="about_version_label">Versió</string>
-  <string name="about_source_label">Codi font</string>
+    <string name="about_source_label">Codi font</string>
   <string name="about_libraries_label">Biblioteques utilitzades</string>
   <!-- DownloadView -->
   <string name="download_view_download">Baixa</string>

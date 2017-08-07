@@ -111,8 +111,7 @@
   <string name="about_developers_label">Hlavní vývojári</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> a <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Prekladatelia</string>
-  <string name="about_version_label">Verzia aplikácie</string>
-  <string name="about_source_label">Zdrojový kód</string>
+    <string name="about_source_label">Zdrojový kód</string>
   <string name="about_libraries_label">Použité knižnice</string>
   <!-- DownloadView -->
   <string name="download_view_download">Stiahnuť</string>

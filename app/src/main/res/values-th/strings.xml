@@ -107,8 +107,7 @@
   <string name="about_developers_label">ผู้พัฒนาหลัก</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> และ <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> และ <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> สำหรับแก้ไขบัคและ Material Design</string>
   <string name="about_translator_label">ผู้แปล</string>
-  <string name="about_version_label">เวอร์ชั่น</string>
-  <string name="about_source_label">ที่มารหัส</string>
+    <string name="about_source_label">ที่มารหัส</string>
   <string name="about_libraries_label">ใช้ไลบารี่แล้ว</string>
   <!-- DownloadView -->
   <string name="download_view_download">ดาวน์โหลด</string>
