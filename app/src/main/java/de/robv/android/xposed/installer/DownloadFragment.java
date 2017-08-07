@@ -244,7 +244,6 @@ public class DownloadFragment extends Fragment implements
 
             Resources res = context.getResources();
             sectionHeadersStatus = new String[]{
-                    res.getString(R.string.download_section_framework),
                     res.getString(R.string.download_section_update_available),
                     res.getString(R.string.download_section_installed),
                     res.getString(R.string.download_section_not_installed),};
@@ -275,7 +274,6 @@ public class DownloadFragment extends Fragment implements
             Cursor cursor = (Cursor) getItem(position);
             long created = cursor.getLong(OverviewColumnsIndexes.CREATED);
             long updated = cursor.getLong(OverviewColumnsIndexes.UPDATED);
-            boolean isFramework = cursor.getInt(OverviewColumnsIndexes.IS_FRAMEWORK) > 0;
             boolean isInstalled = cursor.getInt(OverviewColumnsIndexes.IS_INSTALLED) > 0;
             boolean hasUpdate = cursor.getInt(OverviewColumnsIndexes.HAS_UPDATE) > 0;
 
@@ -291,15 +289,12 @@ public class DownloadFragment extends Fragment implements
                     return 2;
                 return 3;
             } else {
-                if (isFramework)
-                    return 0;
-
                 if (hasUpdate)
-                    return 1;
+                    return 0;
                 else if (isInstalled)
-                    return 2;
+                    return 1;
                 else
-                    return 3;
+                    return 2;
             }
         }
 

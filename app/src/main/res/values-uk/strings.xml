@@ -64,8 +64,7 @@
   <string name="download_sorting_status">За статусом</string>
   <string name="download_sorting_updated">За датою оновлення</string>
   <string name="download_sorting_created">За датою створення</string>
-  <string name="download_section_framework">Фреймворк</string>
-  <string name="download_section_update_available">Є оновлення</string>
+    <string name="download_section_update_available">Є оновлення</string>
   <string name="download_section_installed">Встановлено</string>
   <string name="download_section_not_installed">Не встановлено</string>
   <string name="download_section_24h">Останні 24 години</string>

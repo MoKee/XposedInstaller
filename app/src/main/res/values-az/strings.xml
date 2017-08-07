@@ -43,7 +43,6 @@
     <string name="download_sorting_status">Statusa görə çeşidlə</string>
     <string name="download_sorting_updated">Axırıncı yeniləməyə görə çeşidlə</string>
     <string name="download_sorting_created">Yaradılma vaxtına görə çeşidlə</string>
-    <string name="download_section_framework">Framework</string>
     <string name="download_section_update_available">Yeniləmə mövcuddur</string>
     <string name="download_section_installed">Quraşdırıldı</string>
     <string name="download_section_not_installed">Quraşdırılmadı</string>

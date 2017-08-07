@@ -45,8 +45,7 @@
   <string name="download_sorting_status">Sortera efter status</string>
   <string name="download_sorting_updated">Sortera efter senaste uppdatering</string>
   <string name="download_sorting_created">Sortera efter datum för skapandet</string>
-  <string name="download_section_framework">Ramverk</string>
-  <string name="download_section_update_available">Uppdatering tillgänglig</string>
+    <string name="download_section_update_available">Uppdatering tillgänglig</string>
   <string name="download_section_installed">Installerad</string>
   <string name="download_section_not_installed">Inte installerad</string>
   <string name="download_section_24h">Senaste 24 timmarna</string>

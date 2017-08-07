@@ -64,7 +64,6 @@
     <string name="download_sorting_status">Susun mengikut status</string>
     <string name="download_sorting_updated">Susun mengikut kemaskini terakhir</string>
     <string name="download_sorting_created">Susun mengikut tarikh cipta</string>
-    <string name="download_section_framework">Framework</string>
     <string name="download_section_update_available">Terdapat kemaskini</string>
     <string name="download_section_installed">Telah dipasang</string>
     <string name="download_section_not_installed">Tidak dipasang</string>

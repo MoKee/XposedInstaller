@@ -71,8 +71,7 @@
   <string name="download_sorting_status">状態</string>
   <string name="download_sorting_updated">最終更新日</string>
   <string name="download_sorting_created">作成日</string>
-  <string name="download_section_framework">フレームワーク</string>
-  <string name="download_section_update_available">更新があります</string>
+    <string name="download_section_update_available">更新があります</string>
   <string name="download_section_installed">インストール済み</string>
   <string name="download_section_not_installed">未インストール</string>
   <string name="download_section_24h">24時間以内</string>

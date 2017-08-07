@@ -392,9 +392,6 @@ public final class RepoDb extends SQLiteOpenHelper {
                 "v." + ModuleVersionsColumns.NAME + " AS " + OverviewColumns.LATEST_VERSION,
                 "i." + InstalledModulesColumns.VERSION_NAME + " AS " + OverviewColumns.INSTALLED_VERSION,
 
-                "(CASE WHEN m." + ModulesColumns.PKGNAME + " = '" + ModuleUtil.getInstance().getFrameworkPackageName()
-                        + "' THEN 1 ELSE 0 END) AS " + OverviewColumns.IS_FRAMEWORK,
-
                 "(CASE WHEN i." + InstalledModulesColumns.VERSION_NAME + " IS NOT NULL"
                         + " THEN 1 ELSE 0 END) AS " + OverviewColumns.IS_INSTALLED,
 
@@ -403,7 +400,7 @@ public final class RepoDb extends SQLiteOpenHelper {
         };
 
         // Conditions
-        String where = ModulesColumns.PREFERRED + " = 1";
+        String where = ModulesColumns.PREFERRED + " = 1 and m." + ModulesColumns.PKGNAME + " != '" + ModuleUtil.getInstance().getFrameworkPackageName() + "'";
         String whereArgs[] = null;
         if (!TextUtils.isEmpty(filterText)) {
             where += " AND (m." + ModulesColumns.TITLE + " LIKE ?"
@@ -423,8 +420,6 @@ public final class RepoDb extends SQLiteOpenHelper {
             sbOrder.append(OverviewColumns.UPDATED);
             sbOrder.append(" DESC,");
         }
-        sbOrder.append(OverviewColumns.IS_FRAMEWORK);
-        sbOrder.append(" DESC, ");
         sbOrder.append(OverviewColumns.HAS_UPDATE);
         sbOrder.append(" DESC, ");
         sbOrder.append(OverviewColumns.IS_INSTALLED);

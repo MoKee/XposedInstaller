@@ -75,8 +75,7 @@
   <string name="download_sorting_status">Clasificar por estado</string>
   <string name="download_sorting_updated">Clasificar por última actualización</string>
   <string name="download_sorting_created">Clasificar por fecha de creación</string>
-  <string name="download_section_framework">Framework</string>
-  <string name="download_section_update_available">Actualización disponible</string>
+    <string name="download_section_update_available">Actualización disponible</string>
   <string name="download_section_installed">Instalado</string>
   <string name="download_section_not_installed">No instalado</string>
   <string name="download_section_24h">Últimas 24 horas</string>
