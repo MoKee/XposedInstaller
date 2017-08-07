@@ -22,7 +22,6 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import de.robv.android.xposed.installer.ModulesFragment;
-import de.robv.android.xposed.installer.R;
 import de.robv.android.xposed.installer.XposedApp;
 import de.robv.android.xposed.installer.repo.ModuleVersion;
 import de.robv.android.xposed.installer.repo.RepoDb;
@@ -196,7 +195,7 @@ public final class ModuleUtil {
         return result;
     }
 
-    public synchronized void updateModulesList(boolean showToast) {
+    public synchronized boolean updateModulesList() {
         try {
             Log.i(XposedApp.TAG, "updating modules.list");
             int installedXposedVersion = XposedApp.getInstalledXposedVersion();
@@ -226,21 +225,12 @@ public final class ModuleUtil {
             FileUtils.setPermissions(MODULES_LIST_FILE, 00664, -1, -1);
             FileUtils.setPermissions(XposedApp.ENABLED_MODULES_LIST_FILE, 00664, -1, -1);
 
-            if (showToast)
-                showToast(R.string.xposed_module_list_updated);
+            return true;
         } catch (IOException e) {
             Log.e(XposedApp.TAG, "cannot write " + MODULES_LIST_FILE, e);
             Toast.makeText(mApp, "cannot write " + MODULES_LIST_FILE + e, Toast.LENGTH_SHORT).show();
+            return false;
         }
-    }
-
-    private void showToast(int message) {
-        if (mToast != null) {
-            mToast.cancel();
-            mToast = null;
-        }
-        mToast = Toast.makeText(mApp, mApp.getString(message), Toast.LENGTH_SHORT);
-        mToast.show();
     }
 
     public void addListener(ModuleListener listener) {

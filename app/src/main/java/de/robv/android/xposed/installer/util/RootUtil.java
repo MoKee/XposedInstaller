@@ -3,7 +3,6 @@ package de.robv.android.xposed.installer.util;
 import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.text.TextUtils;
@@ -240,17 +239,6 @@ public class RootUtil {
 
         RebootMode(@StringRes int titleRes) {
             this.titleRes = titleRes;
-        }
-
-        public static RebootMode fromId(@IdRes int id) {
-            switch (id) {
-                case R.id.reboot:
-                    return NORMAL;
-                case R.id.soft_reboot:
-                    return SOFT;
-                default:
-                    throw new IllegalArgumentException();
-            }
         }
     }
 

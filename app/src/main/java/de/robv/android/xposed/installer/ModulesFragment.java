@@ -1,66 +1,73 @@
 package de.robv.android.xposed.installer;
 
 import android.content.ActivityNotFoundException;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ListFragment;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView.AdapterContextMenuInfo;
-import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.Collator;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
 import de.robv.android.xposed.installer.repo.RepoDb;
-import de.robv.android.xposed.installer.repo.RepoDb.RowNotFoundException;
+import de.robv.android.xposed.installer.util.FrameworkUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
 import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
 import de.robv.android.xposed.installer.util.NavUtil;
-import de.robv.android.xposed.installer.util.ThemeUtil;
+import de.robv.android.xposed.installer.util.RootUtil;
 
 import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
 
-public class ModulesFragment extends ListFragment implements ModuleListener {
+public class ModulesFragment extends Fragment implements ModuleListener {
 
     public static final String SETTINGS_CATEGORY = "de.robv.android.xposed.category.MODULE_SETTINGS";
 
     public static final String PLAY_STORE_PACKAGE = "com.android.vending";
     public static final String PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=%s";
-
+    private static final String KEY_HIDE_INSTALL_WARNING = "hide_install_warning";
     private static String PLAY_STORE_LABEL = null;
+    private final ArrayList<InstalledModule> mModules = new ArrayList<>();
 
     private ModuleUtil mModuleUtil;
+    private RecyclerView mModulesView;
     private ModuleAdapter mAdapter = null;
     private PackageManager mPm = null;
 
     private Runnable reloadModules = new Runnable() {
         public void run() {
-            mAdapter.setNotifyOnChange(false);
-            mAdapter.clear();
-            mAdapter.addAll(mModuleUtil.getModules().values());
+            mModules.clear();
+            mModules.addAll(mModuleUtil.getModules().values());
             final Collator col = Collator.getInstance(Locale.getDefault());
-            mAdapter.sort(new Comparator<InstalledModule>() {
+            Collections.sort(mModules, new Comparator<InstalledModule>() {
                 @Override
                 public int compare(InstalledModule lhs, InstalledModule rhs) {
                     return col.compare(lhs.getAppName(), rhs.getAppName());
@@ -73,43 +80,98 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         mModuleUtil = ModuleUtil.getInstance();
         mPm = getActivity().getPackageManager();
         if (PLAY_STORE_LABEL == null) {
             try {
-                ApplicationInfo ai = mPm.getApplicationInfo(PLAY_STORE_PACKAGE,
-                        0);
+                ApplicationInfo ai = mPm.getApplicationInfo(PLAY_STORE_PACKAGE, 0);
                 PLAY_STORE_LABEL = mPm.getApplicationLabel(ai).toString();
             } catch (NameNotFoundException ignored) {
             }
         }
     }
 
+    @Nullable
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.tab_modules, container, false);
+    }
 
-        mAdapter = new ModuleAdapter(getActivity());
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        mAdapter = new ModuleAdapter();
+        mModulesView = (RecyclerView) view.findViewById(R.id.modules);
+        mModulesView.setAdapter(mAdapter);
+
         reloadModules.run();
-        setListAdapter(mAdapter);
-        setEmptyText(getActivity().getString(R.string.no_xposed_modules_found));
-        registerForContextMenu(getListView());
         mModuleUtil.addListener(this);
 
-        final int cardMargin = getResources().getDimensionPixelSize(R.dimen.card_margin);
-        getListView().setDivider(null);
-        getListView().setDividerHeight(cardMargin);
-        getListView().setPadding(cardMargin, cardMargin, cardMargin, cardMargin);
-        getListView().setClipToPadding(false);
-        getListView().setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);
+        final SharedPreferences pref = XposedApp.getPreferences();
+        if (!pref.getBoolean(KEY_HIDE_INSTALL_WARNING, false)) {
+            final View disclaimerView = view.findViewById(R.id.disclaimer);
+            disclaimerView.setVisibility(View.VISIBLE);
+            view.findViewById(R.id.accept).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (pref.edit().putBoolean(KEY_HIDE_INSTALL_WARNING, true).commit()) {
+                        disclaimerView.setVisibility(View.GONE);
+                    }
+                }
+            });
+        }
+
+        final boolean isEnabled = FrameworkUtil.isEnabled();
+        final boolean isLoaded = FrameworkUtil.isLoaded();
+
+        if (isEnabled && !isLoaded) {
+            view.findViewById(R.id.deactivated).setVisibility(View.VISIBLE);
+            ((TextView) view.findViewById(R.id.exception)).setText(getString(
+                    R.string.framework_not_active, XposedApp.getXposedProp().getVersion()));
+        }
+
+        final Switch masterView = (Switch) view.findViewById(R.id.master);
+        masterView.setChecked(isEnabled);
+        masterView.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (FrameworkUtil.setEnable(isChecked)) {
+                    showSnackbarForReboot(isChecked
+                            ? R.string.xposed_on_next_reboot
+                            : R.string.xposed_off_next_reboot);
+                }
+            }
+        });
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         mModuleUtil.removeListener(this);
-        setListAdapter(null);
+        mModulesView.setAdapter(null);
         mAdapter = null;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_installer, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.reboot:
+                confirmReboot(RootUtil.RebootMode.NORMAL);
+                return true;
+            case R.id.soft_reboot:
+                confirmReboot(RootUtil.RebootMode.SOFT);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -122,72 +184,43 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
         getActivity().runOnUiThread(reloadModules);
     }
 
-    @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        String packageName = (String) v.getTag();
-        if (packageName == null)
-            return;
-
-        Intent launchIntent = getSettingsIntent(packageName);
-        if (launchIntent != null)
+    private void onModuleItemClick(int position) {
+        final InstalledModule module = mModules.get(position);
+        final String packageName = module.packageName;
+        final Intent launchIntent = getSettingsIntent(packageName);
+        if (launchIntent != null) {
             startActivity(launchIntent);
-        else
-            Toast.makeText(getActivity(),
-                    getActivity().getString(R.string.module_no_ui),
-                    Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v,
-                                    ContextMenuInfo menuInfo) {
-        InstalledModule installedModule = getItemFromContextMenuInfo(menuInfo);
-        if (installedModule == null)
-            return;
-
-        menu.setHeaderTitle(installedModule.getAppName());
-        getActivity().getMenuInflater().inflate(R.menu.context_menu_modules, menu);
-
-        if (getSettingsIntent(installedModule.packageName) == null)
-            menu.removeItem(R.id.menu_launch);
-
-        try {
-            String support = RepoDb
-                    .getModuleSupport(installedModule.packageName);
-            if (NavUtil.parseURL(support) == null)
-                menu.removeItem(R.id.menu_support);
-        } catch (RowNotFoundException e) {
-            menu.removeItem(R.id.menu_download_updates);
-            menu.removeItem(R.id.menu_support);
+        } else {
+            Snackbar.make(mModulesView, R.string.module_no_ui, Snackbar.LENGTH_SHORT).show();
         }
-
-        String installer = mPm.getInstallerPackageName(installedModule.packageName);
-        if (PLAY_STORE_LABEL != null && PLAY_STORE_PACKAGE.equals(installer))
-            menu.findItem(R.id.menu_play_store).setTitle(PLAY_STORE_LABEL);
-        else
-            menu.removeItem(R.id.menu_play_store);
     }
 
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        InstalledModule module = getItemFromContextMenuInfo(item.getMenuInfo());
-        if (module == null)
-            return false;
+    private void onModuleEnableChanged(int position, boolean isChecked) {
+        final InstalledModule module = mModules.get(position);
+        final String packageName = module.packageName;
+        boolean changed = mModuleUtil.isModuleEnabled(packageName) ^ isChecked;
+        if (changed) {
+            mModuleUtil.setModuleEnabled(packageName, isChecked);
+            if (mModuleUtil.updateModulesList()) {
+                showSnackbarForReboot(R.string.reboot_needed);
+            }
+        }
+    }
 
+    private boolean onContextItemSelected(int position, MenuItem item) {
+        final InstalledModule module = mModules.get(position);
         switch (item.getItemId()) {
             case R.id.menu_launch:
                 startActivity(getSettingsIntent(module.packageName));
                 return true;
-
             case R.id.menu_download_updates:
-                Intent detailsIntent = new Intent(getActivity(), DownloadDetailsActivity.class);
-                detailsIntent.setData(Uri.fromParts("package", module.packageName, null));
-                startActivity(detailsIntent);
+                startActivity(new Intent(getActivity(), DownloadDetailsActivity.class).setData(
+                        Uri.fromParts("package", module.packageName, null)));
                 return true;
-
             case R.id.menu_support:
-                NavUtil.startURL(getActivity(), Uri.parse(RepoDb.getModuleSupport(module.packageName)));
+                NavUtil.startURL(getActivity(),
+                        Uri.parse(RepoDb.getModuleSupport(module.packageName)));
                 return true;
-
             case R.id.menu_play_store:
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW);
                 i.setData(Uri.parse(String.format(PLAY_STORE_LINK, module.packageName)));
@@ -199,23 +232,17 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
                     startActivity(i);
                 }
                 return true;
-
             case R.id.menu_app_info:
-                startActivity(new Intent(ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", module.packageName, null)));
+                startActivity(new Intent(ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.fromParts("package", module.packageName, null)));
                 return true;
-
             case R.id.menu_uninstall:
-                startActivity(new Intent(Intent.ACTION_UNINSTALL_PACKAGE, Uri.fromParts("package", module.packageName, null)));
+                startActivity(new Intent(Intent.ACTION_UNINSTALL_PACKAGE,
+                        Uri.fromParts("package", module.packageName, null)));
                 return true;
         }
 
         return false;
-    }
-
-    private InstalledModule getItemFromContextMenuInfo(ContextMenuInfo menuInfo) {
-        AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
-        int position = info.position - getListView().getHeaderViewsCount();
-        return (position >= 0) ? (InstalledModule) getListAdapter().getItem(position) : null;
     }
 
     private Intent getSettingsIntent(String packageName) {
@@ -240,75 +267,160 @@ public class ModulesFragment extends ListFragment implements ModuleListener {
         return intent;
     }
 
-    private class ModuleAdapter extends ArrayAdapter<InstalledModule> {
+    private void showSnackbarForReboot(@StringRes int reason) {
+        Snackbar.make(mModulesView, reason, Snackbar.LENGTH_LONG)
+                .setAction(R.string.reboot, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        confirmReboot(RootUtil.RebootMode.SOFT);
+                    }
+                })
+                .show();
+    }
 
-        ModuleAdapter(Context context) {
-            super(context, R.layout.list_item_module, R.id.title);
+    private void confirmReboot(final RootUtil.RebootMode mode) {
+        new AlertDialog.Builder(getActivity())
+                .setMessage(R.string.reboot_confirmation)
+                .setPositiveButton(mode.titleRes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        RootUtil.reboot(mode, getContext());
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .show();
+    }
+
+    private class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ViewHolder> {
+
+        final LayoutInflater inflater = LayoutInflater.from(getContext());
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return new ViewHolder(inflater.inflate(R.layout.list_item_module, parent, false));
         }
 
-        @NonNull
         @Override
-        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-            View view = super.getView(position, convertView, parent);
+        public void onBindViewHolder(ViewHolder holder, int position) {
+            holder.bind(mModules.get(position));
+        }
 
-            if (convertView == null) {
-                // The reusable view was created for the first time, set up the
-                // listener on the checkbox
-                ((Switch) view.findViewById(R.id.checkbox)).setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public int getItemCount() {
+            return mModules.size();
+        }
+
+        class ViewHolder extends RecyclerView.ViewHolder {
+
+            private final ImageView iconView;
+            private final TextView titleView;
+            private final TextView versionNameView;
+            private final TextView descriptionView;
+            private final TextView warningView;
+            private final Switch enableView;
+            private final PopupMenu popupMenu;
+
+            ViewHolder(View itemView) {
+                super(itemView);
+
+                iconView = (ImageView) itemView.findViewById(R.id.icon);
+                titleView = (TextView) itemView.findViewById(R.id.title);
+                versionNameView = (TextView) itemView.findViewById(R.id.version_name);
+                descriptionView = (TextView) itemView.findViewById(R.id.description);
+                warningView = (TextView) itemView.findViewById(R.id.warning);
+                enableView = (Switch) itemView.findViewById(R.id.enable);
+
+                popupMenu = new PopupMenu(getContext(), itemView);
+                popupMenu.inflate(R.menu.context_menu_modules);
+
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onModuleItemClick(getLayoutPosition());
+                    }
+                });
+
+                itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        popupMenu.show();
+                        return true;
+                    }
+                });
+
+                enableView.setOnCheckedChangeListener(new OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        String packageName = (String) buttonView.getTag();
-                        boolean changed = mModuleUtil.isModuleEnabled(packageName) ^ isChecked;
-                        if (changed) {
-                            mModuleUtil.setModuleEnabled(packageName, isChecked);
-                            mModuleUtil.updateModulesList(true);
-                        }
+                        onModuleEnableChanged(getLayoutPosition(), isChecked);
+                    }
+                });
+
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        return onContextItemSelected(getLayoutPosition(), item);
                     }
                 });
             }
 
-            InstalledModule item = getItem(position);
+            void bind(InstalledModule module) {
+                final Menu menu = popupMenu.getMenu();
 
-            TextView version = (TextView) view.findViewById(R.id.version_name);
-            version.setText(item.versionName);
+                iconView.setImageDrawable(module.getIcon());
+                titleView.setText(module.getAppName());
+                versionNameView.setText(module.versionName);
 
-            // Store the package name in some views' tag for later access
-            view.findViewById(R.id.checkbox).setTag(item.packageName);
-            view.setTag(item.packageName);
+                if (TextUtils.isEmpty(module.getDescription())) {
+                    descriptionView.setVisibility(View.GONE);
+                } else {
+                    descriptionView.setVisibility(View.VISIBLE);
+                    descriptionView.setText(module.getDescription());
+                }
 
-            ((ImageView) view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
+                if (module.minVersion == 0) {
+                    enableView.setEnabled(false);
+                    warningView.setText(getString(R.string.no_min_version_specified));
+                    warningView.setVisibility(View.VISIBLE);
+                } else if (module.minVersion < ModuleUtil.MIN_MODULE_VERSION) {
+                    enableView.setEnabled(false);
+                    warningView.setText(getString(R.string.warning_min_version_too_low,
+                            module.minVersion, ModuleUtil.MIN_MODULE_VERSION));
+                    warningView.setVisibility(View.VISIBLE);
+                } else if (module.isInstalledOnExternalStorage()) {
+                    enableView.setEnabled(false);
+                    warningView.setText(getString(R.string.warning_installed_on_external_storage));
+                    warningView.setVisibility(View.VISIBLE);
+                } else {
+                    enableView.setEnabled(true);
+                    warningView.setVisibility(View.GONE);
+                }
 
-            TextView descriptionText = (TextView) view.findViewById(R.id.description);
-            if (!item.getDescription().isEmpty()) {
-                descriptionText.setText(item.getDescription());
-                descriptionText.setTextColor(ThemeUtil.getThemeColor(getContext(), android.R.attr.textColorSecondary));
-            } else {
-                descriptionText.setText(getString(R.string.module_empty_description));
-                descriptionText.setTextColor(getResources().getColor(R.color.warning));
+                enableView.setChecked(mModuleUtil.isModuleEnabled(module.packageName));
+
+                if (getSettingsIntent(module.packageName) == null) {
+                    menu.removeItem(R.id.menu_launch);
+                }
+
+                try {
+                    String support = RepoDb.getModuleSupport(module.packageName);
+                    if (NavUtil.parseURL(support) == null) {
+                        menu.removeItem(R.id.menu_support);
+                    }
+                } catch (RepoDb.RowNotFoundException e) {
+                    menu.removeItem(R.id.menu_download_updates);
+                    menu.removeItem(R.id.menu_support);
+                }
+
+                String installer = mPm.getInstallerPackageName(module.packageName);
+                if (PLAY_STORE_LABEL != null && PLAY_STORE_PACKAGE.equals(installer)) {
+                    menu.findItem(R.id.menu_play_store).setTitle(PLAY_STORE_LABEL);
+                } else {
+                    menu.removeItem(R.id.menu_play_store);
+                }
             }
 
-            Switch checkbox = (Switch) view.findViewById(R.id.checkbox);
-            checkbox.setChecked(mModuleUtil.isModuleEnabled(item.packageName));
-            TextView warningText = (TextView) view.findViewById(R.id.warning);
-
-            if (item.minVersion == 0) {
-                checkbox.setEnabled(false);
-                warningText.setText(getString(R.string.no_min_version_specified));
-                warningText.setVisibility(View.VISIBLE);
-            } else if (item.minVersion < ModuleUtil.MIN_MODULE_VERSION) {
-                checkbox.setEnabled(false);
-                warningText.setText(String.format(getString(R.string.warning_min_version_too_low), item.minVersion, ModuleUtil.MIN_MODULE_VERSION));
-                warningText.setVisibility(View.VISIBLE);
-            } else if (item.isInstalledOnExternalStorage()) {
-                checkbox.setEnabled(false);
-                warningText.setText(getString(R.string.warning_installed_on_external_storage));
-                warningText.setVisibility(View.VISIBLE);
-            } else {
-                checkbox.setEnabled(true);
-                warningText.setVisibility(View.GONE);
-            }
-            return view;
         }
+
     }
 
 }

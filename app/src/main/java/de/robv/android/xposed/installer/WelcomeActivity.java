@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,20 +16,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import de.robv.android.xposed.installer.installation.StatusInstallerFragment;
-import de.robv.android.xposed.installer.util.Loader;
-import de.robv.android.xposed.installer.util.ModuleUtil;
-import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
-import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
-import de.robv.android.xposed.installer.util.RepoLoader;
-
 public class WelcomeActivity extends AppCompatActivity implements
-        NavigationView.OnNavigationItemSelectedListener,
-        ModuleListener, Loader.Listener<RepoLoader> {
+        NavigationView.OnNavigationItemSelectedListener {
 
     private static final String SELECTED_ITEM_ID = "SELECTED_ITEM_ID";
     private final Handler mDrawerHandler = new Handler();
-    private RepoLoader mRepoLoader;
     private DrawerLayout mDrawerLayout;
     private int mPrevSelectedId;
     private NavigationView mNavigationView;
@@ -89,24 +79,7 @@ public class WelcomeActivity extends AppCompatActivity implements
                 mDrawerLayout.closeDrawers();
         }
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            int value = extras.getInt("fragment", prefs.getInt("default_view", 0));
-            switchFragment(value);
-        }
-
-        mRepoLoader = RepoLoader.getInstance();
-        ModuleUtil.getInstance().addListener(this);
-        mRepoLoader.addListener(this);
-
-        notifyDataSetChanged();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ModuleUtil.getInstance().removeListener(this);
-        mRepoLoader.removeListener(this);
+        switchFragment(0);
     }
 
     public void switchFragment(int itemId) {
@@ -125,11 +98,6 @@ public class WelcomeActivity extends AppCompatActivity implements
     private void navigate(final int itemId) {
         Fragment navFragment = null;
         switch (itemId) {
-            case R.id.nav_item_framework:
-                mPrevSelectedId = itemId;
-                setTitle(R.string.app_name);
-                navFragment = new StatusInstallerFragment();
-                break;
             case R.id.nav_item_modules:
                 mPrevSelectedId = itemId;
                 setTitle(R.string.nav_item_modules);
@@ -191,44 +159,5 @@ public class WelcomeActivity extends AppCompatActivity implements
         } else {
             super.onBackPressed();
         }
-    }
-
-    private void notifyDataSetChanged() {
-        View parentLayout = findViewById(R.id.content_frame);
-        String frameworkUpdateVersion = mRepoLoader.getFrameworkUpdateVersion();
-        boolean moduleUpdateAvailable = mRepoLoader.hasModuleUpdates();
-
-        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
-        if (currentFragment instanceof DownloadDetailsFragment) {
-            if (frameworkUpdateVersion != null) {
-                Snackbar.make(parentLayout, R.string.welcome_framework_update_available + " " + String.valueOf(frameworkUpdateVersion), Snackbar.LENGTH_LONG).show();
-            }
-        }
-
-        boolean snackBar = XposedApp.getPreferences().getBoolean("snack_bar", true);
-
-        if (moduleUpdateAvailable && snackBar) {
-            Snackbar.make(parentLayout, R.string.modules_updates_available, Snackbar.LENGTH_LONG).setAction(getString(R.string.view), new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    switchFragment(2);
-                }
-            }).show();
-        }
-    }
-
-    @Override
-    public void onInstalledModulesReloaded(ModuleUtil moduleUtil) {
-        notifyDataSetChanged();
-    }
-
-    @Override
-    public void onSingleInstalledModuleReloaded(ModuleUtil moduleUtil, String packageName, InstalledModule module) {
-        notifyDataSetChanged();
-    }
-
-    @Override
-    public void onReloadDone(RepoLoader loader) {
-        notifyDataSetChanged();
     }
 }
