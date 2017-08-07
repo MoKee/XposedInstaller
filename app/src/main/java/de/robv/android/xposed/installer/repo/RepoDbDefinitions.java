@@ -173,7 +173,6 @@ public class RepoDbDefinitions {
         public static final String INSTALLED_VERSION = "installed_version";
         public static final String LATEST_VERSION = "latest_version";
 
-        public static final String IS_FRAMEWORK = "is_framework";
         public static final String IS_INSTALLED = "is_installed";
         public static final String HAS_UPDATE = "has_update";
     }
@@ -190,7 +189,6 @@ public class RepoDbDefinitions {
         public static int INSTALLED_VERSION = -1;
         public static int LATEST_VERSION = -1;
 
-        public static int IS_FRAMEWORK = -1;
         public static int IS_INSTALLED = -1;
         public static int HAS_UPDATE = -1;
 
@@ -208,7 +206,6 @@ public class RepoDbDefinitions {
             INSTALLED_VERSION = cursor.getColumnIndexOrThrow(OverviewColumns.INSTALLED_VERSION);
             LATEST_VERSION = cursor.getColumnIndexOrThrow(OverviewColumns.LATEST_VERSION);
             INSTALLED_VERSION = cursor.getColumnIndexOrThrow(OverviewColumns.INSTALLED_VERSION);
-            IS_FRAMEWORK = cursor.getColumnIndexOrThrow(OverviewColumns.IS_FRAMEWORK);
             IS_INSTALLED = cursor.getColumnIndexOrThrow(OverviewColumns.IS_INSTALLED);
             HAS_UPDATE = cursor.getColumnIndexOrThrow(OverviewColumns.HAS_UPDATE);
 

@@ -46,8 +46,7 @@
   <string name="download_sorting_status">상태 순서(설치/비설치)로 정렬</string>
   <string name="download_sorting_updated">최신의 업데이트 순서로 정렬</string>
   <string name="download_sorting_created">모듈이 Xposed Repository 서버에 등록된 순서로 정렬</string>
-  <string name="download_section_framework">설치된 설치 도구</string>
-  <string name="download_section_update_available">업데이트가 가능한 모듈들</string>
+    <string name="download_section_update_available">업데이트가 가능한 모듈들</string>
   <string name="download_section_installed">설치된 모듈들</string>
   <string name="download_section_not_installed">설치되지 않은 모듈들</string>
   <string name="download_section_24h">지난 24시간 동안 등록된 모듈들</string>

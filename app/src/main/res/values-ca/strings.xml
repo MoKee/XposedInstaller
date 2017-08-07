@@ -69,8 +69,7 @@
   <string name="download_sorting_status">Ordena per estat</string>
   <string name="download_sorting_updated">Ordena per darrera actualització</string>
   <string name="download_sorting_created">Ordena per data de creació</string>
-  <string name="download_section_framework">Marc</string>
-  <string name="download_section_update_available">Actualització disponible</string>
+    <string name="download_section_update_available">Actualització disponible</string>
   <string name="download_section_installed">Instal·lat</string>
   <string name="download_section_not_installed">No instal·lat</string>
   <string name="download_section_24h">Darreres 24 hores</string>

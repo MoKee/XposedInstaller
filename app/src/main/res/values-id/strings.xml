@@ -41,7 +41,6 @@
     <string name="download_sorting_status">Sortir menurut status</string>
     <string name="download_sorting_updated">Sortir menurut update terakhir</string>
     <string name="download_sorting_created">Sortir menurut tanggal pembuatan</string>
-    <string name="download_section_framework">Framework</string>
     <string name="download_section_update_available">Update tersedia</string>
     <string name="download_section_installed">Terinstall</string>
     <string name="download_section_not_installed">Tidak terinstall</string>

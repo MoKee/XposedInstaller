@@ -42,8 +42,7 @@
   <string name="download_sorting_status">فرز حسب الحالة</string>
   <string name="download_sorting_updated">فرز حسب آخر تحديث</string>
   <string name="download_sorting_created">فرز حسب تاريخ الإنشاء</string>
-  <string name="download_section_framework">الإطار</string>
-  <string name="download_section_update_available">تحديث متوفر</string>
+    <string name="download_section_update_available">تحديث متوفر</string>
   <string name="download_section_installed">تثبيت</string>
   <string name="download_section_not_installed">لم يتم تثبيت</string>
   <string name="download_section_24h">ال 24 ساعة الماضية</string>

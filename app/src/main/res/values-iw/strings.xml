@@ -62,8 +62,7 @@
   <string name="download_sorting_status">מיין לפי סטטוס</string>
   <string name="download_sorting_updated">מיין לפי עדכון אחרון</string>
   <string name="download_sorting_created">מיין לפי תאריך יצירה</string>
-  <string name="download_section_framework">סביבת</string>
-  <string name="download_section_update_available">עדכון זמין</string>
+    <string name="download_section_update_available">עדכון זמין</string>
   <string name="download_section_installed">מותקן</string>
   <string name="download_section_not_installed">לא מותקן</string>
   <string name="download_section_24h">24 שעות אחרונות</string>

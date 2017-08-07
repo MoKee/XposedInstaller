@@ -71,8 +71,7 @@
   <string name="download_sorting_status">เรียงโดยสถานะ</string>
   <string name="download_sorting_updated">เรียงโดยการอัพเดท</string>
   <string name="download_sorting_created">เรียงโดยวันที่สร้าง</string>
-  <string name="download_section_framework">เฟรมเวิร์ค</string>
-  <string name="download_section_update_available">สามารถอัพเดทได้</string>
+    <string name="download_section_update_available">สามารถอัพเดทได้</string>
   <string name="download_section_installed">ติดตั้งแล้ว</string>
   <string name="download_section_not_installed">ไม่ได้ติดตั้ง</string>
   <string name="download_section_24h">24 ชั่วโมงล่าสุด</string>

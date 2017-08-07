@@ -75,8 +75,7 @@
   <string name="download_sorting_status">Dle stavu</string>
   <string name="download_sorting_updated">Dle poslední aktualizace</string>
   <string name="download_sorting_created">Dle data vytvoření</string>
-  <string name="download_section_framework">Xposed Framework</string>
-  <string name="download_section_update_available">Aktualizace k dispozici</string>
+    <string name="download_section_update_available">Aktualizace k dispozici</string>
   <string name="download_section_installed">Nainstalováno</string>
   <string name="download_section_not_installed">Nenainstalováno</string>
   <string name="download_section_24h">Za posleních 24 hodin</string>
