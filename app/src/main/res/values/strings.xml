@@ -41,6 +41,7 @@
     <string name="activate_only">Activate only</string>
     <string name="module_activated">Xposed module has been activated</string>
     <string name="module_no_ui">This module does not provide a user interface</string>
+    <string name="no_xposed_modules_installed">No Xposed modules were installed.</string>
     <string name="xposed_module_updated_notification_title">Xposed module updated</string>
     <string name="xposed_module_updated_notification">Reboot to activate changes</string>
     <string name="no_min_version_specified">This module does not specify the Xposed version it needs.</string>

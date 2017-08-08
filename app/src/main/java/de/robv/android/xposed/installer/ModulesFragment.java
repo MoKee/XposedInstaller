@@ -59,6 +59,7 @@ public class ModulesFragment extends Fragment implements ModuleListener {
 
     private ModuleUtil mModuleUtil;
     private RecyclerView mModulesView;
+    private View mEmptyView;
     private ModuleAdapter mAdapter = null;
     private PackageManager mPm = null;
 
@@ -74,6 +75,14 @@ public class ModulesFragment extends Fragment implements ModuleListener {
                 }
             });
             mAdapter.notifyDataSetChanged();
+
+            if (mModules.isEmpty()) {
+                mModulesView.setVisibility(View.GONE);
+                mEmptyView.setVisibility(View.VISIBLE);
+            } else {
+                mEmptyView.setVisibility(View.GONE);
+                mModulesView.setVisibility(View.VISIBLE);
+            }
         }
     };
 
@@ -106,6 +115,8 @@ public class ModulesFragment extends Fragment implements ModuleListener {
         mAdapter = new ModuleAdapter();
         mModulesView = (RecyclerView) view.findViewById(R.id.modules);
         mModulesView.setAdapter(mAdapter);
+
+        mEmptyView = view.findViewById(R.id.empty);
 
         reloadModules.run();
         mModuleUtil.addListener(this);

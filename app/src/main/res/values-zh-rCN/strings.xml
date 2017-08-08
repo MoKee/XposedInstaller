@@ -36,6 +36,7 @@
   <string name="activate_only">仅激活</string>
   <string name="module_activated">Xposed 模块已激活</string>
   <string name="module_no_ui">该模块未提供用户界面</string>
+  <string name="no_xposed_modules_installed">尚未安装任何 Xposed 模块</string>
   <string name="xposed_module_updated_notification_title">Xposed 模块已更新</string>
   <string name="xposed_module_updated_notification">重启设备以激活更新。</string>
   <string name="no_min_version_specified">该模块未指定需要的 Xposed 版本。</string>
