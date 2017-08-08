@@ -31,6 +31,7 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed-Modul ist noch nicht aktiv</string>
   <string name="module_is_not_activated_yet_detailed">%s wurde installiert, aber noch nicht aktiviert.</string>
+  <string name="reboot_needed">Neustarten, um Änderungen zu aktivieren</string>
   <string name="activate_and_reboot">Aktivieren und neustarten</string>
   <string name="activate_only">Nur aktivieren</string>
   <string name="module_activated">Xposed-Modul wurde aktiviert</string>
@@ -103,6 +104,8 @@
   <string name="about_developers_label">Hauptentwickler</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> und <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Übersetzer:</string>
+  <string name="about_modified_version_label">Modifizierte Mokee Version</string>
+  <string name="about_framework_version_label">Framework-Version</string>
   <string name="about_source_label">Quellcode</string>
   <string name="about_libraries_label">Verwendete Bibliotheken</string>
   <!-- DownloadView -->
