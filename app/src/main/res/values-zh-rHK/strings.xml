@@ -85,9 +85,7 @@
   <string name="settings_disable_resources">停用資源鉤子</string>
   <string name="settings_disable_resources_summary">解決與主題引擎的衝突。\n<b>警告：</b> 啓用此選項將導致修改資源的模組停止運作。</string>
   <!-- Support tab -->
-  <string name="support_modules_label">模組支援</string>
-  <string name="support_modules_description">於模組清單長按並選取 \"%1$s\"。</string>
-  <string name="support_framework_label">框架/Installer 支援</string>
+    <string name="support_framework_label">框架/Installer 支援</string>
   <string name="support_faq_label">常見/已知問題</string>
   <string name="support_donate_label">捐贈</string>
   <string name="support_donate_description">若您想對 Xposed 表達感謝，在此贊助 rovo89。</string>

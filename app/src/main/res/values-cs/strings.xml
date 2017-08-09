@@ -85,9 +85,7 @@
   <string name="settings_disable_resources">Zakázat ovlivňování prostředků</string>
   <string name="settings_disable_resources_summary">Řešení konfliktů s tématy\n<b>VAROVÁNÍ:</b> Pokud je tato možnost povolena, moduly, které se snaží změnit zdroje, nebudou fungovat.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Podpora pro jednotlivé moduly</string>
-  <string name="support_modules_description">Podržte prst na kterémkoliv z modulů v seznamu nainstalovaných modulů a zvolte \"%1$s\".</string>
-  <string name="support_framework_label">Podpora pro Framework/instalátor</string>
+    <string name="support_framework_label">Podpora pro Framework/instalátor</string>
   <string name="support_faq_label">FAQ/známé problémy</string>
   <string name="support_donate_label">Finanční příspěvek</string>
   <string name="support_donate_description">Pokud chcete poděkovat za Xposed, můžete rovo89 zaslat finanční příspěvek zde:</string>

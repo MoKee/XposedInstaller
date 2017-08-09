@@ -80,9 +80,7 @@
   <string name="settings_disable_resources">ปิดใช้งานการขอทรัพยากร</string>
   <string name="settings_disable_resources_summary">แก้ปัญหาความขัดแย้งกับชุดรูปแบบแอนจิน\n<b>คำเตือน:</b> โมดุลที่จะพยายามเปลี่ยนแปลงทรัพยากรจะไม่ทำงานเมื่อเปิดใช้งาน</string>
   <!-- Support tab -->
-  <string name="support_modules_label">สนับสนุนโมดูล</string>
-  <string name="support_modules_description">คลิกยาวบนโมดูลในรายการโมดูลและเลือก \"%1$s\"</string>
-  <string name="support_framework_label">เฟรมเวิร์ค/สนับสนุนการติดตั้ง</string>
+    <string name="support_framework_label">เฟรมเวิร์ค/สนับสนุนการติดตั้ง</string>
   <string name="support_faq_label">ถามตอบ/ปัญหา</string>
   <string name="support_donate_label">บริจาค</string>
   <string name="support_donate_description">หากคูรต้องการขอบคุณ Xposed คุณสามารถบริจาค rovo89 ที่นี่</string>

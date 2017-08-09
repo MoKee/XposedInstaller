@@ -82,9 +82,7 @@
   <string name="settings_disable_resources">Disabilita agganci alle risorse</string>
   <string name="settings_disable_resources_summary">Soluzioni di conflitti con i theme engine\n<b>ATTENZIONE:</b> I moduli che cambiano le risorse non funzioneranno attivando questa funzione.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Supporto per i moduli</string>
-  <string name="support_modules_description">Click lungo su qualsiasi modulo nella lista dei moduli e seleziona \"%1$s\".</string>
-  <string name="support_framework_label">Framework/Installer supporto</string>
+    <string name="support_framework_label">Framework/Installer supporto</string>
   <string name="support_faq_label">FAQ/Bug conosciuti</string>
   <string name="support_donate_label">Dona</string>
   <string name="support_donate_description">Se ti piacerebbe dire grazie per Xposed, puoi donare a rovo89 qui</string>

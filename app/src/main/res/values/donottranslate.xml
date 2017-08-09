@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name" translatable="false">Xposed Installer</string>
+    <string name="support_download_url" translatable="false">https://download.mokeedev.com</string>
     <string name="support_faq_url" translatable="false">http://forum.xda-developers.com/xposed/xposed-faq-issues-t2735540</string>
     <string name="support_donate_url" translatable="false">http://repo.xposed.info/donate</string>
     <string name="about_source" translatable="false">https://github.com/MoKee/android_packages_apps_XposedInstaller</string>

@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The MoKee Open Source Project
+
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation, either version 3 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
     <!-- General/various strings -->
@@ -94,8 +111,7 @@
     <string name="settings_disable_resources_summary">Workaround for conflicts with theming engines\n<b>WARNING:</b> Modules which try to change resources will not work when this is enabled.</string>
 
     <!-- Support tab -->
-    <string name="support_modules_label">Support for modules</string>
-    <string name="support_modules_description">Long-click any module in the modules list and select \"%1$s\".</string>
+    <string name="support_download_label">Download MoKee ROM</string>
     <string name="support_framework_label">Framework/Installer support</string>
     <string name="support_faq_label">FAQ/known issues</string>
     <string name="support_donate_label">Donate</string>

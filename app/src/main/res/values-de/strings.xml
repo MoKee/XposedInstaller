@@ -85,9 +85,7 @@
   <string name="settings_disable_resources">Ressourcen-APIs deaktivieren</string>
   <string name="settings_disable_resources_summary">Workaround für Konflikte mit \"Theming Engines\"\n<b>VORSICHT:</b> Module, die Ressourcen verändern, werden mit dieser Einstellung nicht funktionieren.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Support für Module</string>
-  <string name="support_modules_description">Drücke in der Modulliste lange auf ein Modul und wähle im Kontextmenü \"%1$s\" aus.</string>
-  <string name="support_framework_label">Framework/Installer-Support</string>
+    <string name="support_framework_label">Framework/Installer-Support</string>
   <string name="support_faq_label">FAQ/bekannte Fehler</string>
   <string name="support_donate_label">Spenden</string>
   <string name="support_donate_description">Wenn du dich für Xposed bedanken möchtest, kannst du hier an rovo89 spenden:</string>

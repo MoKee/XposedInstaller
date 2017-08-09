@@ -80,9 +80,7 @@
   <string name="settings_disable_resources">リソースフックを無効化</string>
   <string name="settings_disable_resources_summary">テーマエンジンとの競合を回避します。\n<b>警告:</b> このオプションを有効化すると、リソースをフックするモジュールが動作しなくなります。</string>
   <!-- Support tab -->
-  <string name="support_modules_label">モジュールのサポート</string>
-  <string name="support_modules_description">モジュールリストでモジュールを長押しして「%1$s」を選択してください。</string>
-  <string name="support_framework_label">フレームワーク/インストールのサポート</string>
+    <string name="support_framework_label">フレームワーク/インストールのサポート</string>
   <string name="support_faq_label">よくある質問/既知の問題</string>
   <string name="support_donate_label">寄付</string>
   <string name="support_donate_description">Xposedに対してお礼をしたければ、ここからrovo89に寄付ができます</string>

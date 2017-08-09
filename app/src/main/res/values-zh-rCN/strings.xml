@@ -87,9 +87,8 @@
   <string name="settings_disable_resources_summary">\n与主题引擎冲突的解决方法\n\n
 警告：启用此功能时，尝试更改资源的模块将无法正常工作。</string>
   <!-- Support tab -->
-  <string name="support_modules_label">模块支持</string>
-  <string name="support_modules_description">在模块列表中长按任何模块并选择“%1$s”</string>
-  <string name="support_framework_label">框架/安装器支持</string>
+  <string name="support_download_label">下载魔趣ROM</string>
+    <string name="support_framework_label">框架/安装器支持</string>
   <string name="support_faq_label">常见问题/已知问题</string>
   <string name="support_donate_label">捐赠</string>
   <string name="support_donate_description">如果您想感谢 Xposed 作者，可以在此向 rovo89 捐赠</string>

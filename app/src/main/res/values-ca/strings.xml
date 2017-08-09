@@ -78,9 +78,7 @@
   <string name="settings_disable_resources">Ganxos d\'orígens inhabilitats</string>
   <string name="settings_disable_resources_summary">Solució per a conflictes amb motors de tematització\n<b>AVÍS:</b> Els mòduls que intenten canviar recursos no funcionaran si s\'habilita.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Ajuda per als mòduls</string>
-  <string name="support_modules_description">Feu clic llarg sobre un mòdul de la llista de mòduls i seleccioneu \"%1$s\".</string>
-  <string name="support_framework_label">Ajuda per al marc/instal·lador</string>
+    <string name="support_framework_label">Ajuda per al marc/instal·lador</string>
   <string name="support_faq_label">PMF/problemes coneguts</string>
   <string name="support_donate_label">Donació</string>
   <string name="support_donate_description">Si voleu donar les gràcies per l\'Xposed, podeu fer una donació per a rovo89 aquí</string>

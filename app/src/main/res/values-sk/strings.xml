@@ -85,9 +85,7 @@
   <string name="settings_disable_resources">Zakázať zmenu zdrojov</string>
   <string name="settings_disable_resources_summary">Riešenie konfliktov s témami\n<b>VAROVANIE:</b> Ak je táto možnosť povolená, moduly, ktoré sa snažia zmeniť zdroje, nebudú fungovať.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Podpora pre moduly</string>
-  <string name="support_modules_description">Podržte dlho na module v zozname modulov a zvoľte \"%1$s\".</string>
-  <string name="support_framework_label">Podpora pre Framework/Installer</string>
+    <string name="support_framework_label">Podpora pre Framework/Installer</string>
   <string name="support_faq_label">FAQ/známe chyby</string>
   <string name="support_donate_label">Prispieť</string>
   <string name="support_donate_description">Ak chcete poďakovať za Xposed, môžete poslať dar pre rovo89 tu</string>

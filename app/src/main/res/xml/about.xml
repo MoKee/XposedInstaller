@@ -36,12 +36,13 @@
         app:key="source"
         app:title="@string/about_source_label" />
 
-    <PreferenceCategory app:title="@string/nav_item_support">
+    <PreferenceCategory
+        app:key="support"
+        app:title="@string/nav_item_support">
 
         <Preference
-            app:key="modules"
-            app:summary="@string/support_modules_description"
-            app:title="@string/support_modules_label" />
+            app:key="download"
+            app:title="@string/support_download_label" />
 
         <Preference
             app:key="installer"

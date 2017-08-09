@@ -88,8 +88,6 @@
     <string name="settings_disable_resources_summary">Solução para conflitos com gestores de temas \n<b>AVISO:</b> Os módulos que dependam da alteração de recursos não irão funcionar se ativar esta opção.</string>
 
     <!-- Support tab -->
-    <string name="support_modules_label">Suporte para módulos</string>
-    <string name="support_modules_description">Mantenha premido qualquer módulo da lista e selecione \"%1$s\".</string>
     <string name="support_framework_label">Suporte à \"Framework\"/\"Installer\"</string>
     <string name="support_faq_label">FAQ/Problemas conhecidos</string>
     <string name="support_donate_label">Doar</string>

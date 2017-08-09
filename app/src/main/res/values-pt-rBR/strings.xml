@@ -82,9 +82,7 @@
   <string name="settings_disable_resources">Desabilitar prender recursos</string>
   <string name="settings_disable_resources_summary">Solução para conflitos com temas\n<b>AVISO:</b> Módulos que tentam alterar recursos não funcionarão com esta opção ativada.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Ajuda para módulos</string>
-  <string name="support_modules_description">Pressione qualquer módulo na lista de módulos e selecione \"%1$s\".</string>
-  <string name="support_framework_label">Ajuda para o Framework/Installer</string>
+    <string name="support_framework_label">Ajuda para o Framework/Installer</string>
   <string name="support_faq_label">FAQ/erros conhecidos</string>
   <string name="support_donate_label">Doar</string>
   <string name="support_donate_description">Se você gostaria de dizer obrigado pelo Xposed, você pode doar para rovo89 aqui</string>

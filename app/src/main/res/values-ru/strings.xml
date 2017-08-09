@@ -83,9 +83,7 @@
   <string name="settings_disable_resources">Не изменять ресурсы</string>
   <string name="settings_disable_resources_summary">Временное решение для конфликтов с темами системы\n<b>ВНИМАНИЕ:</b> Модули, которые пытаются изменить ресурсы не будут работать, если эта опция включена.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Поддержка модулей</string>
-  <string name="support_modules_description">Долгое нажатие на модуле, в меню \"Установленные модули\" и выберите \"%1$s\".</string>
-  <string name="support_framework_label">Поддержка Xposed Framework/Installer</string>
+    <string name="support_framework_label">Поддержка Xposed Framework/Installer</string>
   <string name="support_faq_label">Справка/известные проблемы</string>
   <string name="support_donate_label">Пожертвовать</string>
   <string name="support_donate_description">Если вы хотите отблагодарить за Xposed, вы можете сделать пожертвование для rovo89 здесь:</string>

@@ -82,9 +82,7 @@
   <string name="settings_disable_resources">Wyłącz zasoby konfliktów</string>
   <string name="settings_disable_resources_summary">Rozwiązanie konfliktów z silnikiem\n<b>OSTRZEŻENIE:</b> Moduły, które próbują zmienić zasoby nie będą pracowały, kiedy to jest włączone.</string>
   <!-- Support tab -->
-  <string name="support_modules_label">Wsparcie dla modułów</string>
-  <string name="support_modules_description">Długie naciśnięcie modułu na liście i wybierz \"%1$s\".</string>
-  <string name="support_framework_label">Wsparcie Framework/Instalator</string>
+    <string name="support_framework_label">Wsparcie Framework/Instalator</string>
   <string name="support_faq_label">FAQ/znane problemy</string>
   <string name="support_donate_label">Dotacja</string>
   <string name="support_donate_description">Jeśli chcesz podziękować za Xposed, dokonaj dotacji dla rovo89 tutaj</string>
