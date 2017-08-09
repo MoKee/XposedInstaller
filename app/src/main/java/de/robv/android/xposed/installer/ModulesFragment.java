@@ -1,7 +1,6 @@
 package de.robv.android.xposed.installer;
 
 import android.content.ActivityNotFoundException;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -24,8 +23,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -33,7 +30,6 @@ import android.widget.TextView;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -68,12 +64,7 @@ public class ModulesFragment extends Fragment implements ModuleListener {
             mModules.clear();
             mModules.addAll(mModuleUtil.getModules().values());
             final Collator col = Collator.getInstance(Locale.getDefault());
-            Collections.sort(mModules, new Comparator<InstalledModule>() {
-                @Override
-                public int compare(InstalledModule lhs, InstalledModule rhs) {
-                    return col.compare(lhs.getAppName(), rhs.getAppName());
-                }
-            });
+            Collections.sort(mModules, (lhs, rhs) -> col.compare(lhs.getAppName(), rhs.getAppName()));
             mAdapter.notifyDataSetChanged();
 
             if (mModules.isEmpty()) {
@@ -125,12 +116,9 @@ public class ModulesFragment extends Fragment implements ModuleListener {
         if (!pref.getBoolean(KEY_HIDE_INSTALL_WARNING, false)) {
             final View disclaimerView = view.findViewById(R.id.disclaimer);
             disclaimerView.setVisibility(View.VISIBLE);
-            view.findViewById(R.id.accept).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (pref.edit().putBoolean(KEY_HIDE_INSTALL_WARNING, true).commit()) {
-                        disclaimerView.setVisibility(View.GONE);
-                    }
+            view.findViewById(R.id.accept).setOnClickListener(v -> {
+                if (pref.edit().putBoolean(KEY_HIDE_INSTALL_WARNING, true).commit()) {
+                    disclaimerView.setVisibility(View.GONE);
                 }
             });
         }
@@ -146,14 +134,11 @@ public class ModulesFragment extends Fragment implements ModuleListener {
 
         final Switch masterView = (Switch) view.findViewById(R.id.master);
         masterView.setChecked(isEnabled);
-        masterView.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (FrameworkUtil.setEnable(isChecked)) {
-                    showSnackbarForReboot(isChecked
-                            ? R.string.xposed_on_next_reboot
-                            : R.string.xposed_off_next_reboot);
-                }
+        masterView.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (FrameworkUtil.setEnable(isChecked)) {
+                showSnackbarForReboot(isChecked
+                        ? R.string.xposed_on_next_reboot
+                        : R.string.xposed_off_next_reboot);
             }
         });
     }
@@ -280,24 +265,14 @@ public class ModulesFragment extends Fragment implements ModuleListener {
 
     private void showSnackbarForReboot(@StringRes int reason) {
         Snackbar.make(mModulesView, reason, Snackbar.LENGTH_LONG)
-                .setAction(R.string.reboot, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        confirmReboot(RootUtil.RebootMode.SOFT);
-                    }
-                })
+                .setAction(R.string.reboot, v -> confirmReboot(RootUtil.RebootMode.SOFT))
                 .show();
     }
 
     private void confirmReboot(final RootUtil.RebootMode mode) {
         new AlertDialog.Builder(getActivity())
                 .setMessage(R.string.reboot_confirmation)
-                .setPositiveButton(mode.titleRes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        RootUtil.reboot(mode, getContext());
-                    }
-                })
+                .setPositiveButton(mode.titleRes, (dialog, which) -> RootUtil.reboot(mode, getContext()))
                 .setNegativeButton(android.R.string.no, null)
                 .show();
     }
@@ -344,34 +319,19 @@ public class ModulesFragment extends Fragment implements ModuleListener {
                 popupMenu = new PopupMenu(getContext(), itemView);
                 popupMenu.inflate(R.menu.context_menu_modules);
 
-                itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        onModuleItemClick(getLayoutPosition());
-                    }
+                itemView.setOnClickListener(v ->
+                        onModuleItemClick(getLayoutPosition()));
+
+                itemView.setOnLongClickListener(v -> {
+                    popupMenu.show();
+                    return true;
                 });
 
-                itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        popupMenu.show();
-                        return true;
-                    }
-                });
+                enableView.setOnCheckedChangeListener((buttonView, isChecked) ->
+                        onModuleEnableChanged(getLayoutPosition(), isChecked));
 
-                enableView.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        onModuleEnableChanged(getLayoutPosition(), isChecked);
-                    }
-                });
-
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        return onContextItemSelected(getLayoutPosition(), item);
-                    }
-                });
+                popupMenu.setOnMenuItemClickListener(item ->
+                        onContextItemSelected(getLayoutPosition(), item));
             }
 
             void bind(InstalledModule module) {

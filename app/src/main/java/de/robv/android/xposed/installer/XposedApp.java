@@ -17,7 +17,6 @@
 
 package de.robv.android.xposed.installer;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
@@ -29,9 +28,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.FileUtils;
 import android.os.Handler;
-import android.os.SystemProperties;
 import android.preference.PreferenceManager;
-import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.File;
@@ -44,15 +41,11 @@ import de.robv.android.xposed.installer.util.InstallZipUtil;
 import de.robv.android.xposed.installer.util.InstallZipUtil.XposedProp;
 import de.robv.android.xposed.installer.util.NotificationUtil;
 import de.robv.android.xposed.installer.util.RepoLoader;
+import de.robv.android.xposed.installer.util.XposedConstants;
 
 public class XposedApp extends Application implements ActivityLifecycleCallbacks {
+
     public static final String TAG = "XposedInstaller";
-
-    public static final boolean mkVerified = !TextUtils.isEmpty(SystemProperties.get("ro.mk.version"));
-
-    @SuppressLint("SdCardPath")
-    public static final String BASE_DIR = (mkVerified ? "/data/user_de/0" : "/data/data") + "/de.robv.android.xposed.installer/";
-    public static final String ENABLED_MODULES_LIST_FILE = XposedApp.BASE_DIR + "conf/enabled_modules.list";
 
     private static final String[] XPOSED_PROP_FILES = new String[]{
             "/su/xposed/xposed.prop", // official systemless
@@ -90,9 +83,7 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
     }
 
     public static XposedProp getXposedProp() {
-        synchronized (mInstance) {
-            return mInstance.mXposedProp;
-        }
+        return mInstance.mXposedProp;
     }
 
     public static SharedPreferences getPreferences() {
@@ -126,14 +117,15 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         registerActivityLifecycleCallbacks(this);
     }
 
+    @SuppressWarnings("OctalInteger")
     private void createDirectories() {
-        mkdirAndChmod("bin", 00771);
-        mkdirAndChmod("conf", 00771);
-        mkdirAndChmod("log", 00777);
+        mkdirAndChmod(XposedConstants.BIN_DIR, 00771);
+        mkdirAndChmod(XposedConstants.CONF_DIR, 00771);
+        mkdirAndChmod(XposedConstants.LOG_DIR, 00777);
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void mkdirAndChmod(String dir, int permissions) {
-        dir = BASE_DIR + dir;
         new File(dir).mkdir();
         FileUtils.setPermissions(dir, permissions, -1, -1);
     }

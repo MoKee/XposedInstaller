@@ -31,13 +31,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Calendar;
 
+import de.robv.android.xposed.installer.util.XposedConstants;
+
 import static de.robv.android.xposed.installer.XposedApp.WRITE_EXTERNAL_PERMISSION;
 
 public class LogsFragment extends Fragment {
 
-    private File mFileErrorLog = new File(XposedApp.BASE_DIR + "log/error.log");
-    private File mFileErrorLogOld = new File(
-            XposedApp.BASE_DIR + "log/error.log.old");
+    private final File mFileErrorLog = new File(XposedConstants.LOG_DIR + "/error.log");
+    private final File mFileErrorLogOld = new File(XposedConstants.LOG_DIR + "/error.log.old");
+
     private TextView mTxtLog;
     private ScrollView mSVLog;
     private HorizontalScrollView mHSVLog;
@@ -95,51 +97,22 @@ public class LogsFragment extends Fragment {
     }
 
     private void scrollTop() {
-        mSVLog.post(new Runnable() {
-            @Override
-            public void run() {
-                mSVLog.scrollTo(0, 0);
-            }
-        });
-        mHSVLog.post(new Runnable() {
-            @Override
-            public void run() {
-                mHSVLog.scrollTo(0, 0);
-            }
-        });
+        mSVLog.post(() -> mSVLog.scrollTo(0, 0));
+        mHSVLog.post(() -> mHSVLog.scrollTo(0, 0));
     }
 
     private void scrollDown() {
-        mSVLog.post(new Runnable() {
-            @Override
-            public void run() {
-                mSVLog.scrollTo(0, mTxtLog.getHeight());
-            }
-        });
-        mHSVLog.post(new Runnable() {
-            @Override
-            public void run() {
-                mHSVLog.scrollTo(0, 0);
-            }
-        });
+        mSVLog.post(() -> mSVLog.scrollTo(0, mTxtLog.getHeight()));
+        mHSVLog.post(() -> mHSVLog.scrollTo(0, 0));
     }
 
     private void reloadErrorLog() {
         new LogsReader().execute(mFileErrorLog);
-        mSVLog.post(new Runnable() {
-            @Override
-            public void run() {
-                mSVLog.scrollTo(0, mTxtLog.getHeight());
-            }
-        });
-        mHSVLog.post(new Runnable() {
-            @Override
-            public void run() {
-                mHSVLog.scrollTo(0, 0);
-            }
-        });
+        mSVLog.post(() -> mSVLog.scrollTo(0, mTxtLog.getHeight()));
+        mHSVLog.post(() -> mHSVLog.scrollTo(0, 0));
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void clear() {
         try {
             new FileOutputStream(mFileErrorLog).close();
@@ -169,12 +142,7 @@ public class LogsFragment extends Fragment {
         if (requestCode == WRITE_EXTERNAL_PERMISSION) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 if (mClickedMenuItem != null) {
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            onOptionsItemSelected(mClickedMenuItem);
-                        }
-                    }, 500);
+                    new Handler().postDelayed(() -> onOptionsItemSelected(mClickedMenuItem), 500);
                 }
             } else {
                 Toast.makeText(getActivity(), R.string.permissionNotGranted, Toast.LENGTH_LONG).show();
@@ -183,6 +151,7 @@ public class LogsFragment extends Fragment {
     }
 
     @SuppressLint("DefaultLocale")
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private File save() {
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);

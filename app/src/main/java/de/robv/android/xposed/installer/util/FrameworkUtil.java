@@ -26,17 +26,17 @@ import de.robv.android.xposed.installer.XposedApp;
 
 public class FrameworkUtil {
 
-    private static final File DISABLE_FILE = new File(XposedApp.BASE_DIR + "conf/disabled");
+    private static final File DISABLE_FILE = new File(XposedConstants.CONF_DISABLED);
 
     // Used by MoKee integration, since we want to disable Xposed by default
-    private static final File ENABLE_FILE = new File(XposedApp.BASE_DIR + "conf/enabled");
+    private static final File ENABLE_FILE = new File(XposedConstants.CONF_MOKEE_INTEGRATION_ENABLED);
 
     public static boolean isLoaded() {
         return XposedApp.getActiveXposedVersion() == XposedApp.getInstalledXposedVersion();
     }
 
     public static boolean isEnabled() {
-        if (XposedApp.mkVerified) {
+        if (XposedConstants.MOKEE_INTEGRATION) {
             return !DISABLE_FILE.exists() && ENABLE_FILE.exists();
         } else {
             return !DISABLE_FILE.exists();

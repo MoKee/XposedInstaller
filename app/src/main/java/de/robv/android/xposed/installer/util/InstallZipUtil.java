@@ -1,15 +1,54 @@
 package de.robv.android.xposed.installer.util;
 
-import android.os.Build;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.zip.ZipFile;
 
 public final class InstallZipUtil {
+
+    private InstallZipUtil() {
+    }
+
+    public static XposedProp parseXposedProp(InputStream is) throws IOException {
+        XposedProp prop = new XposedProp();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split("=", 2);
+            if (parts.length != 2) {
+                continue;
+            }
+
+            String key = parts[0].trim();
+            if (key.charAt(0) == '#') {
+                continue;
+            }
+
+            String value = parts[1].trim();
+
+            switch (key) {
+                case "version":
+                    prop.mVersion = value;
+                    prop.mVersionInt = ModuleUtil.extractIntPart(value);
+                    break;
+                case "arch":
+                    prop.mArch = value;
+                    break;
+                case "minsdk":
+                    prop.mMinSdk = Integer.parseInt(value);
+                    break;
+                case "maxsdk":
+                    prop.mMaxSdk = Integer.parseInt(value);
+                    break;
+            }
+        }
+        reader.close();
+        return prop.isComplete() ? prop : null;
+    }
+
     public static class XposedProp {
+
         private String mVersion = null;
         private int mVersionInt = 0;
         private String mArch = null;
@@ -32,56 +71,5 @@ public final class InstallZipUtil {
             return mVersionInt;
         }
 
-        public boolean isArchCompatible() {
-            return FrameworkZips.ARCH.equals(mArch);
-        }
-
-        public boolean isSdkCompatible() {
-            return mMinSdk <= Build.VERSION.SDK_INT && Build.VERSION.SDK_INT <= mMaxSdk;
-        }
-
-        public boolean isCompatible() {
-            return isSdkCompatible() && isArchCompatible();
-        }
     }
-
-    public static XposedProp parseXposedProp(InputStream is) throws IOException {
-        XposedProp prop = new XposedProp();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-        String line;
-        while ((line = reader.readLine()) != null) {
-            String[] parts = line.split("=", 2);
-            if (parts.length != 2) {
-                continue;
-            }
-
-            String key = parts[0].trim();
-            if (key.charAt(0) == '#') {
-                continue;
-            }
-
-            String value = parts[1].trim();
-
-            if (key.equals("version")) {
-                prop.mVersion = value;
-                prop.mVersionInt = ModuleUtil.extractIntPart(value);
-            } else if (key.equals("arch")) {
-                prop.mArch = value;
-            } else if (key.equals("minsdk")) {
-                prop.mMinSdk = Integer.parseInt(value);
-            } else if (key.equals("maxsdk")) {
-                prop.mMaxSdk = Integer.parseInt(value);
-            }
-        }
-        reader.close();
-        return prop.isComplete() ? prop : null;
-    }
-
-    public static void closeSilently(ZipFile z) {
-        try {
-            z.close();
-        } catch (IOException ignored) {}
-    }
-
-    private InstallZipUtil() {}
 }

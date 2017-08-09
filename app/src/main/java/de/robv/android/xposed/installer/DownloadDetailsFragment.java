@@ -69,12 +69,7 @@ public class DownloadDetailsFragment extends Fragment {
             final Uri link = NavUtil.parseURL(moreInfoEntry.second);
             if (link != null) {
                 txtValue.setTextColor(txtValue.getLinkTextColors());
-                moreInfoView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        NavUtil.startURL(getActivity(), link);
-                    }
-                });
+                moreInfoView.setOnClickListener(v -> NavUtil.startURL(getActivity(), link));
             }
 
             moreInfoContainer.addView(moreInfoView);

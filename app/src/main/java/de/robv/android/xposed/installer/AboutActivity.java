@@ -30,7 +30,6 @@ import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.view.View;
 import android.widget.TextView;
 
 import de.psdev.licensesdialog.LicensesDialog;
@@ -39,6 +38,7 @@ import de.psdev.licensesdialog.licenses.SILOpenFontLicense11;
 import de.psdev.licensesdialog.model.Notice;
 import de.psdev.licensesdialog.model.Notices;
 import de.robv.android.xposed.installer.util.NavUtil;
+import de.robv.android.xposed.installer.util.XposedConstants;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -50,12 +50,7 @@ public class AboutActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> finish());
 
         ActionBar ab = getSupportActionBar();
         if (ab != null) {
@@ -109,8 +104,8 @@ public class AboutActivity extends AppCompatActivity {
 
             linkPreference("source", R.string.about_source);
 
-            if (XposedApp.mkVerified) {
-                ((PreferenceGroup)findPreference("support")).removePreference(findPreference("download"));
+            if (XposedConstants.MOKEE_INTEGRATION) {
+                ((PreferenceGroup) findPreference("support")).removePreference(findPreference("download"));
             } else {
                 linkPreference("download", R.string.support_download_url);
             }

@@ -64,12 +64,7 @@ public class WelcomeActivity extends AppCompatActivity implements
 
         if (savedInstanceState == null) {
             mDrawerHandler.removeCallbacksAndMessages(null);
-            mDrawerHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    navigate(mSelectedId);
-                }
-            }, 250);
+            mDrawerHandler.postDelayed(() -> navigate(mSelectedId), 250);
 
             boolean openDrawer = prefs.getBoolean("open_drawer", false);
 
@@ -79,19 +74,14 @@ public class WelcomeActivity extends AppCompatActivity implements
                 mDrawerLayout.closeDrawers();
         }
 
-        switchFragment(0);
+        switchFragment();
     }
 
-    public void switchFragment(int itemId) {
-        mSelectedId = mNavigationView.getMenu().getItem(itemId).getItemId();
+    public void switchFragment() {
+        mSelectedId = mNavigationView.getMenu().getItem(0).getItemId();
         mNavigationView.getMenu().findItem(mSelectedId).setChecked(true);
         mDrawerHandler.removeCallbacksAndMessages(null);
-        mDrawerHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                navigate(mSelectedId);
-            }
-        }, 250);
+        mDrawerHandler.postDelayed(() -> navigate(mSelectedId), 250);
         mDrawerLayout.closeDrawers();
     }
 
@@ -136,12 +126,7 @@ public class WelcomeActivity extends AppCompatActivity implements
         menuItem.setChecked(true);
         mSelectedId = menuItem.getItemId();
         mDrawerHandler.removeCallbacksAndMessages(null);
-        mDrawerHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                navigate(mSelectedId);
-            }
-        }, 250);
+        mDrawerHandler.postDelayed(() -> navigate(mSelectedId), 250);
         mDrawerLayout.closeDrawers();
         return true;
     }

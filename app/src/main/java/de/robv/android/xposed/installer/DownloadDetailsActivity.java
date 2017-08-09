@@ -14,7 +14,6 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -32,8 +31,10 @@ public class DownloadDetailsActivity extends AppCompatActivity implements
     public static final int DOWNLOAD_DESCRIPTION = 0;
     public static final int DOWNLOAD_VERSIONS = 1;
     public static final int DOWNLOAD_SETTINGS = 2;
+
     private static RepoLoader sRepoLoader = RepoLoader.getInstance();
     private static ModuleUtil sModuleUtil = ModuleUtil.getInstance();
+
     private ViewPager mPager;
     private String mPackageName;
     private Module mModule;
@@ -56,12 +57,7 @@ public class DownloadDetailsActivity extends AppCompatActivity implements
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });
+            toolbar.setNavigationOnClickListener(view -> finish());
 
             ActionBar ab = getSupportActionBar();
 
@@ -82,12 +78,9 @@ public class DownloadDetailsActivity extends AppCompatActivity implements
             TextView txtMessage = (TextView) findViewById(android.R.id.message);
             txtMessage.setText(getResources().getString(R.string.download_details_not_found, mPackageName));
 
-            findViewById(R.id.reload).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    v.setEnabled(false);
-                    sRepoLoader.triggerReload(true);
-                }
+            findViewById(R.id.reload).setOnClickListener(v -> {
+                v.setEnabled(false);
+                sRepoLoader.triggerReload(true);
             });
         }
     }
@@ -137,12 +130,7 @@ public class DownloadDetailsActivity extends AppCompatActivity implements
     }
 
     private void reload() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                recreate();
-            }
-        });
+        runOnUiThread(this::recreate);
     }
 
     @Override
