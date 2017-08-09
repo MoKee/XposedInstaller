@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application light theme. -->
-    <style name="Theme.XposedInstaller.Light.Base" parent="@android:style/Theme.Material.Settings" />
-
     <style name="Theme.XposedInstaller.Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

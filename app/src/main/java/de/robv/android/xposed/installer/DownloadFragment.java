@@ -1,7 +1,6 @@
 package de.robv.android.xposed.installer;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -22,10 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CursorAdapter;
-import android.widget.FilterQueryProvider;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -62,14 +58,8 @@ public class DownloadFragment extends Fragment implements
         mRepoLoader = RepoLoader.getInstance();
         mModuleUtil = ModuleUtil.getInstance();
         mAdapter = new DownloadsAdapter(getActivity());
-        mAdapter.setFilterQueryProvider(new FilterQueryProvider() {
-            @Override
-            public Cursor runQuery(CharSequence constraint) {
-                return RepoDb.queryModuleOverview(mSortingOrder, constraint);
-            }
-        });
-        mSortingOrder = mPref.getInt("download_sorting_order",
-                RepoDb.SORT_STATUS);
+        mAdapter.setFilterQueryProvider(constraint -> RepoDb.queryModuleOverview(mSortingOrder, constraint));
+        mSortingOrder = mPref.getInt("download_sorting_order", RepoDb.SORT_STATUS);
 
         setHasOptionsMenu(true);
     }
@@ -110,28 +100,23 @@ public class DownloadFragment extends Fragment implements
         });
         reloadItems();
 
-        mListView.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Cursor cursor = (Cursor) mAdapter.getItem(position);
-                String packageName = cursor.getString(OverviewColumnsIndexes.PKGNAME);
+        mListView.setOnItemClickListener((parent, view, position, id) -> {
+            Cursor cursor = (Cursor) mAdapter.getItem(position);
+            String packageName = cursor.getString(OverviewColumnsIndexes.PKGNAME);
 
-                Intent detailsIntent = new Intent(getActivity(), DownloadDetailsActivity.class);
-                detailsIntent.setData(Uri.fromParts("package", packageName, null));
-                startActivity(detailsIntent);
-            }
+            Intent detailsIntent = new Intent(getActivity(), DownloadDetailsActivity.class);
+            detailsIntent.setData(Uri.fromParts("package", packageName, null));
+            startActivity(detailsIntent);
         });
-        mListView.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // Expand the search view when the SEARCH key is triggered
-                if (keyCode == KeyEvent.KEYCODE_SEARCH && event.getAction() == KeyEvent.ACTION_UP && (event.getFlags() & KeyEvent.FLAG_CANCELED) == 0) {
-                    if (mSearchView != null)
-                        mSearchView.setIconified(false);
-                    return true;
-                }
-                return false;
+
+        mListView.setOnKeyListener((v1, keyCode, event) -> {
+            // Expand the search view when the SEARCH key is triggered
+            if (keyCode == KeyEvent.KEYCODE_SEARCH && event.getAction() == KeyEvent.ACTION_UP && (event.getFlags() & KeyEvent.FLAG_CANCELED) == 0) {
+                if (mSearchView != null)
+                    mSearchView.setIconified(false);
+                return true;
             }
+            return false;
         });
 
         setHasOptionsMenu(true);
@@ -199,16 +184,12 @@ public class DownloadFragment extends Fragment implements
             case R.id.menu_sort:
                 new AlertDialog.Builder(getActivity())
                         .setTitle(R.string.download_sorting_title)
-                        .setSingleChoiceItems(R.array.download_sort_order, mSortingOrder,
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int i) {
-                                        mSortingOrder = i;
-                                        mPref.edit().putInt("download_sorting_order", mSortingOrder).apply();
-                                        reloadItems();
-                                        dialog.dismiss();
-                                    }
-                                })
+                        .setSingleChoiceItems(R.array.download_sort_order, mSortingOrder, (dialog, i) -> {
+                            mSortingOrder = i;
+                            mPref.edit().putInt("download_sorting_order", mSortingOrder).apply();
+                            reloadItems();
+                            dialog.dismiss();
+                        })
                         .show();
                 return true;
         }

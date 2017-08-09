@@ -62,12 +62,7 @@ public class DownloadDetailsVersionsFragment extends ListFragment {
                 TextView txtHeader = new TextView(getActivity());
                 txtHeader.setText(R.string.download_test_version_not_shown);
                 txtHeader.setTextColor(getResources().getColor(R.color.warning));
-                txtHeader.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mActivity.gotoPage(DownloadDetailsActivity.DOWNLOAD_SETTINGS);
-                    }
-                });
+                txtHeader.setOnClickListener(v -> mActivity.gotoPage(DownloadDetailsActivity.DOWNLOAD_SETTINGS));
                 getListView().addHeaderView(txtHeader);
             }
 

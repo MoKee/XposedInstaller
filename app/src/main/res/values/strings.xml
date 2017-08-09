@@ -31,8 +31,6 @@
     <string name="nav_item_support">Support</string>
     <string name="nav_item_logs">Logs</string>
     <string name="nav_item_about">About</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Installer tab -->
     <string name="soft_reboot">Soft reboot</string>

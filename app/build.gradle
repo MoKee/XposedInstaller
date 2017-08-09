@@ -11,7 +11,7 @@ android {
         targetSdkVersion 23
         long timestamp = System.currentTimeMillis() / 1000
         versionCode Integer.valueOf(timestamp.toString())
-        versionName "4.0.0"
+        versionName "4.0.0-mokee"
         archivesBaseName = "XposedInstaller_${versionName}".replace(' ', '_')
     }
 
@@ -23,6 +23,11 @@ android {
         debug {
             pseudoLocalesEnabled true
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 

@@ -28,7 +28,6 @@ import de.robv.android.xposed.installer.repo.RepoDb;
 
 public final class ModuleUtil {
     // xposedminversion below this
-    private static final String MODULES_LIST_FILE = XposedApp.BASE_DIR + "conf/modules.list";
     private static final String PLAY_STORE_PACKAGE = "com.android.vending";
     public static int MIN_MODULE_VERSION = 2; // reject modules with
     private static ModuleUtil mInstance = null;
@@ -40,7 +39,6 @@ public final class ModuleUtil {
     private InstalledModule mFramework = null;
     private Map<String, InstalledModule> mInstalledModules;
     private boolean mIsReloading = false;
-    private Toast mToast;
 
     private ModuleUtil() {
         mApp = XposedApp.getInstance();
@@ -200,8 +198,8 @@ public final class ModuleUtil {
             Log.i(XposedApp.TAG, "updating modules.list");
             int installedXposedVersion = XposedApp.getInstalledXposedVersion();
 
-            PrintWriter modulesList = new PrintWriter(MODULES_LIST_FILE);
-            PrintWriter enabledModulesList = new PrintWriter(XposedApp.ENABLED_MODULES_LIST_FILE);
+            PrintWriter modulesList = new PrintWriter(XposedConstants.CONF_MODULES);
+            PrintWriter enabledModulesList = new PrintWriter(XposedConstants.CONF_ENABLED_MODULES);
 
             List<InstalledModule> enabledModules = getEnabledModules();
             for (InstalledModule module : enabledModules) {
@@ -222,13 +220,13 @@ public final class ModuleUtil {
             modulesList.close();
             enabledModulesList.close();
 
-            FileUtils.setPermissions(MODULES_LIST_FILE, 00664, -1, -1);
-            FileUtils.setPermissions(XposedApp.ENABLED_MODULES_LIST_FILE, 00664, -1, -1);
+            FileUtils.setPermissions(XposedConstants.CONF_MODULES, 00664, -1, -1);
+            FileUtils.setPermissions(XposedConstants.CONF_ENABLED_MODULES, 00664, -1, -1);
 
             return true;
         } catch (IOException e) {
-            Log.e(XposedApp.TAG, "cannot write " + MODULES_LIST_FILE, e);
-            Toast.makeText(mApp, "cannot write " + MODULES_LIST_FILE + e, Toast.LENGTH_SHORT).show();
+            Log.e(XposedApp.TAG, "cannot write " + XposedConstants.CONF_MODULES, e);
+            Toast.makeText(mApp, "cannot write " + XposedConstants.CONF_MODULES + e, Toast.LENGTH_SHORT).show();
             return false;
         }
     }

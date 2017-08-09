@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceManager;
 
@@ -50,14 +49,9 @@ public class DownloadDetailsSettingsFragment extends PreferenceFragmentCompat {
             editor.putBoolean("no_global", false).apply();
         }
 
-        findPreference("release_type").setOnPreferenceChangeListener(
-                new Preference.OnPreferenceChangeListener() {
-                    @Override
-                    public boolean onPreferenceChange(Preference preference,
-                                                      Object newValue) {
-                        RepoLoader.getInstance().setReleaseTypeLocal(packageName, (String) newValue);
-                        return true;
-                    }
-                });
+        findPreference("release_type").setOnPreferenceChangeListener((preference, newValue) -> {
+            RepoLoader.getInstance().setReleaseTypeLocal(packageName, (String) newValue);
+            return true;
+        });
     }
 }
