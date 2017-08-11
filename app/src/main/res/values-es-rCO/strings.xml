@@ -102,6 +102,7 @@
   <string name="settings_disable_resources">Deshabilitar resource hooks</string>
   <string name="settings_disable_resources_summary">Solución para conflictos con motores de temas\n<b>PRECAUCIÓN:</b> Los módulos que intentan cambiar los recursos no funcionarán mientras ésto esté habilitado.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Descargar MoKee ROM</string>
   <string name="support_framework_label">Framework/Soporte del Instalador</string>
   <string name="support_faq_label">Preguntas frecuentes/problemas conocidos</string>
   <string name="support_donate_label">Dona</string>
