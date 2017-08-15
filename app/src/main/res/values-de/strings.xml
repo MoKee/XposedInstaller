@@ -52,6 +52,7 @@
   <string name="activate_only">Nur aktivieren</string>
   <string name="module_activated">Xposed-Modul wurde aktiviert</string>
   <string name="module_no_ui">Dieses Modul besitzt keine Benutzeroberfläche</string>
+  <string name="no_xposed_modules_installed">Es wurden keine Xposed-Module installiert.</string>
   <string name="xposed_module_updated_notification_title">Xposed-Modul aktualisiert</string>
   <string name="xposed_module_updated_notification">Neustarten, um Änderungen zu aktivieren</string>
   <string name="no_min_version_specified">Dieses Modul macht keine Angabe über die benötigte Xposed-Version.</string>
@@ -101,6 +102,7 @@
   <string name="settings_disable_resources">Ressourcen-APIs deaktivieren</string>
   <string name="settings_disable_resources_summary">Workaround für Konflikte mit \"Theming Engines\"\n<b>VORSICHT:</b> Module, die Ressourcen verändern, werden mit dieser Einstellung nicht funktionieren.</string>
   <!-- Support tab -->
+  <string name="support_download_label">MoKee ROM herunterladen</string>
   <string name="support_framework_label">Framework/Installer-Support</string>
   <string name="support_faq_label">FAQ/bekannte Fehler</string>
   <string name="support_donate_label">Spenden</string>
