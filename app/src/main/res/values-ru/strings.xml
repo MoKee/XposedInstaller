@@ -47,9 +47,12 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed модуль еще не активирован</string>
   <string name="module_is_not_activated_yet_detailed">%s был установлен но не активирован.</string>
+  <string name="reboot_needed">Перезагрузить для принятия изменений</string>
   <string name="activate_and_reboot">Активировать и перезагрузить</string>
+  <string name="activate_only">Активировать только</string>
   <string name="module_activated">Модуль Xposed был активирован</string>
   <string name="module_no_ui">Этот модуль не содержит пользовательского интерфейса</string>
+  <string name="no_xposed_modules_installed">Xposed модули не установлены.</string>
   <string name="xposed_module_updated_notification_title">Модуль Xposed обновлен</string>
   <string name="xposed_module_updated_notification">Перезагрузите устройство</string>
   <string name="no_min_version_specified">Этот модуль не указал версию Xposed, в которой он нуждается.</string>
@@ -99,6 +102,7 @@
   <string name="settings_disable_resources">Не изменять ресурсы</string>
   <string name="settings_disable_resources_summary">Временное решение для конфликтов с темами системы\n<b>ВНИМАНИЕ:</b> Модули, которые пытаются изменить ресурсы не будут работать, если эта опция включена.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Загрузить MoKee ROM</string>
   <string name="support_framework_label">Поддержка Xposed Framework/Installer</string>
   <string name="support_faq_label">Справка/известные проблемы</string>
   <string name="support_donate_label">Пожертвовать</string>
@@ -116,6 +120,8 @@
   <string name="about_developers_label">Главные разработчики</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> и <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> и <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> Для исправления багов и Material Дизайна</string>
   <string name="about_translator_label">Переводчик:</string>
+  <string name="about_modified_version_label">Модифицированная версия MoKee</string>
+  <string name="about_framework_version_label">Версия фреймворка</string>
   <string name="about_source_label">Исходный код</string>
   <string name="about_libraries_label">Используемые библиотеки</string>
   <!-- DownloadView -->
@@ -141,4 +147,5 @@
   <string name="permissionNotGranted">Эта функция не будет работать без разрешения на запись для накопителя.</string>
   <string name="module_saved">Модуль сохранен в %1$s</string>
   <string name="save">Сохранить</string>
+  <string name="update_download_list">Потяните вниз для обновления модульного листа</string>
 </resources>
