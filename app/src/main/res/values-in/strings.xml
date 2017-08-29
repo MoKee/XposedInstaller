@@ -18,40 +18,134 @@
 -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <!-- General/various strings -->
+  <string name="menuSend">Kirim</string>
+  <string name="menuSaveToSd">Simpan ke kartu SD</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Modul</string>
   <string name="nav_item_download">Unduh</string>
   <string name="nav_item_settings">Setelan</string>
   <string name="nav_item_support">Dukungan</string>
+  <string name="nav_item_logs">Log</string>
   <string name="nav_item_about">Tentang</string>
   <string name="navigation_drawer_open">Buka navigasi rinci</string>
   <string name="navigation_drawer_close">Tutup navigasi rinci</string>
   <!-- Installer tab -->
+  <string name="soft_reboot">Mulai ulang cepat</string>
+  <string name="reboot">Mulai ulang</string>
+  <string name="reboot_failed">Mulai ulang gagal. Gunakan fungsi normal mulai ulang perangkat.</string>
+  <string name="reboot_confirmation">Apakah anda ingin memulai ulang sekarang?</string>
+  <string name="install_warning_title">Hati-hati!</string>
+  <string name="install_warning">Dalam beberapa kasus, perangkat anda tidak lagi bisa boot setelah menginstal Xposed.\n\nJika anda tidak pernah mendengar tentang \"soft brick\" dan \"bootloop\" sebelumnya atau jika anda tidak tahu bagaimana untuk mengembalikan dari situasi tsb, <b>Jangan</b> menginstal Xposed! \n\nBagaimanapun, memiliki cadangan terakhir sangat dianjurkan.</string>
+  <string name="dont_show_again">Jangan tampilkan ini lagi</string>
+  <string name="framework_not_active">Xposed Framework versi %s diinstal, tetapi tidak aktif. Periksa log untuk rincian.</string>
+  <string name="status">Xposed Status</string>
+  <string name="xposed_on_next_reboot">Xposed Framework akan dihidupkan saat mulai ulang berikutnya</string>
+  <string name="xposed_off_next_reboot">Xposed Framework akan dimatikan saat mulai ulang berikutnya</string>
   <!-- File operations -->
+  <string name="root_failed">Gagal mendapatkan akses root.\n\nPastikan perangkat te-root dengan benar dan anda belum memblokir perintah shell.</string>
   <!-- Modules tab -->
+  <string name="module_is_not_activated_yet">Modul Xposed belum dihidupkan saat ini</string>
+  <string name="module_is_not_activated_yet_detailed">%s telah terinstal, tapi tidak dihidupkan.</string>
+  <string name="reboot_needed">Mulai ulang untuk menerapkan perubahan</string>
+  <string name="activate_and_reboot">Hidupkan dan mulai ulang</string>
+  <string name="activate_only">Hidupkan saja</string>
+  <string name="module_activated">Modul Xposed telah dihidupkan</string>
+  <string name="module_no_ui">Modul ini tidak memberikan antarmuka pengguna</string>
+  <string name="no_xposed_modules_installed">Tidak ada modul Xposed terpasang.</string>
+  <string name="xposed_module_updated_notification_title">Modul Xposed diperbarui</string>
+  <string name="xposed_module_updated_notification">Mulai ulang untuk menghidupkan perubahan</string>
+  <string name="no_min_version_specified">Modul ini tidak menentukan versi Xposed yang dibutuhkan.</string>
+  <string name="warning_min_version_too_low">Modul ini dibuat untuk Xposed versi %1$d, tetapi karena perubahan yang tidak kompatibel dalam versi %2$d, itu telah dimatikan.</string>
+  <string name="module_launch">Peluncuran UI</string>
+  <string name="module_download_updates">Unduh/Perbarui</string>
   <string name="module_support">Dukungan</string>
   <string name="module_app_info">Info aplikasi</string>
   <string name="module_uninstall">Copot pemasangan</string>
   <!-- Download tab -->
   <string name="menuSearch">Pencarian</string>
   <string name="menuReload">Muat ulang</string>
+  <string name="changes">Perubahan:</string>
   <string name="download_details_page_description">Deskripsi</string>
+  <string name="download_details_page_versions">Versi</string>
   <string name="download_details_page_settings">Setelan</string>
+  <string name="reltype_stable">Stabil</string>
+  <string name="reltype_stable_summary">Stabil (risiko bug rendah)</string>
+  <string name="reltype_beta">Beta</string>
+  <string name="reltype_beta_summary">Beta (beberapa bug diharapkan)</string>
   <string name="reltype_experimental">Eksperimental</string>
+  <string name="reltype_experimental_summary">Experimental (risiko bug tinggi)</string>
+  <string name="reltype_use_global_summary">Gunakan setelan global</string>
+  <string name="download_author">oleh %s</string>
+  <string name="download_unknown_author">author tidak diketahui</string>
+  <string name="download_status_installed">Terpasang (versi %s)</string>
+  <string name="download_status_update_available">Pembaruan tersedia (versi %1$s \u2192 %2$s)</string>
+  <string name="download_timestamps">Ditambahkan pada %1$s \u00b7 diperbaharui pada %2$s</string>
+  <string name="download_sorting_title">Urutan sortir</string>
+  <string name="download_sorting_status">Urutan berdasarkan status</string>
+  <string name="download_sorting_updated">Urutan berdasarkan terakhir diperbarui</string>
+  <string name="download_sorting_created">Urutkan berdasarkan tanggal pembuatan</string>
+  <string name="download_section_update_available">Pembaruan tersedia</string>
   <string name="download_section_installed">Terpasang</string>
+  <string name="download_section_not_installed">Tidak terpasang</string>
+  <string name="download_section_24h">24 jam terakhir</string>
+  <string name="download_section_7d">7 hari terakhir</string>
+  <string name="download_section_30d">30 hari terakhir</string>
+  <string name="download_section_older">Lebih dari 30 hari yang lalu</string>
+  <string name="download_details_not_found">Tidak ada modul dengan paket nama \"%s\" dalam repositori.</string>
+  <string name="download_no_versions">Author belum mengunggah apa-apa lagi saat ini.</string>
+  <string name="download_test_version_not_shown">Versi uji tersedia, namun itu tidak ditampilkan karena pengaturan global atau modul-spesifik.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">Unduh</string>
+  <string name="settings_release_type">Versi untuk ditampilkan</string>
   <string name="settings_group_experimental">Eksperimental</string>
+  <string name="settings_disable_resources">Kait sumber daya dimatikan</string>
+  <string name="settings_disable_resources_summary">Solusi untuk konflik dengan mesin tema\n <b>peringatan:</b> modul yang mencoba untuk mengubah sumber daya tidak akan bekerja ketika ini dihidupkan.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Unduh ROM MoKee</string>
+  <string name="support_framework_label">Dukungan Framework/Installer</string>
+  <string name="support_faq_label">FAQ/masalah diketahui</string>
   <string name="support_donate_label">Donasi</string>
+  <string name="support_donate_description">Jika anda ingin mengatakan terima kasih untuk Xposed, anda dapat menyumbang ke rovo89 di sini</string>
   <!-- Logs tab  -->
+  <string name="logs_save_failed">Tidak bisa menulis log ke Kartu SD:</string>
+  <string name="sdcard_not_writable">Kartu SD tidak ditemukan atau tidak dapat ditulisi</string>
+  <string name="menuClearLog">Bershikan log sekarang</string>
+  <string name="logs_cleared">Log berhasil dibersihkan</string>
+  <string name="logs_clear_failed">Tidak dapat membersihkan log:</string>
+  <string name="log_is_empty">Log kosong</string>
+  <string name="scroll_top">Gulir ke atas</string>
+  <string name="scroll_bottom">Gulir ke bawah</string>
   <!-- About tab -->
+  <string name="about_developers_label">Pengembang utama</string>
+  <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> and <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> and <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> untuk perbaikan bug dan Desain Material</string>
+  <string name="about_translator_label">Penerjemah</string>
+  <string name="about_modified_version_label">Versi modifikasi MoKee</string>
+  <string name="about_framework_version_label">Versi Framework</string>
+  <string name="about_source_label">Sumber kode</string>
+  <string name="about_libraries_label">Digunakan Perpustakaan</string>
   <!-- DownloadView -->
   <string name="download_view_download">Unduh</string>
   <string name="download_view_install">Pasang</string>
   <string name="download_view_cancel">Batal</string>
+  <string name="download_view_no_url">URL unduhan tidak tersedia</string>
+  <string name="download_view_running">Unduhan berlangsung (%1$,d dari %2$,d kB)</string>
+  <string name="download_view_waiting">Unduhan menunggu</string>
+  <string name="download_view_successful">Berhasil mengunduh</string>
+  <string name="download_view_failed">Unduh gagal (kesalahan %d)</string>
   <!-- DownloadUtils -->
+  <string name="download_md5sum_incorrect">MD5 sum tidak benar (terunduh: %1$s, diharapkan: %2$s)</string>
+  <string name="download_could_not_read_file">Tidak bisa membaca berkas unduhan: %s</string>
+  <string name="download_no_valid_apk">Berkas unduhan bukan APK yang benar (atau tidak kompatibel)</string>
+  <string name="download_incorrect_package_name">Nama paket tidak benar (terunduh: %1$s, diharapkan: %2$s)</string>
   <!-- RepoLoader -->
+  <string name="repo_download_failed_http">Mengunduh %1$s gagal: %2$d (%3$s)</string>
+  <string name="repo_download_failed">Mengunduh %1$s gagal: %2$s</string>
+  <string name="repo_load_failed">Tidak dapat memuat repositori dari %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Modul ini tidak dapat dimuat karena dipasang pada kartu SD, silakan memindahkannya ke penyimpanan internal.</string>
+  <string name="permissionNotGranted">Fitur ini tidak akan bekerja tanpa izin untuk menulis penyimpanan eksternal.</string>
+  <string name="module_saved">Modul disimpan di %1$s</string>
   <string name="save">Simpan</string>
+  <string name="update_download_list">Tarik kebawah untuk memperbarui daftar modul terunduh</string>
 </resources>
