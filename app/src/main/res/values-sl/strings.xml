@@ -18,27 +18,56 @@
 -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <!-- General/various strings -->
+  <string name="menuSend">Pošlji</string>
+  <string name="menuSaveToSd">Shrani na kartico SD</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Moduli</string>
   <string name="nav_item_download">Prenesi</string>
   <string name="nav_item_settings">Nastavitve</string>
   <string name="nav_item_support">Podpora</string>
+  <string name="nav_item_logs">Dnevniki</string>
   <string name="nav_item_about">O nas</string>
   <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
   <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
   <!-- Installer tab -->
+  <string name="soft_reboot">Mehek ponovni zagon</string>
+  <string name="reboot">Ponovno zaženi</string>
+  <string name="reboot_failed">Ponovni zagon ni uspel. Prosim, porabite normalni ponovni zagon naprave.</string>
+  <string name="reboot_confirmation">Ali želite znova zagnati zdaj?</string>
+  <string name="install_warning_title">Previdno!</string>
+  <string name="dont_show_again">Ne prikaži znova</string>
+  <string name="framework_not_active">Xposed Framework verzija %s je nameščen, toda ni aktiven. Za podrobnosti prosimo preberite dnevnik.</string>
+  <string name="status">Xposed stanje</string>
+  <string name="xposed_on_next_reboot">Xposed Framework bo omogočen pri naslednjem ponovnem zagonu</string>
+  <string name="xposed_off_next_reboot">Xposed Framework bo onemogočen pri naslednjem ponovnem zagonu</string>
   <!-- File operations -->
   <!-- Modules tab -->
+  <string name="module_is_not_activated_yet">Xposed modul še ni aktiviran</string>
   <string name="module_support">Podpora</string>
   <string name="module_app_info">Podatki o aplikaciji</string>
   <string name="module_uninstall">Odstrani</string>
   <!-- Download tab -->
   <string name="menuSearch">Iskanje</string>
   <string name="menuReload">Osveži</string>
+  <string name="changes">Spremembe:</string>
   <string name="download_details_page_description">Opis</string>
+  <string name="download_details_page_versions">Različica</string>
   <string name="download_details_page_settings">Nastavitve</string>
+  <string name="reltype_stable">Stabilen</string>
+  <string name="reltype_stable_summary">Stabilen (nizko tveganje napak)</string>
+  <string name="reltype_beta">Beta</string>
+  <string name="reltype_beta_summary">Beta (pričakuje se nekaj napak)</string>
   <string name="reltype_experimental">Preizkusno</string>
+  <string name="reltype_experimental_summary">Eksperimentalno (visoko tveganje za napake)</string>
+  <string name="reltype_use_global_summary">Uporabi globalne nastavitve</string>
+  <string name="download_author">od %s</string>
+  <string name="download_unknown_author">neznan avtor</string>
+  <string name="download_status_installed">Nameščena (različica %s)</string>
+  <string name="download_status_update_available">Posodobitev na voljo (različica %1$s \u2192 %2$s)</string>
+  <string name="download_timestamps">Dodano %1$s \u00b7 posodobljeno %2$s</string>
   <string name="download_section_installed">Nameščeno</string>
+  <string name="download_section_24h">Zadnjih 24 ur</string>
   <!-- Settings tab -->
   <string name="settings_group_download">Prenesi</string>
   <string name="settings_group_experimental">Preizkusno</string>
