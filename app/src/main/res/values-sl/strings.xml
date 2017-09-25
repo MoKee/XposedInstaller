@@ -44,6 +44,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul še ni aktiviran</string>
+  <string name="module_download_updates">Prenosi/Posodobitve</string>
   <string name="module_support">Podpora</string>
   <string name="module_app_info">Podatki o aplikaciji</string>
   <string name="module_uninstall">Odstrani</string>
@@ -66,19 +67,44 @@
   <string name="download_status_installed">Nameščena (različica %s)</string>
   <string name="download_status_update_available">Posodobitev na voljo (različica %1$s \u2192 %2$s)</string>
   <string name="download_timestamps">Dodano %1$s \u00b7 posodobljeno %2$s</string>
+  <string name="download_sorting_title">Vrstni red razvrščanja</string>
+  <string name="download_sorting_status">Razvrsti po stanju</string>
+  <string name="download_sorting_updated">Razvrsti po zadnji posodobitvi</string>
+  <string name="download_sorting_created">Razvrsti po datumu nastanka</string>
+  <string name="download_section_update_available">Posodobitev na voljo</string>
   <string name="download_section_installed">Nameščeno</string>
+  <string name="download_section_not_installed">Ni nameščeno</string>
   <string name="download_section_24h">Zadnjih 24 ur</string>
+  <string name="download_section_7d">Zadnjih 7 dni</string>
+  <string name="download_section_30d">Zadnjih 30 dni</string>
+  <string name="download_section_older">Več kot 30 dni nazaj</string>
   <!-- Settings tab -->
   <string name="settings_group_download">Prenesi</string>
   <string name="settings_group_experimental">Preizkusno</string>
   <!-- Support tab -->
+  <string name="support_faq_label">FAQ/znane težave</string>
   <string name="support_donate_label">Prispevaj</string>
   <!-- Logs tab  -->
+  <string name="logs_save_failed">Ne morem zapisati dnevnika na SD kartico:</string>
+  <string name="sdcard_not_writable">SD kartice ni bilo mogoče najti ali ni zapisljiva</string>
+  <string name="menuClearLog">Počisti dnevnik zdaj</string>
+  <string name="logs_cleared">Dnevnik uspešno počiščen</string>
+  <string name="logs_clear_failed">Ne morem počistiti dnevnika:</string>
+  <string name="log_is_empty">Dnevnik je prazen</string>
+  <string name="scroll_top">Pomik na vrh</string>
+  <string name="scroll_bottom">Pomik na dno</string>
   <!-- About tab -->
+  <string name="about_developers_label">Glavni razvijalci</string>
+  <string name="about_translator_label">Prevajalec</string>
+  <string name="about_modified_version_label">Spremenjena različica MoKee</string>
+  <string name="about_framework_version_label">Verzija frameworka</string>
+  <string name="about_source_label">Izvorna koda</string>
+  <string name="about_libraries_label">Uporabljene knjižnice</string>
   <!-- DownloadView -->
   <string name="download_view_download">Prenesi</string>
   <string name="download_view_install">Namesti</string>
   <string name="download_view_cancel">Prekliči</string>
+  <string name="download_view_no_url">URL za prenos ni na voljo</string>
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
