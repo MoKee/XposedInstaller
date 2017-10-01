@@ -1,10 +1,7 @@
 package de.robv.android.xposed.installer.widget;
 
-import android.Manifest;
 import android.app.DownloadManager;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -13,21 +10,17 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import de.robv.android.xposed.installer.R;
 import de.robv.android.xposed.installer.util.DownloadsUtil;
 import de.robv.android.xposed.installer.util.DownloadsUtil.DownloadFinishedCallback;
 import de.robv.android.xposed.installer.util.DownloadsUtil.DownloadInfo;
 
-import static de.robv.android.xposed.installer.XposedApp.WRITE_EXTERNAL_PERMISSION;
-
 public class DownloadView extends LinearLayout {
     public static String mClickedUrl;
     private final Button btnDownload;
     private final Button btnDownloadCancel;
     private final Button btnInstall;
-    private final Button btnSave;
     private final ProgressBar progressBar;
     private final TextView txtInfo;
     public Fragment fragment;
@@ -38,7 +31,6 @@ public class DownloadView extends LinearLayout {
         public void run() {
             if (mUrl == null) {
                 btnDownload.setVisibility(View.GONE);
-                btnSave.setVisibility(View.GONE);
                 btnDownloadCancel.setVisibility(View.GONE);
                 btnInstall.setVisibility(View.GONE);
                 progressBar.setVisibility(View.GONE);
@@ -46,7 +38,6 @@ public class DownloadView extends LinearLayout {
                 txtInfo.setText(R.string.download_view_no_url);
             } else if (mInfo == null) {
                 btnDownload.setVisibility(View.VISIBLE);
-                btnSave.setVisibility(View.VISIBLE);
                 btnDownloadCancel.setVisibility(View.GONE);
                 btnInstall.setVisibility(View.GONE);
                 progressBar.setVisibility(View.GONE);
@@ -57,7 +48,6 @@ public class DownloadView extends LinearLayout {
                     case DownloadManager.STATUS_PAUSED:
                     case DownloadManager.STATUS_RUNNING:
                         btnDownload.setVisibility(View.GONE);
-                        btnSave.setVisibility(View.GONE);
                         btnDownloadCancel.setVisibility(View.VISIBLE);
                         btnInstall.setVisibility(View.GONE);
                         progressBar.setVisibility(View.VISIBLE);
@@ -78,7 +68,6 @@ public class DownloadView extends LinearLayout {
 
                     case DownloadManager.STATUS_FAILED:
                         btnDownload.setVisibility(View.VISIBLE);
-                        btnSave.setVisibility(View.VISIBLE);
                         btnDownloadCancel.setVisibility(View.GONE);
                         btnInstall.setVisibility(View.GONE);
                         progressBar.setVisibility(View.GONE);
@@ -89,7 +78,6 @@ public class DownloadView extends LinearLayout {
 
                     case DownloadManager.STATUS_SUCCESSFUL:
                         btnDownload.setVisibility(View.GONE);
-                        btnSave.setVisibility(View.GONE);
                         btnDownloadCancel.setVisibility(View.GONE);
                         btnInstall.setVisibility(View.VISIBLE);
                         progressBar.setVisibility(View.GONE);
@@ -98,8 +86,6 @@ public class DownloadView extends LinearLayout {
                         break;
                 }
             }
-            // TODO maybe enable again after checking the implementation
-            btnSave.setVisibility(View.GONE);
         }
     };
     private String mTitle = null;
@@ -116,7 +102,6 @@ public class DownloadView extends LinearLayout {
         btnDownload = (Button) findViewById(R.id.btnDownload);
         btnDownloadCancel = (Button) findViewById(R.id.btnDownloadCancel);
         btnInstall = (Button) findViewById(R.id.btnInstall);
-        btnSave = (Button) findViewById(R.id.save);
 
         btnDownload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,24 +113,6 @@ public class DownloadView extends LinearLayout {
 
                 if (mInfo != null)
                     new DownloadMonitor().start();
-            }
-        });
-
-        btnSave.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mClickedUrl = mUrl;
-
-                if (checkPermissions()) return;
-
-                DownloadsUtil.add(getContext(), mTitle, mUrl,
-                        new DownloadFinishedCallback() {
-                            @Override
-                            public void onDownloadFinished(Context context, DownloadInfo info) {
-                                Toast.makeText(context, context.getString(R.string.module_saved,
-                                        info.localFilename), Toast.LENGTH_SHORT).show();
-                            }
-                        }, DownloadsUtil.MIME_TYPES.APK, true, true);
             }
         });
 
@@ -174,15 +141,6 @@ public class DownloadView extends LinearLayout {
         txtInfo = (TextView) findViewById(R.id.txtInfo);
 
         refreshViewFromUiThread();
-    }
-
-    private boolean checkPermissions() {
-        if (ActivityCompat.checkSelfPermission(this.getContext(),
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            fragment.requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_PERMISSION);
-            return true;
-        }
-        return false;
     }
 
     private void refreshViewFromUiThread() {

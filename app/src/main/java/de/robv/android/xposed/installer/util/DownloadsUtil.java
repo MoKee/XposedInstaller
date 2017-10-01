@@ -47,9 +47,7 @@ public class DownloadsUtil {
         private String mUrl = null;
         private DownloadFinishedCallback mCallback = null;
         private MIME_TYPES mMimeType = MIME_TYPES.APK;
-        private boolean mSave = false;
         private File mDestination = null;
-        private boolean mModule = false;
 
         public Builder(Context context) {
             mContext = context;
@@ -75,11 +73,6 @@ public class DownloadsUtil {
             return this;
         }
 
-        public Builder setSave(boolean save) {
-            mSave = save;
-            return this;
-        }
-
         public Builder setDestination(File file) {
             mDestination = file;
             return this;
@@ -90,11 +83,6 @@ public class DownloadsUtil {
                 throw new IllegalStateException("URL must be set first");
             }
             return setDestination(getDownloadTargetForUrl(subDir, mUrl));
-        }
-
-        public Builder setModule(boolean module) {
-            mModule = module;
-            return this;
         }
 
         public DownloadInfo download() {
@@ -127,29 +115,17 @@ public class DownloadsUtil {
 
     @Deprecated
     public static DownloadInfo add(Context context, String title, String url, DownloadFinishedCallback callback, MIME_TYPES mimeType) {
-        return add(context, title, url, callback, mimeType, true, true);
-    }
-
-    @Deprecated
-    public static DownloadInfo add(Context context, String title, String url, DownloadFinishedCallback callback, MIME_TYPES mimeType, boolean save, boolean module) {
         return new Builder(context)
                 .setTitle(title)
                 .setUrl(url)
                 .setCallback(callback)
                 .setMimeType(mimeType)
-                .setSave(save)
-                .setModule(module)
                 .download();
     }
 
     private static DownloadInfo add(Builder b) {
         Context context = b.mContext;
         removeAllForUrl(context, b.mUrl);
-
-        String savePath = "XposedInstaller";
-        if (b.mModule) {
-            savePath = XposedApp.getDownloadPath().replace(Environment.getExternalStorageDirectory() + "", "");
-        }
 
         Request request = new Request(Uri.parse(b.mUrl));
         request.setTitle(b.mTitle);
@@ -158,12 +134,6 @@ public class DownloadsUtil {
             b.mDestination.getParentFile().mkdirs();
             removeAllForLocalFile(context, b.mDestination);
             request.setDestinationUri(Uri.fromFile(b.mDestination));
-        } else if (b.mSave) {
-            try {
-                request.setDestinationInExternalPublicDir(savePath, b.mTitle + b.mMimeType.getExtension());
-            } catch (IllegalStateException e) {
-                Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
         }
         request.setNotificationVisibility(Request.VISIBILITY_VISIBLE);
 
