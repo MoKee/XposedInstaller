@@ -36,6 +36,7 @@ import android.util.Log;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import de.robv.android.xposed.installer.util.AssetUtil;
 import de.robv.android.xposed.installer.util.DownloadsUtil;
@@ -128,9 +129,20 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
 
     @SuppressWarnings("OctalInteger")
     private void createDirectories() {
-        mkdirAndChmod(XposedConstants.BIN_DIR, 00771);
+        FileUtils.setPermissions(XposedConstants.BASE_DIR, 00711, -1, -1);
         mkdirAndChmod(XposedConstants.CONF_DIR, 00771);
         mkdirAndChmod(XposedConstants.LOG_DIR, 00777);
+
+        if (Build.VERSION.SDK_INT >= 24) {
+            try {
+                Method deleteDir = FileUtils.class.getDeclaredMethod("deleteContentsAndDir", File.class);
+                deleteDir.invoke(null, new File(XposedConstants.BIN_DIR));
+                deleteDir.invoke(null, new File(XposedConstants.CONF_DIR));
+                deleteDir.invoke(null, new File(XposedConstants.LOG_DIR));
+            } catch (ReflectiveOperationException e) {
+                Log.w(XposedApp.TAG, "Failed to delete obsolete directories", e);
+            }
+        }
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
