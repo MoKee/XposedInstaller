@@ -136,9 +136,9 @@ public class XposedApp extends Application implements ActivityLifecycleCallbacks
         if (Build.VERSION.SDK_INT >= 24) {
             try {
                 Method deleteDir = FileUtils.class.getDeclaredMethod("deleteContentsAndDir", File.class);
-                deleteDir.invoke(null, new File(XposedConstants.BIN_DIR));
-                deleteDir.invoke(null, new File(XposedConstants.CONF_DIR));
-                deleteDir.invoke(null, new File(XposedConstants.LOG_DIR));
+                deleteDir.invoke(null, new File(XposedConstants.BASE_DIR_LEGACY, "bin"));
+                deleteDir.invoke(null, new File(XposedConstants.BASE_DIR_LEGACY, "conf"));
+                deleteDir.invoke(null, new File(XposedConstants.BASE_DIR_LEGACY, "log"));
             } catch (ReflectiveOperationException e) {
                 Log.w(XposedApp.TAG, "Failed to delete obsolete directories", e);
             }

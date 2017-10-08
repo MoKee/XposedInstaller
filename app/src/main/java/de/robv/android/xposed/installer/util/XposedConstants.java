@@ -9,7 +9,7 @@ public class XposedConstants {
 
     public static final boolean MOKEE_INTEGRATION = !TextUtils.isEmpty(SystemProperties.get("ro.mk.version"));
 
-    private static final String BASE_DIR_LEGACY = "/data/data/de.robv.android.xposed.installer/";
+    public static final String BASE_DIR_LEGACY = "/data/data/de.robv.android.xposed.installer/";
 
     public static final String BASE_DIR = Build.VERSION.SDK_INT >= 24
             ? "/data/user_de/0/de.robv.android.xposed.installer/" : BASE_DIR_LEGACY;
