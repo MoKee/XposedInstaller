@@ -73,7 +73,7 @@
   <string name="reltype_stable_summary">Estable (bajo riesgo de bugs)</string>
   <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (se pueden presentar algunos bugs)</string>
-  <string name="reltype_experimental">Experimental</string>
+  <string name="reltype_experimental">All</string>
   <string name="reltype_experimental_summary">Experimental (alto riesgo de bugs)</string>
   <string name="reltype_use_global_summary">Usar ajustes globales</string>
   <string name="download_author">creado por %s</string>
@@ -98,7 +98,7 @@
   <!-- Settings tab -->
   <string name="settings_group_download">Descargar</string>
   <string name="settings_release_type">Versiones a ser mostradas</string>
-  <string name="settings_group_experimental">Experimental</string>
+  <string name="settings_group_experimental">All</string>
   <string name="settings_disable_resources">Deshabilitar resource hooks</string>
   <string name="settings_disable_resources_summary">Solución para conflictos con motores de temas\n<b>PRECAUCIÓN:</b> Los módulos que intentan cambiar los recursos no funcionarán mientras ésto esté habilitado.</string>
   <!-- Support tab -->
