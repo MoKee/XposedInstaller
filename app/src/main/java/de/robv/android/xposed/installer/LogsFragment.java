@@ -254,7 +254,7 @@ public class LogsFragment extends Fragment {
 
         @Override
         protected void onPostExecute(String llog) {
-            mTxtLog.append(llog);
+            mTxtLog.setText(llog);
 
             if (llog.length() == 0)
                 mTxtLog.setText(R.string.log_is_empty);
