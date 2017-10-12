@@ -44,6 +44,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul še ni aktiviran</string>
+  <string name="xposed_module_updated_notification">Ponovni zagon za uveljavitev sprememb</string>
   <string name="module_download_updates">Prenosi/Posodobitve</string>
   <string name="module_support">Podpora</string>
   <string name="module_app_info">Podatki o aplikaciji</string>
@@ -82,6 +83,7 @@
   <string name="settings_group_download">Prenesi</string>
   <string name="settings_group_experimental">Preizkusno</string>
   <!-- Support tab -->
+  <string name="support_download_label">Prenos MoKee ROM-a</string>
   <string name="support_faq_label">FAQ/znane težave</string>
   <string name="support_donate_label">Prispevaj</string>
   <!-- Logs tab  -->
@@ -105,8 +107,23 @@
   <string name="download_view_install">Namesti</string>
   <string name="download_view_cancel">Prekliči</string>
   <string name="download_view_no_url">URL za prenos ni na voljo</string>
+  <string name="download_view_running">Prenos poteka (%1$,d of %2$,d kB)</string>
+  <string name="download_view_waiting">Prenos na čakanju</string>
+  <string name="download_view_successful">Prenos je uspel</string>
+  <string name="download_view_failed">Prenos ni uspel (napaka %d)</string>
   <!-- DownloadUtils -->
+  <string name="download_md5sum_incorrect">MD5 vsota je nepravilna (preneseno: %1$s, preostanek: %2$s)</string>
+  <string name="download_could_not_read_file">Prenesenega ni mogoče prebrati: %s</string>
+  <string name="download_no_valid_apk">Prenesena datoteka ni veljavni APK (ali nezdružljiv)</string>
+  <string name="download_incorrect_package_name">Nepravilno ime paketa (preneseno: %1$s, preostanek: %2$s)</string>
   <!-- RepoLoader -->
+  <string name="repo_download_failed_http">Prenos %1$s ni uspel: %2$d (%3$s)</string>
+  <string name="repo_download_failed">Prenos %1$s ni uspel: %2$s</string>
+  <string name="repo_load_failed">Ni mogoče naložiti skladišča iz %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Ta modul ni mogoče naložiti, ker je nameščen na SD kartici, prosim premaknite ga vnotranji pomnilnik.</string>
+  <string name="permissionNotGranted">Ta funkcija ne bo delovala brez dovoljenja za pisanje na zunanjo shrambo.</string>
+  <string name="module_saved">Modul shran ob %1$s</string>
   <string name="save">Shrani</string>
+  <string name="update_download_list">Podrsaj navzdol za osvežitev seznama modulov za prenos</string>
 </resources>
