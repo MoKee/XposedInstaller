@@ -20,12 +20,14 @@
   <!-- General/various strings -->
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_settings">Tetapan</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Maklumat apl</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Perihalan</string>
+  <string name="download_details_page_settings">Tetapan</string>
   <!-- Settings tab -->
   <!-- Support tab -->
   <!-- Logs tab  -->
