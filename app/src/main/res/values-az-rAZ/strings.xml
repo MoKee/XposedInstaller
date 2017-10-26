@@ -29,6 +29,7 @@
   <string name="module_app_info">Tətbiq məlumatı</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Təsvir</string>
+  <string name="download_details_page_versions">Versiyalar</string>
   <string name="reltype_experimental">Təcrübi</string>
   <string name="download_section_installed">Quraşdırılmış</string>
   <!-- Settings tab -->
