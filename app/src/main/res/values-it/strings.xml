@@ -26,6 +26,7 @@
   <string name="nav_item_download">scarica</string>
   <string name="nav_item_settings">Impostazioni</string>
   <string name="nav_item_support">Supporto</string>
+  <string name="nav_item_logs">Log</string>
   <string name="nav_item_about">Info su</string>
   <string name="navigation_drawer_open">Apri navigation drawer</string>
   <string name="navigation_drawer_close">Chiudi navigation drawer</string>
@@ -46,10 +47,12 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Il modulo Xposed non è stato ancora attivato</string>
   <string name="module_is_not_activated_yet_detailed">%s è stato installato, ma non è ancora attivo.</string>
+  <string name="reboot_needed">Riavviare il sistema per applicare le modifiche</string>
   <string name="activate_and_reboot">Attiva e riavvia</string>
   <string name="activate_only">Attiva solamente</string>
   <string name="module_activated">Il modulo è stato attivato</string>
   <string name="module_no_ui">Questo modulo non dispone di un\'interfaccia utente</string>
+  <string name="no_xposed_modules_installed">Nessun modulo Xposed installato.</string>
   <string name="xposed_module_updated_notification_title">Modulo Xposed aggiornato</string>
   <string name="xposed_module_updated_notification">Riavvia per attivare i cambiamenti</string>
   <string name="no_min_version_specified">Questo modulo non specifica la versione di Xposed di cui ha bisogno.</string>
@@ -68,6 +71,7 @@
   <string name="download_details_page_settings">Impostazioni</string>
   <string name="reltype_stable">Stabile</string>
   <string name="reltype_stable_summary">Stabile (basso rischio di bug)</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (è possibile incontrare bug)</string>
   <string name="reltype_experimental">Sperimentale</string>
   <string name="reltype_experimental_summary">Sperimentale (alto rischio di bug)</string>
@@ -98,6 +102,7 @@
   <string name="settings_disable_resources">Disabilita agganci alle risorse</string>
   <string name="settings_disable_resources_summary">Soluzioni di conflitti con i theme engine\n<b>ATTENZIONE:</b> I moduli che cambiano le risorse non funzioneranno attivando questa funzione.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Scarica MoKee ROM</string>
   <string name="support_framework_label">Framework/Installer supporto</string>
   <string name="support_faq_label">FAQ/Bug conosciuti</string>
   <string name="support_donate_label">Dona</string>
@@ -115,6 +120,8 @@
   <string name="about_developers_label">Sviluppatori principali</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> e <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n <a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> e <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> per bug fix e Material Design</string>
   <string name="about_translator_label">Tradotto da</string>
+  <string name="about_modified_version_label">Versione modificata MoKee</string>
+  <string name="about_framework_version_label">Versione del Framework</string>
   <string name="about_source_label">Codice sorgente</string>
   <string name="about_libraries_label">Librerie utilizzate</string>
   <!-- DownloadView -->
@@ -140,4 +147,5 @@
   <string name="permissionNotGranted">Questa funzionalità non funzionerà senza il permesso di scrittura della memoria esterna.</string>
   <string name="module_saved">Modulo salvato in %1$s</string>
   <string name="save">Salva</string>
+  <string name="update_download_list">Scorri verso il basso per aggiornare l\'elenco dei moduli del download</string>
 </resources>

@@ -39,6 +39,7 @@
   <!-- About tab -->
   <!-- DownloadView -->
   <string name="download_view_download">ಡೌನ್‍ಲೋಡ್</string>
+  <string name="download_view_install">ಅಳವಡಿಸಿ</string>
   <string name="download_view_cancel">ರದ್ದು</string>
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
