@@ -3,7 +3,6 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "de.robv.android.xposed.installer"
@@ -36,18 +35,18 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:preference-v7:25.3.1'
-    compile 'com.android.support:preference-v14:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:customtabs:25.3.1'
-    compile 'se.emilsjolander:stickylistheaders:2.7.0'
-    compile 'eu.chainfire:libsuperuser:1.0.0.201608240809'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'de.psdev.licensesdialog:licensesdialog:1.8.1'
-    provided fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:preference-v7:25.3.1'
+    implementation 'com.android.support:preference-v14:25.3.1'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+    implementation 'com.android.support:cardview-v7:25.3.1'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.android.support:customtabs:25.3.1'
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    implementation 'eu.chainfire:libsuperuser:1.0.0.201608240809'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'de.psdev.licensesdialog:licensesdialog:1.8.1'
+    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 repositories {
     mavenCentral()
