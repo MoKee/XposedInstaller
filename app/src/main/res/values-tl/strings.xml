@@ -20,9 +20,11 @@
   <!-- General/various strings -->
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_support">Suporta</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->
+  <string name="module_support">Suporta</string>
   <string name="module_app_info">Impormasyon ng app</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Paglalarawan</string>
