@@ -49,29 +49,103 @@
   <string name="module_is_not_activated_yet_detailed">%s быў усталяваны але не актываваны.</string>
   <string name="reboot_needed">Перазагрузіць, каб змены ўступілі ў сілу</string>
   <string name="activate_and_reboot">Актываваць і перазагрузіць</string>
+  <string name="activate_only">Актываваць толькі</string>
+  <string name="module_activated">Модуль Xposed быў актываваны</string>
+  <string name="module_no_ui">Гэты модуль не ўтрымлівае карыстацкага інтэрфейсу</string>
+  <string name="no_xposed_modules_installed">Xposed модулі не ўсталяваны.</string>
+  <string name="xposed_module_updated_notification_title">Модуль Xposed абноўлены</string>
+  <string name="xposed_module_updated_notification">Перазагрузіць, каб актываваць змены</string>
+  <string name="no_min_version_specified">Гэты модуль не ўказаў версію Xposed, у якой ён мае патрэбу.</string>
+  <string name="warning_min_version_too_low">Гэты модуль быў створаны для Xposed версіі %1$d, але з-за несумяшчальных змяненняў у версіі %2$d, ён быў адключаны.</string>
+  <string name="module_launch">Запуск карыстацкага інтэрфейсу</string>
+  <string name="module_download_updates">Спампаваць/Абнавіць</string>
   <string name="module_support">Падтрымка</string>
   <string name="module_app_info">Звесткі пра праграму</string>
   <string name="module_uninstall">Выдаліць</string>
   <!-- Download tab -->
   <string name="menuSearch">Пошук</string>
   <string name="menuReload">Абнавіць</string>
+  <string name="changes">Змены:</string>
   <string name="download_details_page_description">Апісанне</string>
+  <string name="download_details_page_versions">Версіі</string>
   <string name="download_details_page_settings">Налады</string>
+  <string name="reltype_stable">Стабільная</string>
+  <string name="reltype_stable_summary">Стабільныя (нізкая рызыка памылак)</string>
+  <string name="reltype_beta">Бэта</string>
+  <string name="reltype_beta_summary">Бэта (нязначная рызыка памылак)</string>
   <string name="reltype_experimental">Эксперыментальная</string>
+  <string name="reltype_experimental_summary">Эксперыментальныя (вялікая рызыка памылак)</string>
+  <string name="reltype_use_global_summary">Выкарыстоўвайце глабальныя налады</string>
+  <string name="download_author">ад %s</string>
+  <string name="download_unknown_author">аўтар невядомы</string>
+  <string name="download_status_installed">Усталяваная (версія %s)</string>
+  <string name="download_status_update_available">Ёсць абнаўленне (версія %1$s \u2192 %2$s)</string>
+  <string name="download_timestamps">Дададзена %1$s \u00b7 Абноўлена %2$s</string>
+  <string name="download_sorting_title">Парадак сартавання</string>
+  <string name="download_sorting_status">Сартаваць па статусе</string>
+  <string name="download_sorting_updated">Сартаваць па апошнім абнаўленні</string>
+  <string name="download_sorting_created">Сартаванне па даце стварэння</string>
+  <string name="download_section_update_available">Даступна абнаўленне</string>
   <string name="download_section_installed">Усталявана</string>
+  <string name="download_section_not_installed">Не ўсталявана</string>
+  <string name="download_section_24h">За апошнія 24 гадзінны</string>
+  <string name="download_section_7d">За апошнія 7 дзён</string>
+  <string name="download_section_30d">За апошнія 30 дзён</string>
+  <string name="download_section_older">Больш 30 дзён таму</string>
+  <string name="download_details_not_found">Модуль з іменем пакета \"%s\" адсутнічае ў рэпазіторыі.</string>
+  <string name="download_no_versions">Аўтар яшчэ нічога не выклаў.</string>
+  <string name="download_test_version_not_shown">Даступныя тэставыя версіі. Але яны схаваны ў наладах \"Адлюстраванне версій модуля\".</string>
   <!-- Settings tab -->
   <string name="settings_group_download">Спампаваць</string>
+  <string name="settings_release_type">Адлюстраванне версій модуля</string>
   <string name="settings_group_experimental">Эксперыментальная</string>
+  <string name="settings_disable_resources">Не змяняць рэсурсы</string>
+  <string name="settings_disable_resources_summary">Часовае рашэнне для канфліктаў з тэмамі сістэмы\n<b>УВАГА:</b> Модулі, якія спрабуюць змяніць рэсурсы не будуць працаваць, калі гэтая опцыя ўключана.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Спампаваць MoKee ROM</string>
+  <string name="support_framework_label">Падтрымка Xposed Framework/Installer</string>
+  <string name="support_faq_label">Даведка/вядомыя праблемы</string>
   <string name="support_donate_label">Ахвяраваць</string>
+  <string name="support_donate_description">Калі вы хочаце аддзячыць за Xposed, вы можаце зрабіць ахвяраванне для rovo89 тут</string>
   <!-- Logs tab  -->
+  <string name="logs_save_failed">Немагчыма запісаць логі на SD-карту:</string>
+  <string name="sdcard_not_writable">SD-карта не знойдзена ці запіс на яе немагчымы</string>
+  <string name="menuClearLog">Ачысціць логі</string>
+  <string name="logs_cleared">Логі паспяхова ачышчаны</string>
+  <string name="logs_clear_failed">Немагчыма ачысціць логі:</string>
+  <string name="log_is_empty">Спіс логаў пусты</string>
+  <string name="scroll_top">Пракруціць уверх</string>
+  <string name="scroll_bottom">Пракруціць уніз</string>
   <!-- About tab -->
+  <string name="about_developers_label">Асноўныя распрацоўшчыкі</string>
+  <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> і <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> і <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> для выпраўлення памылак і Material Design</string>
+  <string name="about_translator_label">Перакладчык</string>
+  <string name="about_modified_version_label">Мадыфікаваная версія MoKee</string>
+  <string name="about_framework_version_label">Версія framework</string>
+  <string name="about_source_label">Зыходны код</string>
+  <string name="about_libraries_label">Выкарыстоўваюцца бібліятэкі</string>
   <!-- DownloadView -->
   <string name="download_view_download">Спампаваць</string>
   <string name="download_view_install">Усталяваць</string>
   <string name="download_view_cancel">Скасаваць</string>
+  <string name="download_view_no_url">Няма даступных URL для спампоўкі</string>
+  <string name="download_view_running">Спампоўкі і ўсталёўка (%1$,d з %2$,d кб)</string>
+  <string name="download_view_waiting">Чаканне спампоўкі</string>
+  <string name="download_view_successful">Спампоўка завершана</string>
+  <string name="download_view_failed">Памылка спампоўкі (%d)</string>
   <!-- DownloadUtils -->
+  <string name="download_md5sum_incorrect">Сума MD5 не супадае (спампавана: %1$s, чакалася: %2$s)</string>
+  <string name="download_could_not_read_file">Памылка чытання спампаванага файла: %s</string>
+  <string name="download_no_valid_apk">Спампаваны файл не з\'яўляецца APK (або несумяшчальны)</string>
+  <string name="download_incorrect_package_name">Імя пакета няслушна (спампавана: %1$s, чакалася: %2$s)</string>
   <!-- RepoLoader -->
+  <string name="repo_download_failed_http">Спампоўка %1$s перарвана: %2$d (%3$s)</string>
+  <string name="repo_download_failed">Спампоўка %1$s перарвана: %2$s</string>
+  <string name="repo_load_failed">Немагчыма загрузіць рэпазіторый %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Гэты модуль не можа быць загружаны, таму што ён усталяваны на SD-карту, перамесціце яго ва ўнутраную памяць.</string>
+  <string name="permissionNotGranted">Гэтая функцыя не будзе працаваць без дазволу на запіс для назапашвальніка.</string>
+  <string name="module_saved">Модуль захаваны ў %1$s</string>
   <string name="save">Захаваць</string>
+  <string name="update_download_list">Пацягніце ўніз для абнаўлення модульнага ліста</string>
 </resources>
