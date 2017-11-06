@@ -102,7 +102,7 @@
   <string name="settings_disable_resources">停用資源鉤子</string>
   <string name="settings_disable_resources_summary">解決與主題引擎的衝突。\n<b>警告：</b> 啓用此選項將導致修改資源的模組停止運作。</string>
   <!-- Support tab -->
-  <string name="support_download_label">下載魔趣 ROM</string>
+  <string name="support_download_label">下載MoKee ROM</string>
   <string name="support_framework_label">框架/Installer 支援</string>
   <string name="support_faq_label">常見/已知問題</string>
   <string name="support_donate_label">贊助</string>
@@ -120,7 +120,7 @@
   <string name="about_developers_label">主要開發人員</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> 和 <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> 和\n <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> 修復錯誤及 Material Design 化</string>
   <string name="about_translator_label">翻譯：</string>
-  <string name="about_modified_version_label">魔趣訂製版本</string>
+  <string name="about_modified_version_label">MoKee 訂製版本</string>
   <string name="about_framework_version_label">框架版本</string>
   <string name="about_source_label">原始碼</string>
   <string name="about_libraries_label">使用的函式庫</string>
