@@ -28,20 +28,15 @@
   <string name="nav_item_support">สนับสนุน</string>
   <string name="nav_item_logs">บันทึกการใช้งาน</string>
   <string name="nav_item_about">เกี่ยวกับ</string>
-  <string name="navigation_drawer_open">เปิด Navigation Drawer</string>
-  <string name="navigation_drawer_close">ปิด Navigation Drawer</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">ซอฟท์รีบูต</string>
-  <string name="reboot">รีบูต</string>
-  <string name="reboot_failed">รีบูตล้มเหลว กรุณาใช้ฟังก์ชั่นรีบูตโทรศัพท์</string>
-  <string name="reboot_confirmation">ต้องการรีบูตเดี๋ยวนี้?</string>
+    <!-- Installer tab -->
+    <string name="reboot">รีบูต</string>
+    <string name="reboot_confirmation">ต้องการรีบูตเดี๋ยวนี้?</string>
   <string name="install_warning_title">โปรดระวัง!</string>
   <string name="install_warning">ในกรณีที่โทรศัพท์ของคุณอาจจะไม่รีบูตหลังจากการติดตั้ง\n\nหากคุณไม่เคยได้ยินเกี่ยวกับ \"Soft Brick\" และ \"Bootloop\" มาก่อน <b>ห้าม</b>ติดตั้ง Xposed!\n\nโดยทั่วไปแล้ว แนะนำให้กู้คืนไฟล์สำรองของคุณ</string>
   <string name="dont_show_again">ไม่ต้องแสดงอีกครั้ง</string>
   <string name="framework_not_active">เฟรมเวิร์คเวอร์ชั่น %s ถูกติดตั้งแล้วแต่ยังไม่ได้ใช้งาน กรุณาตรวจสอบบันทึกการใช้งานสำหรับรายละเอียด</string>
   <!-- File operations -->
-  <string name="root_failed">การเข้าถึงรูทล้มเหลว\n\nแน่ใจว่าโทรศัพท์ของคุณได้รับการรูทเรียบร้อยแล้วและไม่ได้บล็อคคำสั่ง Shell</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">โมดูลยังไม่เปิดใช้งาน</string>
   <string name="module_is_not_activated_yet_detailed">%s ถูกติดตั้งแล้ว แต่ยังไม่ได้เปิดใช้งาน</string>
   <string name="activate_and_reboot">เปิดใช้งานและรีบูต</string>
@@ -136,6 +131,4 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">ไม่สามารถโหลดโมดูลนี้เพราะติดตั้งบนการ์ดความจำ กรุณาย้ายไปยังหน่วยความจำภายใน</string>
   <string name="permissionNotGranted">คุณสมบัตินี้จะไม่ทำงาน หากไม่ได้รับการอนุญาตเพื่อเขียนข้อมูลไปยังที่เก็บข้อมูลภายนอก</string>
-  <string name="module_saved">โมดูลบันทึกที่ %1$s</string>
-  <string name="save">บันทึก</string>
 </resources>

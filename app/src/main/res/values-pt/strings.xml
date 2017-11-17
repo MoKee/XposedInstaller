@@ -14,13 +14,9 @@
     <string name="nav_item_support">Suporte</string>
     <string name="nav_item_logs">Registos</string>
     <string name="nav_item_about">Acerca</string>
-    <string name="navigation_drawer_open">Abrir a gaveta de navegação</string>
-    <string name="navigation_drawer_close">Fechar a gaveta de navegação</string>
 
     <!-- Installer tab -->
-    <string name="soft_reboot">Reinício suave</string>
     <string name="reboot">Reiniciar</string>
-    <string name="reboot_failed">Falha ao reiniciar. Por favor reinicie o seu aparelho utilizando o menu nativo do sistema.</string>
     <string name="reboot_confirmation">Pretende reiniciar?</string>
     <string name="install_warning_title">Atenção!</string>
     <string name="install_warning">Em certos casos, após a instalação da \"Xposed\", o dispositivo deixa de arrancar.\n\nAssim, se nunca ouviu falar em \"soft brick\" ou \"bootloop\", ou caso não saiba como recuperar de uma situação dessas, <b>NÃO</b> instale a \"Xposed\"!\n\nIndependentemente disso, ter um \"backup\" recente é sempre, altamente, recomendado.</string>
@@ -28,7 +24,6 @@
     <string name="framework_not_active">A versão %s da \"Xposed Framework\" está instalada mas não está ativa. Por favor verifique os registos para mais detalhes.</string>
 
     <!-- File operations -->
-    <string name="root_failed">Falha ao obter o acesso \"root\".\n\nCertifique-se que o seu aparelho dispõe de acesso \"root\" e/ou que foi dada permissão à app para correr como tal.</string>
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">O módulo \"Xposed\! ainda não foi ativado</string>
@@ -134,6 +129,5 @@
     <!-- Most of these belong to currently hidden features -->
     <string name="warning_installed_on_external_storage">Este módulo não pode ser carregado pois está instalado no cartão SD. Mova-o para a memória interna, por favor.</string>
     <string name="permissionNotGranted">Esta funcionalidade não funcionará sem a permissão de escrita para o cartão SD.</string>
-    <string name="module_saved">Módulo guardado em %1$s</string>
 
 </resources>

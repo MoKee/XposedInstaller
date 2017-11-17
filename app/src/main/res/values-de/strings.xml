@@ -28,13 +28,9 @@
   <string name="nav_item_support">Hilfe</string>
   <string name="nav_item_logs">Protokolle</string>
   <string name="nav_item_about">Über</string>
-  <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
-  <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Software-Neustart</string>
-  <string name="reboot">Geräte-Neustart</string>
-  <string name="reboot_failed">Neustart fehlgeschlagen. Bitte verwende die normale Neustartfunktion des Geräts.</string>
-  <string name="reboot_confirmation">Möchtest du jetzt neustarten?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Geräte-Neustart</string>
+    <string name="reboot_confirmation">Möchtest du jetzt neustarten?</string>
   <string name="install_warning_title">Vorsicht!</string>
   <string name="install_warning">In manchen Fällen wird das Gerät nicht mehr korrekt starten, nachdem du Xposed installiert hast.\n\nFalls dir \"Soft Brick\" und \"Bootloop\" nichts sagen oder du nicht weißt, wie du dich aus einer solchen Situation befreien kannst, solltest du Xposed <b>NICHT</b> installieren!\n\nIn jedem Fall ist es sehr empfehlenswert, ein aktuelles Backup zu haben.</string>
   <string name="dont_show_again">Nicht wieder anzeigen</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed-Framework wird aktiviert beim nächsten Neustart</string>
   <string name="xposed_off_next_reboot">Xposed-Framework wird deaktiviert beim nächsten Neustart</string>
   <!-- File operations -->
-  <string name="root_failed">Root-Zugriff fehlgeschlagen\n\nStelle sicher, dass das Gerät korrekt gerootet ist und Shell-Kommandos nicht blockiert werden.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed-Modul ist noch nicht aktiv</string>
   <string name="module_is_not_activated_yet_detailed">%s wurde installiert, aber noch nicht aktiviert.</string>
   <string name="reboot_needed">Neustarten, um Änderungen zu aktivieren</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Dieses Modul kann nicht geladen werden, da es auf der SD-Karte installiert ist. Bitte verschiebe es auf den Internen Speicher.</string>
   <string name="permissionNotGranted">Diese Funktion funktioniert nur mit der Zugriffs-Berechtigung auf den Speicher.</string>
-  <string name="module_saved">Modul gespeichert unter %1$s</string>
-  <string name="save">Speichern</string>
-  <string name="update_download_list">Ziehe nach unten, um die Liste zu aktualieren</string>
+    <string name="update_download_list">Ziehe nach unten, um die Liste zu aktualieren</string>
 </resources>

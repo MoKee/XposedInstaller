@@ -28,20 +28,15 @@
   <string name="nav_item_support">サポート</string>
   <string name="nav_item_logs">ログ</string>
   <string name="nav_item_about">情報</string>
-  <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
-  <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">ソフトリブート</string>
-  <string name="reboot">再起動</string>
-  <string name="reboot_failed">再起動できませんでした。端末の通常の再起動の機能を使用してください。</string>
-  <string name="reboot_confirmation">今すぐ再起動しますか？</string>
+    <!-- Installer tab -->
+    <string name="reboot">再起動</string>
+    <string name="reboot_confirmation">今すぐ再起動しますか？</string>
   <string name="install_warning_title">注意！</string>
   <string name="install_warning">Xposedをインストールした後、場合によっては起動しなくなることがあります。\n\n 「仮文鎮」や「ブートループ」を知らない場合やその状態からの復旧方法を理解していないのであれば、Xposedをインストール<b>しないでください</b>。\n\nいずれにせよ、現在のバックアップを取ることを強く推奨します。</string>
   <string name="dont_show_again">次回から表示しない</string>
   <string name="framework_not_active">バージョン%sのXposedフレームワークがインストールされていますが、有効になっていません。ログで詳細を確認してください。</string>
   <!-- File operations -->
-  <string name="root_failed">ルートアクセスを取得できませんでした。\n\n端末が正しくルート化されているか、シェルコマンドをブロックしていないかを確認してください。</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposedモジュールがまだ有効化されていません</string>
   <string name="module_is_not_activated_yet_detailed">%sがインストールされましたが、まだ有効化されていません。</string>
   <string name="activate_and_reboot">有効化して再起動</string>
@@ -135,6 +130,4 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">このモジュールはSDカードにインストールされているため、読み込めませんでした。内部ストレージに移動してください。</string>
   <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません。</string>
-  <string name="module_saved">モジュールを%1$sに保存しました</string>
-  <string name="save">保存</string>
 </resources>

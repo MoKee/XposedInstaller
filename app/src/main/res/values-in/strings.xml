@@ -28,13 +28,9 @@
   <string name="nav_item_support">Dukungan</string>
   <string name="nav_item_logs">Log</string>
   <string name="nav_item_about">Tentang</string>
-  <string name="navigation_drawer_open">Buka navigasi rinci</string>
-  <string name="navigation_drawer_close">Tutup navigasi rinci</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Mulai ulang cepat</string>
-  <string name="reboot">Mulai ulang</string>
-  <string name="reboot_failed">Mulai ulang gagal. Gunakan fungsi normal mulai ulang perangkat.</string>
-  <string name="reboot_confirmation">Apakah anda ingin memulai ulang sekarang?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Mulai ulang</string>
+    <string name="reboot_confirmation">Apakah anda ingin memulai ulang sekarang?</string>
   <string name="install_warning_title">Hati-hati!</string>
   <string name="install_warning">Dalam beberapa kasus, perangkat anda tidak lagi bisa boot setelah menginstal Xposed.\n\nJika anda tidak pernah mendengar tentang \"soft brick\" dan \"bootloop\" sebelumnya atau jika anda tidak tahu bagaimana untuk mengembalikan dari situasi tsb, <b>Jangan</b> menginstal Xposed! \n\nBagaimanapun, memiliki cadangan terakhir sangat dianjurkan.</string>
   <string name="dont_show_again">Jangan tampilkan ini lagi</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework akan dihidupkan saat mulai ulang berikutnya</string>
   <string name="xposed_off_next_reboot">Xposed Framework akan dimatikan saat mulai ulang berikutnya</string>
   <!-- File operations -->
-  <string name="root_failed">Gagal mendapatkan akses root.\n\nPastikan perangkat te-root dengan benar dan anda belum memblokir perintah shell.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Modul Xposed belum dihidupkan saat ini</string>
   <string name="module_is_not_activated_yet_detailed">%s telah terinstal, tapi tidak dihidupkan.</string>
   <string name="reboot_needed">Mulai ulang untuk menerapkan perubahan</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Modul ini tidak dapat dimuat karena dipasang pada kartu SD, silakan memindahkannya ke penyimpanan internal.</string>
   <string name="permissionNotGranted">Fitur ini tidak akan bekerja tanpa izin untuk menulis penyimpanan eksternal.</string>
-  <string name="module_saved">Modul disimpan di %1$s</string>
-  <string name="save">Simpan</string>
-  <string name="update_download_list">Tarik kebawah untuk memperbarui daftar modul terunduh</string>
+    <string name="update_download_list">Tarik kebawah untuk memperbarui daftar modul terunduh</string>
 </resources>

@@ -28,13 +28,9 @@
   <string name="nav_item_support">Ajuda</string>
   <string name="nav_item_logs">Registros</string>
   <string name="nav_item_about">Sobre</string>
-  <string name="navigation_drawer_open">Abrir gaveta de navegação</string>
-  <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Reinício rápido</string>
-  <string name="reboot">Reiniciar</string>
-  <string name="reboot_failed">O reinício falhou. Por favor, use a função de reinício normal do sistema.</string>
-  <string name="reboot_confirmation">Deseja reinciar agora?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Reiniciar</string>
+    <string name="reboot_confirmation">Deseja reinciar agora?</string>
   <string name="install_warning_title">Seja cuidadoso!</string>
   <string name="install_warning">Em alguns casos, seu dispositivo pode não ligar depois de instalar o Xposed.\n\nSe você nunca ouviu falar sobre \"soft brick\" e \"bootloop\" antes ou se você não sabe como se recuperar dessa situação, <b>NÃO</b> instale o Xposed!\n\nEm qualquer caso, ter um backup recente é altamente recomendado.</string>
   <string name="dont_show_again">Não mostre isso novamente</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">O Xposed Framework vai ser ativado no próximo reinício</string>
   <string name="xposed_off_next_reboot">O Xposed Framework vai ser desativado no próximo reinício</string>
   <!-- File operations -->
-  <string name="root_failed">Falha ao obter acesso root.\n\nTenha certeza que seu dispositivo está enraizado corretamente e que você não bloqueou comandos shell.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Módulo não foi ativado ainda</string>
   <string name="module_is_not_activated_yet_detailed">%s foi instalado, mas ainda não está ativado.</string>
   <string name="reboot_needed">Reinicie para aplicar a atualização</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Este módulo não pôde ser carregado porque esá instalado no cartão SD, por favor, mova-o para a memória interna.</string>
   <string name="permissionNotGranted">Esta função não vai funcionar sem permissão para escrever no cartão SD.</string>
-  <string name="module_saved">Módulo salvo em %1$s</string>
-  <string name="save">Salvar</string>
-  <string name="update_download_list">Pulldown para atualizar a lista de módulos do download</string>
+    <string name="update_download_list">Pulldown para atualizar a lista de módulos do download</string>
 </resources>

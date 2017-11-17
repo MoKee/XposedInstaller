@@ -26,19 +26,14 @@
   <string name="nav_item_settings">Beállítások</string>
   <string name="nav_item_support">Támogatás</string>
   <string name="nav_item_about">Információk</string>
-  <string name="navigation_drawer_open">Navigációs fiók megnyitása</string>
-  <string name="navigation_drawer_close">Navigációs fiók bezárása</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Gyors újraindítás</string>
-  <string name="reboot">Újraindítás</string>
-  <string name="reboot_failed">Újraindítás sikertelen. Kérlek használd az eszköz rendes újraindítási funkcióját.</string>
-  <string name="reboot_confirmation">Újra akarsz indítani most?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Újraindítás</string>
+    <string name="reboot_confirmation">Újra akarsz indítani most?</string>
   <string name="install_warning_title">Légy óvatos!</string>
   <string name="install_warning">Néhány esetben az eszközöd talán nem fog bootolni az Xposed telepítése után. Ha sosem hallottál a \"soft brick\"-ről vagy a \"bootloop\"-ról vagy ha nem tudod, hogyan térj vissza egy ilyen helyzetből, <b>NE</b> telepítsd az Xposed-ot. Egy friss mentés megléte erősen ajánlott minden esetben.</string>
   <string name="dont_show_again">Ne mutasd még egyszer</string>
   <!-- File operations -->
-  <string name="root_failed">Rendszergazda jogok kérése sikertelen.\n\nEllenőrizd, hogy az eszközöd megfelelően van-e rootolva és nincsenek-e blokkolva a shell parancsok.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Az Xposed modul még nincs aktiválva</string>
   <string name="module_is_not_activated_yet_detailed">%s telepítve lett, de még nincs aktiválva.</string>
   <string name="activate_and_reboot">Aktiválás és újraindítás</string>
@@ -126,5 +121,4 @@
   <string name="repo_download_failed">%1$s letöltése sikertelen: %2$s</string>
   <string name="repo_load_failed">Nem lehet betölteni a gyűjteményt %1$s-ról:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Mentés</string>
 </resources>

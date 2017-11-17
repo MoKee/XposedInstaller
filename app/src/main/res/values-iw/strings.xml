@@ -27,16 +27,13 @@
   <string name="nav_item_support">תמיכה</string>
   <string name="nav_item_about">אודות</string>
   <!-- Installer tab -->
-  <string name="soft_reboot">הפעלה מחדש מהירה</string>
-  <string name="reboot">הפעלה מחדש</string>
-  <string name="reboot_failed">הפעלה מחדש נכשלה. בבקשה הפעילו מחדש את המכשיר בעצמכם.</string>
-  <string name="reboot_confirmation">האם להפעיל מחדש כעת?</string>
+    <string name="reboot">הפעלה מחדש</string>
+    <string name="reboot_confirmation">האם להפעיל מחדש כעת?</string>
   <string name="install_warning_title">היו זהירים!</string>
   <string name="install_warning">במקרים מסויימים, המכשיר שלך עלול לא לעבוד לאחר התקנה של Xposed.\n\nאם מעולם לא שמעת על \"soft brick\" ו \"bootloop\" או שאתה לא יודע איך לצאת ממצב כזה, <b>אל</b> תתקין את Xposed!\n\nבכל מקרה, מומלץ שיהיה גיבוי עדכני.</string>
   <string name="dont_show_again">אל תציג זאת שוב</string>
   <!-- File operations -->
-  <string name="root_failed">לא ניתן להשיג הרשאות רוט.\n\nבדקו שהמכשיר שלכם עבר תהליך רוט כראוי ושהוא לא חסום לפקודות shell.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">מודול עוד לא מופעל</string>
   <string name="module_is_not_activated_yet_detailed">%s הותקן, אך עוד לא הופעל.</string>
   <string name="activate_and_reboot">אפשר והפעל מחדש</string>
@@ -124,5 +121,4 @@
   <string name="repo_download_failed">ההורדה של %1$s נכשלה: %2$s</string>
   <string name="repo_load_failed">לא ניתן לטעון מאגר מיתוך %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">שמור</string>
 </resources>

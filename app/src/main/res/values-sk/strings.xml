@@ -28,13 +28,9 @@
   <string name="nav_item_support">Podpora</string>
   <string name="nav_item_logs">Záznamy</string>
   <string name="nav_item_about">O aplikácii</string>
-  <string name="navigation_drawer_open">Otvoriť navigačný panel</string>
-  <string name="navigation_drawer_close">Zavrieť navigačný panel</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Softvérový reštart</string>
-  <string name="reboot">Reštart</string>
-  <string name="reboot_failed">Reštart zlyhal. Prosím, použite normálnu funkciu zariadenia pre reštart.</string>
-  <string name="reboot_confirmation">Chcete reštartovať zariadenie teraz?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Reštart</string>
+    <string name="reboot_confirmation">Chcete reštartovať zariadenie teraz?</string>
   <string name="install_warning_title">Buďte opatrný!</string>
   <string name="install_warning">V niektorých prípadoch sa vaše zariadenie nemusí spustiť po inštalácii Xposedu.\n\nAk ste nikdy predtým nepočuli o problémoch, ako sú \"soft brick\" a \"bootloop\", alebo ak neviete, ako sa dostať z takejto situácie, <b>NEINŠTALUJTE</b> Xposed!\n\nV každom prípade je odporúčané si vytvoriť zálohu.</string>
   <string name="dont_show_again">Nezobrazovať znova</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework bude povolený pri nasledujúcom reštarte</string>
   <string name="xposed_off_next_reboot">Xposed Framework bude zakázaný pri nasledujúcom reštarte</string>
   <!-- File operations -->
-  <string name="root_failed">Nepodarilo sa získať root prístup.\n\nUistite sa, že je zariadenie správne rootnuté a príkazy konzoly nie sú blokované.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul zatiaľ nie je aktivovaný</string>
   <string name="module_is_not_activated_yet_detailed">Modul %s bol nainštalovaný, ale zatiaľ nie je aktivovaný.</string>
   <string name="reboot_needed">Reštartujte pre aplikáciu zmien</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Tento modul nemôže byť načítaný, pretože je nainštalovaný na karte SD, prosím, presuňte ho do interného úložiska.</string>
   <string name="permissionNotGranted">Táto funkcia nebude fungovať bez povolenia zapisovať na externé úložisko.</string>
-  <string name="module_saved">Modul bol uložený %1$s</string>
-  <string name="save">Uložiť</string>
-  <string name="update_download_list">Prejdite dolu pre obnovenie zoznamu modulov na prevzatie</string>
+    <string name="update_download_list">Prejdite dolu pre obnovenie zoznamu modulov na prevzatie</string>
 </resources>

@@ -28,13 +28,9 @@
   <string name="nav_item_support">Ondersteuning</string>
   <string name="nav_item_logs">Logs</string>
   <string name="nav_item_about">Over</string>
-  <string name="navigation_drawer_open">Open navigatie menu</string>
-  <string name="navigation_drawer_close">Sluit navigatie menu</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Herstart systeem</string>
-  <string name="reboot">Herstart apparaat</string>
-  <string name="reboot_failed">Herstart mislukt. Herstart het apparaat handmatig.</string>
-  <string name="reboot_confirmation">Wilt u nu herstarten?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Herstart apparaat</string>
+    <string name="reboot_confirmation">Wilt u nu herstarten?</string>
   <string name="install_warning_title">Pas op!</string>
   <string name="install_warning">In sommige gevallen kan het apparaat niet meer opstarten na het installeren van Xposed.\n\nAls u nog nooit gehoord heeft van \"soft brick\" of \"bootloop\" of als u niet weet hoe dit hersteld moet worden, installeer Xposed dan <b>NIET</b>!\n\nHet hebben van een recente back-up is in ieder geval sterk aanbevolen!</string>
   <string name="dont_show_again">Niet opnieuw tonen</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework zal worden ingeschakeld na volgende keer opstarten</string>
   <string name="xposed_off_next_reboot">Xposed Framework zal worden ingeschakeld na volgende keer opstarten</string>
   <!-- File operations -->
-  <string name="root_failed">Het krijgen van root-toegang is mislukt.\n\nZorg ervoor dat uw apparaat goed geroot is en dat shell commando\'s niet geblokkeerd worden.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed module is nog niet geactiveerd</string>
   <string name="module_is_not_activated_yet_detailed">%s werdt geinstalleerd, maar is nog niet geactiveerd.</string>
   <string name="reboot_needed">Herstart om de veranderingen te activeren</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Deze module kan niet worden geladen omdat het geïnstalleerd is op de SD-kaart, verplaats het naar de interne opslag.</string>
   <string name="permissionNotGranted">Deze functie werkt niet zonder toestemming om te schrijven op de externe opslag.</string>
-  <string name="module_saved">Module opgeslagen op %1$s</string>
-  <string name="save">Opslaan</string>
-  <string name="update_download_list">veeg naar beneden voor het vernieuwen van de module lijst</string>
+    <string name="update_download_list">veeg naar beneden voor het vernieuwen van de module lijst</string>
 </resources>

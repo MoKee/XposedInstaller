@@ -8,7 +8,6 @@
     <!-- Navigation drawer items -->
 
     <!-- Installer tab -->
-    <string name="soft_reboot">Reboot cepat</string>
     <string name="reboot">Reboot</string>
 
     <!-- File operations -->

@@ -26,19 +26,14 @@
   <string name="nav_item_settings">Cài đặt</string>
   <string name="nav_item_support">Hỗ trợ</string>
   <string name="nav_item_about">Thông tin</string>
-  <string name="navigation_drawer_open">Mở menu ngăn kéo</string>
-  <string name="navigation_drawer_close">Đóng menu ngăn kéo</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Khởi động lại mềm</string>
-  <string name="reboot">Khởi động lại</string>
-  <string name="reboot_failed">Không thể khởi động lại. Vui lòng sử dụng chức năng khởi động lại của thiết bị.</string>
-  <string name="reboot_confirmation">Bạn có muốn khởi động lại không?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Khởi động lại</string>
+    <string name="reboot_confirmation">Bạn có muốn khởi động lại không?</string>
   <string name="install_warning_title">Hãy cẩn thận!</string>
   <string name="install_warning">Trong một số trường hợp, thiết bị của bạn có thể không khởi động được sau khi cài Xposed.\n\nNếu bạn chưa từng nghe nói về \"soft brick\" và \"bootloop\" hoặc nếu bạn không biết cách xử lý trong tình huống đó, thì <b>ĐỪNG</b> cài Xposed!\n\nDù thế nào, bạn cũng nên có một bản sao lưu mới.</string>
   <string name="dont_show_again">Đừng hiện lại nữa</string>
   <!-- File operations -->
-  <string name="root_failed">Không thể lấy quyền root.\n\nHãy đảm bảo rằng thiết bị của bạn đã root và bạn không chặn các lệnh shell.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Module chưa bật</string>
   <string name="module_is_not_activated_yet_detailed">%s đã được cài, nhưng chưa được kích hoạt.</string>
   <string name="activate_and_reboot">Kích hoạt và khởi động lại</string>
@@ -125,5 +120,4 @@
   <string name="repo_download_failed">Tải xuống %1$s không thành công: %2$s</string>
   <string name="repo_load_failed">Không thể tải kho module từ %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Lưu</string>
 </resources>

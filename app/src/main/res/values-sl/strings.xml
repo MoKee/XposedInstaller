@@ -28,13 +28,9 @@
   <string name="nav_item_support">Podpora</string>
   <string name="nav_item_logs">Dnevniki</string>
   <string name="nav_item_about">O nas</string>
-  <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
-  <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Mehek ponovni zagon</string>
-  <string name="reboot">Ponovno zaženi</string>
-  <string name="reboot_failed">Ponovni zagon ni uspel. Prosim, porabite normalni ponovni zagon naprave.</string>
-  <string name="reboot_confirmation">Ali želite znova zagnati zdaj?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Ponovno zaženi</string>
+    <string name="reboot_confirmation">Ali želite znova zagnati zdaj?</string>
   <string name="install_warning_title">Previdno!</string>
   <string name="dont_show_again">Ne prikaži znova</string>
   <string name="framework_not_active">Xposed Framework verzija %s je nameščen, toda ni aktiven. Za podrobnosti prosimo preberite dnevnik.</string>
@@ -123,7 +119,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Ta modul ni mogoče naložiti, ker je nameščen na SD kartici, prosim premaknite ga vnotranji pomnilnik.</string>
   <string name="permissionNotGranted">Ta funkcija ne bo delovala brez dovoljenja za pisanje na zunanjo shrambo.</string>
-  <string name="module_saved">Modul shran ob %1$s</string>
-  <string name="save">Shrani</string>
-  <string name="update_download_list">Podrsaj navzdol za osvežitev seznama modulov za prenos</string>
+    <string name="update_download_list">Podrsaj navzdol za osvežitev seznama modulov za prenos</string>
 </resources>

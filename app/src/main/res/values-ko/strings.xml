@@ -28,21 +28,16 @@
   <string name="nav_item_support">지원</string>
   <string name="nav_item_logs">로그</string>
   <string name="nav_item_about">소개</string>
-  <string name="navigation_drawer_open">탐색 서랍 열기</string>
-  <string name="navigation_drawer_close">탐색 서랍 닫기</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">빠른 재시작</string>
-  <string name="reboot">기본 재시작(권장)</string>
-  <string name="reboot_failed">재부팅하지 못했습니다. 디바이스의 기본 재부팅 기능을 사용하세요.</string>
-  <string name="reboot_confirmation">지금 재부팅 하시겠습니까?</string>
+    <!-- Installer tab -->
+    <string name="reboot">기본 재시작(권장)</string>
+    <string name="reboot_confirmation">지금 재부팅 하시겠습니까?</string>
   <string name="dont_show_again">다시 표시하지 않음</string>
   <string name="framework_not_active">Xposed 프레임 워크 버젼 %s가 설치되었지만, 활성화 되지 않았습니다. 자세한 내용은 로그를 확인 하십시요.</string>
   <string name="status">Xposed 상태</string>
   <string name="xposed_on_next_reboot">Xposed 프레임워크가 다음 재부팅때 활성화 됩니다</string>
   <string name="xposed_off_next_reboot">Xposed 프레임 워크가 다음 재부팅때 비활성화 됩니다</string>
   <!-- File operations -->
-  <string name="root_failed">루트 권한을 얻지 못했습니다.\n\n디바이스가 제대로 루팅이 되어있는지 확인하고 셀 명령을 차단하지 않았는지 확인하세요.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed 모듈이 아직 활성화 되지 않았습니다.</string>
   <string name="module_is_not_activated_yet_detailed">%s가 설치되었습니다, 하지만 아직 활성화 되지 않았습니다.</string>
   <string name="module_no_ui">이 모듈은 UI(사용자 환경)를 제공하지 않습니다.\n따라서 이 모듈은 활성화 하더라도 어플리케이션의 형태로 실행되어 화면에 출력되는 바는 없습니다.</string>
@@ -119,5 +114,4 @@
   <string name="repo_download_failed">%1$s의 내려받기가 실패했습니다 : %2$s</string>
   <string name="repo_load_failed">%1$s로부터 정보를 읽어들이지 못했습니다 : \n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">저장</string>
 </resources>

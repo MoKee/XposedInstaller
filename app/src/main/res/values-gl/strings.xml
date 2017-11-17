@@ -8,7 +8,6 @@
     <!-- Navigation drawer items -->
 
     <!-- Installer tab -->
-    <string name="soft_reboot">Reinicie Software</string>
     <string name="reboot">Reinicie</string>
 
     <!-- File operations -->

@@ -27,16 +27,13 @@
   <string name="nav_item_support">Asistenta</string>
   <string name="nav_item_about">Despre</string>
   <!-- Installer tab -->
-  <string name="soft_reboot">Repornire soft:</string>
-  <string name="reboot">Repornire</string>
-  <string name="reboot_failed">Repornirea a esuat. Va rugam utilizati functia nativa a dispozitivului.</string>
-  <string name="reboot_confirmation">Confirmati repornirea ?</string>
+    <string name="reboot">Repornire</string>
+    <string name="reboot_confirmation">Confirmati repornirea ?</string>
   <string name="install_warning_title">Procedati cu grija !</string>
   <string name="install_warning">In anumite cazuri dispozitivul nu va porni dupa instalarea Xposed. \n\nIf daca nu ati auzit despre \"soft brick\" si \"bootloop\" pana acum si nu stiti cum sa remediati o astfel de problema,  <b>NU</b> instalati Xposed!\n\nin nici un caz. A avea un backup recent este de preferat.</string>
   <string name="dont_show_again">Nu mai afisati.</string>
   <!-- File operations -->
-  <string name="root_failed">Accesul la root a esuat.\n\nAsigurati-va ca dispozitivul este rootat corespunzator iar comenzile de tip shell nu sunt blocate.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed nu este inca activ</string>
   <string name="module_is_not_activated_yet_detailed">%s a fost instalat, dar nu este inca activ.</string>
   <string name="activate_and_reboot">Activare si repornire.</string>
@@ -123,5 +120,4 @@
   <string name="repo_download_failed">Descarcare %1$s esuata: %2$s</string>
   <string name="repo_load_failed">Nu se poate incarca repository-ul de la %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Salvaţi</string>
 </resources>

@@ -28,13 +28,9 @@
   <string name="nav_item_support">支持</string>
   <string name="nav_item_logs">日志</string>
   <string name="nav_item_about">关于</string>
-  <string name="navigation_drawer_open">打开导航抽屉</string>
-  <string name="navigation_drawer_close">关闭导航抽屉</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">软重启</string>
-  <string name="reboot">重启</string>
-  <string name="reboot_failed">重启设备失败。请使用设备的标准重启功能。</string>
-  <string name="reboot_confirmation">您现在要重启设备吗？</string>
+    <!-- Installer tab -->
+    <string name="reboot">重启</string>
+    <string name="reboot_confirmation">您现在要重启设备吗？</string>
   <string name="install_warning_title">警告！</string>
   <string name="install_warning">在某些情况下，您的设备在安装 Xposed 后可能无法正常启动。\n\n如果您以前从未听说过“软砖”和“bootloop”，或者不知道怎样从这种情况中恢复，请不要安装 Xposed。\n\n无论发生什么情况，我们都推荐您及时备份资料。</string>
   <string name="dont_show_again">不再显示</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed 框架将在重启后启用</string>
   <string name="xposed_off_next_reboot">Xposed 框架将在重启后禁用</string>
   <!-- File operations -->
-  <string name="root_failed">无法获取 Root 权限.\n\n请确保您的设备已经获取 Root 权限，并且您未阻止 shell 命令。</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed 模块未激活</string>
   <string name="module_is_not_activated_yet_detailed">%s 已安装，但尚未激活。</string>
   <string name="reboot_needed">重新启动以应用更改</string>
@@ -146,7 +141,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">该模块不能载入，因为它安装在 SD 卡上，请将它移至内部存储。</string>
   <string name="permissionNotGranted">没有获取写入外部存储权限，该功能无法正常工作。</string>
-  <string name="module_saved">模块保存于 %1$s</string>
-  <string name="save">保存</string>
-  <string name="update_download_list">下拉刷新已下载模块列表</string>
+    <string name="update_download_list">下拉刷新已下载模块列表</string>
 </resources>

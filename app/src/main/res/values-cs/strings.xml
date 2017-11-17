@@ -28,13 +28,9 @@
   <string name="nav_item_support">Podpora</string>
   <string name="nav_item_logs">Logy</string>
   <string name="nav_item_about">O aplikaci</string>
-  <string name="navigation_drawer_open">Otevřít panel navigace</string>
-  <string name="navigation_drawer_close">Zavřít panel navigace</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Lehký restart</string>
-  <string name="reboot">Restart</string>
-  <string name="reboot_failed">Nepodařilo se restartovat zařízení. Prosím, restartujte jej běžným způsobem.</string>
-  <string name="reboot_confirmation">Chcete zařízení restartovat nyní?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Restart</string>
+    <string name="reboot_confirmation">Chcete zařízení restartovat nyní?</string>
   <string name="install_warning_title">Buďte opatrní!</string>
   <string name="install_warning">V některých případech nemusí po instalaci Xposed vaše zařízení již naběhnout.\n\nPokud nejste obeznámeni s pojmy \"soft brick\" nebo \"bootloop\" a pokud nevíte, jak se v podobné situaci zachovat, <b>NEINSTALUJTE</b> Xposed!\n\nV každém případě je vřele doporučeno mít aktuální zálohu.</string>
   <string name="dont_show_again">Již nezobrazovat</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework bude povolen při příštím restartu</string>
   <string name="xposed_off_next_reboot">Xposed Framework bude zakázán na příštím restartu</string>
   <!-- File operations -->
-  <string name="root_failed">Nepodařilo se získat oprávnění root.\n\nUjistěte se, že je vaše zařízení správně rootnuté a nejsou blokované přikazy shellu.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul ještě není aktivován</string>
   <string name="module_is_not_activated_yet_detailed">%s byl nainstalován, ale ještě není aktivován.</string>
   <string name="reboot_needed">Restartovat pro aktivaci změn</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Tento modul nemohl být načten protože je nainstalován na kartě SD, přesuňte jej prosím do interní paměti.</string>
   <string name="permissionNotGranted">Tato funkce nebude fungovat bez udělení oprávnění k zápisu na externí úložiště.</string>
-  <string name="module_saved">Modul byl uložen %1$s</string>
-  <string name="save">Uložit</string>
-  <string name="update_download_list">Přejděte dolů pro obnovení seznamu modulů na převzetí</string>
+    <string name="update_download_list">Přejděte dolů pro obnovení seznamu modulů na převzetí</string>
 </resources>

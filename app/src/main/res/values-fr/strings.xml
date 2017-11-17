@@ -26,19 +26,14 @@
   <string name="nav_item_settings">Préférences</string>
   <string name="nav_item_support">Assistance</string>
   <string name="nav_item_about">À Propos</string>
-  <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
-  <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Redémarrage doux</string>
-  <string name="reboot">Redémarrer</string>
-  <string name="reboot_failed">Le redémarrage a échoué. Veuillez utiliser la fonction redémarrage de l\'appareil.</string>
-  <string name="reboot_confirmation">Voulez-vous redémarrer maintenant ?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Redémarrer</string>
+    <string name="reboot_confirmation">Voulez-vous redémarrer maintenant ?</string>
   <string name="install_warning_title">Soyez prudent !</string>
   <string name="install_warning">Dans certains cas, votre appareil pourrait ne plus démarrer après avoir installé le Framework Xposed.\n\nSi vous n\'avez jamais entendu parler de \"soft brick\" et de \"bootloop\" avant ou si vous ne savez pas comment récupérer d\'une telle situation, n\'installez <b>PAS</b> le Framework Xposed !\n\nDans tous les cas, il est fortement recommandé d\'avoir une sauvegarde récente.</string>
   <string name="dont_show_again">Ne plus afficher</string>
   <!-- File operations -->
-  <string name="root_failed">Échec accès root.\n\nAssurez-vous que votre appareil soit correctement rooté et que vous n\'ayez pas bloqué les commandes shell.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Le module Xposed n\'est pas encore activé</string>
   <string name="module_is_not_activated_yet_detailed">%s a été installé mais n\'est pas encore activé.</string>
   <string name="activate_and_reboot">Activer et redémarrer</string>
@@ -124,5 +119,4 @@
   <string name="repo_download_failed">Téléchargement %1$s échoué: %2$s</string>
   <string name="repo_load_failed">Impossible de charger le dépôt depuis %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Enregistrer</string>
 </resources>

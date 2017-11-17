@@ -26,10 +26,8 @@
   <string name="nav_item_settings">Inställningar</string>
   <string name="nav_item_support">Hjälp</string>
   <string name="nav_item_about">Om</string>
-  <string name="navigation_drawer_close">Stäng navigationspanel</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Mjuk omstart</string>
-  <string name="reboot">Omstart</string>
+    <!-- Installer tab -->
+    <string name="reboot">Omstart</string>
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modulen är inte aktiverad än</string>
@@ -97,5 +95,4 @@
   <string name="repo_download_failed">Nerladdning av %1$s misslyckades: %2$s</string>
   <string name="repo_load_failed">Kan inte ladda datakatalog från %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Spara</string>
 </resources>

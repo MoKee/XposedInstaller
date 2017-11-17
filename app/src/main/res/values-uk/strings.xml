@@ -28,13 +28,9 @@
   <string name="nav_item_support">Служба підтримки</string>
   <string name="nav_item_logs">Логи</string>
   <string name="nav_item_about">Про додаток</string>
-  <string name="navigation_drawer_open">Відкрити навігаційну панель</string>
-  <string name="navigation_drawer_close">Закрити навігаційну панель</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Швидке перезавантаження</string>
-  <string name="reboot">Перезавантаження</string>
-  <string name="reboot_failed">Помилка перезавантаження. Скористуйтеся, будь-ласка, звичайною функцією перезавантаження.</string>
-  <string name="reboot_confirmation">Чи Ви бажаєте зараз перезавантажитися?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Перезавантаження</string>
+    <string name="reboot_confirmation">Чи Ви бажаєте зараз перезавантажитися?</string>
   <string name="install_warning_title">Обережно!</string>
   <string name="install_warning">В деяких випадках, після встановлення Xposed, Ваш пристрій може більше не запуститися.\n\nЯкщо Ви нічого не чули про \"soft brick\" та \"bootloop\" або якщо Ви не знаєте як відновитися з такого стану, будь-ласка, <b>НЕ</b> встановлюйте Xposed!\n\nВ будь-якому разі, наявність свіжої резервної копії є необхідністю.</string>
   <string name="dont_show_again">Більше не показувати</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework буде ввімкнено після наступного перезавантаження</string>
   <string name="xposed_off_next_reboot">Xposed Framework буде вимкнено після наступного перезавантаження</string>
   <!-- File operations -->
-  <string name="root_failed">Помилка отримання прав суперкористувача.\n\nПереконайтеся, що Ваш пристрій рутований (має бути доступний суперкористувач) і що Ви не заблокували виконання shell-команд.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Модуль Xposed ще не активовано</string>
   <string name="module_is_not_activated_yet_detailed">%s було встановлено, але ще не активовано.</string>
   <string name="reboot_needed">Для активації змін перезавантажтеся</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Не вдалося завантажити цей модуль, оскільки його інстальовано на SD-карту, будь ласка перемістіть його до вбудованої пам\'яті.</string>
   <string name="permissionNotGranted">Ця функція не буде працювати без дозволу на запис до зовнішнього сховища.</string>
-  <string name="module_saved">Модуль збережено до %1$s</string>
-  <string name="save">Зберегти</string>
-  <string name="update_download_list">Потягніть вниз для перезавантаження списку завантажень модулів</string>
+    <string name="update_download_list">Потягніть вниз для перезавантаження списку завантажень модулів</string>
 </resources>

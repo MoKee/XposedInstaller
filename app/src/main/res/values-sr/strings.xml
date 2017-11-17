@@ -25,16 +25,13 @@
   <string name="nav_item_download">Преузми</string>
   <string name="nav_item_support">Подршка</string>
   <!-- Installer tab -->
-  <string name="soft_reboot">Softverski restart</string>
-  <string name="reboot">Restart</string>
-  <string name="reboot_failed">Restartovanje je neuspešno. Milim, restartujte urđaj normalnom procedurom.</string>
-  <string name="reboot_confirmation">Da li želite da restartujete uređaj sada?</string>
+    <string name="reboot">Restart</string>
+    <string name="reboot_confirmation">Da li želite da restartujete uređaj sada?</string>
   <string name="install_warning_title">Budite oprezni!</string>
   <string name="install_warning">U nekim slučajevima, može se desiti da vaš uređaj ne podigne sistem nakon instalacije Xposed-a.\n\Ako nikada niste čuli o terminima \"soft brick\" i \"bootloop\" do sada ili ako ne znate kako da nađete rešenje ako se nađete u toj situaciji, <b>NE</b> instalirajte Xposed!\n\nU svakom slučaju, imati rezervnu kopiju sistema je preporučljivo.</string>
   <string name="dont_show_again">Ne prikazuj ponovo</string>
   <!-- File operations -->
-  <string name="root_failed">Neuspešan pristup root direktorijumu.\n\nProverite još jednom da li je vaš uređaj root-ovan pravilno i da niste blokirali shell komande.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul još nije aktivan</string>
   <string name="module_no_ui">Ovaj modul ne daje korisnički interfejs</string>
   <string name="no_min_version_specified">Ovaj modul nije precizirao Xposed verziju koja je potrebna.</string>
@@ -105,5 +102,4 @@
   <string name="repo_download_failed">Učitano %1$s neuspešno: %2$s</string>
   <string name="repo_load_failed">Nemoguće učitati repozitorij iz %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Сачувај</string>
 </resources>

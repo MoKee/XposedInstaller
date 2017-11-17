@@ -28,13 +28,9 @@
   <string name="nav_item_support">Wsparcie</string>
   <string name="nav_item_logs">Logi</string>
   <string name="nav_item_about">O aplikacji</string>
-  <string name="navigation_drawer_open">Otwórz szufladę naiwigacji</string>
-  <string name="navigation_drawer_close">Zamknij szufladę naiwigacji</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Tryb szybki</string>
-  <string name="reboot">Tryb normalny</string>
-  <string name="reboot_failed">Restartnie powiódł się. Proszę użyć normalnego trybu restartu.</string>
-  <string name="reboot_confirmation">Chcesz teraz zrestartować telefon?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Tryb normalny</string>
+    <string name="reboot_confirmation">Chcesz teraz zrestartować telefon?</string>
   <string name="install_warning_title">Bądź ostrożny!</string>
   <string name="install_warning">W niektórych przypadkach urządzenie może nie uruchomić się po instalacji Xposed. Jeśli nigdy nie słyszałeś o miękkiej cegle, bootloopie i nie wiesz jak odzyskać w takiej sytuacji system, nie instaluj Xposed! W każdym bądź razie, zrobienie kopii  zapasowej jest bardzo zalecane.</string>
   <string name="dont_show_again">Nie pokazuj ponownie</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework zostanie włączony po ponownym uruchoimieniu</string>
   <string name="xposed_off_next_reboot">Xposed Framework zostanie wyłączony po ponownym uruchoimieniu</string>
   <!-- File operations -->
-  <string name="root_failed">Nie udało się uzyskać dostępu do konta roota. Upewnij się, że urządzenie jest zrootowane prawidłowo i nie zostały zablokowane polecenia powłoki.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Moduł Xposed nie jest jeszcze aktywny</string>
   <string name="module_is_not_activated_yet_detailed">%s został zainstalowany, ale nie został jeszcze aktywowany.</string>
   <string name="activate_and_reboot">Aktywuj i zrestartuj</string>
@@ -137,6 +132,4 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Ten moduł nie może zostać załadowany, ponieważ jest zainstalowany na karcie SD, przenieś go do pamięci wewnętrznej.</string>
   <string name="permissionNotGranted">Ta funkcja nie zadziała bez uprawnienia zapisu zewnętrznej pamięci masowej.</string>
-  <string name="module_saved">Moduł zapisany %1$s</string>
-  <string name="save">Zapisz</string>
 </resources>

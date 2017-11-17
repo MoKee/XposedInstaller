@@ -35,9 +35,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Installer tab -->
-    <string name="soft_reboot">Soft reboot</string>
     <string name="reboot">Reboot</string>
-    <string name="reboot_failed">Reboot failed. Please use the device\'s normal reboot function.</string>
     <string name="reboot_confirmation">Do you want to reboot now?</string>
     <string name="install_warning_title">Be careful!</string>
     <string name="install_warning">In some cases, your device might no longer boot after installing Xposed.\n\nIf you never heard about \"soft brick\" and \"bootloop\" before or if you don\'t know how to recover from such a situation, do <b>NOT</b> install Xposed!\n\nIn any case, having a recent backup is highly recommended.</string>
@@ -48,7 +46,6 @@
     <string name="xposed_off_next_reboot">Xposed Framework will be disabled on next reboot</string>
 
     <!-- File operations -->
-    <string name="root_failed">Failed to get root access.\n\nMake sure your device is rooted properly and you have not blocked shell commands.</string>
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">Xposed module is not activated yet</string>
@@ -161,8 +158,6 @@
     <!-- Most of these belong to currently hidden features -->
     <string name="warning_installed_on_external_storage">This module cannot be loaded because it\'s installed on the SD card, please move it to internal storage.</string>
     <string name="permissionNotGranted">This feature will not work without permission to write external storage.</string>
-    <string name="module_saved">Module saved at %1$s</string>
-    <string name="save">Save</string>
     <string name="update_download_list">Pulldown to refresh download\'s module list</string>
 
 </resources>

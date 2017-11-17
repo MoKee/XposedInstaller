@@ -25,16 +25,13 @@
   <string name="nav_item_settings">Innstillinger</string>
   <string name="nav_item_support">Brukerstøtte</string>
   <!-- Installer tab -->
-  <string name="soft_reboot">Soft restart</string>
-  <string name="reboot">Restart</string>
-  <string name="reboot_failed">Restart failet. Vennligst bruk enhetens normale restartfunksjon.</string>
-  <string name="reboot_confirmation">Ønsker du å restarte nå?</string>
+    <string name="reboot">Restart</string>
+    <string name="reboot_confirmation">Ønsker du å restarte nå?</string>
   <string name="install_warning_title">Vær forsiktig!</string>
   <string name="install_warning">I noen tilfeller så vil ikke enheten din starte etter at du har installert Xposed..\n\nHvis du aldri har hørt om \"soft brick\" og \"bootloop\" før, eller om du ikke vet hvordan du kommer deg ut fra en slik situasjon, <b>IKKE</b> installer Xposed!\n\nI de fleste tilfeller så er en backup høyt anbefalt å ha liggende.</string>
   <string name="dont_show_again">Ikke vis dette igjen</string>
   <!-- File operations -->
-  <string name="root_failed">Klarte ikke å få root-tilgang.\n\nSørg for at enheten din er rootet riktig og at du ikke har blokkert shell-kommandoer.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul er ikke aktivert enda</string>
   <string name="module_is_not_activated_yet_detailed">%s har blitt installert, men er ikke aktivert enda.</string>
   <string name="activate_and_reboot">Aktiver og restart</string>
@@ -121,5 +118,4 @@
   <string name="repo_download_failed">Laster ned %1$s feilet: %2$s</string>
   <string name="repo_load_failed">Kan ikke laste inn pakkebrønn fra %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Lagre</string>
 </resources>

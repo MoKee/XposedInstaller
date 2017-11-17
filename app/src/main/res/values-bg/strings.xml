@@ -26,19 +26,14 @@
   <string name="nav_item_settings">Настройки</string>
   <string name="nav_item_support">Поддръжка</string>
   <string name="nav_item_about">Относно</string>
-  <string name="navigation_drawer_open">Отваряне на панела за навигация</string>
-  <string name="navigation_drawer_close">Затваряне на панела за навигация</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Софт рестарт</string>
-  <string name="reboot">Рестарт</string>
-  <string name="reboot_failed">Рестартирането не е възможно. Моля използвайте нормалната функция за рестартиране на устройството.</string>
-  <string name="reboot_confirmation">Да рестартирам ли сега?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Рестарт</string>
+    <string name="reboot_confirmation">Да рестартирам ли сега?</string>
   <string name="install_warning_title">Бъдете внимателни!</string>
   <string name="install_warning">В някои случаи е възможно, след инсталиране на Xposed вашето устройство да не стартира.\n\nАко никога не сте чували за \"soft brick\" и \"bootloop\" или ако незнаете как да възстановите устройството в такава ситуация, <b>НЕ</b> инсталирайте Xposed!\n\nВъв всеки случай се препоръчва да имате скорошно резервно копие.</string>
   <string name="dont_show_again">Не показвай отново</string>
   <!-- File operations -->
-  <string name="root_failed">Няма root достъп.\n\nУбедете се, че устройството Ви е root-нато и не сте блокирали shell командите.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Модула за Xposed не е активиран</string>
   <string name="module_is_not_activated_yet_detailed">%s беше инсталиран, но все още не е активиран.</string>
   <string name="activate_and_reboot">Активирай и рестартирай</string>
@@ -126,5 +121,4 @@
   <string name="repo_download_failed">Изтеглянето на %1$s е неуспешно: %2$s</string>
   <string name="repo_load_failed">Не може да се зареди хранилището от %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">Запазване</string>
 </resources>

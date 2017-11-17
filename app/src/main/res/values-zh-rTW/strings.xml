@@ -28,13 +28,9 @@
   <string name="nav_item_support">支援</string>
   <string name="nav_item_logs">日誌</string>
   <string name="nav_item_about">關於</string>
-  <string name="navigation_drawer_open">開啟清單式導航列</string>
-  <string name="navigation_drawer_close">關閉清單式導航列</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">快速重新啟動</string>
-  <string name="reboot">重新啟動</string>
-  <string name="reboot_failed">重新啟動失敗。請使用裝置的標準的重新啟動功能。</string>
-  <string name="reboot_confirmation">您要現在重新啟動嗎？</string>
+    <!-- Installer tab -->
+    <string name="reboot">重新啟動</string>
+    <string name="reboot_confirmation">您要現在重新啟動嗎？</string>
   <string name="install_warning_title">小心！</string>
   <string name="install_warning">某些情況下，您的裝置可能會在安裝 Xposed 後無法啓動。\n\n如果您從未聽說「軟變磚」或「無限重新啟動」，或者您不知道如何從這種情況恢復，請\"<b>不要</b>\"安裝 Xposed ！\n\n無論如何，強烈建議準備好最近的備份。</string>
   <string name="dont_show_again">不要再顯示這個</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed 框架將在下次重新啟動裝置後啟用</string>
   <string name="xposed_off_next_reboot">Xposed 框架將在下次重新啟動裝置後停用</string>
   <!-- File operations -->
-  <string name="root_failed">無法取得 root 權限。\n\n請確認您的裝置已正確的 root 以及您沒有阻擋 shell 指令。</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed 模組未啟動</string>
   <string name="module_is_not_activated_yet_detailed">已安裝 %s，但尚未啟用。</string>
   <string name="reboot_needed">重新啟動以套用修改</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">此模組安裝在 SD 卡中導致無法載入，請將此模組移回內部儲存空間。</string>
   <string name="permissionNotGranted">未取得寫入外部存儲空間權限，此功能將無法正常運作。</string>
-  <string name="module_saved">儲存模組於 %1$s</string>
-  <string name="save">儲存</string>
-  <string name="update_download_list">下滑以重新下載的模組清單</string>
+    <string name="update_download_list">下滑以重新下載的模組清單</string>
 </resources>

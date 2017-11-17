@@ -10,7 +10,6 @@
     <!-- Navigation drawer items -->
 
     <!-- Installer tab -->
-    <string name="soft_reboot">Cəld yenidən başlat</string>
     <string name="reboot">Yenidən başlat</string>
 
     <!-- File operations -->

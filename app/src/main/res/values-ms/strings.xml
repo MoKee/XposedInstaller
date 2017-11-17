@@ -10,16 +10,13 @@
     <!-- Navigation drawer items -->
 
     <!-- Installer tab -->
-    <string name="soft_reboot">Hidup smula secara perlahan</string>
     <string name="reboot">Hidupkan semula</string>
-    <string name="reboot_failed">Hidupkan semula gagal. Sila gunakan peranti\'s hidupkan smula secara biasa.</string>
     <string name="reboot_confirmation">Adakah anda mahu menghidupkan semula sekarang?</string>
     <string name="install_warning_title">Berhati²!</string>
     <string name="install_warning">Ada sesetengah kes, peranti anda mungkin tidak dapat hidupkan semula selepas memasang Xposed.\n\nJika anda tidak peduli mengenainya \"soft brick\" and \"bootloop\" sebelum anda lakukan dan\'tidak tahu bagaimana untuk pemulihan dari sebarang situasi, Jangan <b>Tidak</b> Memasang Xposed!\n\nada sesetengah kes, digalakkan anda membuat sandaran.</string>
     <string name="dont_show_again">Jangan\' tunjukkan ini lagi</string>
 
     <!-- File operations -->
-    <string name="root_failed">Gagal untuk mendapat kebenaran root.\n\nPastikan peranti anda telah di\'root secara sempurna dan anda tidak menghalang shell commands.</string>
 
     <!-- Modules tab -->
     <string name="module_is_not_activated_yet">Xposed modul tidak diaktifkan lagi</string>

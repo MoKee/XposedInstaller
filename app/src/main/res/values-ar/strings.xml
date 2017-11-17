@@ -25,8 +25,7 @@
   <string name="nav_item_support">الدعم الفني</string>
   <string name="nav_item_about">حول</string>
   <!-- Installer tab -->
-  <string name="soft_reboot">اعادة تشغيل سريعة</string>
-  <string name="reboot">اعادة التشغيل</string>
+    <string name="reboot">اعادة التشغيل</string>
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">لم يتم تنشيط الوحدة النمطية إكسبوسيد بعد</string>
@@ -92,5 +91,4 @@
   <string name="repo_download_failed">تحميل %1$s فشل: %2$s</string>
   <string name="repo_load_failed">لايمكن التحميل من المستودع %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">حفظ</string>
 </resources>

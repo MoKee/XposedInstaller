@@ -28,13 +28,9 @@
   <string name="nav_item_support">Падтрымка</string>
   <string name="nav_item_logs">Логі</string>
   <string name="nav_item_about">Аб праграме</string>
-  <string name="navigation_drawer_open">Адкрыць панэль</string>
-  <string name="navigation_drawer_close">Зачыніць панель</string>
-  <!-- Installer tab -->
-  <string name="soft_reboot">Хуткі перазапуск</string>
-  <string name="reboot">Перазапуск</string>
-  <string name="reboot_failed">Збой перазагрузкі. Калі ласка, выкарыстоўвайце убудаваную функцыю перазагрузкі на прыладзе.</string>
-  <string name="reboot_confirmation">Хочаце перазагрузіць прылада цяпер?</string>
+    <!-- Installer tab -->
+    <string name="reboot">Перазапуск</string>
+    <string name="reboot_confirmation">Хочаце перазагрузіць прылада цяпер?</string>
   <string name="install_warning_title">Будзьце асцярожныя!</string>
   <string name="install_warning">У некаторых выпадках, прылада можа не загрузіцца пасля ўсталёўкі Xposed.\n\nКалі вы не ведаеце што такое \"soft brick\" і \"bootloop\". І не ведаеце як аднавіць сістэму, <b>НЕ</b> ўсталёўвайце Xposed!\n\nУ любым выпадку, рабіце рэзервовую копію сістэмы. \"</string>
   <string name="dont_show_again">Больш не папярэджваць</string>
@@ -43,8 +39,7 @@
   <string name="xposed_on_next_reboot">Xposed Framework будзе ўключаны пасля перазагрузкі</string>
   <string name="xposed_off_next_reboot">Xposed Framework будзе адключаны пасля перазагрузкі</string>
   <!-- File operations -->
-  <string name="root_failed">Збой атрымання правоў рут-доступу.\n\nПераканайцеся, што на прыладзе ёсць рут і каманды абалонкі не блакуюцца.</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed модуль яшчэ не актываваны</string>
   <string name="module_is_not_activated_yet_detailed">%s быў усталяваны але не актываваны.</string>
   <string name="reboot_needed">Перазагрузіць, каб змены ўступілі ў сілу</string>
@@ -145,7 +140,5 @@
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Гэты модуль не можа быць загружаны, таму што ён усталяваны на SD-карту, перамесціце яго ва ўнутраную памяць.</string>
   <string name="permissionNotGranted">Гэтая функцыя не будзе працаваць без дазволу на запіс для назапашвальніка.</string>
-  <string name="module_saved">Модуль захаваны ў %1$s</string>
-  <string name="save">Захаваць</string>
-  <string name="update_download_list">Пацягніце ўніз для абнаўлення модульнага ліста</string>
+    <string name="update_download_list">Пацягніце ўніз для абнаўлення модульнага ліста</string>
 </resources>

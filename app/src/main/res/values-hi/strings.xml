@@ -23,16 +23,13 @@
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
   <!-- Installer tab -->
-  <string name="soft_reboot">नरम रिबूट</string>
-  <string name="reboot">रिबूट</string>
-  <string name="reboot_failed">रिबूट फ़ैल होगया है। किरपिया आपके डिवाइस के सामान्य रिबूट प्रक्रिया चलकर देखे।</string>
-  <string name="reboot_confirmation">क्या आप रिबूट करने की अनुमति देंगे?</string>
+    <string name="reboot">रिबूट</string>
+    <string name="reboot_confirmation">क्या आप रिबूट करने की अनुमति देंगे?</string>
   <string name="install_warning_title">ध्यान से!</string>
   <string name="install_warning">कभी कब्बर आबका डिवाइस बूट नहीं होगा, अगर आपने कभी\n\nIf  \"सॉफ्ट  ब्रिक\" और \"बूटलूप\" एन शब्दओ के बारे में कभी नहीं सुना जाओ या आप को पता नहीं की ऐसी स्थिति से रिकवर कैसे हिते है, एक्स्पोसड <b>कभी इनस्टॉल ना करे</b>!\n\nकिसी भी स्थिथि में बैकप होना यदेमंद है।</string>
   <string name="dont_show_again">वापिस मत दिखाओ</string>
   <!-- File operations -->
-  <string name="root_failed">रूट असेस नहीं मिल पाया गई।\n\nएक बार जाच करके जरुर देखे के अपने रूट किया है और जरुरी परमिशन दिए है।</string>
-  <!-- Modules tab -->
+    <!-- Modules tab -->
   <string name="module_is_not_activated_yet">एक्स्पोसड मोदुले अभी चालू नहीं है।</string>
   <string name="module_is_not_activated_yet_detailed">%s इनस्टॉल किया गया है पर वह अभी चालू नहीं है।</string>
   <string name="activate_and_reboot">चालू करके रिबूट करो</string>
@@ -119,5 +116,4 @@
   <string name="repo_download_failed">डोव्न्लॉदिङ्ग फ़ैल %1$s फ़ैल %2$s</string>
   <string name="repo_load_failed">इस रिपॉजिटरी से रिसोर्सेज लोड ना कर पाए %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="save">सहेजें</string>
 </resources>
