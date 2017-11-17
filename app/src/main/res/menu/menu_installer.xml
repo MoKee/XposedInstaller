@@ -8,11 +8,6 @@
             android:icon="@drawable/ic_menu_refresh"
             android:title="@string/reboot"/>
 
-        <item
-            android:id="@+id/soft_reboot"
-            android:icon="@drawable/ic_menu_refresh"
-            android:title="@string/soft_reboot"/>
-
     </group>
 
 </menu>

@@ -1,6 +1,8 @@
 package de.robv.android.xposed.installer;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -9,6 +11,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.design.widget.Snackbar;
@@ -39,7 +42,6 @@ import de.robv.android.xposed.installer.util.ModuleUtil;
 import de.robv.android.xposed.installer.util.ModuleUtil.InstalledModule;
 import de.robv.android.xposed.installer.util.ModuleUtil.ModuleListener;
 import de.robv.android.xposed.installer.util.NavUtil;
-import de.robv.android.xposed.installer.util.RootUtil;
 
 import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
 
@@ -160,10 +162,7 @@ public class ModulesFragment extends Fragment implements ModuleListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.reboot:
-                confirmReboot(RootUtil.RebootMode.NORMAL);
-                return true;
-            case R.id.soft_reboot:
-                confirmReboot(RootUtil.RebootMode.SOFT);
+                confirmReboot();
                 return true;
         }
 
@@ -265,14 +264,20 @@ public class ModulesFragment extends Fragment implements ModuleListener {
 
     private void showSnackbarForReboot(@StringRes int reason) {
         Snackbar.make(mModulesView, reason, Snackbar.LENGTH_LONG)
-                .setAction(R.string.reboot, v -> confirmReboot(RootUtil.RebootMode.SOFT))
+                .setAction(R.string.reboot, v -> confirmReboot())
                 .show();
     }
 
-    private void confirmReboot(final RootUtil.RebootMode mode) {
+    private void confirmReboot() {
         new AlertDialog.Builder(getActivity())
                 .setMessage(R.string.reboot_confirmation)
-                .setPositiveButton(mode.titleRes, (dialog, which) -> RootUtil.reboot(mode, getContext()))
+                .setPositiveButton(R.string.reboot, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        PowerManager powerManager = (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
+                        powerManager.reboot(null);
+                    }
+                })
                 .setNegativeButton(android.R.string.no, null)
                 .show();
     }

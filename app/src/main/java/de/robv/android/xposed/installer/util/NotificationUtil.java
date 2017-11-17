@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
@@ -19,8 +20,7 @@ public final class NotificationUtil {
     public static final int NOTIFICATION_MODULES_UPDATED = 1;
     private static final int PENDING_INTENT_OPEN_MODULES = 0;
     private static final int PENDING_INTENT_OPEN_INSTALL = 1;
-    private static final int PENDING_INTENT_SOFT_REBOOT = 2;
-    private static final int PENDING_INTENT_REBOOT = 3;
+    private static final int PENDING_INTENT_REBOOT = 2;
     private static final int PENDING_INTENT_ACTIVATE_MODULE_AND_REBOOT = 4;
     private static final int PENDING_INTENT_ACTIVATE_MODULE = 5;
     private static Context sContext = null;
@@ -116,20 +116,12 @@ public final class NotificationUtil {
         if (Build.VERSION.SDK_INT >= 21)
             builder.setPriority(2);
 
-        Intent iSoftReboot = new Intent(sContext, RebootReceiver.class);
-        iSoftReboot.putExtra(RebootReceiver.EXTRA_SOFT_REBOOT, true);
-        PendingIntent pSoftReboot = PendingIntent.getBroadcast(sContext,
-                PENDING_INTENT_SOFT_REBOOT, iSoftReboot,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-
         Intent iReboot = new Intent(sContext, RebootReceiver.class);
         PendingIntent pReboot = PendingIntent.getBroadcast(sContext,
                 PENDING_INTENT_REBOOT, iReboot,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         builder.addAction(0, sContext.getString(R.string.reboot), pReboot);
-        builder.addAction(0, sContext.getString(R.string.soft_reboot),
-                pSoftReboot);
 
         sNotificationManager.notify(null, NOTIFICATION_MODULES_UPDATED, builder.build());
     }
@@ -162,17 +154,8 @@ public final class NotificationUtil {
                 if (intent.hasExtra(EXTRA_ACTIVATE_MODULE_AND_RETURN)) return;
             }
 
-            RootUtil rootUtil = new RootUtil();
-            if (!rootUtil.startShell()) {
-                Log.e(XposedApp.TAG, "Could not start root shell");
-                return;
-            }
-
-            boolean isSoftReboot = intent.getBooleanExtra(EXTRA_SOFT_REBOOT, false);
-            rootUtil.reboot(isSoftReboot ? RootUtil.RebootMode.SOFT : RootUtil.RebootMode.NORMAL,
-                    new RootUtil.LogLineCallback());
-
-            AssetUtil.removeBusybox();
+            PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+            powerManager.reboot(null);
         }
     }
 }
