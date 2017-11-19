@@ -400,8 +400,9 @@ public final class RepoDb extends SQLiteOpenHelper {
         };
 
         // Conditions
-        String where = ModulesColumns.PREFERRED + " = 1 and m." + ModulesColumns.PKGNAME + " != '" + ModuleUtil.getInstance().getFrameworkPackageName()
-                + "' and m." + ModulesColumns.PKGNAME + " != '" + "webin.fuck_mokee_module" + "'";
+        String where = ModulesColumns.PREFERRED + " = 1 and m." + ModulesColumns.PKGNAME + " != '" + ModuleUtil.getInstance().getFrameworkPackageName() + "'"
+                + " and m." + ModulesColumns.PKGNAME + " != '" + "webin.fuck_mokee_module" + "'"
+                + " and m." + ModulesColumns.PKGNAME + " != '" + "web1n.MK.Tuner" + "'";
         String whereArgs[] = null;
         if (!TextUtils.isEmpty(filterText)) {
             where += " AND (m." + ModulesColumns.TITLE + " LIKE ?"
