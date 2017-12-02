@@ -47,9 +47,12 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Moduł Xposed nie jest jeszcze aktywny</string>
   <string name="module_is_not_activated_yet_detailed">%s został zainstalowany, ale nie został jeszcze aktywowany.</string>
+  <string name="reboot_needed">Zrestartuj aby zastosować zmiany</string>
   <string name="activate_and_reboot">Aktywuj i zrestartuj</string>
+  <string name="activate_only">Tylko aktywacja</string>
   <string name="module_activated">Moduł został aktywowany</string>
   <string name="module_no_ui">Ten moduł nie zawiera interfejsu użytkownika</string>
+  <string name="no_xposed_modules_installed">Brak zainstalowanych modułów Xposed.</string>
   <string name="xposed_module_updated_notification_title">Moduł został zaktualizowany</string>
   <string name="xposed_module_updated_notification">Uruchom ponownie, aby aktywować zmiany</string>
   <string name="no_min_version_specified">Ten moduł nie określa wymaganej wersji Xposed.</string>
@@ -68,6 +71,7 @@
   <string name="download_details_page_settings">Ustawienia</string>
   <string name="reltype_stable">Stabilna</string>
   <string name="reltype_stable_summary">Stabilna (niskie ryzyko błędów)</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (spodziewaj się trochę błędów)</string>
   <string name="reltype_experimental">Eksperymentalna</string>
   <string name="reltype_experimental_summary">Eksperymentalna (wysokie ryzyko błędów)</string>
@@ -98,6 +102,7 @@
   <string name="settings_disable_resources">Wyłącz zasoby konfliktów</string>
   <string name="settings_disable_resources_summary">Rozwiązanie konfliktów z silnikiem\n<b>OSTRZEŻENIE:</b> Moduły, które próbują zmienić zasoby nie będą pracowały, kiedy to jest włączone.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Pobierz ROM MoKee</string>
   <string name="support_framework_label">Wsparcie Framework/Instalator</string>
   <string name="support_faq_label">FAQ/znane problemy</string>
   <string name="support_donate_label">Dotacja</string>
@@ -113,7 +118,10 @@
   <string name="scroll_bottom">Przewiń do dołu</string>
   <!-- About tab -->
   <string name="about_developers_label">Moi deweloperzy</string>
+  <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114"> rovo89</a> i <a href="http://forum.xda-developers.com/member.php?u=4322181"> Tungstwenty</a> \n <a href="http://forum.xda-developers.com/member.php?u=4756862">- BioHaZard -</a> i <a href="http://forum.xda-developers.com/member.php?u=5345056"> dvdandroid</a> za poprawki i Material Design</string>
   <string name="about_translator_label">Tłumacz</string>
+  <string name="about_modified_version_label">Zmodyfikowana wersja MoKee</string>
+  <string name="about_framework_version_label">Wersja frameworka</string>
   <string name="about_source_label">Źródło kodu</string>
   <string name="about_libraries_label">Używane biblioteki</string>
   <!-- DownloadView -->
@@ -139,4 +147,5 @@
   <string name="permissionNotGranted">Ta funkcja nie zadziała bez uprawnienia zapisu zewnętrznej pamięci masowej.</string>
   <string name="module_saved">Moduł zapisany %1$s</string>
   <string name="save">Zapisz</string>
+  <string name="update_download_list">Przesuń w dół aby odświeżyć listę pobranych modułów</string>
 </resources>
