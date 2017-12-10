@@ -33,30 +33,30 @@
   <!-- Installer tab -->
   <string name="soft_reboot">Reinício rápido</string>
   <string name="reboot">Reiniciar</string>
-  <string name="reboot_failed">O reinício falhou. Por favor, use a função de reinício normal do sistema.</string>
-  <string name="reboot_confirmation">Deseja reinciar agora?</string>
+  <string name="reboot_failed">Reinicialização falhou. Por favor, use a função de reinicialização normal do dispositivo.</string>
+  <string name="reboot_confirmation">Você quer reiniciar agora?</string>
   <string name="install_warning_title">Seja cuidadoso!</string>
   <string name="install_warning">Em alguns casos, seu dispositivo pode não ligar depois de instalar o Xposed.\n\nSe você nunca ouviu falar sobre \"soft brick\" e \"bootloop\" antes ou se você não sabe como se recuperar dessa situação, <b>NÃO</b> instale o Xposed!\n\nEm qualquer caso, ter um backup recente é altamente recomendado.</string>
   <string name="dont_show_again">Não mostre isso novamente</string>
-  <string name="framework_not_active">O Xposed Framework versão %s está instalado, mas não está ativo. Por favor, veja registros para detalhes.</string>
-  <string name="status">Estado do Xposed</string>
+  <string name="framework_not_active">A versão %s do \"Xposed Framework\" está instalada mas não está ativa. Por favor verifique os registros para mais detalhes.</string>
+  <string name="status">Estado do Xposed Framework</string>
   <string name="xposed_on_next_reboot">O Xposed Framework vai ser ativado no próximo reinício</string>
   <string name="xposed_off_next_reboot">O Xposed Framework vai ser desativado no próximo reinício</string>
   <!-- File operations -->
-  <string name="root_failed">Falha ao obter acesso root.\n\nTenha certeza que seu dispositivo está enraizado corretamente e que você não bloqueou comandos shell.</string>
+  <string name="root_failed">Falha ao obter o acesso \"root\".\n\nCertifique-se de que o seu aparelho dispõe de acesso \"root\" e de que você não bloqueou comandos shell.</string>
   <!-- Modules tab -->
-  <string name="module_is_not_activated_yet">Módulo não foi ativado ainda</string>
+  <string name="module_is_not_activated_yet">O módulo Xposed Framework ainda não foi ativado</string>
   <string name="module_is_not_activated_yet_detailed">%s foi instalado, mas ainda não está ativado.</string>
-  <string name="reboot_needed">Reinicie para aplicar a atualização</string>
+  <string name="reboot_needed">Reiniciar para aplicar as alterações</string>
   <string name="activate_and_reboot">Ativar e reiniciar</string>
-  <string name="activate_only">Ativar somente</string>
-  <string name="module_activated">O módulo foi ativado</string>
+  <string name="activate_only">Somente ativar</string>
+  <string name="module_activated">O módulo Xposed Framework foi ativado</string>
   <string name="module_no_ui">Este módulo não possui uma interface de usuário</string>
-  <string name="no_xposed_modules_installed">Nenhum módulo Xposed foi encontrado.</string>
-  <string name="xposed_module_updated_notification_title">Módulo atualizado</string>
+  <string name="no_xposed_modules_installed">Nenhum módulo Xposed Framework foi encontrado.</string>
+  <string name="xposed_module_updated_notification_title">Módulo Xposed Framework atualizado</string>
   <string name="xposed_module_updated_notification">Reinicie para efetivar as mudanças</string>
-  <string name="no_min_version_specified">Este módulo não especificou qual versão do Xposed precisa.</string>
-  <string name="warning_min_version_too_low">Este módulo foi criado para a versão %1$d do Xposed, mas devido à alterações incompatíveis na versão %2$d, foi desabilitado.</string>
+  <string name="no_min_version_specified">Este módulo não especifica qual a versão do Xposed Framework de que necessita.</string>
+  <string name="warning_min_version_too_low">Este módulo foi criado para a versão %1$d do Xposed Framework, mas devido à alterações incompatíveis na versão %2$d, ele foi desativado.</string>
   <string name="module_launch">Abrir interface de usuário</string>
   <string name="module_download_updates">Baixar/Atualizar</string>
   <string name="module_support">Ajuda</string>
@@ -65,16 +65,16 @@
   <!-- Download tab -->
   <string name="menuSearch">Pesquisar</string>
   <string name="menuReload">Recarregar</string>
-  <string name="changes">Alterações</string>
-  <string name="download_details_page_description">Descrição:</string>
+  <string name="changes">Alterações:</string>
+  <string name="download_details_page_description">Descrição</string>
   <string name="download_details_page_versions">Versões</string>
   <string name="download_details_page_settings">Configurações</string>
   <string name="reltype_stable">Estável</string>
-  <string name="reltype_stable_summary">Estável (baixo risco de bugs)</string>
+  <string name="reltype_stable_summary">Estável (baixo risco de erros)</string>
   <string name="reltype_beta">Beta</string>
-  <string name="reltype_beta_summary">Beta (alguns bugs podem aparecer)</string>
+  <string name="reltype_beta_summary">Beta (alguns erros podem aparecer)</string>
   <string name="reltype_experimental">Experimental</string>
-  <string name="reltype_experimental_summary">Experimental (alto risco de bugs)</string>
+  <string name="reltype_experimental_summary">Experimental (alto risco de erros)</string>
   <string name="reltype_use_global_summary">Usar configurações globais</string>
   <string name="download_author">por %s</string>
   <string name="download_unknown_author">autor desconhecido</string>
@@ -102,20 +102,20 @@
   <string name="settings_disable_resources">Desabilitar prender recursos</string>
   <string name="settings_disable_resources_summary">Solução para conflitos com temas\n<b>AVISO:</b> Módulos que tentam alterar recursos não funcionarão com esta opção ativada.</string>
   <!-- Support tab -->
-  <string name="support_download_label">Baixar MoKee ROM</string>
+  <string name="support_download_label">Baixar a ROM do MoKee</string>
   <string name="support_framework_label">Ajuda para o Framework/Installer</string>
   <string name="support_faq_label">FAQ/erros conhecidos</string>
   <string name="support_donate_label">Doar</string>
-  <string name="support_donate_description">Se você gostaria de dizer obrigado pelo Xposed, você pode doar para rovo89 aqui</string>
+  <string name="support_donate_description">Se você gostaria de dizer obrigado pelo Xposed, você pode doar para o rovo89 aqui</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Não foi possível gravar o registro no cartão SD:</string>
   <string name="sdcard_not_writable">Cartão SD não encontrado ou não gravável</string>
   <string name="menuClearLog">Limpar registros agora</string>
   <string name="logs_cleared">Registro limpo com sucesso</string>
   <string name="logs_clear_failed">Não foi possível limpar o registro:</string>
-  <string name="log_is_empty">o registro está vazio</string>
-  <string name="scroll_top">Rolar para o topo</string>
-  <string name="scroll_bottom">Rolar ao topo</string>
+  <string name="log_is_empty">O registro está vazio</string>
+  <string name="scroll_top">Voltar ao topo</string>
+  <string name="scroll_bottom">Rolar até o final</string>
   <!-- About tab -->
   <string name="about_developers_label">Principais desenvolvedores</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> e <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> e <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> pela correção de erros e Material Design</string>
@@ -129,12 +129,12 @@
   <string name="download_view_install">Instalar</string>
   <string name="download_view_cancel">Cancelar</string>
   <string name="download_view_no_url">Nenhuma URL de download disponível</string>
-  <string name="download_view_running">Baixando (%1$,d of %2$,d kB)</string>
+  <string name="download_view_running">Baixando (%1$,d de %2$,d kB)</string>
   <string name="download_view_waiting">Esperando para baixar</string>
   <string name="download_view_successful">Baixado com sucesso</string>
   <string name="download_view_failed">Download falhou (erro %d)</string>
   <!-- DownloadUtils -->
-  <string name="download_md5sum_incorrect">MD5 sum está incorreto (baixado: %1$s, esperado: %2$s)</string>
+  <string name="download_md5sum_incorrect">Soma MD5 está incorreta (baixado: %1$s, esperado: %2$s)</string>
   <string name="download_could_not_read_file">Não foi possível ler o arquivo baixado: %s</string>
   <string name="download_no_valid_apk">O arquivo baixado não é um APK válido (ou é incompatível)</string>
   <string name="download_incorrect_package_name">Nome do pacote está incorreto (baixado: %1$s, esperado: %2$s)</string>
@@ -143,9 +143,9 @@
   <string name="repo_download_failed">Baixando %1$s falhou: %2$s</string>
   <string name="repo_load_failed">Não foi possível carregar o repositório de %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="warning_installed_on_external_storage">Este módulo não pôde ser carregado porque esá instalado no cartão SD, por favor, mova-o para a memória interna.</string>
+  <string name="warning_installed_on_external_storage">Este módulo não pôde ser carregado porque está instalado no cartão SD, por favor, mova-o para a memória interna.</string>
   <string name="permissionNotGranted">Esta função não vai funcionar sem permissão para escrever no cartão SD.</string>
   <string name="module_saved">Módulo salvo em %1$s</string>
   <string name="save">Salvar</string>
-  <string name="update_download_list">Pulldown para atualizar a lista de módulos do download</string>
+  <string name="update_download_list">Puxe para baixo para atualizar a lista de download dos módulos</string>
 </resources>
