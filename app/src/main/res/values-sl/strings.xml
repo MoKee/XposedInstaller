@@ -44,6 +44,13 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul še ni aktiviran</string>
+  <string name="reboot_needed">Ponovni zagon za uveljavitev sprememb</string>
+  <string name="activate_and_reboot">Aktiviraj in ponovno zaženi</string>
+  <string name="activate_only">Samo aktiviraj</string>
+  <string name="module_activated">Xposed modul je bil aktiviran</string>
+  <string name="module_no_ui">Ta modul ne zagotavlja uporabniškega vmesnika</string>
+  <string name="no_xposed_modules_installed">Nobeden Xposed modul ni bil nameščen.</string>
+  <string name="xposed_module_updated_notification_title">Xposed modul posodobljen</string>
   <string name="xposed_module_updated_notification">Ponovni zagon za uveljavitev sprememb</string>
   <string name="module_download_updates">Prenosi/Posodobitve</string>
   <string name="module_support">Podpora</string>
