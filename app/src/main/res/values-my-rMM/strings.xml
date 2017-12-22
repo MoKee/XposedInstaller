@@ -36,6 +36,8 @@
   <!-- Logs tab  -->
   <!-- About tab -->
   <!-- DownloadView -->
+  <string name="download_view_install">သွင်းရန်</string>
+  <string name="download_view_cancel">မလုပ်တော့</string>
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->

@@ -22,9 +22,11 @@
   <string name="menuSaveToSd">SD Karta kaydet</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Modüller</string>
   <string name="nav_item_download">İndir</string>
   <string name="nav_item_settings">Ayarlar</string>
   <string name="nav_item_support">Destek</string>
+  <string name="nav_item_logs">Günlükler</string>
   <string name="nav_item_about">Hakkında</string>
   <string name="navigation_drawer_open">Navigasyon çekmecesini aç</string>
   <string name="navigation_drawer_close">Navigasyon çekmecesini kapat</string>
@@ -36,14 +38,21 @@
   <string name="install_warning_title">Dikkatli olun!</string>
   <string name="install_warning">Bazı durumlarda Xposed yüklendikten sonra telefonunuz soft brick olabilir\n\nEğer \"soft brick\" veya \"bootloop\" gibi terimleri duymadıysanız\veya bunlar hakkında bilginiz yoksa Xposedi <b>YÜKLEMEYİN</b> Ya da yüklemeden önce\n\nMutlaka telefonunuzu yedekleyin.</string>
   <string name="dont_show_again">Bunu bir daha gösterme</string>
+  <string name="framework_not_active">Xposed Framework\'ün %s sürümü yüklü ama aktif değil. Lütfen detaylar için günlükleri kontrol edin.</string>
+  <string name="status">Xposed Durumu</string>
+  <string name="xposed_on_next_reboot">Xposed Framework sonraki başlatmada etkinleştirilecektir</string>
+  <string name="xposed_off_next_reboot">Xposed Framework sonraki başlatmada devre dışı bırakılacaktır</string>
   <!-- File operations -->
   <string name="root_failed">Root erişimi alınamadı.\n\nLütfen cihazınının root erişiminin açık olduğuna ve komut alabildiğine emin olun.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modülü henüz aktif değil</string>
   <string name="module_is_not_activated_yet_detailed">%s yüklendi,ama şu an aktif değil.</string>
+  <string name="reboot_needed">Değişiklikleri uygulamak için yeniden başlatın</string>
   <string name="activate_and_reboot">Aktifleştir ve yeniden başlat</string>
+  <string name="activate_only">Sadece etkinleştir</string>
   <string name="module_activated">Xposed modülü aktifleştirildi.</string>
   <string name="module_no_ui">Bu modül bir kullanıcı arabirimi sağlamaz</string>
+  <string name="no_xposed_modules_installed">Xposed modülleri yüklenemedi.</string>
   <string name="xposed_module_updated_notification_title">Xposed modülü güncellendi</string>
   <string name="xposed_module_updated_notification">Değişiklikleri etkinleştirmek için yeniden başlatın</string>
   <string name="no_min_version_specified">Bu modül ihtiyacı olan Xposed sürümünü belirtmez.</string>
@@ -62,6 +71,7 @@
   <string name="download_details_page_settings">Ayarlar</string>
   <string name="reltype_stable">Kararlı</string>
   <string name="reltype_stable_summary">Kararlı (Düşük hatalar olabilir)</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (bazı hatalar beklenebilir)</string>
   <string name="reltype_experimental">Deneysel</string>
   <string name="reltype_experimental_summary">Deneysel (Yüksek risk ve hatalar olabilir)</string>
@@ -92,7 +102,11 @@
   <string name="settings_disable_resources">Kaynak bilgiler engelli</string>
   <string name="settings_disable_resources_summary">Tema motoru ile çakışmalar için çözüm\n<b>UYARI:</b> Bu etkinleştirildiğinde kaynaklarını değiştirmeye çalışmayın modüller çalışmaz.</string>
   <!-- Support tab -->
+  <string name="support_download_label">MoKee ROM\'u indir</string>
+  <string name="support_framework_label">Framework/Yükleyici Desteği</string>
+  <string name="support_faq_label">SSS/karşılaşılan sorunlar</string>
   <string name="support_donate_label">Bağış yap</string>
+  <string name="support_donate_description">Xposed için teşekkür etmek isterseniz, rovo89\'a bağışta bulunabilirsiniz</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Log kayıtlarını SD karta yazamadı:</string>
   <string name="sdcard_not_writable">SD kart yazılabilir değil veya bulunamadı</string>
@@ -100,10 +114,14 @@
   <string name="logs_cleared">Log kayıtları başarı ile silindi</string>
   <string name="logs_clear_failed">Log kayıtları silinemesi:</string>
   <string name="log_is_empty">Log kaydı boş</string>
+  <string name="scroll_top">Üste kaydır</string>
+  <string name="scroll_bottom">Aşağı kaydır</string>
   <!-- About tab -->
   <string name="about_developers_label">Ana Geliştiriciler:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> and <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Çevirmen:</string>
+  <string name="about_modified_version_label">MoKee değiştirilmiş sürüm</string>
+  <string name="about_framework_version_label">Framework sürümü</string>
   <string name="about_source_label">Kaynak kodu:</string>
   <string name="about_libraries_label">Kullanılan kütüphaneler:</string>
   <!-- DownloadView -->
@@ -125,5 +143,9 @@
   <string name="repo_download_failed">İndirme %1$s başarısız: %2$s</string>
   <string name="repo_load_failed">Depodan yüklenemiyor %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Bu modül SD karta yüklü olduğundan yüklenemiyor, lütfen dahili belleğe taşıyınız.</string>
+  <string name="permissionNotGranted">Bu özellik izin almadan harici depolama alanına yazamaz.</string>
+  <string name="module_saved">%1$s modülü kaydedildi</string>
   <string name="save">Kaydet</string>
+  <string name="update_download_list">Modül indirme listesini yenilemek için aşağı çek</string>
 </resources>
