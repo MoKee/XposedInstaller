@@ -78,9 +78,9 @@
   <string name="reltype_use_global_summary">Как в общих настройках</string>
   <string name="download_author">от %s</string>
   <string name="download_unknown_author">Автор неизвестен</string>
-  <string name="download_status_installed">Установленная (версия %s)</string>
+  <string name="download_status_installed">Установлено (версия %s)</string>
   <string name="download_status_update_available">Доступно обновление (версия %1$s \u2192 %2$s)</string>
-  <string name="download_timestamps">Добавлено %1$s \u00b7 Обновлено %2$s</string>
+  <string name="download_timestamps">Добавлено %1$s \u00b7, обновлено %2$s</string>
   <string name="download_sorting_title">Порядок сортировк</string>
   <string name="download_sorting_status">Сортировать по статусу</string>
   <string name="download_sorting_updated">Сортировать по последнему обновлению</string>
@@ -129,9 +129,9 @@
   <string name="download_view_install">Установить</string>
   <string name="download_view_cancel">Отмена</string>
   <string name="download_view_no_url">Нет доступных URL для загрузки</string>
-  <string name="download_view_running">Скачивание и установка (%1$,d из %2$,d кб)</string>
+  <string name="download_view_running">Идёт скачивание (%1$,d из %2$,d КБ)</string>
   <string name="download_view_waiting">Ожидает скачивания</string>
-  <string name="download_view_successful">Скачивание завершено</string>
+  <string name="download_view_successful">Загрузка завершена</string>
   <string name="download_view_failed">Ошибка загрузки (ошибка %d)</string>
   <!-- DownloadUtils -->
   <string name="download_md5sum_incorrect">Сумма MD5 не совпадает (загружено: %1$s, ожидалось: %2$s)</string>
@@ -141,7 +141,7 @@
   <!-- RepoLoader -->
   <string name="repo_download_failed_http">Загрузка %1$s прервана: %2$d (%3$s)</string>
   <string name="repo_download_failed">Загрузка %1$s прервана: %2$s</string>
-  <string name="repo_load_failed">Не могу загрузить репозиторий %1$s:\n%2$s</string>
+  <string name="repo_load_failed">Не удалось загрузить репозиторий %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
   <string name="warning_installed_on_external_storage">Этот модуль не может быть загружен, потому что он установлен на SD-карту, переместите его во внутреннюю память.</string>
   <string name="permissionNotGranted">Эта функция не будет работать без разрешения на запись для накопителя.</string>
