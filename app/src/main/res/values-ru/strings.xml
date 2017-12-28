@@ -27,25 +27,25 @@
   <string name="nav_item_settings">Настройки</string>
   <string name="nav_item_support">Поддержка</string>
   <string name="nav_item_logs">Логи</string>
-  <string name="nav_item_about">О программе!</string>
+  <string name="nav_item_about">О приложении</string>
   <string name="navigation_drawer_open">Открыть меню приложений</string>
   <string name="navigation_drawer_close">Закрыть меню приложений</string>
   <!-- Installer tab -->
   <string name="soft_reboot">Быстрая перезагрузка</string>
-  <string name="reboot">Полная перезагрузка</string>
-  <string name="reboot_failed">Сбой перезагрузки. Пожалуйста, используйте встроенную функцию перезагрузки на устройстве.</string>
+  <string name="reboot">Перезагрузка</string>
+  <string name="reboot_failed">Не удалось перезагрузиться. Пожалуйста, используйте встроенную функцию перезагрузки на устройстве.</string>
   <string name="reboot_confirmation">Хотите перезагрузить устройство сейчас?</string>
   <string name="install_warning_title">Будьте осторожны!</string>
   <string name="install_warning">В некоторых случаях, устройство может не загрузиться после установки Xposed.\n\nЕсли вы не знаете что такое \"soft brick\" и \"bootloop\". И не знаете как восстановить систему, <b>НЕ</b> устанавливайте Xposed!\n\nВ любом случае, делайте резервную копию системы.\"</string>
-  <string name="dont_show_again">Больше не показывать сообщение</string>
-  <string name="framework_not_active">Xposed Framework версия %s установлена, но не активирована. Пожалуйста проверьте логи.</string>
+  <string name="dont_show_again">Больше не показывать</string>
+  <string name="framework_not_active">Xposed Framework версия %s установлена, но не активирована. Пожалуйста, проверьте логи для дополнительной информации.</string>
   <string name="status">Состояние Xposed</string>
   <string name="xposed_on_next_reboot">Xposed Framework будет включен после перезагрузки</string>
   <string name="xposed_off_next_reboot">Xposed Framework будет выключен после перезагрузки</string>
   <!-- File operations -->
   <string name="root_failed">Сбой получения прав рут-доступа.\n\nУбедитесь, что на устройстве есть рут и команды оболочки не блокируются.</string>
   <!-- Modules tab -->
-  <string name="module_is_not_activated_yet">Xposed модуль еще не активирован</string>
+  <string name="module_is_not_activated_yet">Модуль Xposed ещё не активирован</string>
   <string name="module_is_not_activated_yet_detailed">%s был установлен но не активирован.</string>
   <string name="reboot_needed">Перезагрузить для принятия изменений</string>
   <string name="activate_and_reboot">Активировать и перезагрузить</string>
@@ -65,7 +65,7 @@
   <!-- Download tab -->
   <string name="menuSearch">Поиск</string>
   <string name="menuReload">Обновить</string>
-  <string name="changes">Список изменений:</string>
+  <string name="changes">Изменения:</string>
   <string name="download_details_page_description">Описание</string>
   <string name="download_details_page_versions">Версии</string>
   <string name="download_details_page_settings">Настройки</string>
@@ -81,7 +81,7 @@
   <string name="download_status_installed">Установлено (версия %s)</string>
   <string name="download_status_update_available">Доступно обновление (версия %1$s \u2192 %2$s)</string>
   <string name="download_timestamps">Добавлено %1$s \u00b7, обновлено %2$s</string>
-  <string name="download_sorting_title">Порядок сортировк</string>
+  <string name="download_sorting_title">Порядок сортировки</string>
   <string name="download_sorting_status">Сортировать по статусу</string>
   <string name="download_sorting_updated">Сортировать по последнему обновлению</string>
   <string name="download_sorting_created">Сортировать по дате создания</string>
@@ -98,7 +98,7 @@
   <!-- Settings tab -->
   <string name="settings_group_download">Загрузка</string>
   <string name="settings_release_type">Отображение версий модуля</string>
-  <string name="settings_group_experimental">Экспериментальное</string>
+  <string name="settings_group_experimental">Экспериментальные</string>
   <string name="settings_disable_resources">Не изменять ресурсы</string>
   <string name="settings_disable_resources_summary">Временное решение для конфликтов с темами системы\n<b>ВНИМАНИЕ:</b> Модули, которые пытаются изменить ресурсы не будут работать, если эта опция включена.</string>
   <!-- Support tab -->
@@ -109,7 +109,7 @@
   <string name="support_donate_description">Если вы хотите отблагодарить за Xposed, вы можете сделать пожертвование для rovo89 здесь:</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Невозможно записать логи на SD-карту:</string>
-  <string name="sdcard_not_writable">SD-карта не найдена или запись на неё невозможна</string>
+  <string name="sdcard_not_writable">Карта памяти не обнаружена или она недоступна для записи</string>
   <string name="menuClearLog">Очистить логи</string>
   <string name="logs_cleared">Логи успешно очищены</string>
   <string name="logs_clear_failed">Невозможно очистить логи:</string>
@@ -119,7 +119,7 @@
   <!-- About tab -->
   <string name="about_developers_label">Главные разработчики</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> и <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> и <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> Для исправления багов и Material Дизайна</string>
-  <string name="about_translator_label">Переводчик:</string>
+  <string name="about_translator_label">Переводчик</string>
   <string name="about_modified_version_label">Модифицированная версия MoKee</string>
   <string name="about_framework_version_label">Версия фреймворка</string>
   <string name="about_source_label">Исходный код</string>
