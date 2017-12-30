@@ -23,6 +23,9 @@
   <string name="nav_item_download">I-download</string>
   <string name="nav_item_settings">Mga setting</string>
   <string name="nav_item_support">Suporta</string>
+  <string name="nav_item_about">Tungkol</string>
+  <string name="navigation_drawer_open">Buksan ang navigation drawer</string>
+  <string name="navigation_drawer_close">Isara ang navigation driver</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->

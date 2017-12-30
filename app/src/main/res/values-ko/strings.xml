@@ -35,6 +35,9 @@
   <string name="reboot">기본 재시작(권장)</string>
   <string name="reboot_failed">재부팅하지 못했습니다. 디바이스의 기본 재부팅 기능을 사용하세요.</string>
   <string name="reboot_confirmation">지금 재부팅 하시겠습니까?</string>
+  <string name="install_warning_title">주의하세요!</string>
+  <string name="install_warning">어떤 경우에는, Xposed를 설치한 후 기기가 부팅되지 않을 수 있습니다.\n\nIf \"소프트브릭\"과 \"무한부팅\"을 들어보지 못했거나 그러한 상황에서 복구할 수 있는
+ 방법을 알지 못할 경우<b>XPOSED를 설치하지 마세요!</b>\n\n어떤 경우에도, 최근 일자로 백업을 해두는 것을 강력히 권장합니다.</string>
   <string name="dont_show_again">다시 표시하지 않음</string>
   <string name="framework_not_active">Xposed 프레임 워크 버젼 %s가 설치되었지만, 활성화 되지 않았습니다. 자세한 내용은 로그를 확인 하십시요.</string>
   <string name="status">Xposed 상태</string>
@@ -45,7 +48,14 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed 모듈이 아직 활성화 되지 않았습니다.</string>
   <string name="module_is_not_activated_yet_detailed">%s가 설치되었습니다, 하지만 아직 활성화 되지 않았습니다.</string>
+  <string name="reboot_needed">재부팅하여 변경 사항 적용하기</string>
+  <string name="activate_and_reboot">활성화하고 재부팅하기</string>
+  <string name="activate_only">활성화만 하기</string>
+  <string name="module_activated">Xposed 모듈이 활성화되었습니다</string>
   <string name="module_no_ui">이 모듈은 UI(사용자 환경)를 제공하지 않습니다.\n따라서 이 모듈은 활성화 하더라도 어플리케이션의 형태로 실행되어 화면에 출력되는 바는 없습니다.</string>
+  <string name="no_xposed_modules_installed">설치된 Xposed 모듈이 없습니다.</string>
+  <string name="xposed_module_updated_notification_title">Xposed 모듈이 업데이트 되었습니다</string>
+  <string name="xposed_module_updated_notification">활성화 변경사항을 적용하기 위해 재부팅</string>
   <string name="no_min_version_specified">이 모듈은 요구되는 최소한의 Xposed의 버전이 설정되지 않았습니다.</string>
   <string name="warning_min_version_too_low">이 모듈은 Xposed 버전 %1$d에 맞춰 제작되었으나 Xposed 버전 %2$d에선 호환되지 않으므로 비활성화 됩니다.</string>
   <string name="module_launch">모듈 실행</string>
@@ -60,8 +70,13 @@
   <string name="download_details_page_description">설명</string>
   <string name="download_details_page_versions">버젼</string>
   <string name="download_details_page_settings">설정</string>
+  <string name="reltype_stable">안정</string>
+  <string name="reltype_stable_summary">안정 (버그가 적음)</string>
   <string name="reltype_beta">베타</string>
+  <string name="reltype_beta_summary">베타 (버그가 있을 수 있음)</string>
   <string name="reltype_experimental">실험적인 기능</string>
+  <string name="reltype_experimental_summary">실험 (버그의 위험이 있음)</string>
+  <string name="reltype_use_global_summary">글로벌 설정 사용하기</string>
   <string name="download_author">개발자 : %s</string>
   <string name="download_unknown_author">정의된 개발자 이름 없음.</string>
   <string name="download_status_installed">설치됨 (version %s)</string>
@@ -78,18 +93,25 @@
   <string name="download_section_7d">지난 7일간 등록된 모듈들</string>
   <string name="download_section_30d">지난 30일동안 등록된 모듈들</string>
   <string name="download_section_older">30일보다 더 오래 전에 등록된 모듈들</string>
+  <string name="download_details_not_found">저장소에서 \"%s\" 이름의 패키지 모듈을 찾을 수 없습니다.</string>
+  <string name="download_no_versions">그 저자는 아직 아무것도 업로드하지 않았습니다.</string>
+  <string name="download_test_version_not_shown">테스트 버전이 있습니다, 그러나 당신이 글로벌 설정을 했거나 모듈의 개별 설정 때문에 보이지는 않습니다.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">내려받기</string>
+  <string name="settings_release_type">표시할 버전</string>
   <string name="settings_group_experimental">실험적인 기능 들</string>
   <!-- Support tab -->
   <string name="support_download_label">MoKee ROM 다운로드</string>
+  <string name="support_framework_label">프레임워크/인스톨러 지원</string>
   <string name="support_faq_label">FAQ/알려진 문제</string>
   <string name="support_donate_label">기부</string>
+  <string name="support_donate_description">Xposed에 감사를 느낀다면, 이곳에서 개발자 rovo89에게 기부를 할 수 있습니다</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">내장 메모리에 내역을 저장할 수 없습니다 : </string>
   <string name="sdcard_not_writable">내장 메모리에 데이터를 쓸 수 없거나 내장 메모리를 찾을 수 없습니다.</string>
   <string name="menuClearLog">지금 로그 비우기</string>
   <string name="logs_cleared">로그가 성공적으로 비워졌습니다</string>
+  <string name="logs_clear_failed">기록을 청소할 수 없습니다:</string>
   <string name="log_is_empty">로그가 없습니다</string>
   <string name="scroll_top">맨 위로 스크롤</string>
   <string name="scroll_bottom">맨 아래로 스크롤</string>
@@ -97,6 +119,7 @@
   <string name="about_developers_label">대표 개발자 :</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> 와 <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">번역자 : </string>
+  <string name="about_modified_version_label">Mokee 수정된 버전</string>
   <string name="about_framework_version_label">프레임워크 버젼</string>
   <string name="about_source_label">소스 코드 :</string>
   <string name="about_libraries_label">사용된 라이브러리들 :</string>
@@ -119,5 +142,9 @@
   <string name="repo_download_failed">%1$s의 내려받기가 실패했습니다 : %2$s</string>
   <string name="repo_load_failed">%1$s로부터 정보를 읽어들이지 못했습니다 : \n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">모듈이 SD카드에 설치되어 있기 때문에 불러올 수 없습니다, 내부 저장소로 옮겨주세요.</string>
+  <string name="permissionNotGranted">이 기능은 외부 저장소 쓰기 권한 없이는 동작하지 않습니다.</string>
+  <string name="module_saved">모듈이 %1$s에 저장되었습니다</string>
   <string name="save">저장</string>
+  <string name="update_download_list">모듈 목록을 갱신하려면 아래로 밀어당기세요</string>
 </resources>
