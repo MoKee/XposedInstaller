@@ -26,6 +26,8 @@
   <string name="nav_item_settings">Setări</string>
   <string name="nav_item_support">Asistenta</string>
   <string name="nav_item_about">Despre</string>
+  <string name="navigation_drawer_open">Deschideţi sertarul de navigare</string>
+  <string name="navigation_drawer_close">Închideţi sertarul de navigare</string>
   <!-- Installer tab -->
   <string name="soft_reboot">Repornire soft:</string>
   <string name="reboot">Repornire</string>

@@ -24,6 +24,8 @@
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Преузми</string>
   <string name="nav_item_support">Подршка</string>
+  <string name="navigation_drawer_open">Отвори фиоку навигације</string>
+  <string name="navigation_drawer_close">Затвори фиоку навигације</string>
   <!-- Installer tab -->
   <string name="soft_reboot">Softverski restart</string>
   <string name="reboot">Restart</string>

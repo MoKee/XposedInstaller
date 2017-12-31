@@ -31,6 +31,7 @@
   <!-- Modules tab -->
   <string name="module_support">Hjælp</string>
   <string name="module_app_info">Oplysninger om appen</string>
+  <string name="module_uninstall">Afinstaller</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Beskrivelse</string>
   <string name="download_details_page_settings">Indstillinger</string>

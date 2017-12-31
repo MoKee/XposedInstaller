@@ -18,34 +18,134 @@
 -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <!-- General/various strings -->
+  <string name="menuSend">Ipadala</string>
+  <string name="menuSaveToSd">I-save sa SD card</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Mga modyul</string>
   <string name="nav_item_download">I-download</string>
   <string name="nav_item_settings">Mga setting</string>
   <string name="nav_item_support">Suporta</string>
+  <string name="nav_item_logs">Mga Log</string>
   <string name="nav_item_about">Tungkol</string>
   <string name="navigation_drawer_open">Buksan ang navigation drawer</string>
   <string name="navigation_drawer_close">Isara ang navigation driver</string>
   <!-- Installer tab -->
+  <string name="soft_reboot">Soft reboot</string>
+  <string name="reboot">Reboot</string>
+  <string name="reboot_failed">Nabigo ang pag-reboot. Mangyaring gamitin ang normal na pag-reboot ng function ng device.</string>
+  <string name="reboot_confirmation">Gusto mo bang mag-reboot ngayon?</string>
+  <string name="install_warning_title">Maging maingat!</string>
+  <string name="install_warning">Sa ilang mga kaso, ang iyong aparato ay maaaring hindi na ma-boot pagkatapos i-install ang Xposed.\n\n Kung hindi mo pa narinig ang tungkol sa \"soft brick\" at \"bootloop\" bago o kung hindi mo alam kung paano mabawi mula sa ganitong sitwasyon, gawin ang <b> HINDI </b> i-install ang Xposed!\n\nSa anumang kaso, ang pagkakaroon ng kamakailang backup ay lubos na inirerekomenda.</string>
+  <string name="dont_show_again">Huwag itong ipakita muli</string>
+  <string name="framework_not_active">Na-install ang bersyon ng Xposed Framework %s, ngunit hindi aktibo. Mangyaring suriin ang mga log para sa mga detalye.</string>
+  <string name="status">Estado ng Xposed</string>
+  <string name="xposed_on_next_reboot">Pinagana ang Xposed Framework sa susunod na pag-reboot</string>
+  <string name="xposed_off_next_reboot">Hindi mapapagana ang Xposed Framework sa susunod na pag-reboot</string>
   <!-- File operations -->
+  <string name="root_failed">Nabigong ma-root access.\n\nTiyakin na maayos na-root ang iyong device at hindi mo hinarangan ang mga command shell.</string>
   <!-- Modules tab -->
+  <string name="module_is_not_activated_yet">Hindi na-activate ang Xposed module</string>
+  <string name="module_is_not_activated_yet_detailed">%s na-install na, ngunit hindi pa naisa-aktibo.</string>
+  <string name="reboot_needed">I-reboot upang i-apply ang mga pagbabago</string>
+  <string name="activate_and_reboot">Buhayin at i-reboot</string>
+  <string name="activate_only">Isaaktibo lamang</string>
+  <string name="module_activated">Na-aktibo ang Xposed module</string>
+  <string name="module_no_ui">Ang module na ito ay hindi nagbibigay ng isang user interface</string>
+  <string name="no_xposed_modules_installed">Walang naka-install na mga module Xposed.</string>
+  <string name="xposed_module_updated_notification_title">Na-update ang Xposed module</string>
+  <string name="xposed_module_updated_notification">I-reboot upang i-activate ang mga pagbabago</string>
+  <string name="no_min_version_specified">Ang module na ito ay hindi tumutukoy sa Xposed na bersyon na kailangan nito.</string>
+  <string name="warning_min_version_too_low">Ang module na ito ay nilikha para sa Xposed na bersyon% 1 $ d, ngunit dahil sa mga di-magkatugma na mga pagbabago sa bersyon% 2 $ d, hindi pinagana.</string>
+  <string name="module_launch">Ilunsad ang UI</string>
+  <string name="module_download_updates">I-download / Mga Update</string>
   <string name="module_support">Suporta</string>
+  <string name="module_app_info">Impormasyon ng app</string>
+  <string name="module_uninstall">I-uninstall</string>
   <!-- Download tab -->
+  <string name="menuSearch">Hanapin</string>
+  <string name="menuReload">I-reload</string>
+  <string name="changes">Mga pagbabago:</string>
+  <string name="download_details_page_description">Paglalarawan</string>
+  <string name="download_details_page_versions">Mga Bersyon</string>
   <string name="download_details_page_settings">Mga setting</string>
+  <string name="reltype_stable">Stable</string>
+  <string name="reltype_stable_summary">Stable (mababang panganib ng mga bug)</string>
+  <string name="reltype_beta">Beta</string>
+  <string name="reltype_beta_summary">Beta (ilang mga bug na inaasahan)</string>
   <string name="reltype_experimental">Eksperimental</string>
+  <string name="reltype_experimental_summary">Experimental (mataas na panganib ng mga bug)</string>
+  <string name="reltype_use_global_summary">Gumamit ng pandaigdigang setting</string>
+  <string name="download_author">ni %s</string>
+  <string name="download_unknown_author">hindi kilalang may-akda</string>
+  <string name="download_status_installed">Naka-install (bersyon %s)</string>
+  <string name="download_status_update_available">I-update ang magagamit (bersyon %1$s \u2192 %2$s)</string>
+  <string name="download_timestamps">Nagdagdag sa% 1 $ s \ u00b7 Na-update sa% 2 $ s</string>
+  <string name="download_sorting_title">Pag-aayos ng order</string>
+  <string name="download_sorting_status">Pagsunud-sunuran ayon sa katayuan</string>
+  <string name="download_sorting_updated">Pagsunud-sunurin ayon sa huling update</string>
+  <string name="download_sorting_created">Pagsunud-sunurin ayon sa petsa ng paglikha</string>
+  <string name="download_section_update_available">Ang update ay available</string>
   <string name="download_section_installed">Naka-install</string>
+  <string name="download_section_not_installed">Hindi naka-install</string>
+  <string name="download_section_24h">Huling 24 na oras</string>
+  <string name="download_section_7d">Huling 7 araw</string>
+  <string name="download_section_30d">Huling 30 araw</string>
+  <string name="download_section_older">Mahigit sa 30 araw na nakalipas</string>
+  <string name="download_details_not_found">Walang module na may pangalan ng package na \"% s\" sa repository.</string>
+  <string name="download_no_versions">Hindi pa na-upload ang may-akda.</string>
+  <string name="download_test_version_not_shown">Available ang isang pagsubok na bersyon, subalit hindi ito ipinapakita dahil sa iyong mga pandaigdigang o mga setting na tukoy sa module.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">I-download</string>
+  <string name="settings_release_type">Mga Bersyon na ipapakita</string>
   <string name="settings_group_experimental">Eksperimental</string>
+  <string name="settings_disable_resources">Disabled resource hooks</string>
+  <string name="settings_disable_resources_summary">Magtrabaho sa paligid para sa mga kontrahan sa mga theming engine \ n <b> BABALA: </ b> Mga module na subukan upang baguhin ang mga mapagkukunan ay hindi gagana kapag ito ay gumagana.</string>
   <!-- Support tab -->
+  <string name="support_download_label">I-download ang MoKee ROM</string>
+  <string name="support_framework_label">Suporta sa Framework / Installer</string>
+  <string name="support_faq_label">FAQ / kilalang isyu</string>
   <string name="support_donate_label">Mag-donate</string>
+  <string name="support_donate_description">Kung nais mong sabihin salamat para sa Xposed, maaari kang mag-abuloy sa rovo89 dito</string>
   <!-- Logs tab  -->
+  <string name="logs_save_failed">Hindi maisulat ang log sa SD card:</string>
+  <string name="sdcard_not_writable">Ang SD card ay hindi natagpuan o hindi maaaring masulatan</string>
+  <string name="menuClearLog">I-clear ang log ngayon</string>
+  <string name="logs_cleared">Matagumpay na nai-clear ang pag-log</string>
+  <string name="logs_clear_failed">Hindi maalis ang log:</string>
+  <string name="log_is_empty">Walang laman ang log</string>
+  <string name="scroll_top">Mag-scroll sa itaas</string>
+  <string name="scroll_bottom">Mag-scroll sa ibaba</string>
   <!-- About tab -->
+  <string name="about_developers_label">Pangunahing developer</string>
+  <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> and <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>\n<a href="http://forum.xda-developers.com/member.php?u=4756862">-BioHaZard-</a> and <a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a> for bug fixes and Material Design</string>
+  <string name="about_translator_label">Isalin</string>
+  <string name="about_modified_version_label">MoKee na binagong bersyon</string>
+  <string name="about_framework_version_label">Framework version</string>
+  <string name="about_source_label">Source code</string>
+  <string name="about_libraries_label">Ginamit na mga library</string>
   <!-- DownloadView -->
   <string name="download_view_download">I-download</string>
   <string name="download_view_install">Mag-install</string>
   <string name="download_view_cancel">Kanselahin</string>
+  <string name="download_view_no_url">Walang magagamit na URL ng pag-download</string>
+  <string name="download_view_running">Ang pag-download ay tumatakbo (%1$,d of %2$,d kB)</string>
+  <string name="download_view_waiting">Naghihintay ang pag-download</string>
+  <string name="download_view_successful">Ang download ay matagumpay</string>
+  <string name="download_view_failed">Nabigo ang pag-download (error %d)</string>
   <!-- DownloadUtils -->
+  <string name="download_md5sum_incorrect">Mali ang MD5 (nai-download na:% 1 $ s, inaasahan:% 2 $ s)</string>
+  <string name="download_could_not_read_file">Hindi mabasa ang nai-download na file: %s</string>
+  <string name="download_no_valid_apk">Ang na-download na file ay hindi isang wastong APK (o hindi tugma)</string>
+  <string name="download_incorrect_package_name">Mali ang pangalan ng package (download:% 1 $ s, inaasahan:% 2 $ s)</string>
   <!-- RepoLoader -->
+  <string name="repo_download_failed_http">Nagda-download %1$s nabigo: %2$d (%3$s)</string>
+  <string name="repo_download_failed">Nagda-download %1$s nabigo: %2$d</string>
+  <string name="repo_load_failed">Hindi ma-load ang imbakan mula sa %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Ang module na ito ay hindi maaaring mai-load dahil naka-install ito sa SD card, mangyaring ilipat ito sa panloob na imbakan.</string>
+  <string name="permissionNotGranted">Ang tampok na ito ay hindi gagana nang walang pahintulot na magsulat ng panlabas na imbakan.</string>
+  <string name="module_saved">Module na na-save sa</string>
+  <string name="save">I-save</string>
+  <string name="update_download_list">Pulldown upang i-refresh ang listahan ng module ng pag-download</string>
 </resources>

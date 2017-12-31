@@ -22,6 +22,8 @@
   <!-- Navigation drawer items -->
   <string name="nav_item_download">Atsisiųsti</string>
   <string name="nav_item_support">Parama</string>
+  <string name="navigation_drawer_open">Atidaryti navigacijos stalčių</string>
+  <string name="navigation_drawer_close">Uždaryti navigacijos stalčių</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->

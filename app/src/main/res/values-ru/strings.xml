@@ -134,7 +134,7 @@
   <string name="download_view_cancel">Отмена</string>
   <string name="download_view_no_url">Нет доступных URL для загрузки</string>
   <string name="download_view_running">Идёт скачивание (%1$,d из %2$,d КБ)</string>
-  <string name="download_view_waiting">Ожидает скачивания</string>
+  <string name="download_view_waiting">Ожидание скачивания</string>
   <string name="download_view_successful">Загрузка завершена</string>
   <string name="download_view_failed">Ошибка загрузки (ошибка %d)</string>
   <!-- DownloadUtils -->

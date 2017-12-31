@@ -28,6 +28,7 @@
   <!-- Modules tab -->
   <string name="module_support">Support</string>
   <string name="module_app_info">অ্যাপ্লিকেশানের তথ্য</string>
+  <string name="module_uninstall">আনইনস্টল করুন</string>
   <!-- Download tab -->
   <string name="download_details_page_settings">Settings</string>
   <string name="reltype_experimental">পরীক্ষামূলক</string>

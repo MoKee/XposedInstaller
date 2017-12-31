@@ -23,6 +23,8 @@
   <string name="nav_item_download">دانلود</string>
   <string name="nav_item_settings">تنظیمات</string>
   <string name="nav_item_support">پشتیبانی</string>
+  <string name="navigation_drawer_open">باز کردن کشو</string>
+  <string name="navigation_drawer_close">بستن کشو</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->

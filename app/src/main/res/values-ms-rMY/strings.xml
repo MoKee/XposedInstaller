@@ -28,6 +28,7 @@
   <!-- Modules tab -->
   <string name="module_support">Sokongan</string>
   <string name="module_app_info">Maklumat apl</string>
+  <string name="module_uninstall">Nyahpasang</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Perihalan</string>
   <string name="download_details_page_settings">Tetapan</string>

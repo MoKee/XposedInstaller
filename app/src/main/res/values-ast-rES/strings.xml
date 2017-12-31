@@ -20,6 +20,8 @@
   <!-- General/various strings -->
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="navigation_drawer_open">Abrir caxón de navegación</string>
+  <string name="navigation_drawer_close">Zarrar caxón de navegación</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->
