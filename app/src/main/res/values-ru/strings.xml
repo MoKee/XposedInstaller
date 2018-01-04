@@ -47,7 +47,7 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Модуль Xposed ещё не активирован</string>
   <string name="module_is_not_activated_yet_detailed">Модуль %s установлен, но не активирован.</string>
-  <string name="reboot_needed">Перезагрузить для применения изменений</string>
+  <string name="reboot_needed">Перезагрузите для применения изменений</string>
   <string name="activate_and_reboot">Активировать и перезагрузить</string>
   <string name="activate_only">Только активировать</string>
   <string name="module_activated">Модуль Xposed активирован</string>

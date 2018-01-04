@@ -20,19 +20,27 @@
   <!-- General/various strings -->
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_download">I-download</string>
   <string name="nav_item_support">Suporta</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_support">Suporta</string>
   <string name="module_app_info">Impormasyon ng app</string>
+  <string name="module_uninstall">I-uninstall</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Paglalarawan</string>
+  <string name="reltype_experimental">Eksperimental</string>
+  <string name="download_section_installed">Naka-install</string>
   <!-- Settings tab -->
+  <string name="settings_group_download">I-download</string>
+  <string name="settings_group_experimental">Eksperimental</string>
   <!-- Support tab -->
+  <string name="support_donate_label">Mag-abuloy</string>
   <!-- Logs tab  -->
   <!-- About tab -->
   <!-- DownloadView -->
+  <string name="download_view_download">I-download</string>
   <!-- DownloadUtils -->
   <!-- RepoLoader -->
   <!-- Most of these belong to currently hidden features -->
