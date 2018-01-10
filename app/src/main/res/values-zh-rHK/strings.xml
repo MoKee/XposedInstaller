@@ -126,8 +126,8 @@
   <string name="about_libraries_label">使用的函式庫</string>
   <!-- DownloadView -->
   <string name="download_view_download">下載</string>
-  <string name="download_view_install">Install</string>
-  <string name="download_view_cancel">Cancel</string>
+  <string name="download_view_install">安裝</string>
+  <string name="download_view_cancel">取消</string>
   <string name="download_view_no_url">無下載地址可用</string>
   <string name="download_view_running">正在下載 (%1$,d / %2$,d kB)</string>
   <string name="download_view_waiting">等待下載中</string>

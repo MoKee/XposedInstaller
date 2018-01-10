@@ -26,6 +26,7 @@
   <!-- Modules tab -->
   <string name="module_support">Qo\'llab-quvvatlas</string>
   <string name="module_app_info">Ilova haqida</string>
+  <string name="module_uninstall">O‘chirib tashlash</string>
   <!-- Download tab -->
   <string name="reltype_experimental">Tajriba</string>
   <string name="download_section_installed">O\'rnatilgan</string>

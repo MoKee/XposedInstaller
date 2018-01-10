@@ -28,6 +28,7 @@
   <!-- Modules tab -->
   <string name="module_support">ಬೆಂಬಲ</string>
   <string name="module_app_info">ಅಪ್ಲಿಕೇಶನ್ ಮಾಹಿತಿ</string>
+  <string name="module_uninstall">ಅಸ್ಥಾಪಿಸು</string>
   <!-- Download tab -->
   <string name="download_details_page_settings">ಸಂಯೋಜನೆಗಳು</string>
   <string name="reltype_experimental">ಪ್ರಾಯೋಗಿಕ</string>

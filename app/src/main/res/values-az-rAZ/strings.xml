@@ -27,6 +27,7 @@
   <!-- Modules tab -->
   <string name="module_support">Dəstək</string>
   <string name="module_app_info">Tətbiq məlumatı</string>
+  <string name="module_uninstall">Sistemdən sil</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Təsvir</string>
   <string name="download_details_page_versions">Versiyalar</string>

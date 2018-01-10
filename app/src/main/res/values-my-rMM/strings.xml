@@ -26,6 +26,7 @@
   <!-- Modules tab -->
   <string name="module_support">အထောက်အပံ့</string>
   <string name="module_app_info">အက်ပ်အချက်အလက်များ</string>
+  <string name="module_uninstall">ဖယ်ထုတ်မည်</string>
   <!-- Download tab -->
   <string name="reltype_experimental">စမ်းသပ်အဆင့်</string>
   <string name="download_section_installed">ထည့်သွင်းထားသော</string>
