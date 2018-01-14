@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Հավելվածի տվյալներ</string>
+  <string name="module_uninstall">Հեռացնել</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Նկարագրություն</string>
   <!-- Settings tab -->

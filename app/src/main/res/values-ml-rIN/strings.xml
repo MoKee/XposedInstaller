@@ -27,6 +27,7 @@
   <!-- Modules tab -->
   <string name="module_support">പിന്തുണ</string>
   <string name="module_app_info">ആപ്പ് വിവരം</string>
+  <string name="module_uninstall">അൺഇൻസ്റ്റാളുചെയ്യുക</string>
   <!-- Download tab -->
   <string name="reltype_experimental">പരീക്ഷണകരം</string>
   <string name="download_section_installed">ഇൻസ്റ്റാൾ ചെയ്തു</string>

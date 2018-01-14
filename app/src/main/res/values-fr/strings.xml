@@ -22,6 +22,7 @@
   <string name="menuSaveToSd">Sauver sur la carte SD</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Modules</string>
   <string name="nav_item_download">Télécharger</string>
   <string name="nav_item_settings">Préférences</string>
   <string name="nav_item_support">Assistance</string>

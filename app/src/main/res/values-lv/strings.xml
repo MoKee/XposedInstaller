@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Lietotnes informācija</string>
+  <string name="module_uninstall">Atinstalēt</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Apraksts</string>
   <!-- Settings tab -->

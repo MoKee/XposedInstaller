@@ -31,6 +31,7 @@
   <string name="module_uninstall">I-uninstall</string>
   <!-- Download tab -->
   <string name="menuSearch">Hanapin</string>
+  <string name="menuReload">I-reload</string>
   <string name="download_details_page_description">Paglalarawan</string>
   <string name="download_details_page_settings">Mga setting</string>
   <string name="reltype_experimental">Eksperimental</string>

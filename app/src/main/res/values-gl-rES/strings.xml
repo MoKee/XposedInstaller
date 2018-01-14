@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Info. da aplicación</string>
+  <string name="module_uninstall">Desinstalar</string>
   <!-- Download tab -->
   <!-- Settings tab -->
   <!-- Support tab -->

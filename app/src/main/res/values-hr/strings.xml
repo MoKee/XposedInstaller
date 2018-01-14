@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Info o aplikaciji</string>
+  <string name="module_uninstall">Deinstaliraj</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Opis</string>
   <!-- Settings tab -->

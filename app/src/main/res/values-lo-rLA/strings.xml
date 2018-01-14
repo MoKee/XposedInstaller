@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">ຂໍ້ມູນແອັບ</string>
+  <string name="module_uninstall">ຖອນ​ການ​ຕິດ​ຕັ້ງ</string>
   <!-- Download tab -->
   <string name="download_details_page_description">ຄຳອະທິບາຍ</string>
   <!-- Settings tab -->

@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Rakenduse teave</string>
+  <string name="module_uninstall">Desinstalli</string>
   <!-- Download tab -->
   <string name="download_details_page_description">Kirjeldus</string>
   <!-- Settings tab -->

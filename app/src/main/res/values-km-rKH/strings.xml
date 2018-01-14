@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">ព័ត៌មាន​កម្មវិធី</string>
+  <string name="module_uninstall">លុបការដំឡើង</string>
   <!-- Download tab -->
   <string name="download_details_page_description">ការ​ពិពណ៌នា</string>
   <!-- Settings tab -->

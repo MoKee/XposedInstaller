@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">अनुप्रयोग जानकारी</string>
+  <string name="module_uninstall">विस्थापित गर्नुहोस्</string>
   <!-- Download tab -->
   <string name="download_details_page_description">वर्णन</string>
   <!-- Settings tab -->

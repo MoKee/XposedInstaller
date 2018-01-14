@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">යෙදුම් තොරතුරු</string>
+  <string name="module_uninstall">අස්ථාපනය කරන්න</string>
   <!-- Download tab -->
   <string name="download_details_page_description">විස්තරය</string>
   <!-- Settings tab -->

@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">Инф. за апликација</string>
+  <string name="module_uninstall">Деинсталирај</string>
   <!-- Download tab -->
   <!-- Settings tab -->
   <!-- Support tab -->

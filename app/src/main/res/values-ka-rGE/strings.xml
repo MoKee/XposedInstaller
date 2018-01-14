@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">აპის შესახებ</string>
+  <string name="module_uninstall">დეინსტალაცია</string>
   <!-- Download tab -->
   <string name="download_details_page_description">აღწერა</string>
   <!-- Settings tab -->

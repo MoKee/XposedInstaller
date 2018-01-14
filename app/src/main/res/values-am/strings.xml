@@ -24,6 +24,7 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_app_info">የመተግበሪያ መረጃ</string>
+  <string name="module_uninstall">አራግፍ</string>
   <!-- Download tab -->
   <string name="download_details_page_description">መግለጫ</string>
   <!-- Settings tab -->
