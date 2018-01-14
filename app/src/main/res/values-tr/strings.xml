@@ -36,7 +36,7 @@
   <string name="reboot_failed">Yeniden Başlatma hatası. Lütfen cihazın normal yeniden başlatma işlevini kullanın.</string>
   <string name="reboot_confirmation">Telefonu yeniden başlatmak istiyor musunuz?</string>
   <string name="install_warning_title">Dikkatli ol!</string>
-  <string name="install_warning">Bazı durumlarda, Xposed\'i yükledikten sonra cihazınız önyükleme yapmayabilir.\n\n Eğer Daha önce \"yumuşak tuğla\" ve \"ön yükleme döngüsü\" hakkında hiç bir şey duymadıysanız veya böyle bir durumdan nasıl kurtulacağınızı bilmiyorsanız, Xposed\'ı <b>kurmayın<b>!\n\n Her durumda, yeni bir yedekleme yapılması şiddetle tavsiye edilir.</string>
+  <string name="install_warning">Bazı durumlarda, Xposed\'i yükledikten sonra cihazınız önyükleme yapmayabilir.\n\n Eğer Daha önce \"yumuşak tuğla\" ve \"ön yükleme döngüsü\" hakkında hiç bir şey duymadıysanız veya böyle bir durumdan nasıl kurtulacağınızı bilmiyorsanız, Xposed\'ı <b>kurmayın</b>!\n\n Her durumda, yeni bir yedekleme yapılması şiddetle tavsiye edilir.</string>
   <string name="dont_show_again">Bunu tekrar gösterme</string>
   <string name="framework_not_active">Xposed\'ın Framework sürümü %s yüklü ama aktif değil. Lütfen detaylar için günlük kayıtları kontrol edin.</string>
   <string name="status">Xposed durumu</string>
