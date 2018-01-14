@@ -100,7 +100,7 @@
   <string name="settings_release_type">Mga Bersyon na ipapakita</string>
   <string name="settings_group_experimental">Eksperimental</string>
   <string name="settings_disable_resources">Disabled resource hooks</string>
-  <string name="settings_disable_resources_summary">Magtrabaho sa paligid para sa mga kontrahan sa mga theming engine \ n <b> BABALA: </ b> Mga module na subukan upang baguhin ang mga mapagkukunan ay hindi gagana kapag ito ay gumagana.</string>
+  <string name="settings_disable_resources_summary">Magtrabaho sa paligid para sa mga kontrahan sa mga theming engine \ n <b> BABALA: </b> Mga module na subukan upang baguhin ang mga mapagkukunan ay hindi gagana kapag ito ay gumagana.</string>
   <!-- Support tab -->
   <string name="support_download_label">I-download ang MoKee ROM</string>
   <string name="support_framework_label">Suporta sa Framework / Installer</string>
