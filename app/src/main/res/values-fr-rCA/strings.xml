@@ -31,13 +31,14 @@
   <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
   <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
   <!-- Installer tab -->
-  <string name="soft_reboot">Redémarrage doux</string>
+  <string name="soft_reboot">Redémarrage à chaud</string>
   <string name="reboot">Redémarrer</string>
-  <string name="reboot_failed">Le redémarrage a échoué. Veuillez utiliser la fonction redémarrage de l\'appareil.</string>
-  <string name="reboot_confirmation">Voulez-vous redémarrer maintenant ?</string>
+  <string name="reboot_failed">Échec de redémarrage. Veuillez utiliser la fonction habituelle de redémarrage de l’appareil.</string>
+  <string name="reboot_confirmation">Voulez-vous redémarrer maintenant ?</string>
   <string name="install_warning_title">Soyez prudent !</string>
   <string name="install_warning">Dans certains cas, votre appareil pourrait ne plus démarrer après avoir installé le Framework Xposed.\n\nSi vous n\'avez jamais entendu parler de \"soft brick\" et de \"bootloop\" avant ou si vous ne savez pas comment récupérer d\'une telle situation, n\'installez <b>PAS</b> le Framework Xposed !\n\nDans tous les cas, il est fortement recommandé d\'avoir une sauvegarde récente.</string>
   <string name="dont_show_again">Ne plus afficher</string>
+  <string name="framework_not_active">Xposed Framework version %s est installé, mais non-active. Vérifiez, s\'il vous plaît, les rapports pour des détails.</string>
   <string name="status">Statut de Xposed</string>
   <string name="xposed_on_next_reboot">Le Framework Xposed sera activé au prochain redémarrage</string>
   <string name="xposed_off_next_reboot">Le Framework Xposed sera désactivé au prochain redémarrage</string>
@@ -46,14 +47,14 @@
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Le module Xposed n\'est pas encore activé</string>
   <string name="module_is_not_activated_yet_detailed">%s a été installé mais n\'est pas encore activé.</string>
-  <string name="reboot_needed">Redémarrez pour activer les modifications</string>
+  <string name="reboot_needed">Redémarrer pour appliquer les changements</string>
   <string name="activate_and_reboot">Activer et redémarrer</string>
   <string name="activate_only">Activer uniquement</string>
   <string name="module_activated">Module Xposed activé</string>
   <string name="module_no_ui">Ce module ne fournit pas d\'interface utilisateur</string>
   <string name="no_xposed_modules_installed">Aucun module Xposed installé.</string>
   <string name="xposed_module_updated_notification_title">Module Xposed mis à jour</string>
-  <string name="xposed_module_updated_notification">Redémarrez pour appliquer les modifications</string>
+  <string name="xposed_module_updated_notification">Redémarrer pour appliquer les changements</string>
   <string name="no_min_version_specified">Ce module ne spécifie pas la version de Xposed dont il a besoin.</string>
   <string name="warning_min_version_too_low">Ce module a été créé pour Xposed version %1$d, mais du fait de changements incompatibles dans la version %2$d, il a été désactivé.</string>
   <string name="module_launch">Lancer l\'UI</string>
@@ -102,8 +103,10 @@
   <string name="settings_disable_resources_summary">Solution pour éviter les conflits avec les moteurs de thème\n<b>ATTENTION:</b> Les modules qui essaient de modifier les ressources ne fonctionneront pas si vous activez ceci.</string>
   <!-- Support tab -->
   <string name="support_download_label">Télécharger la ROM MoKee</string>
+  <string name="support_framework_label">Support du Framework/Installer</string>
   <string name="support_faq_label">FAQ/problèmes connus</string>
   <string name="support_donate_label">Faire un don</string>
+  <string name="support_donate_description">Si vous voulez dire Merci pour Xposed, vous pouvez faire un don à rovo89 ici</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Impossible d\'écrire le journal:</string>
   <string name="sdcard_not_writable">Carte SD non trouvée ou en lecture seule</string>
