@@ -109,7 +109,7 @@
   <string name="support_donate_description">Si vous voulez dire Merci pour Xposed, vous pouvez faire un don à rovo89 ici</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Impossible d\'écrire le journal:</string>
-  <string name="sdcard_not_writable">Carte SD non trouvée ou en lecture seule</string>
+  <string name="sdcard_not_writable">La carte SD est introuvable ou en lecture seule</string>
   <string name="menuClearLog">Effacer le journal</string>
   <string name="logs_cleared">Journal effacé</string>
   <string name="logs_clear_failed">Impossible d\'effacer le journal:</string>

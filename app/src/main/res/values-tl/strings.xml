@@ -26,19 +26,33 @@
   <string name="nav_item_download">I-download</string>
   <string name="nav_item_settings">Mga setting</string>
   <string name="nav_item_support">Suporta</string>
+  <string name="nav_item_logs">Mga log</string>
   <string name="nav_item_about">Tungkol sa</string>
+  <string name="navigation_drawer_open">Buksan ang navigation drawer</string>
+  <string name="navigation_drawer_close">Isara ang navigation drawer</string>
   <!-- Installer tab -->
   <string name="reboot_failed">Nabigo ang pag-reboot. Mangyaring gamitin ang normal na pag-reboot ng punsyon ng device.</string>
   <string name="reboot_confirmation">Gusto mo bang mag-reboot ngayon?</string>
+  <string name="install_warning_title">Mag-ingat!</string>
   <string name="install_warning">Sa ilang mga kaso, ang iyong device ay maaaring hindi na ma-boot pagkatapos i-install ang Xposed.\n\n Kung hindi mo pa narinig ang tungkol sa \"soft brick\" at \"bootloop\" noon o kung hindi mo alam kung paano mabawi mula sa ganitong sitwasyon, <b> HUWAG </b> i-install ang Xposed!\n\nSa anumang kaso, ang pagkakaroon ng kamakailang backup ay lubos na inirerekomenda.</string>
+  <string name="dont_show_again">Huwag itong ipakitang muli</string>
   <string name="framework_not_active">Na-install ang bersyon ng Xposed Framework %s, ngunit hindi aktibo. Paki-suri ang mga log para sa mga detalye.</string>
+  <string name="status">Status ng Xposed</string>
   <string name="xposed_on_next_reboot">Pinagana ang Xposed Framework sa susunod na pag-reboot</string>
   <string name="xposed_off_next_reboot">Hindi mapapagana ang Xposed Framework sa susunod na pag-reboot</string>
   <!-- File operations -->
   <string name="root_failed">Nabigong makakuha ng root access.\n\nTiyakin na maayos na-root ang iyong device at hindi mo hinarangan ang mga command shell.</string>
   <!-- Modules tab -->
+  <string name="module_is_not_activated_yet">Ang Xposed na module ay hindi pa naka-activate</string>
   <string name="module_is_not_activated_yet_detailed">%s na-install na, ngunit hindi pa naisa-aktibo.</string>
+  <string name="reboot_needed">I-reboot upang i-apply ang mga pagbabago</string>
+  <string name="activate_and_reboot">I-activate at i-reboot</string>
+  <string name="activate_only">Aktibahin lamang</string>
+  <string name="module_activated">Ang Xposed na module ay na-activate na</string>
   <string name="module_no_ui">Ang module na ito ay hindi nagbibigay ng isang user interface</string>
+  <string name="no_xposed_modules_installed">Walang Xposed na mga module ang na-install.</string>
+  <string name="xposed_module_updated_notification_title">Ang Xposed na module ay na-update na</string>
+  <string name="xposed_module_updated_notification">I-reboot upang i-activate ang mga pagbabago</string>
   <string name="no_min_version_specified">Ang module na ito ay hindi tumutukoy sa Xposed na bersyon na kailangan nito.</string>
   <string name="warning_min_version_too_low">Ang module na ito ay nilikha para sa Xposed na bersyon %1$d, ngunit dahil sa mga di-magkatugma na mga pagbabago sa bersyon %2$d, ito ay hindi pinagana.</string>
   <string name="module_support">Suporta</string>
@@ -47,24 +61,54 @@
   <!-- Download tab -->
   <string name="menuSearch">Hanapin</string>
   <string name="menuReload">I-reload</string>
+  <string name="changes">Pagbabago:</string>
   <string name="download_details_page_description">Paglalarawan</string>
   <string name="download_details_page_settings">Mga setting</string>
   <string name="reltype_experimental">Eksperimental</string>
+  <string name="reltype_use_global_summary">Gamitin ang global na setting</string>
+  <string name="download_unknown_author">hindi kilalang may-akda</string>
   <string name="download_status_update_available">I-update ang magagamit (bersyon %1$s \u2192 %2$s)</string>
   <string name="download_timestamps">Nagdagdag sa %1$s \u00b7 Na-update sa %2$s</string>
+  <string name="download_sorting_title">Order ng pag-uri</string>
+  <string name="download_sorting_status">Uriin ayon sa status</string>
+  <string name="download_sorting_updated">Uriin ayon sa huling update</string>
+  <string name="download_sorting_created">Uriin ayon sa petsa ng paggawa</string>
   <string name="download_section_installed">Naka-install</string>
+  <string name="download_section_not_installed">Hindi na-install</string>
+  <string name="download_section_24h">Nakaraang 24 oras</string>
+  <string name="download_section_7d">Nakaraang 7 araw</string>
+  <string name="download_section_30d">Nakaraang 30 na araw</string>
+  <string name="download_section_older">Mahigit sa 30 na raw na ang nakakaraan</string>
+  <string name="download_details_not_found">Walang module na mayroong package name na \"%s\" sa repository.</string>
+  <string name="download_no_versions">Ang may akda ay wala pang ina-upload na kahit na ano.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">I-download</string>
+  <string name="settings_release_type">Mga bersyon na ipapakita</string>
   <string name="settings_group_experimental">Eksperimental</string>
+  <string name="settings_disable_resources">Resource hooks na hindi pinagana</string>
   <!-- Support tab -->
+  <string name="support_download_label">I-download ang MoKee ROM</string>
   <string name="support_donate_label">Mag-abuloy</string>
+  <string name="support_donate_description">Kung gusto mong magpasalamat para sa Xposed, maaari kang magbigay ng donasyon sa rovo89 dito</string>
   <!-- Logs tab  -->
+  <string name="logs_save_failed">Hindi maisulat ang log sa SD card:</string>
+  <string name="sdcard_not_writable">Ang SD card ay hindi makita o hindi masulatan</string>
+  <string name="menuClearLog">Burahin ang log ngayon</string>
+  <string name="logs_cleared">Ang log ay tagumpay na nabura</string>
+  <string name="logs_clear_failed">Hindi mabura ang log:</string>
+  <string name="log_is_empty">Ang log ay walang laman</string>
+  <string name="scroll_top">I-scroll sa ibabaw</string>
+  <string name="scroll_bottom">I-scroll sa ibaba</string>
   <!-- About tab -->
+  <string name="about_translator_label">Tagasalin</string>
   <!-- DownloadView -->
   <string name="download_view_download">I-download</string>
   <string name="download_view_install">I-install</string>
   <string name="download_view_cancel">Kanselahin</string>
+  <string name="download_view_no_url">Walang download URL na magagamit</string>
   <string name="download_view_running">Ang pag-download ay tumatakbo (%1$,d of %2$,d kB)</string>
+  <string name="download_view_waiting">Ang download ay naghihintay</string>
+  <string name="download_view_successful">Ang download ay tagumpay</string>
   <string name="download_view_failed">Ang pag-download ay nabigo (error %d)</string>
   <!-- DownloadUtils -->
   <string name="download_md5sum_incorrect">Mali ang MD5 (nai-download na: %1$s, inaasahan: %2$s)</string>
