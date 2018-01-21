@@ -81,6 +81,7 @@
   <string name="download_section_older">Mahigit sa 30 na raw na ang nakakaraan</string>
   <string name="download_details_not_found">Walang module na mayroong package name na \"%s\" sa repository.</string>
   <string name="download_no_versions">Ang may akda ay wala pang ina-upload na kahit na ano.</string>
+  <string name="download_test_version_not_shown">Mayroon nang test version, subalit ito ay hindi ipinakita dahil sa iyong global o module-specific na mga setting.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">I-download</string>
   <string name="settings_release_type">Mga bersyon na ipapakita</string>
