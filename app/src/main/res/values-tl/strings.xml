@@ -31,6 +31,7 @@
   <string name="navigation_drawer_open">Buksan ang navigation drawer</string>
   <string name="navigation_drawer_close">Isara ang navigation drawer</string>
   <!-- Installer tab -->
+  <string name="soft_reboot">Malambot na reboot</string>
   <string name="reboot_failed">Nabigo ang pag-reboot. Mangyaring gamitin ang normal na pag-reboot ng punsyon ng device.</string>
   <string name="reboot_confirmation">Gusto mo bang mag-reboot ngayon?</string>
   <string name="install_warning_title">Mag-ingat!</string>
@@ -55,6 +56,8 @@
   <string name="xposed_module_updated_notification">I-reboot upang i-activate ang mga pagbabago</string>
   <string name="no_min_version_specified">Ang module na ito ay hindi tumutukoy sa Xposed na bersyon na kailangan nito.</string>
   <string name="warning_min_version_too_low">Ang module na ito ay nilikha para sa Xposed na bersyon %1$d, ngunit dahil sa mga di-magkatugma na mga pagbabago sa bersyon %2$d, ito ay hindi pinagana.</string>
+  <string name="module_launch">Simulan ang UI</string>
+  <string name="module_download_updates">Download/Mga pagbabago</string>
   <string name="module_support">Suporta</string>
   <string name="module_app_info">Impormasyon ng app</string>
   <string name="module_uninstall">I-uninstall</string>
@@ -63,16 +66,22 @@
   <string name="menuReload">I-reload</string>
   <string name="changes">Pagbabago:</string>
   <string name="download_details_page_description">Paglalarawan</string>
+  <string name="download_details_page_versions">Mga bersyon</string>
   <string name="download_details_page_settings">Mga setting</string>
+  <string name="reltype_stable_summary">Kwadra (mababang mga panganib ng mga bug)</string>
+  <string name="reltype_beta_summary">Beta (ilang mga bug ay aasahan)</string>
   <string name="reltype_experimental">Eksperimental</string>
+  <string name="reltype_experimental_summary">Experimental (mataas na panganib ng mga bug)</string>
   <string name="reltype_use_global_summary">Gamitin ang global na setting</string>
   <string name="download_unknown_author">hindi kilalang may-akda</string>
+  <string name="download_status_installed">Naka-install (bersyon %s)</string>
   <string name="download_status_update_available">I-update ang magagamit (bersyon %1$s \u2192 %2$s)</string>
   <string name="download_timestamps">Nagdagdag sa %1$s \u00b7 Na-update sa %2$s</string>
   <string name="download_sorting_title">Order ng pag-uri</string>
   <string name="download_sorting_status">Uriin ayon sa status</string>
   <string name="download_sorting_updated">Uriin ayon sa huling update</string>
   <string name="download_sorting_created">Uriin ayon sa petsa ng paggawa</string>
+  <string name="download_section_update_available">Pagbabago na magagamit</string>
   <string name="download_section_installed">Naka-install</string>
   <string name="download_section_not_installed">Hindi na-install</string>
   <string name="download_section_24h">Nakaraang 24 oras</string>
@@ -89,6 +98,7 @@
   <string name="settings_disable_resources">Resource hooks na hindi pinagana</string>
   <!-- Support tab -->
   <string name="support_download_label">I-download ang MoKee ROM</string>
+  <string name="support_faq_label">FAQ/kilalang mga isyu</string>
   <string name="support_donate_label">Mag-abuloy</string>
   <string name="support_donate_description">Kung gusto mong magpasalamat para sa Xposed, maaari kang magbigay ng donasyon sa rovo89 dito</string>
   <!-- Logs tab  -->
@@ -101,7 +111,10 @@
   <string name="scroll_top">I-scroll sa ibabaw</string>
   <string name="scroll_bottom">I-scroll sa ibaba</string>
   <!-- About tab -->
+  <string name="about_developers_label">Pangunahing nag-develop</string>
   <string name="about_translator_label">Tagasalin</string>
+  <string name="about_modified_version_label">MoKee binago na bersyon</string>
+  <string name="about_framework_version_label">Framework na bersyon</string>
   <!-- DownloadView -->
   <string name="download_view_download">I-download</string>
   <string name="download_view_install">I-install</string>

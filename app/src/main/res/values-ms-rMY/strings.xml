@@ -32,6 +32,7 @@
   <string name="module_uninstall">Nyahpasang</string>
   <!-- Download tab -->
   <string name="menuSearch">Carikan</string>
+  <string name="menuReload">Muat semula</string>
   <string name="download_details_page_description">Perihalan</string>
   <string name="download_details_page_settings">Tetapan</string>
   <string name="reltype_experimental">Eksperimen</string>
