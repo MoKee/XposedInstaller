@@ -22,9 +22,11 @@
   <string name="menuSaveToSd">Lưu vào thẻ SD</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Các Mô-Đun</string>
   <string name="nav_item_download">Tải về</string>
   <string name="nav_item_settings">Cài đặt</string>
   <string name="nav_item_support">Hỗ trợ</string>
+  <string name="nav_item_logs">Nhật ký</string>
   <string name="nav_item_about">Thông tin</string>
   <string name="navigation_drawer_open">Mở menu ngăn kéo</string>
   <string name="navigation_drawer_close">Đóng menu ngăn kéo</string>
@@ -36,14 +38,21 @@
   <string name="install_warning_title">Hãy cẩn thận!</string>
   <string name="install_warning">Trong một số trường hợp, thiết bị của bạn có thể không khởi động được sau khi cài Xposed.\n\nNếu bạn chưa từng nghe nói về \"soft brick\" và \"bootloop\" hoặc nếu bạn không biết cách xử lý trong tình huống đó, thì <b>ĐỪNG</b> cài Xposed!\n\nDù thế nào, bạn cũng nên có một bản sao lưu mới.</string>
   <string name="dont_show_again">Đừng hiện lại nữa</string>
+  <string name="framework_not_active">Xposed Framework phiên bản %s đã được cài đặt, nhưng không hoạt động. Hãy kiểm tra các bản ghi để biết chi tiết.</string>
+  <string name="status">Tình trạng Xposed</string>
+  <string name="xposed_on_next_reboot">Khung Xposed sẽ được kích hoạt khi khởi động lại</string>
+  <string name="xposed_off_next_reboot">Khung Xposed sẽ được kích hoạt khi khởi động lại</string>
   <!-- File operations -->
   <string name="root_failed">Không thể lấy quyền root.\n\nHãy đảm bảo rằng thiết bị của bạn đã root và bạn không chặn các lệnh shell.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Module chưa bật</string>
   <string name="module_is_not_activated_yet_detailed">%s đã được cài, nhưng chưa được kích hoạt.</string>
+  <string name="reboot_needed">Không thể lưu các thay đổi</string>
   <string name="activate_and_reboot">Kích hoạt và khởi động lại</string>
+  <string name="activate_only">Kích hoạt</string>
   <string name="module_activated">Module của Xposed đã được kích hoạt</string>
   <string name="module_no_ui">Module này không có giao diện</string>
+  <string name="no_xposed_modules_installed">Không tìm thấy module nào.</string>
   <string name="xposed_module_updated_notification_title">Module của Xposed đã được cập nhật</string>
   <string name="xposed_module_updated_notification">Khởi động lại để áp dụng ác thay đổi</string>
   <string name="no_min_version_specified">Module này không yêu cầu cụ thể phiên bản Xposed nào.</string>
@@ -62,6 +71,7 @@
   <string name="download_details_page_settings">Thiết lập</string>
   <string name="reltype_stable">Ổn định</string>
   <string name="reltype_stable_summary">Ổn định (ít khả năng lỗi)</string>
+  <string name="reltype_beta">Phiên bản beta</string>
   <string name="reltype_beta_summary">Beta (có thể chứa lỗi)</string>
   <string name="reltype_experimental">Thử nghiệm</string>
   <string name="reltype_experimental_summary">Thử nghiệm (nhiều khả năng lỗi)</string>
@@ -92,7 +102,11 @@
   <string name="settings_disable_resources">Ngắt các kết nối tài nguyên</string>
   <string name="settings_disable_resources_summary">Tránh xung đột với các máy giao diện\n<b>CẢNH BÁO:</b> Các module cần thay đổi tài nguyên sẽ không hoạt động khi bật tính năng này.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Tải về ROM MoKee</string>
+  <string name="support_framework_label">Hỗ trợ khung/cài đặt</string>
+  <string name="support_faq_label">Câu hỏi thường gặp / vấn đề đã biết</string>
   <string name="support_donate_label">Ủng hộ</string>
+  <string name="support_donate_description">Nếu bạn muốn nói cảm ơn cho Xposed, bạn có thể tặng cho rovo89 đây</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Không thể ghi nhật ký vào thẻ SD:</string>
   <string name="sdcard_not_writable">Không tìm thấy thẻ SD hoặc thẻ không ghi lên được</string>
@@ -100,10 +114,14 @@
   <string name="logs_cleared">Đã xoá nhật ký</string>
   <string name="logs_clear_failed">Không thể xoá nhật ký:</string>
   <string name="log_is_empty">Nhật ký trống</string>
+  <string name="scroll_top">Cuộn lên đầu</string>
+  <string name="scroll_bottom">Cuộn xuống cuối</string>
   <!-- About tab -->
   <string name="about_developers_label">Các tác giả chính:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> và <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Người dịch:</string>
+  <string name="about_modified_version_label">Phiên bản sửa đổi MoKee</string>
+  <string name="about_framework_version_label">Phiên bản Framework</string>
   <string name="about_source_label">Mã nguồn:</string>
   <string name="about_libraries_label">Sử dụng các thư viện:</string>
   <!-- DownloadView -->
@@ -125,5 +143,9 @@
   <string name="repo_download_failed">Tải xuống %1$s không thành công: %2$s</string>
   <string name="repo_load_failed">Không thể tải kho module từ %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Không thể tải mô đun này vì nó được cài đặt trên thẻ SD, vui lòng di chuyển nó vào bộ nhớ trong.</string>
+  <string name="permissionNotGranted">Tính năng này sẽ không hoạt động mà không có sự cho phép để viết lưu trữ bên ngoài.</string>
+  <string name="module_saved">Đã lưu mô-đun lúc %1$s</string>
   <string name="save">Lưu</string>
+  <string name="update_download_list">Kéo xuống để làm tươi của tải về mô-đun danh sách</string>
 </resources>

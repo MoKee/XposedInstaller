@@ -75,7 +75,7 @@
   <string name="reltype_beta_summary">Бета (незначительный риск ошибок)</string>
   <string name="reltype_experimental">Экспериментальная</string>
   <string name="reltype_experimental_summary">Экспериментальные (большой риск ошибок)</string>
-  <string name="reltype_use_global_summary">Как в общих настройках</string>
+  <string name="reltype_use_global_summary">Использовать глобальные настройки</string>
   <string name="download_author">от %s</string>
   <string name="download_unknown_author">Неизвестный автор</string>
   <string name="download_status_installed">Установлено (версия %s)</string>
