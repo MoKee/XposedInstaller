@@ -22,9 +22,11 @@
   <string name="menuSaveToSd">Salveaza pe cardul SD</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Module</string>
   <string name="nav_item_download">Descarcă</string>
   <string name="nav_item_settings">Setări</string>
   <string name="nav_item_support">Asistenta</string>
+  <string name="nav_item_logs">Jurnale</string>
   <string name="nav_item_about">Despre</string>
   <string name="navigation_drawer_open">Deschideţi sertarul de navigare</string>
   <string name="navigation_drawer_close">Închideţi sertarul de navigare</string>
@@ -36,14 +38,21 @@
   <string name="install_warning_title">Procedati cu grija !</string>
   <string name="install_warning">In anumite cazuri dispozitivul nu va porni dupa instalarea Xposed. \n\nIf daca nu ati auzit despre \"soft brick\" si \"bootloop\" pana acum si nu stiti cum sa remediati o astfel de problema,  <b>NU</b> instalati Xposed!\n\nin nici un caz. A avea un backup recent este de preferat.</string>
   <string name="dont_show_again">Nu mai afisati.</string>
+  <string name="framework_not_active">Xposed Framework versiunea %s este instalată, dar nu este activă. Vă rugăm să verificați jurnalele pentru detalii.</string>
+  <string name="status">Statutul Xposed</string>
+  <string name="xposed_on_next_reboot">Xposed Framework va fi activată la următoarea repornire</string>
+  <string name="xposed_off_next_reboot">Xposed Framework va fi dezactivată la următoarea repornire</string>
   <!-- File operations -->
   <string name="root_failed">Accesul la root a esuat.\n\nAsigurati-va ca dispozitivul este rootat corespunzator iar comenzile de tip shell nu sunt blocate.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed nu este inca activ</string>
   <string name="module_is_not_activated_yet_detailed">%s a fost instalat, dar nu este inca activ.</string>
+  <string name="reboot_needed">Reporniți pentru a aplica modificările</string>
   <string name="activate_and_reboot">Activare si repornire.</string>
+  <string name="activate_only">Doar activare</string>
   <string name="module_activated">Modulul Xposed nu a fost inca activat.</string>
   <string name="module_no_ui">Acest modul nu ofera o interfata pentru utilizator</string>
+  <string name="no_xposed_modules_installed">Nu au fost gasite module Xposed.</string>
   <string name="xposed_module_updated_notification_title">Modulul Xposed a fost actualizat.</string>
   <string name="xposed_module_updated_notification">Reporniti pentru a activa modificarile.</string>
   <string name="no_min_version_specified">Acest modul nu specifica ce versiune de Xposed este necesara.</string>
@@ -62,6 +71,7 @@
   <string name="download_details_page_settings">Setari</string>
   <string name="reltype_stable">Stabil</string>
   <string name="reltype_stable_summary">Stabil (risc scazut de probleme)</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_beta_summary">Beta (pot aparea unele probleme)</string>
   <string name="reltype_experimental">Experimental</string>
   <string name="reltype_experimental_summary">Experimental (risc crescut de probleme)</string>
@@ -92,7 +102,11 @@
   <string name="settings_disable_resources">Dezactivare resource hooks</string>
   <string name="settings_disable_resources_summary">Solutie pentru conflictele cu teme\n<b>ATENTIE:</b> Modulele care vor incerca sa modifice resursele nu vor functiona cand aceasta este activata.</string>
   <!-- Support tab -->
+  <string name="support_download_label">Descarcă MoKee ROM</string>
+  <string name="support_framework_label">Suport cadru/instalare</string>
+  <string name="support_faq_label">Întrebări frecvente/probleme cunoscute</string>
   <string name="support_donate_label">Doneaza</string>
+  <string name="support_donate_description">În cazul în care doriţi să mulţumiți pentru Xposed, puteţi dona către rovo89 aici</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Log-ul nu a putut fi scris pe cardul SD :</string>
   <string name="sdcard_not_writable">Cardul SD nu a fost gasit sau nu poate fi scris</string>
@@ -100,10 +114,14 @@
   <string name="logs_cleared">Log curatat</string>
   <string name="logs_clear_failed">Log-ul nu a putut fi curatat:</string>
   <string name="log_is_empty">Log-ul este gol</string>
+  <string name="scroll_top">Derulează până sus</string>
+  <string name="scroll_bottom">Derulează până jos</string>
   <!-- About tab -->
   <string name="about_developers_label">Dezvoltatori:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> si <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Traducator:</string>
+  <string name="about_modified_version_label">Versiune modificată MoKee</string>
+  <string name="about_framework_version_label">Versiune Framework</string>
   <string name="about_source_label">Cod sursa:</string>
   <string name="about_libraries_label">Librarii utilizate:</string>
   <!-- DownloadView -->
@@ -125,5 +143,9 @@
   <string name="repo_download_failed">Descarcare %1$s esuata: %2$s</string>
   <string name="repo_load_failed">Nu se poate incarca repository-ul de la %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Acest modul nu poate fi încărcat, deoarece este instalat pe cardul SD, vă rugăm să îl mutaţi pe stocare internă.</string>
+  <string name="permissionNotGranted">Această caracteristică nu va funcționa fără permisiunea de a scrie în memoria externă.</string>
+  <string name="module_saved">Module salvat la %1$s</string>
   <string name="save">Salvaţi</string>
+  <string name="update_download_list">Trage în jos pentru a reîmprospăta lista modulelor descărcărcate</string>
 </resources>
