@@ -36,14 +36,19 @@
   <string name="reboot_failed">Ponovni zagon ni uspel. Prosim, porabite normalni ponovni zagon naprave.</string>
   <string name="reboot_confirmation">Ali želite znova zagnati zdaj?</string>
   <string name="install_warning_title">Previdno!</string>
+  <string name="install_warning">V nekaterih primerih se vaša naprava ne bo mogla več pravilno zagnati po namestitvi Xposed.\n\n
+Če še niste slišali za\"soft brick\" in \"bootloop\" ali kako popraviti to situacijo, <b>NE</b> nameščajte Xposed!\n\n
+V vsakem primeru je zelo preporočljivo, da naredite varnostno kopijo pred nameščanjem.</string>
   <string name="dont_show_again">Ne prikaži znova</string>
   <string name="framework_not_active">Xposed Framework verzija %s je nameščen, toda ni aktiven. Za podrobnosti prosimo preberite dnevnik.</string>
   <string name="status">Xposed stanje</string>
   <string name="xposed_on_next_reboot">Xposed Framework bo omogočen pri naslednjem ponovnem zagonu</string>
   <string name="xposed_off_next_reboot">Xposed Framework bo onemogočen pri naslednjem ponovnem zagonu</string>
   <!-- File operations -->
+  <string name="root_failed">Dostop do korena ni uspel.\n\nPrepričajte se, da je vaša naprava zakoreninjena pravilno in da ne blokira ukazne lupine.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modul še ni aktiviran</string>
+  <string name="module_is_not_activated_yet_detailed">%s je bila nameščena, vendar še ni aktivna.</string>
   <string name="reboot_needed">Ponovni zagon za uveljavitev sprememb</string>
   <string name="activate_and_reboot">Aktiviraj in ponovno zaženi</string>
   <string name="activate_only">Samo aktiviraj</string>
@@ -52,6 +57,8 @@
   <string name="no_xposed_modules_installed">Nobeden Xposed modul ni bil nameščen.</string>
   <string name="xposed_module_updated_notification_title">Xposed modul posodobljen</string>
   <string name="xposed_module_updated_notification">Ponovni zagon za uveljavitev sprememb</string>
+  <string name="warning_min_version_too_low">Ta modul je bil ustvarjen za različico Xposed %1$d, vendar zaradi nezdružljive sprememb v različici %2$d, je onemogočen.</string>
+  <string name="module_launch">Zaženi UI</string>
   <string name="module_download_updates">Prenosi/Posodobitve</string>
   <string name="module_support">Podpora</string>
   <string name="module_app_info">Podatki o aplikaciji</string>

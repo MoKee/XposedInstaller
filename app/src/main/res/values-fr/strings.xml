@@ -79,7 +79,7 @@
   <string name="download_author">par %s</string>
   <string name="download_unknown_author">auteur inconnu</string>
   <string name="download_status_installed">Installé (version %s)</string>
-  <string name="download_status_update_available">Mise à jour disponible (version %1$s \u2192 %2$s)</string>
+  <string name="download_status_update_available">Mise à jour proposée (version %1$s \u2192 %2$s)</string>
   <string name="download_timestamps">Ajouté le %1$s \u00b7 Mis à jour le %2$s</string>
   <string name="download_sorting_title">Ordre de tri</string>
   <string name="download_sorting_status">Trier par statut</string>
