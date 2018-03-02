@@ -106,7 +106,7 @@
   <string name="support_framework_label">Support du Framework/Installer</string>
   <string name="support_faq_label">FAQ/problème connus</string>
   <string name="support_donate_label">Faire un don</string>
-  <string name="support_donate_description">Si vous voulez dire Merci pour Xposed, vous pouvez faire un don à rovo89 ici</string>
+  <string name="support_donate_description">Si vous voulez dire merci pour Xposed, vous pouvez faire un don à rovo89 ici</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Impossible d\'écrire le journal:</string>
   <string name="sdcard_not_writable">Carte SD non trouvée ou en lecture seule</string>

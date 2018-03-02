@@ -143,7 +143,7 @@
   <string name="repo_download_failed">Téléchargement %1$s échoué: %2$s</string>
   <string name="repo_load_failed">Impossible de charger le dépôt depuis %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="warning_installed_on_external_storage">Ce module ne peut pas être chargé car il est installé sur la carte SD, merci de le déplacer sur le stockage interne.</string>
+  <string name="warning_installed_on_external_storage">Ce module ne peut pas être chargé, car il est installé sur la carte SD. Veuillez le déplacer sur la mémoire interne.</string>
   <string name="permissionNotGranted">Cette fonction ne fonctionnera pas sans la permission d’écrire sur le stockage externe.</string>
   <string name="module_saved">Module enregistré à %1$s</string>
   <string name="save">Enregistrer</string>

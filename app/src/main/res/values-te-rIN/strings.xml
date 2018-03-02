@@ -20,14 +20,20 @@
   <!-- General/various strings -->
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_support">మద్దతు</string>
   <!-- Installer tab -->
   <!-- File operations -->
   <!-- Modules tab -->
+  <string name="module_support">మద్దతు</string>
   <string name="module_app_info">అనువర్తన సమాచారం</string>
   <string name="module_uninstall">అన్ఇన్‌స్టాల్ చేయి</string>
   <!-- Download tab -->
+  <string name="reltype_experimental">ప్రయోగాత్మక</string>
+  <string name="download_section_installed">ఇన్స్టాల్</string>
   <!-- Settings tab -->
+  <string name="settings_group_experimental">ప్రయోగాత్మక</string>
   <!-- Support tab -->
+  <string name="support_donate_label">దానం</string>
   <!-- Logs tab  -->
   <!-- About tab -->
   <!-- DownloadView -->
