@@ -18,21 +18,43 @@
 -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <!-- General/various strings -->
+  <string name="menuSend">إرسال</string>
+  <string name="menuSaveToSd">حفظ في كرت الذاكرة SD</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">الإضافات</string>
   <string name="nav_item_download">تنزيل</string>
   <string name="nav_item_settings">الإعدادات</string>
   <string name="nav_item_support">الدعم الفني</string>
+  <string name="nav_item_logs">سجلات</string>
   <string name="nav_item_about">حول</string>
   <string name="navigation_drawer_open">فتح نافذة التنقل</string>
   <string name="navigation_drawer_close">إغلاق نافذة التنقل</string>
   <!-- Installer tab -->
   <string name="soft_reboot">اعادة تشغيل سريعة</string>
   <string name="reboot">اعادة التشغيل</string>
+  <string name="reboot_failed">فشل إعادة التشغيل. الرجاء استخدام وظيفة إعادة تشغيل الجهاز العادي.</string>
+  <string name="reboot_confirmation">هل تريد إعادة التشغيل الآن؟</string>
+  <string name="install_warning_title">انتبه!</string>
+  <string name="install_warning">In some cases, your device might no longer boot after installing Xposed.\n\nIf you never heard about \"soft brick\" and \"bootloop\" before or if you don\'t know how to recover from such a situation, do <b>NOT</b> install Xposed!\n\nIn any case, having a recent backup is highly recommended.</string>
+  <string name="dont_show_again">لا تظهر هذا مرة أخرى</string>
+  <string name="framework_not_active">إطار إكسبوسيد الإصدار %s مثبت، ولكن غير نشط. الرجاء التحقق من السجلات للحصول على التفاصيل.</string>
+  <string name="status">حالة إكسبوسد</string>
+  <string name="xposed_on_next_reboot">سيتم تمكين إطار إكسبوسيد في التمهيد التالي</string>
+  <string name="xposed_off_next_reboot">سيتم تعطيل الإطار إكسبوسيد في التمهيد التالي</string>
   <!-- File operations -->
+  <string name="root_failed">Failed to get root access.\n\nMake sure your device is rooted properly and you have not blocked shell commands.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">لم يتم تنشيط الوحدة النمطية إكسبوسيد بعد</string>
+  <string name="module_is_not_activated_yet_detailed">تم تثبيت %s ، ولكن لم يتم تفعيلها حتى الآن.</string>
+  <string name="reboot_needed">إعادة التشغيل لتطبيق التغييرات</string>
+  <string name="activate_and_reboot">تنشيط وإعادة تمهيد</string>
+  <string name="activate_only">تنشيط فقط</string>
+  <string name="module_activated">تم تنشيط الوحدة النمطية إكسبوسيد</string>
   <string name="module_no_ui">هذه الوحدة النمطية لا توفر واجهة المستخدم</string>
+  <string name="no_xposed_modules_installed">لم يتم العثور على أية وحدات إكسبوسيد.</string>
+  <string name="xposed_module_updated_notification_title">تم تحديث الوحدة النمطية لاكسبوسيد</string>
+  <string name="xposed_module_updated_notification">إعادة التشغيل لتفعيل التغييرات</string>
   <string name="no_min_version_specified">لا تحدد هذه الوحدة النمطية إصدار إكسبوسيدبريدجي يحتاج إليها.</string>
   <string name="warning_min_version_too_low">تم إنشاء هذه الوحدة لإصدار Xposed %1$d, ولكن نظرا للتغيرات غير متوافقة في الإصدار %2$d, فقد تم تعطيله.</string>
   <string name="module_launch">بدء تشغيل واجهة المستخدم</string>
@@ -45,8 +67,15 @@
   <string name="menuReload">إعادة تحميل</string>
   <string name="changes">التغييرات:</string>
   <string name="download_details_page_description">الوصف</string>
+  <string name="download_details_page_versions">الاصدارات</string>
   <string name="download_details_page_settings">الإعدادات</string>
+  <string name="reltype_stable">إصدار مُستقرّ</string>
+  <string name="reltype_stable_summary">مستقر (مخاطر منخفضة من الاخطاء)</string>
+  <string name="reltype_beta">تجريبي</string>
+  <string name="reltype_beta_summary">بيتا (بعض الخلل المتوقع)</string>
   <string name="reltype_experimental">اختبارية</string>
+  <string name="reltype_experimental_summary">التجريبية (مخاطر عالية من الأخطاء)</string>
+  <string name="reltype_use_global_summary">استخدم الإعداد العمومي</string>
   <string name="download_author">من قبل %s</string>
   <string name="download_unknown_author">مؤلف غير معروف</string>
   <string name="download_status_installed">تثبيت (version %s)</string>
@@ -63,16 +92,36 @@
   <string name="download_section_7d">آخر 7 أيام</string>
   <string name="download_section_30d">آخر 30 يوما</string>
   <string name="download_section_older">منذ أكثر من 30 يوما</string>
+  <string name="download_details_not_found">لا توجد وحدة نمطية تحمل اسم الحزمة \"%s\" في المستودع.</string>
+  <string name="download_no_versions">المستخدم لم يقم باضافة اي شيء بعد.</string>
+  <string name="download_test_version_not_shown">يتوفر إصدار اختبار، ومع ذلك فإنه لا يتم إظهاره بسبب الإعدادات العمومية أو الخاصة بالوحدة النمطية الخاصة بك.</string>
   <!-- Settings tab -->
   <string name="settings_group_download">تحميل</string>
+  <string name="settings_release_type">الإصدارات المراد إظهارها</string>
   <string name="settings_group_experimental">التجريبية</string>
+  <string name="settings_disable_resources">خطاف الموارد المعطلة</string>
+  <string name="settings_disable_resources_summary">Workaround for conflicts with theming engines\n<b>WARNING:</b> Modules which try to change resources will not work when this is enabled.</string>
   <!-- Support tab -->
+  <string name="support_download_label">تنزيل روم موكي</string>
+  <string name="support_framework_label">دعم الإطار/المثبت</string>
+  <string name="support_faq_label">أسئلة وأجوبة/المشاكل المعروفة</string>
   <string name="support_donate_label">تبرع</string>
+  <string name="support_donate_description">إذا كنت تريد أن تقول شكرا إكسبوسيد، يمكنك التبرع إلى rovo89 هنا</string>
   <!-- Logs tab  -->
+  <string name="logs_save_failed">تعذر كتابة سجل إلى بطاقة SD:</string>
+  <string name="sdcard_not_writable">بطاقة SD لم يتم العثور عليها أو غير قابلة للكتابة</string>
+  <string name="menuClearLog">مسح السجل الآن</string>
+  <string name="logs_cleared">تم مسح السجل بنجاح</string>
+  <string name="logs_clear_failed">لا يمكن مسح السجل:</string>
+  <string name="log_is_empty">السجل فارغ</string>
+  <string name="scroll_top">التمرير الى اعلى</string>
+  <string name="scroll_bottom">التمرير للأسفل</string>
   <!-- About tab -->
   <string name="about_developers_label">مطوري الرئيسية:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> و <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">ترجمات:</string>
+  <string name="about_modified_version_label">موكي نسخة معدلة</string>
+  <string name="about_framework_version_label">إصدار Framework</string>
   <string name="about_source_label">التعليمات البرمجية المصدر:</string>
   <string name="about_libraries_label">المكتبات المستخدمة:</string>
   <!-- DownloadView -->
@@ -94,5 +143,9 @@
   <string name="repo_download_failed">تحميل %1$s فشل: %2$s</string>
   <string name="repo_load_failed">لايمكن التحميل من المستودع %1$s:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">لا يمكن تحميل هذه الوحدة لأنها مثبتة على بطاقة SD, يرجى نقله إلى وحدة التخزين الداخلية.</string>
+  <string name="permissionNotGranted">لن تعمل هذه الميزة بدون إذن للكتابة على وحدة التخزين الخارجية.</string>
+  <string name="module_saved">الوحدة النمطية تم حفظها على %1$s</string>
   <string name="save">حفظ</string>
+  <string name="update_download_list">اسحب لاسفل لحديث قائمة تحميل الوحدات النمطية</string>
 </resources>

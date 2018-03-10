@@ -49,7 +49,7 @@
   <string name="module_is_not_activated_yet_detailed">%s telah terinstal, tapi tidak dihidupkan.</string>
   <string name="reboot_needed">Mulai ulang untuk menerapkan perubahan</string>
   <string name="activate_and_reboot">Hidupkan dan mulai ulang</string>
-  <string name="activate_only">Hidupkan saja</string>
+  <string name="activate_only">Hanya hidupkan</string>
   <string name="module_activated">Modul Xposed telah dihidupkan</string>
   <string name="module_no_ui">Modul ini tidak memberikan antarmuka pengguna</string>
   <string name="no_xposed_modules_installed">Tidak ada modul Xposed terpasang.</string>
