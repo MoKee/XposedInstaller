@@ -22,9 +22,11 @@
   <string name="menuSaveToSd">SD kártyára mentés</string>
   <!-- Welcome screen / main sections -->
   <!-- Navigation drawer items -->
+  <string name="nav_item_modules">Modulok</string>
   <string name="nav_item_download">Letöltés</string>
   <string name="nav_item_settings">Beállítások</string>
   <string name="nav_item_support">Támogatás</string>
+  <string name="nav_item_logs">Naplók</string>
   <string name="nav_item_about">Információk</string>
   <string name="navigation_drawer_open">Navigációs fiók megnyitása</string>
   <string name="navigation_drawer_close">Navigációs fiók bezárása</string>
@@ -36,14 +38,21 @@
   <string name="install_warning_title">Légy óvatos!</string>
   <string name="install_warning">Néhány esetben az eszközöd talán nem fog bootolni az Xposed telepítése után. Ha sosem hallottál a \"soft brick\"-ről vagy a \"bootloop\"-ról vagy ha nem tudod, hogyan térj vissza egy ilyen helyzetből, <b>NE</b> telepítsd az Xposed-ot. Egy friss mentés megléte erősen ajánlott minden esetben.</string>
   <string name="dont_show_again">Ne mutasd még egyszer</string>
+  <string name="framework_not_active">Az Xposed Keretrendszer %s verziója telepítve van, de nem aktív. Ellenőrizze a naplókban a részleteket.</string>
+  <string name="status">Xposed Keretrendszer állapota</string>
+  <string name="xposed_on_next_reboot">Az Xposed Keretrendszer a következő újraindítás után válik aktívvá</string>
+  <string name="xposed_off_next_reboot">Az Xposed Keretrendszer a következő újraindítás után válik inaktívvá</string>
   <!-- File operations -->
   <string name="root_failed">Rendszergazda jogok kérése sikertelen.\n\nEllenőrizd, hogy az eszközöd megfelelően van-e rootolva és nincsenek-e blokkolva a shell parancsok.</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Az Xposed modul még nincs aktiválva</string>
   <string name="module_is_not_activated_yet_detailed">%s telepítve lett, de még nincs aktiválva.</string>
+  <string name="reboot_needed">Újraindítás a változtatások érvényesítéséhez</string>
   <string name="activate_and_reboot">Aktiválás és újraindítás</string>
+  <string name="activate_only">Csak aktiválás</string>
   <string name="module_activated">Az Xposed modul aktiválva lett</string>
   <string name="module_no_ui">A modulnak nincs felhasználói felülete</string>
+  <string name="no_xposed_modules_installed">Nem található telepített Xposed modul!</string>
   <string name="xposed_module_updated_notification_title">Xposed modul frissítve</string>
   <string name="xposed_module_updated_notification">Újraindítás a változtatások aktiválásához</string>
   <string name="no_min_version_specified">A modul nem tünteti fel a szükséges Xposed verziót.</string>
@@ -93,7 +102,11 @@
   <string name="settings_disable_resources">\"Resource hook\"-ok letiltva</string>
   <string name="settings_disable_resources_summary">Megoldás a témamotorokkal való konfliktusokra.\n<b>FIGYELEM:</b> A resource-okat módosítani próbáló modulok nem fognak működni, ha ez engedélyezve van.</string>
   <!-- Support tab -->
+  <string name="support_download_label">MoKee ROM letöltése</string>
+  <string name="support_framework_label">Keretrendszer/Telepítő támogatás</string>
+  <string name="support_faq_label">GYIK / Ismert problémák</string>
   <string name="support_donate_label">Adomány</string>
+  <string name="support_donate_description">Ha köszönetet szeretne mondani az Xposed-ért, itt támogathatja rovo89-et</string>
   <!-- Logs tab  -->
   <string name="logs_save_failed">Nem lehetett a naplót az SD kártyára írni:</string>
   <string name="sdcard_not_writable">SD kártya nem található vagy nem írható</string>
@@ -101,10 +114,14 @@
   <string name="logs_cleared">Napló sikeresen ürítve</string>
   <string name="logs_clear_failed">Nem lehetett üríteni a naplót:</string>
   <string name="log_is_empty">A napló üres</string>
+  <string name="scroll_top">Görgetés az oldal tetejére</string>
+  <string name="scroll_bottom">Görgetés az oldal aljára</string>
   <!-- About tab -->
   <string name="about_developers_label">Fő fejlesztők:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> és <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
   <string name="about_translator_label">Fordító:</string>
+  <string name="about_modified_version_label">MoKee módosított változat</string>
+  <string name="about_framework_version_label">Keretrendszer verziója</string>
   <string name="about_source_label">Forráskód:</string>
   <string name="about_libraries_label">Használt könyvtárak:</string>
   <!-- DownloadView -->
@@ -126,5 +143,9 @@
   <string name="repo_download_failed">%1$s letöltése sikertelen: %2$s</string>
   <string name="repo_load_failed">Nem lehet betölteni a gyűjteményt %1$s-ról:\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
+  <string name="warning_installed_on_external_storage">Ezt a modult nem lehet betölteni, mert az SD kártyára lett telepítve, kérjük, helyezze át a belső tárhelyre.</string>
+  <string name="permissionNotGranted">Ez a funkció nem fog működni a külső tárhely írási jogosultságai nélkül.</string>
+  <string name="module_saved">Modul mentve a következő helyen: %1$s</string>
   <string name="save">Mentés</string>
+  <string name="update_download_list">Húzza lefelé a letöltési modulok listájának frissítéséhez</string>
 </resources>
