@@ -57,6 +57,7 @@ V vsakem primeru je zelo preporo훾ljivo, da naredite varnostno kopijo pred name�
   <string name="no_xposed_modules_installed">Nobeden Xposed modul ni bil name큄훾en.</string>
   <string name="xposed_module_updated_notification_title">Xposed modul posodobljen</string>
   <string name="xposed_module_updated_notification">Ponovni zagon za uveljavitev sprememb</string>
+  <string name="no_min_version_specified">Ta modul nima predpisane Xposed verzije, ki jo potrebuje.</string>
   <string name="warning_min_version_too_low">Ta modul je bil ustvarjen za razli훾ico Xposed %1$d, vendar zaradi nezdru탑ljive sprememb v razli훾ici %2$d, je onemogo훾en.</string>
   <string name="module_launch">Za탑eni UI</string>
   <string name="module_download_updates">Prenosi/Posodobitve</string>
