@@ -25,6 +25,7 @@
   <string name="nav_item_download">Hämta</string>
   <string name="nav_item_settings">Inställningar</string>
   <string name="nav_item_support">Hjälp</string>
+  <string name="nav_item_logs">Loggar</string>
   <string name="nav_item_about">Om</string>
   <string name="navigation_drawer_close">Stäng navigationspanel</string>
   <!-- Installer tab -->
@@ -33,6 +34,8 @@
   <!-- File operations -->
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposed modulen är inte aktiverad än</string>
+  <string name="activate_and_reboot">Aktivera och starta om</string>
+  <string name="activate_only">Aktivera endast</string>
   <string name="module_no_ui">Denna modul tillhandahåller inte ett användargränssnitt</string>
   <string name="no_min_version_specified">Denna modul specificerar inte den Xposed version som behövs.</string>
   <string name="warning_min_version_too_low">Denna modul skapades för Xposed version %1$d, men på grund av oförenliga förändringar i version %2$d, har den avaktiverats.</string>
@@ -46,7 +49,10 @@
   <string name="menuReload">Ladda om</string>
   <string name="changes">Ändringar:</string>
   <string name="download_details_page_description">Beskrivning</string>
+  <string name="download_details_page_versions">Versioner</string>
   <string name="download_details_page_settings">Inställningar</string>
+  <string name="reltype_stable">Stabil</string>
+  <string name="reltype_beta">Beta</string>
   <string name="reltype_experimental">Experimentell</string>
   <string name="download_author">av %s</string>
   <string name="download_unknown_author">okänd skapare</string>
@@ -72,6 +78,7 @@
   <!-- Logs tab  -->
   <string name="logs_save_failed">Kunde inte skriva till loggen på SD-kortet:</string>
   <string name="sdcard_not_writable">SD-kortet hittades inte eller är inte skrivbar</string>
+  <string name="menuClearLog">Rensa logg nu</string>
   <!-- About tab -->
   <string name="about_developers_label">Huvudsakliga utvecklare:</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a> och <a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a></string>
