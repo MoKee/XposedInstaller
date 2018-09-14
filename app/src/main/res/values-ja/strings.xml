@@ -33,24 +33,24 @@
   <!-- Installer tab -->
   <string name="soft_reboot">ソフトリブート</string>
   <string name="reboot">再起動</string>
-  <string name="reboot_failed">再起動できませんでした。端末の通常の再起動の機能を使用してください。</string>
+  <string name="reboot_failed">再起動できませんでした。端末の通常の再起動の機能を使用して下さい。</string>
   <string name="reboot_confirmation">今すぐ再起動しますか？</string>
   <string name="install_warning_title">注意！</string>
-  <string name="install_warning">Xposedをインストールした後、場合によっては起動しなくなることがあります。\n\n 「仮文鎮」や「ブートループ」を知らない場合やその状態からの復旧方法を理解していないのであれば、Xposedをインストール<b>しないでください</b>。\n\nいずれにせよ、現在のバックアップを取ることを強く推奨します。</string>
+  <string name="install_warning">Xposedをインストールした後、場合によっては起動しなくなることがあります。\n\n 「仮文鎮」や「ブートループ」を知らない場合やその状態からの復旧方法を理解していないのであれば、Xposedをインストール<b>しないで下さい</b>。\n\nいずれにせよ、現在のバックアップを取ることを強く推奨します。</string>
   <string name="dont_show_again">次回から表示しない</string>
-  <string name="framework_not_active">バージョン%sのXposedフレームワークがインストールされていますが、有効になっていません。ログで詳細を確認してください。</string>
+  <string name="framework_not_active">バージョン%sのXposedフレームワークがインストールされていますが、有効になっていません。ログで詳細を確認して下さい。</string>
   <!-- File operations -->
-  <string name="root_failed">ルートアクセスを取得できませんでした。\n\n端末が正しくルート化されているか、シェルコマンドをブロックしていないかを確認してください。</string>
+  <string name="root_failed">ルートアクセスを取得できませんでした。\n\n端末が正しくルート化されているか、シェルコマンドをブロックしていないかを確認して下さい。</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposedモジュールがまだ有効化されていません</string>
-  <string name="module_is_not_activated_yet_detailed">%sがインストールされましたが、まだ有効化されていません。</string>
+  <string name="module_is_not_activated_yet_detailed">%sがインストールされましたがまだ有効化されていません</string>
   <string name="activate_and_reboot">有効化して再起動</string>
-  <string name="module_activated">Xposedモジュールが有効化されました。</string>
+  <string name="module_activated">Xposedモジュールが有効化されました</string>
   <string name="module_no_ui">このモジュールにはUIがありません</string>
   <string name="xposed_module_updated_notification_title">Xposedモジュールが更新されました</string>
-  <string name="xposed_module_updated_notification">変更を有効化するには再起動してください。</string>
-  <string name="no_min_version_specified">このモジュールは必要なXposedバージョンを指定していません。</string>
-  <string name="warning_min_version_too_low">このモジュールはXposedバージョン%1$d向けに作成されましたが、 バージョン%2$dとは互換性がないので無効化されました。</string>
+  <string name="xposed_module_updated_notification">変更を有効化するには再起動して下さい</string>
+  <string name="no_min_version_specified">このモジュールは必要なXposedバージョンを指定していません</string>
+  <string name="warning_min_version_too_low">このモジュールはXposedバージョン%1$d向けに作成されましたがバージョン%2$dとは互換性がないので無効化されました</string>
   <string name="module_launch">UIを起動</string>
   <string name="module_download_updates">ダウンロード/更新</string>
   <string name="module_support">サポート</string>
@@ -86,9 +86,9 @@
   <string name="download_section_7d">7日以内</string>
   <string name="download_section_30d">30日以内</string>
   <string name="download_section_older">30日以上前</string>
-  <string name="download_details_not_found">「%s」というパッケージ名のモジュールはレポジトリに存在しません。</string>
-  <string name="download_no_versions">開発者がまだモジュールを公開していません。</string>
-  <string name="download_test_version_not_shown">テストバージョンがありますが、グローバル設定やモジュールごとの設定によって表示されていません。</string>
+  <string name="download_details_not_found">「%s」というパッケージ名のモジュールはレポジトリに存在しません</string>
+  <string name="download_no_versions">開発者がまだモジュールを公開していません</string>
+  <string name="download_test_version_not_shown">テストバージョンがありますがグローバル設定やモジュールごとの設定によって表示されていません</string>
   <!-- Settings tab -->
   <string name="settings_group_download">ダウンロード</string>
   <string name="settings_release_type">表示するバージョン</string>
@@ -104,7 +104,7 @@
   <string name="logs_save_failed">SDカードにログを書き込めませんでした:</string>
   <string name="sdcard_not_writable">SDカードが無いか、書き込み可能ではありません</string>
   <string name="menuClearLog">ログを消去</string>
-  <string name="logs_cleared">ログを消去しました。</string>
+  <string name="logs_cleared">ログを消去しました</string>
   <string name="logs_clear_failed">ログを消去できませんでした:</string>
   <string name="log_is_empty">ログはありません</string>
   <string name="scroll_top">トップにスクロール</string>
@@ -133,8 +133,8 @@
   <string name="repo_download_failed">%1$sがダウンロードできませんでした: %2$s</string>
   <string name="repo_load_failed">%1$sからレポジトリをロードできませんでした\n%2$s</string>
   <!-- Most of these belong to currently hidden features -->
-  <string name="warning_installed_on_external_storage">このモジュールはSDカードにインストールされているため、読み込めませんでした。内部ストレージに移動してください。</string>
-  <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません。</string>
+  <string name="warning_installed_on_external_storage">このモジュールはSDカードにインストールされているため読み込めませんでした。内部ストレージに移動して下さい。</string>
+  <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません</string>
   <string name="module_saved">モジュールを%1$sに保存しました</string>
   <string name="save">保存</string>
 </resources>
