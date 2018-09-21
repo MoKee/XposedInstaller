@@ -39,14 +39,20 @@
   <string name="install_warning">Xposedをインストールした後、場合によっては起動しなくなることがあります。\n\n 「仮文鎮」や「ブートループ」を知らない場合やその状態からの復旧方法を理解していないのであれば、Xposedをインストール<b>しないで下さい</b>。\n\nいずれにせよ、現在のバックアップを取ることを強く推奨します。</string>
   <string name="dont_show_again">次回から表示しない</string>
   <string name="framework_not_active">バージョン%sのXposedフレームワークがインストールされていますが、有効になっていません。ログで詳細を確認して下さい。</string>
+  <string name="status">Xposedの状態</string>
+  <string name="xposed_on_next_reboot">Xposed Frameworkは次の再起動時に有効になります</string>
+  <string name="xposed_off_next_reboot">Xposed Frameworkは次の再起動時に無効になります</string>
   <!-- File operations -->
   <string name="root_failed">ルートアクセスを取得できませんでした。\n\n端末が正しくルート化されているか、シェルコマンドをブロックしていないかを確認して下さい。</string>
   <!-- Modules tab -->
   <string name="module_is_not_activated_yet">Xposedモジュールがまだ有効化されていません</string>
   <string name="module_is_not_activated_yet_detailed">%sがインストールされましたがまだ有効化されていません</string>
+  <string name="reboot_needed">変更を保存するには再起動して下さい</string>
   <string name="activate_and_reboot">有効化して再起動</string>
+  <string name="activate_only">有効にする</string>
   <string name="module_activated">Xposedモジュールが有効化されました</string>
   <string name="module_no_ui">このモジュールにはUIがありません</string>
+  <string name="no_xposed_modules_installed">Xposedモジュールがインストールされていません</string>
   <string name="xposed_module_updated_notification_title">Xposedモジュールが更新されました</string>
   <string name="xposed_module_updated_notification">変更を有効化するには再起動して下さい</string>
   <string name="no_min_version_specified">このモジュールは必要なXposedバージョンを指定していません</string>
@@ -96,6 +102,7 @@
   <string name="settings_disable_resources">リソースフックを無効化</string>
   <string name="settings_disable_resources_summary">テーマエンジンとの競合を回避します。\n<b>警告:</b> このオプションを有効化すると、リソースをフックするモジュールが動作しなくなります。</string>
   <!-- Support tab -->
+  <string name="support_download_label">MoKee ROMをダウンロード</string>
   <string name="support_framework_label">フレームワーク/インストールのサポート</string>
   <string name="support_faq_label">よくある質問/既知の問題</string>
   <string name="support_donate_label">寄付</string>
@@ -108,10 +115,13 @@
   <string name="logs_clear_failed">ログを消去できませんでした:</string>
   <string name="log_is_empty">ログはありません</string>
   <string name="scroll_top">トップにスクロール</string>
+  <string name="scroll_bottom">最下部にスクロール</string>
   <!-- About tab -->
   <string name="about_developers_label">メイン開発者</string>
   <string name="about_developers"><a href="http://forum.xda-developers.com/member.php?u=4419114">rovo89</a>、<a href="http://forum.xda-developers.com/member.php?u=4322181">Tungstwenty</a>、<a href="http://forum.xda-developers.com/member.php?u=5345056">dvdandroid</a>（バグ修正、マテリアルデザイン）</string>
   <string name="about_translator_label">翻訳</string>
+  <string name="about_modified_version_label">MoKee修正バージョン</string>
+  <string name="about_framework_version_label">フレームワークのバージョン</string>
   <string name="about_source_label">ソースコード</string>
   <string name="about_libraries_label">使用ライブラリ</string>
   <!-- DownloadView -->
@@ -137,4 +147,5 @@
   <string name="permissionNotGranted">この機能は外部ストレージへの書き込み権限がないと動作しません</string>
   <string name="module_saved">モジュールを%1$sに保存しました</string>
   <string name="save">保存</string>
+  <string name="update_download_list">プルダウンしてモジュールのダウンロードリストを更新</string>
 </resources>
