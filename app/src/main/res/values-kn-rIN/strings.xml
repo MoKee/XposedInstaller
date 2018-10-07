@@ -32,6 +32,7 @@
   <string name="module_uninstall">ಅಸ್ಥಾಪಿಸು</string>
   <!-- Download tab -->
   <string name="menuSearch">ಹುಡುಕಿ</string>
+  <string name="menuReload">ಮರುಲೋಡ್ ಮಾಡು</string>
   <string name="download_details_page_description">ವಿವರಣೆ</string>
   <string name="download_details_page_settings">ಸಂಯೋಜನೆಗಳು</string>
   <string name="reltype_experimental">ಪ್ರಾಯೋಗಿಕ</string>
